@@ -7,37 +7,16 @@ config interface loopback
 	option netmask	255.0.0.0
 
 config interface lan
-	option ifname   'eth0 eth1 eth2' 	
+	option ifname   'eth2 eth3 eth4 eth5 eth6 eth7' 	
 	option type 	bridge
 	option proto	static
 	option ipaddr	172.16.1.1
 	option netmask	255.255.0.0
 	option ip6assign 60
 
-config interface wan1
-	option ifname	eth3
+config interface wan
+	option ifname	eth0
 	option proto	dhcp
-	option metric   21
-
-config interface wan2
-	option ifname	eth4
-	option proto	dhcp
-	option metric   22
-
-config interface wan3
-	option ifname	eth5
-	option proto	dhcp
-	option metric   23
-
-config interface wan4
-	option ifname	eth6
-	option proto	dhcp
-	option metric   24
-
-config interface wan5
-	option ifname	eth7
-	option proto	dhcp
-	option metric   25
 
 config globals globals
 	option ula_prefix auto
