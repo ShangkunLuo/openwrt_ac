@@ -4,7 +4,7 @@
 START=95
 boot() {
 	mount_root done
-	rm -f /sysupgrade.tgz
+	test -f /sysupgrade.tgz && rm -f /sysupgrade.tgz
 
 	# process user commands
 	[ -f /etc/rc.local ] && {
@@ -12,6 +12,6 @@ boot() {
 	}
 
 	# set leds to normal state
-	. /etc/diag.sh
-	set_state done
+	#. /etc/diag.sh
+	#set_state done
 }

@@ -7,7 +7,7 @@ config interface loopback
 	option netmask	255.0.0.0
 
 config interface lan
-	option ifname   'eth2 eth3 eth4 eth5 eth6 eth7' 	
+	option ifname   'eth1 eth2 eth3 eth4 eth5' 	
 	option type 	bridge
 	option proto	static
 	option ipaddr	172.16.1.1
