@@ -1,0 +1,16 @@
+#!/bin/sh /etc/rc.common
+
+START=94
+
+start(){
+	service_start /usr/sbin/ac-discovery-server
+}
+
+stop(){
+	service_stop /usr/sbin/ac-discovery-server	
+}
+
+restart(){
+        stop
+        start
+}
