@@ -2719,3 +2719,9 @@ config BUSYBOX_DEFAULT_FEATURE_KLOGD_KLOGCTL
 config BUSYBOX_DEFAULT_LOGGER
 	bool
 	default y
+config BUSYBOX_DEFAULT_GETTY 
+	bool
+	default y
+config BUSYBOX_DEFAULT_LOGIN 
+	bool
+	default y
