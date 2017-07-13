@@ -7,7 +7,7 @@ config interface loopback
 	option netmask	255.0.0.0
 
 config interface lan
-	option ifname   'eth1 eth2 eth3 eth4 eth5' 	
+	option ifname   'eth0 eth1 eth2 eth3 eth4' 	
 	option type 	bridge
 	option proto	static
 	option ipaddr	172.16.1.1
@@ -15,7 +15,7 @@ config interface lan
 	option ip6assign 60
 
 config interface wan
-	option ifname	eth0
+	option ifname	eth5
 	option proto	dhcp
 
 config globals globals
