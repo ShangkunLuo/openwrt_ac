@@ -1,0 +1,3 @@
+
+config uhttpdsim 'main'
+	option port '80'
