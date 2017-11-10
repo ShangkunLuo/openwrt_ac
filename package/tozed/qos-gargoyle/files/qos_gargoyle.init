@@ -4,19 +4,17 @@
 # This is free software licensed under the terms of the GNU GPL v2.0
 #
 
-START=93
+START=50
 
 EXTRA_COMMANDS=show
 EXTRA_HELP="	show	Show current Qos configuration (if active)"
 
 include /lib/network
-#include /usr/lib/gargoyle_firewall_util
+include /usr/lib/gargoyle_firewall_util
 
 config_file_name="qos_gargoyle"
 upload_mask="0x007F"
 download_mask="0x7F00"
-mark_mask_wan="0xf0000"
-mark_mask_wan2="0xf00000"
 qos_mark_file="/etc/qos_class_marks"
 
 #created while qos is being initialized so hotplug and init script don't
@@ -79,7 +77,11 @@ load_all_config_sections()
 
 	config_load "$config_name"
 	echo "$all_config_sections"
+
 }
+
+
+
 
 load_and_sort_all_config_sections()
 {
@@ -131,7 +133,6 @@ apply_all_rules()
 	local class_mark_list="$2"
 	local chain="$3"
 	local table="$4"
-	local mark_mask="$6"
 
 	local need_proto
 	local tmp_proto
@@ -166,11 +167,6 @@ apply_all_rules()
 							option_value="$wan_ip"
 						fi
 					fi
-					if [ "$3" = "qos_ingress_wan2" ] ; then
-						if [ "$option_value" = "$local_ip" ] || [ "$option_value" = "$wan_ip" ]; then
-							option_value="$wan2_ip"
-						fi
-					fi
 					match_str="$match_str -d $option_value"
 				;;
 				srcport)
@@ -182,6 +178,7 @@ apply_all_rules()
 					if [ -n $(echo $option_value | grep "-") ] ; then option_value="$(echo "$option_value" | sed -e 's,-,:,g')" ; fi
 					match_str="$match_str --dport $option_value"
 					need_proto="1"
+
 				;;
 				layer7)
 					layer7_connmark=$(cat /etc/l7marker.marks 2>/dev/null | grep "$option_value" | awk '{ print $2 }')
@@ -198,6 +195,7 @@ apply_all_rules()
 			esac
 		done
 
+
 		if [ -n "$min_pkt_size" ] || [ -n "$max_pkt_size" ] ; then
 			if [ -z "$min_pkt_size" ] ; then min_pkt_size=0 ; fi
 			if [ -z "$max_pkt_size" ] ; then max_pkt_size=1500 ; fi
@@ -211,11 +209,14 @@ apply_all_rules()
 				#We need to specify both udp and tcp if the user indicated a port
 				#and he did not indiate a protocal.
 				if [ -z "$proto" ] && [ -n "$need_proto" ] ; then
+
 					$echo_on
-					iptables -t $table -I $chain -p tcp $match_str -j MARK --set-mark $next_mark/$mark_mask
-					iptables -t $table -I $chain -p udp $match_str -j MARK --set-mark $next_mark/$mark_mask
+					iptables -t $table -I $chain -p tcp $match_str -j MARK --set-mark $next_mark
+					iptables -t $table -I $chain -p udp $match_str -j MARK --set-mark $next_mark
 					$echo_off
+
 				else
+
  					#Otherwise just specify what the user requested (or nothing)
 
 					if [ -n "$proto" ] ; then
@@ -225,16 +226,19 @@ apply_all_rules()
 					fi
 
 					$echo_on
-					iptables -t $table -I $chain $tmp_proto $match_str -j MARK --set-mark $next_mark/$mark_mask
+					iptables -t $table -I $chain $tmp_proto $match_str -j MARK --set-mark $next_mark
 					$echo_off
 				fi
+
 			fi
 		fi
 	done
 }
 
+
 update_markfile()
 {
+
 	#initialize mark file in /tmp first, and test md5sum
 	#this should speed things up and prevent writing to flash unnecessarily (since /tmp is ramdisk)
 
@@ -249,7 +253,7 @@ update_markfile()
 		next_class_index=2
 		for uclass_name in $upload_class_list ; do
 			printf "upload $uclass_name %d $upload_mask\n" $next_class_index >> "$tmp_qos_mark_file"
-			next_class_index=$(($next_class_index+1))
+ 			next_class_index=$(($next_class_index+1))
 		done
 	fi
 
@@ -260,7 +264,7 @@ update_markfile()
 		next_class_index=2
 		for dclass_name in $download_class_list ; do
 			printf "download $dclass_name %d $download_mask\n" $(($next_class_index << 8)) >> "$tmp_qos_mark_file"
-			next_class_index=$(($next_class_index+1))
+ 			next_class_index=$(($next_class_index+1))
 		done
 	fi
 
@@ -281,197 +285,23 @@ update_markfile()
 
 }
 
-insmod_imq()
+
+
+initialize_qos()
 {
+	#initialize layer7_marker if necessary
+	create_l7marker_chain
+
 	# Now, load/insert necessary kernel modules
 	# The following packages are required for the modules:
-	local devsnum=$1
 	rmmod  imq >&- 2>&-
-	insmod imq numdevs=$devsnum hook_chains="INPUT,FORWARD" hook_tables="mangle,mangle" >&- 2>&-
-	
-	local i=0
-	while [[ $i -lt $devsnum ]]
-	do
-		ifconfig imq$i mtu 1500
-		let "i++"
-	done
+	insmod imq numdevs=1 hook_chains="INPUT,FORWARD" hook_tables="mangle,mangle" >&- 2>&-
+	ip link set dev imq0 mtu 1500
+
 	insmod cls_fw >&- 2>&-
 	insmod cls_flow >&- 2>&-
 	insmod sch_hfsc >&- 2>&-
 	insmod sch_sfq >&- 2>&-
-}
-initialize_qos_wan2()
-{
-	wan_proto=$(uci get network.wan2.proto 2>/dev/null)
-	if [ "$wan_proto" = "pppoe" ] ; then
-		#On my PPPoE WAN link I see the following overhead
-		#MAC Header=14 & PPPoE=8 plus I read that an addition ATM=8 is added by the modem"
-		overhead="stab linklayer atm overhead 30 mtu 1492 tsize 128 "
-	#else
-		#Even for the ethernet cases I do not think the qdisc sees the MAC Header
-		#but for now leave this out.
-		#overhead="stab linklayer ethernet overhead 14 mpu 64"
-	fi
-
-	total_mem="$(sed -e '/^MemTotal: /!d; s#MemTotal: *##; s# kB##g' /proc/meminfo)"
-	if [ "$total_mem" -lt 16000 ] ; then
-		sfq_depth="depth 32";
-	else
-		sfq_depth="";
-	fi
-
-	#load download variables
-	total_bandwidth=""
-	default_class=""
-	load_all_config_options "$config_file_name" "download"
-	if [ -n "$total_bandwidth" ] ; then
-		total_download_bandwidth="$total_bandwidth"
-	else
-		total_download_bandwidth=-1
-	fi
-	download_default_class="$default_class"
-
-	if [ $total_download_bandwidth -ge 0 ] ; then
-		#wan2 set
-		# Set up the InterMediate Queuing device (IMQ)
-		ifconfig imq1 up
-		# Attach ingress queuing discipline to IMQ interface
-		tc qdisc add dev imq1 root handle 1:0 hfsc default 1
-		tc class add dev imq1 parent 1:0 classid 1:1 hfsc ls rate 1000Mbit ul rate ${total_download_bandwidth}kbit
-
-		#load download classes
-		download_class_list=$(load_all_config_sections "$config_file_name" "download_class")
-		for dclass_name in $download_class_list ; do
-			percent_bandwidth=""
-			min_bandwidth=""
-			max_bandwidth=""
-			minRTT=""
-
-			load_all_config_options "$config_file_name" "$dclass_name"
-			if [ -z "$percent_bandwidth" ] ; then
-				percent_bandwidth="0"
-			fi
-			if [ -z "$min_bandwidth" ] ; then
-				min_bandwidth="-1"
-			fi
-			if [ -z "$max_bandwidth" ] ; then
-				max_bandwidth="-1"
-			fi
-
-			classdef="$percent_bandwidth $max_bandwidth $min_bandwidth $minRTT"
-			eval $dclass_name=\"\$classdef\"  #"#comment quote here so formatting in editor isn't FUBAR
-		done
-
-		class_mark_list=""
-		download_shift=20
-		next_class_index=2
-		next_classid=$(printf "0x%X" $(($next_class_index << $download_shift)) )
-		def_download_idx=$next_class_index
-		def_download_class=$next_classid
-		
-		for dclass_name in $download_class_list ; do
-
-			class_mark_list="$class_mark_list$dclass_name:$next_classid  "
-			dclass_def=$(eval echo "\$$dclass_name")
-
-			class_mark_list_wan2="$class_mark_list_wan2$dclass_name:$next_classid_wan2  "
-
-			#bandwidth for this class
-			m2=$(( 10 * $(echo $dclass_def | awk ' {print $1}' ) ))
-
-			#The Gargoyle ACC switches from optimum WAN utilization mode to minimum RTT mode
-			#when it detects a class has become active that includes a two part service curve.
-			#So to trigger this behaviour we create two parts curves when minRTT is set. 
-
-			minRTT=$( echo $dclass_def | awk ' {print $4}' )
-			if [ "$minRTT" == "Yes" ] ; then
-				ll_str=" ls m1 ${m2}Mbit d 20ms m2 ${m2}Mbit"
-			else
-				ll_str=" ls m2 ${m2}Mbit"
-			fi
-
-			#is there a minimum bandwidth specified?
-			min_bandwidth=$( echo $dclass_def | awk ' {print $3}' )
-			rt_str=""
-			if [ "$min_bandwidth" -gt 0 ] ; then
-				if [ "$minRTT" == "Yes" ] ; then
-					rt_str=" rt m1 $((2*$min_bandwidth))kbit d 20ms m2 ${min_bandwidth}kbit"
-				else
-					rt_str=" rt m2 ${min_bandwidth}kbit"
-				fi
-			fi
-
-			#is there an upper limit specified?
-			max_bandwidth=$( echo $dclass_def | awk ' {print $2}' )
-			ul_str=""
-			if [ "$max_bandwidth" -ge 0 ] ; then
-				ul_str=" ul m2 ${max_bandwidth}kbit"
-			else
-				max_bandwidth="$total_download_bandwidth"
-			fi
-
-			tbw=$(($max_bandwidth*150/8));
-			if [ "$tbw" -lt 5000 ] ; then
-				tbw=5000
-			fi
-
-			$echo_on
-
-			#wan2 set 
-			tc class add dev imq1 parent 1:1 classid 1:$next_class_index hfsc $rt_str $ll_str $ul_str
-			#Assume average download packet size is 1000 bytes.
-			tc qdisc add dev imq1 parent 1:$next_class_index handle $next_class_index:1 sfq headdrop limit $(($tbw/1000)) $sfq_depth divisor 256  
-			tc filter add dev imq1 parent 1:0 prio $next_class_index protocol ip handle $next_classid fw flowid 1:$next_class_index
-			tc filter add dev imq1 parent $next_class_index: handle 1 flow divisor 256 map key dst and 0xff
-			$echo_off
-
-			if [ "$download_default_class" = "$dclass_name" ] ; then
-				def_download_idx=$next_class_index
-				def_download_class=$next_classid
-			fi
-
-			next_class_index=$(($next_class_index+1))
-			next_classid=$(printf "0x%X" $(($next_class_index << $download_shift)) )
-		done
-
-		$echo_on
-
-		#wan2
-		tc qdisc change dev imq1 $overhead root handle 1:0 hfsc default $def_download_idx
-
-		# Create ingress chain
-		iptables -t mangle -N qos_ingress_wan2
-
-		# Mark ingress in FORWARD and INPUT chains to make sure any DNAT (virt. server) is taken into account
-		iptables -t mangle -A FORWARD -i $qos_interface_wan2 -j qos_ingress_wan2
-		iptables -t mangle -A INPUT -i $qos_interface_wan2 -j qos_ingress_wan2
-
-		#Now the rest of the user entered rules.
-		$echo_off
-		apply_all_rules "download_rule" "$class_mark_list" "qos_ingress_wan2" "mangle" "$download_mask" "$mark_mask_wan2"
-		$echo_on
-
-		#set default class mark first in case we don't match anything
-		iptables -t mangle -I qos_ingress_wan2 -j MARK --set-mark $def_download_class/$mark_mask_wan2
-
-		#if we already set a mark in quota chain, we need to save that mark to the connmark, then return so it doesn't get over-written
-		iptables -t mangle -I qos_ingress_wan2 -m mark ! --mark 0x0 -j RETURN
-		iptables -t mangle -I qos_ingress_wan2 -m mark ! --mark 0x0 -j CONNMARK --save-mark --mask $mark_mask_wan2
-
-		#make sure all packets get sent through IMQ
-		iptables -t mangle -I qos_ingress_wan2 -j IMQ --todev 1
-
-		#save current mark to connmark at end of chain
-		iptables -t mangle -A qos_ingress_wan2 -j CONNMARK --save-mark --mask $mark_mask_wan2
-
-		$echo_off
-	fi
-
-}
-initialize_qos()
-{
-	#initialize layer7_marker if necessary
-	#create_l7marker_chain
 
 	#Set the atm parameters if pppoe is being used.
 	wan_proto=$(uci get network.wan.proto 2>/dev/null)
@@ -502,7 +332,7 @@ initialize_qos()
 	else
 		total_upload_bandwidth=-1
 	fi
-
+	
 	upload_default_class="$default_class"
 
 	if [ $total_upload_bandwidth -ge 0 ] ; then
@@ -526,6 +356,7 @@ initialize_qos()
 			classdef="$percent_bandwidth $max_bandwidth $min_bandwidth"
 			eval $uclass_name=\"\$classdef\"  #"#comment quote here so formatting in editor isn't FUBAR
 		done
+
 
 		# Attach egress queuing discipline to QoS interface, now with temperary default
 		$echo_on
@@ -625,7 +456,9 @@ initialize_qos()
 		#set default class mark first in case we don't match anything
 		iptables -t mangle -I qos_egress -j MARK --set-mark $def_upload_class
 
-		#don't --save-mark to connmark, because wifidog may set mark to 0x2
+		#if we already set a mark in quota chain, we need to save that mark to the connmark, then return so it doesn't get over-written
+		iptables -t mangle -I qos_egress -m mark ! --mark 0x0 -j RETURN
+		iptables -t mangle -I qos_egress -m mark ! --mark 0x0 -j CONNMARK --save-mark --mask $upload_mask
 
 		# save current mark to connmark at end of chain
 		iptables -t mangle -A qos_egress -j CONNMARK --save-mark --mask $upload_mask
@@ -633,6 +466,7 @@ initialize_qos()
 		$echo_off
 
 	fi
+
 
 	#load download variables
 	total_bandwidth=""
@@ -645,14 +479,20 @@ initialize_qos()
 	fi
 	download_default_class="$default_class"
 
+	#Only if both upload and download QoS are enabled can we enable Gargoyle active QoS monitor
+	if [ $total_download_bandwidth -eq 0 ] || [ $total_upload_bandwidth -eq 0 ] ; then
+		qos_monenabled = "false" ;
+	fi
+
 	if [ $total_download_bandwidth -ge 0 ] ; then
 		# Set up the InterMediate Queuing device (IMQ)
-		ifconfig imq0 up
+		ip link set imq0 up
 
 		# Attach ingress queuing discipline to IMQ interface
 		tc qdisc add dev imq0 root handle 1:0 hfsc default 1
 
 		tc class add dev imq0 parent 1:0 classid 1:1 hfsc ls rate 1000Mbit ul rate ${total_download_bandwidth}kbit
+
 		#load download classes
 		download_class_list=$(load_all_config_sections "$config_file_name" "download_class")
 		for dclass_name in $download_class_list ; do
@@ -671,19 +511,21 @@ initialize_qos()
 			if [ -z "$max_bandwidth" ] ; then
 				max_bandwidth="-1"
 			fi
-
+            
 			classdef="$percent_bandwidth $max_bandwidth $min_bandwidth $minRTT"
 			eval $dclass_name=\"\$classdef\"  #"#comment quote here so formatting in editor isn't FUBAR
 		done
 
+
 		class_mark_list=""
-		download_shift=16
+		download_shift=8
 		next_class_index=2
 		next_classid=$(printf "0x%X" $(($next_class_index << $download_shift)) )
 		def_download_idx=$next_class_index
 		def_download_class=$next_classid
 
 		for dclass_name in $download_class_list ; do
+
 
 			class_mark_list="$class_mark_list$dclass_name:$next_classid  "
 			dclass_def=$(eval echo "\$$dclass_name")
@@ -694,7 +536,7 @@ initialize_qos()
 			#The Gargoyle ACC switches from optimum WAN utilization mode to minimum RTT mode
 			#when it detects a class has become active that includes a two part service curve.
 			#So to trigger this behaviour we create two parts curves when minRTT is set. 
-
+            
 			minRTT=$( echo $dclass_def | awk ' {print $4}' )
 			if [ "$minRTT" == "Yes" ] ; then
 				ll_str=" ls m1 ${m2}Mbit d 20ms m2 ${m2}Mbit"
@@ -758,30 +600,101 @@ initialize_qos()
 
 		#Now the rest of the user entered rules.
 		$echo_off
-		apply_all_rules "download_rule" "$class_mark_list" "qos_ingress" "mangle" "$download_mask" "$mark_mask_wan"
+		apply_all_rules "download_rule" "$class_mark_list" "qos_ingress" "mangle" "$download_mask"
 		$echo_on
 
 		#set default class mark first in case we don't match anything
-		iptables -t mangle -I qos_ingress -j MARK --set-mark $def_download_class/$mark_mask_wan
+		iptables -t mangle -I qos_ingress -j MARK --set-mark $def_download_class
 
 		#if we already set a mark in quota chain, we need to save that mark to the connmark, then return so it doesn't get over-written
 		iptables -t mangle -I qos_ingress -m mark ! --mark 0x0 -j RETURN
-		iptables -t mangle -I qos_ingress -m mark ! --mark 0x0 -j CONNMARK --save-mark --mask $mark_mask_wan
+		iptables -t mangle -I qos_ingress -m mark ! --mark 0x0 -j CONNMARK --save-mark --mask $download_mask
 
 		#make sure all packets get sent through IMQ
 		iptables -t mangle -I qos_ingress -j IMQ --todev 0
 
 		#save current mark to connmark at end of chain
-		iptables -t mangle -A qos_ingress -j CONNMARK --save-mark --mask $mark_mask_wan
+		iptables -t mangle -A qos_ingress -j CONNMARK --save-mark --mask $download_mask
+
+		$echo_off
+
+	fi
+
+	#Enable Gargoyle active QoS monitor
+	if [ $total_upload_bandwidth -ge 0 ] && [ $total_download_bandwidth -ge 0 ] && [ "$qos_monenabled" = "true" ] ; then
+
+		$echo_on
+
+		#if the user specified a ping target then use that otherwise use the gateway.
+		if [ -z "$ptarget_ip" ] ; then
+			old_ifs="$IFS"
+			IFS=$(printf "\n\r")
+			targets=$(traceroute -n -I -w 1 -q 2 -m6 100.100.100.100 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}.*ms' | grep -v '8.8.8.8' | sed 's/ms//g')
+			ptarget_ip=""
+			for t in $targets ; do
+				if [ -z "$ptarget_ip" ] ; then
+					#ip of potential gateway
+					target=$(echo "$t" | awk '{ print $1 ; }')
+					target_is_local=$(echo "$target" | grep -E '^(192\.168|10\.|172\.1[6789]\.|172\.2[0-9]\.|172\.3[01]\.|0\.0\.0\.0|127\.|255\.)') 
+
+
+					# round or rather ceil() time up to nearest millisecond since bash doesn't like working with decimals
+					time=$(echo "$t" | awk ' { print $3 ; }' | sed 's/\..*$//g')
+					time=$(( $time + 1 ))
+	
+					if [ -z "$target_is_local" ] || [ "$time" -gt 5 ] ; then
+						ptarget_ip="$target"
+					fi
+				fi
+			done
+			IFS="$old_ifs"
+			
+			#in case ping target is still not defined use default gateway
+			if [ -z "$ptarget_ip" ] ; then
+				ptarget_ip=$(gargoyle_header_footer -i gargoyle | sed -n 's/.*currentWanGateway.*"\(.*\)".*/\1/p')
+			fi
+		fi
+
+
+		
+		#Ping responses for the ping target never go to the IMQ device.
+		iptables -t mangle -I qos_ingress -p icmp --icmp-type 0 -d $wan_ip -s $ptarget_ip -j RETURN
+
+		#Make a class to handle the outgoing ping requests from the router.
+		#These pings 84 bytes each for ethernet plus 22 more for PPPoE connections, allowing a maximum rate of 200ms we get 2.6kbps
+		tc class add dev $qos_interface parent 1:1 classid 1:127 hfsc rt umax 106 dmax 10ms rate 4kbit
+		tc qdisc add dev $qos_interface parent 1:127 pfifo
+		tc filter add dev $qos_interface parent 1:0 prio 1 protocol ip handle 127 fw flowid 1:127
+
+		#Mark all ping requests from the router to the ptarget to the above special class overriding any other mark.
+		iptables -t mangle -I qos_egress -p icmp --icmp-type 8 -s $wan_ip -d $ptarget_ip -j MARK --set-mark 127
+
+		#Start the monitor
+		if [ -n "$pinglimit" ] ; then
+			#In manual mode the user selects the active mode pinglimit indirectly.  qosmon always measures the RTT of a ping on an unloaded link.
+			#This is called the ping entitlement.  With a manual entry the minRTT ping limit is 110% of this measured ping entitlement
+			#and the active mode ping limit is the minRTT limit plus the user entered value.  See the qosmon source code for more details.
+			#In summary manaully entered ping times only affect the active mode, not the minRTT mode ping time limits.
+			qosmon -a -b 800 $ptarget_ip $total_download_bandwidth $pinglimit
+		else
+			#In auto mode we calculate transmission delay based on our bandwidth and then ask qosmon
+			#to add this value to its measured ping entitlement to form the final ping limit.
+			pinglimit=$((1500*10*2/3/$total_download_bandwidth+1500*10/$total_upload_bandwidth+2))
+			qosmon -a -b 800 $ptarget_ip $total_download_bandwidth $pinglimit
+		fi
 
 		$echo_off
 	fi
+
+	update_markfile
+
 }
+
 
 define_interface()
 {
 	#Wait for up to 15 seconds for the wan interface to indicate it is up.
-	local wait_sec=15
+	wait_sec=15
 	while [ -z $(uci -P /var/state get network.wan.up 2>/dev/null) ] && [ $wait_sec -gt 0 ] ; do
 		sleep 1
 		wait_sec=$(($wait_sec - 1))
@@ -798,29 +711,9 @@ define_interface()
 
 	wan_ip=$(ifconfig $qos_interface | sed -n 's/.*inet addr:\([0-9/.]*\).*/\1/p')
 	local_ip=$(ifconfig br-lan | sed -n 's/.*inet addr:\([0-9/.]*\).*/\1/p')
-}
-
-wan2_start()
-{
-	supported_mwan3=`sh /lib/supported_mwan3.sh`
-	if [ $supported_mwan3 == "no" ] ; then
-		return "0"
-	fi
-
-	if_wan2_start=`uci get network.wan2 2>/dev/null`
-	if [ "$if_wan2_start" != "interface" ] ; then
-		return "0"
-	fi
-	#wan
-	qos_interface_wan2=$(uci -P /var/state get network.wan2.ifname 2>/dev/null)
-	if [ -z $qos_interface_wan2 ] ; then
-		qos_interface_wan2=$(uci -P /var/state get network.wan2.device 2>/dev/null)
-	fi
-
-	wan2_ip=$(ifconfig $qos_interface_wan2 | sed -n 's/.*inet addr:\([0-9/.]*\).*/\1/p')
-	return "1"
 
 }
+
 stop()
 {
 	#if already in process of being initialized, do not continue
@@ -833,30 +726,47 @@ stop()
 		exit
 	fi
 
+	#Kill the qos monitor in case it is running
+	killall qosmon 2>/dev/null
+
+
 	$echo_on
 	for iface in $(tc qdisc show | grep hfsc | awk '{print $5}'); do
 		tc qdisc del dev "$iface" root
 	done
 
 	# eliminate existing rules in mangle table
-	iptables -t mangle -F qos_egress 2>/dev/null
-	iptables -t mangle -F qos_ingress 2>/dev/null
-	iptables -t mangle -F qos_ingress_wan2 2>/dev/null
-	iptables-save | grep qos_ | grep "A " | sed "s/-A/iptables -t mangle -D/g" | sh
-	iptables -t mangle -X qos_egress 2>/dev/null
-	iptables -t mangle -X qos_ingress 2>/dev/null
-	iptables -t mangle -X qos_ingress_wan2 2>/dev/null
+	delete_chain_from_table "mangle" "qos_egress"
+	delete_chain_from_table "mangle" "qos_ingress"
 	$echo_off
 
 }
+
 
 start()
 {
 	test_total_up=$(uci get qos_gargoyle.upload.total_bandwidth 2>/dev/null)
 	test_total_down=$(uci get qos_gargoyle.download.total_bandwidth 2>/dev/null)
 	if [ -z "$test_total_up" ] && [ -z "$test_total_down" ] ;then
+		disable
 		exit 0
 	fi
+
+
+	#This script is called by a hotplug event.  If the WAN comes
+	#up fast we could end up trying to run qos_gargoyle while the
+	#boot is still in progress which causes issues in low memory
+	#routers.  To avoid this we check to see if rcS is still running 
+	#or not.  If it is we wait until it completes or 60 seconds.
+	cnt=0
+	while ps | grep '[//]rcS S boot' >/dev/null
+		do
+			sleep 4
+			cnt=`expr $cnt + 1`
+			if [ $cnt -ge 15 ] ; then
+				break;
+			fi
+		done
 
 	stop
 	touch "$lock_file"
@@ -864,49 +774,22 @@ start()
 	#load qos_interface from global variables
 	define_interface
 	if [ -n "$qos_interface" ] ; then
+
 		load_all_config_options "$config_file_name" "global"
-		wan2_start
-		supported_ok=$?
-		if [ $supported_ok  == "1" ]; then
-			insmod_imq 2
-			initialize_qos
-			initialize_qos_wan2
-		else
-			insmod_imq 1
-			initialize_qos
-		fi
-		update_markfile
+		initialize_qos
 	fi
 
 	rm -rf "$lock_file"
+
 }
 
 restart()
 {
-	start
+	echo_on="set -x"
+	echo_off="set +x"
+	start "$1"
 }
-show_wan2()
-{
-	#load global variables
-	load_all_config_options "$config_file_name" "global"
 
-	#load qos_interface from global variables
-	wan2_start
-	if [ $? == "1" ]; then
-
-		echo "Egress configuration on $qos_interface_wan2"	
-		tc -s qdisc show dev $qos_interface_wan2
-		tc -s class show dev $qos_interface_wan2
-		tc -s filter show dev $qos_interface_wan2
-
-		echo "Ingress configuration in imq1"
-		iptables -t mangle -vnL qos_ingress_wan2 2>/dev/null
-		tc -s qdisc show dev imq1
-		tc -s class show dev imq1
-		tc -s filter show dev imq1
-		tc -s filter show dev imq1 parent 2:
-	fi
-}
 show()
 {
 	#load global variables
@@ -927,15 +810,13 @@ show()
 	tc -s class show dev imq0
 	tc -s filter show dev imq0
 	tc -s filter show dev imq0 parent 2:
-	show_wan2
+	
+
 }
 
 boot()
 {
-	echo_on="set -x"
-	echo_off="set +x"
-
-	start
+	#Do nothing during init.  Start is called by hotplug.
 	return
 }
 
