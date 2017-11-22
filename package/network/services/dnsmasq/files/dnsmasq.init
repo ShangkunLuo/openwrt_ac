@@ -146,7 +146,12 @@ dnsmasq() {
 	append_parm "$cfg" "domain" "--domain"
 	append_parm "$cfg" "local" "--server"
 	config_list_foreach "$cfg" "server" append_server
-	config_list_foreach "$cfg" "address" append_address
+
+	config_get_bool ADDRESS_SWITCH "$cfg" address_switch 0
+	if [ $ADDRESS_SWITCH -eq 1 ]; then
+		config_list_foreach "$cfg" "address" append_address
+	fi
+
 	config_list_foreach "$cfg" "ipset" append_ipset
 	config_list_foreach "$cfg" "interface" append_interface
 	config_list_foreach "$cfg" "notinterface" append_notinterface
