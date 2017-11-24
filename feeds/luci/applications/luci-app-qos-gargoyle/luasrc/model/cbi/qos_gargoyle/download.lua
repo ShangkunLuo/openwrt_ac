@@ -113,7 +113,7 @@ end
 o = rule_s:option(Value, "source", translate("Source IP(s)"))
 o:value("", translate("All"))
 wa.cbi_add_knownips(o)
-o.datatype = "ipmask4"
+o.datatype = "ip4addr"
 
 o = rule_s:option(Value, "srcport", translate("Source Port(s)"))
 o:value("", translate("All"))
@@ -122,7 +122,7 @@ o.datatype  = "or(port, portrange)"
 o = rule_s:option(Value, "destination", translate("Destination IP(s)"))
 o:value("", translate("All"))
 wa.cbi_add_knownips(o)
-o.datatype = "ipmask4"
+o.datatype = "ip4addr"
 
 o = rule_s:option(Value, "dstport", translate("Destination Port(s)"))
 o:value("", translate("All"))

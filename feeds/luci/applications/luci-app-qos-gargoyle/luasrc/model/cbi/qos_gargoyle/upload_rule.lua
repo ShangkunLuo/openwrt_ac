@@ -47,7 +47,7 @@ o = s:option(Value, "source", translate("Source IP(s)"),
 	.. "man page)."))
 o:value("", translate("All"))
 wa.cbi_add_knownips(o)
-o.datatype = "ipmask4"
+o.datatype = "ip4addr"
 
 o = s:option(Value, "srcport", translate("Source Port(s)"),
 	translate("Packet's source port, can be a range (eg. 80-90)."))
@@ -59,7 +59,7 @@ o = s:option(Value, "destination", translate("Destination IP(s)"),
 	.. "iptables man page)."))
 o:value("", translate("All"))
 wa.cbi_add_knownips(o)
-o.datatype = "ipmask4"
+o.datatype = "ip4addr"
 
 o = s:option(Value, "dstport", translate("Destination Port(s)"),
 	translate("Packet's destination port, can be a range (eg. 80-90)."))
