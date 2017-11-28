@@ -25,15 +25,19 @@ log_error () {
 # $1 class name $2 speed
 add_upload_class () {
     uci set qos_gargoyle.$1=upload_class
+    uci set qos_gargoyle.$1.name=$1
     uci set qos_gargoyle.$1.percent_bandwidth=$percent_bandwidth
-    uci set qos_gargoyle.$1.max_bandwidth=speed
+    uci set qos_gargoyle.$1.min_bandwidth=0
+    uci set qos_gargoyle.$1.max_bandwidth=$2
 }
 
 # $1 class name $2 speed
 add_download_class () {
     uci set qos_gargoyle.$1=download_class
+    uci set qos_gargoyle.$1.name=$1
     uci set qos_gargoyle.$1.percent_bandwidth=$percent_bandwidth
-    uci set qos_gargoyle.$1.max_bandwidth=speed
+    uci set qos_gargoyle.$1.min_bandwidth=0
+    uci set qos_gargoyle.$1.max_bandwidth=$2
 }
 
 # $1 class name
@@ -49,7 +53,7 @@ clean_upload_class () {
             break
         fi
 
-        del_class qos_gargoyle.@upload_class[$i]
+        del_class @upload_class[$i]
     done
 }
 
@@ -61,7 +65,7 @@ clean_download_class () {
             break
         fi
 
-        del_class qos_gargoyle.@download_class[$i]
+        del_class @download_class[$i]
     done
 }
 
@@ -73,7 +77,7 @@ clean_class () {
 # $1 ip address $2 speed(kbps)
 add_upload_rule () {
     add_upload_class uclass_${1//./_} $2
-    uci add qos_gargoyle.upload_rule_${1//./_}=upload_rule
+    uci set qos_gargoyle.upload_rule_${1//./_}=upload_rule
     uci set qos_gargoyle.upload_rule_${1//./_}.source=$1
     uci set qos_gargoyle.upload_rule_${1//./_}.class=uclass_${1//./_}
 }
@@ -81,7 +85,7 @@ add_upload_rule () {
 # $1 ip address $2 speed(kbps)
 add_download_rule () {
     add_download_class dclass_${1//./_} $2
-    uci add qos_gargoyle.download_rule_${1//./_}=download_rule
+    uci set qos_gargoyle.download_rule_${1//./_}=download_rule
     uci set qos_gargoyle.download_rule_${1//./_}.source=$1
     uci set qos_gargoyle.download_rule_${1//./_}.class=dclass_${1//./_}
 }
@@ -143,15 +147,15 @@ clean_rule () {
     clean_download_rule
 }
 
-add_default_upload_rule () {
-    uci add qos_gargoyle.upload_rule_default=upload_rule
-    uci set qos_gargoyle.upload_rule_default.class=uclass_default
-}
+# add_default_upload_rule () {
+#     uci set qos_gargoyle.upload_rule_default=upload_rule
+#     uci set qos_gargoyle.upload_rule_default.class=uclass_default
+# }
 
-add_default_download_rule () {
-    uci add qos_gargoyle.download_rule_default=download_rule
-    uci set qos_gargoyle.download_rule_default.class=dclass_default
-}
+# add_default_download_rule () {
+#     uci set qos_gargoyle.download_rule_default=download_rule
+#     uci set qos_gargoyle.download_rule_default.class=dclass_default
+# }
 
 reload () {
     uci commit qos_gargoyle
