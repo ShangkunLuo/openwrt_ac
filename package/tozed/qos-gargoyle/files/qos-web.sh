@@ -49,7 +49,7 @@ clean_upload_class () {
             break
         fi
 
-        del_class $class
+        del_class qos_gargoyle.@upload_class[$i]
     done
 }
 
@@ -61,7 +61,7 @@ clean_download_class () {
             break
         fi
 
-        del_class $class
+        del_class qos_gargoyle.@download_class[$i]
     done
 }
 
