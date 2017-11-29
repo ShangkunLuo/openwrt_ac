@@ -3,7 +3,7 @@
 # NOTICE:
 #
 # *** upload and download name is reversed in gargoyle QoS ***
-# *** 上传和下载的名字在 gargoyle QoS 里和一般理解是相反的 ***
+# *** 上传和下载的意义在 gargoyle QoS 里和一般理解是相反的 ***
 #
 # *** This script use gargoyle QoS upload and download name ***
 # *** 这个脚本里使用 gargoyle QoS 的叫法 ***
@@ -38,6 +38,30 @@ add_download_class () {
     uci set qos_gargoyle.$1.percent_bandwidth=$percent_bandwidth
     uci set qos_gargoyle.$1.min_bandwidth=0
     uci set qos_gargoyle.$1.max_bandwidth=$2
+}
+
+# $1 speed(kbps)
+add_default_upload_class () {
+    uci set qos_gargoyle.uclass_default=upload_class
+    uci set qos_gargoyle.uclass_default.name=uclass_default
+    uci set qos_gargoyle.uclass_default.percent_bandwidth=80
+    uci set qos_gargoyle.uclass_default.min_bandwidth=0
+    uci set qos_gargoyle.uclass_default.max_bandwidth=$1
+}
+
+# $1 speed(kbps)
+add_default_download_class () {
+    uci set qos_gargoyle.dclass_default=download_class
+    uci set qos_gargoyle.dclass_default.name=dclass_default
+    uci set qos_gargoyle.dclass_default.percent_bandwidth=80
+    uci set qos_gargoyle.dclass_default.min_bandwidth=0
+    uci set qos_gargoyle.dclass_default.max_bandwidth=$1
+}
+
+# $1 speed(kbps)
+add_default_class () {
+    add_default_upload_class $1
+    add_default_download_class $1
 }
 
 # $1 class name
