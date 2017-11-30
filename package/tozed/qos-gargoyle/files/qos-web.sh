@@ -181,11 +181,6 @@ clean_rule () {
 #     uci set qos_gargoyle.download_rule_default.class=dclass_default
 # }
 
-reload () {
-    uci commit qos_gargoyle
-    /etc/init.d/qos_gargoyle reload
-}
-
 # $1 speed(kbps)
 set_upload_speed () {
     uci set qos_gargoyle.upload.total_bandwidth=$1
@@ -201,7 +196,7 @@ set_download_speed () {
 web_show_rule () {
     rm -f $qos_rule_file
 
-    for i in `seq 0 $num_rule`; do
+    for i in `seq 1 $num_rule`; do
         local upload_ip=`uci get qos_gargoyle.@upload_rule[$i].source 2>/dev/null`
         if [ -z $upload_ip ]; then
             log_debug "web_show_rule: stop at qos_gargoyle.@upload_class[$i]"
@@ -233,10 +228,41 @@ web_show_rule () {
 
 web_enable () {
     /etc/init.d/qos_gargoyle enable
+    /etc/init.d/qos_gargoyle restart
 }
 
 web_disable () {
     /etc/init.d/qos_gargoyle disable
+    /etc/init.d/qos_gargoyle restart
+}
+
+web_restart () {
+    uci commit qos_gargoyle
+    /etc/init.d/qos_gargoyle restart
+}
+
+# see comment at the beginning of this file
+web_get_upload_speed () {
+    local speed=`uci get qos_gargoyle.download.total_bandwidth 2>/dev/null`
+    echo -n $speed
+}
+
+# see comment at the beginning of this file
+web_get_download_speed () {
+    local speed=`uci get qos_gargoyle.upload.total_bandwidth 2>/dev/null`
+    echo -n $speed
+}
+
+# see comment at the beginning of this file
+# $1 speed(kbps)
+web_set_upload_speed () {
+    uci set qos_gargoyle.download.total_bandwidth=$1
+}
+
+# see comment at the beginning of this file
+# $1 speed(kbps)
+web_set_download_speed () {
+    uci set qos_gargoyle.upload.total_bandwidth=$1
 }
 
 web_change_rule () {
@@ -249,6 +275,4 @@ web_change_rule () {
 
         add_rule $ip $upload_speed $download_speed
     done < $qos_rule_file_new
-
-    add_default_rule
 }
