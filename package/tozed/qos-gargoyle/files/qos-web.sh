@@ -254,3 +254,11 @@ web_change_rule () {
 
     reload
 }
+
+# $1 upload speed(kbps) $2 download speed(kbps)
+web_set_default_rule () {
+    set_upload_speed $1
+    set_download_speed $2
+
+    reload
+}
