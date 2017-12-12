@@ -8,9 +8,10 @@
 # *** This script use gargoyle QoS upload and download name ***
 # *** 这个脚本里使用 gargoyle QoS 的叫法 ***
 
-qos_rule_file=/tmp/qos_rule_file
-qos_rule_file_new=/tmp/qos_rule_file_new
-qos_total_speed_file=/tmp/qos_total_speed_file
+qos_status_file=/tmp/qos_status
+qos_rule_file=/tmp/qos_rule
+qos_rule_new_file=/tmp/qos_rule_new
+qos_total_speed_file=/tmp/qos_total_speed
 num_rule=20
 num_class=20
 percent_bandwidth=10
@@ -21,6 +22,47 @@ log_debug () {
 
 log_error () {
     logger -s -p ERROR -t "QoS Web: " $1
+}
+
+# $1 ip address
+get_postfix () {
+    # replace . / with _
+    local postfix=${1//./_}
+    postfix=`echo $postfix | sed 's,/,_,'`
+
+    echo $postfix
+}
+
+# $1 ip address
+get_upload_class_name () {
+    local postfix=$(get_postfix $1)
+    local upload_class_name=uclass_$postfix
+
+    echo $upload_class_name
+}
+
+# $1 ip address
+get_upload_rule_name () {
+    local postfix=$(get_postfix $1)
+    local upload_rule_name=upload_rule_$postfix
+
+    echo $upload_rule_name
+}
+
+# $1 ip address
+get_download_class_name () {
+    local postfix=$(get_postfix $1)
+    local download_class_name=dclass_$postfix
+
+    echo $download_class_name
+}
+
+# $1 ip address
+get_download_rule_name () {
+    local postfix=$(get_postfix $1)
+    local download_rule_name=download_rule_$postfix
+
+    echo $download_rule_name
 }
 
 # $1 class name $2 speed
@@ -101,38 +143,50 @@ clean_class () {
 
 # $1 ip address $2 speed(kbps)
 add_upload_rule () {
-    add_upload_class uclass_${1//./_} $2
-    uci set qos_gargoyle.upload_rule_${1//./_}=upload_rule
-    uci set qos_gargoyle.upload_rule_${1//./_}.destination=$1
-    uci set qos_gargoyle.upload_rule_${1//./_}.class=uclass_${1//./_}
+    local upload_class_name=$(get_upload_class_name $1)
+    local upload_rule_name=$(get_upload_rule_name $1)
+
+    add_upload_class $upload_class_name $2
+    uci set qos_gargoyle.${upload_rule_name}=upload_rule
+    uci set qos_gargoyle.${upload_rule_name}.destination=$1
+    uci set qos_gargoyle.${upload_rule_name}.class=$upload_class_name
 }
 
 # $1 ip address $2 speed(kbps)
 add_download_rule () {
-    add_download_class dclass_${1//./_} $2
-    uci set qos_gargoyle.download_rule_${1//./_}=download_rule
-    uci set qos_gargoyle.download_rule_${1//./_}.source=$1
-    uci set qos_gargoyle.download_rule_${1//./_}.class=dclass_${1//./_}
+    local download_class_name=$(get_download_class_name $1)
+    local download_rule_name=$(get_download_rule_name $1)
+
+    add_download_class $download_class_name $2
+    uci set qos_gargoyle.${download_rule_name}=download_rule
+    uci set qos_gargoyle.${download_rule_name}.source=$1
+    uci set qos_gargoyle.${download_rule_name}.class=$download_class_name
 }
 
 # $1 ip address $2 upload speed(kbps) $3 download speed(kbps)
 add_rule () {
-    add_upload_rule $1 $2
-    add_download_rule $1 $3
+    add_upload_rule $1 $3
+    add_download_rule $1 $2
 }
 
 # $1 ip address
 del_upload_rule () {
-    uci delete qos_gargoyle.upload_rule_${1//./_}
+    local upload_rule_name=$(get_upload_rule_name $1)
+    local upload_class_name=$(get_upload_class_name $1)
+
+    uci delete qos_gargoyle.${upload_rule_name}
     # must delete related class
-    del_class uclass_${1//./_}
+    del_class $upload_class_name
 }
 
 # $1 ip address
 del_download_rule () {
-    uci delete qos_gargoyle.download_rule_${1//./_}
+    local download_rule_name=$(get_download_rule_name $1)
+    local download_class_name=$(get_download_class_name $1)
+
+    uci delete qos_gargoyle.${download_rule_name}
     # must delete related class
-    del_class dclass_${1//./_}
+    del_class $download_class_name
 }
 
 # $1 ip address
@@ -209,8 +263,8 @@ web_show_rule () {
             break
         fi
 
-        local upload_class=`uci get qos_gargoyle.@upload_rule[$i].class 2>/dev/null`
-        local upload_speed=`uci get qos_gargoyle.${upload_class}.max_bandwidth 2>/dev/null`
+        local upload_class_name=$(get_upload_class_name $upload_ip)
+        local upload_speed=`uci get qos_gargoyle.${upload_class_name}.max_bandwidth 2>/dev/null`
         if [ -z "$upload_speed" ]; then
             log_error "qos_gargoyle.@upload_rule[$i]: error: upload_speed is null"
             continue
@@ -222,14 +276,22 @@ web_show_rule () {
             continue
         fi
 
-        local download_class=`uci get qos_gargoyle.@download_rule[$i].class 2>/dev/null`
-        local download_speed=`uci get qos_gargoyle.${download_class}.max_bandwidth 2>/dev/null`
+        local download_class_name=$(get_download_class_name $download_ip)
+        local download_speed=`uci get qos_gargoyle.${download_class_name}.max_bandwidth 2>/dev/null`
         if [ -z "$download_speed" ]; then
             log_error "qos_gargoyle.@download_rule[$i]: error: download_speed is null"
             continue
         fi
         echo $upload_ip $download_speed $upload_speed >> $qos_rule_file
     done
+}
+
+web_qos_status () {
+    local enabled
+
+    [ -f /etc/rc.d/S50qos_gargoyle ] && enabled=1 || enabled=0
+
+    echo -n $enabled > $qos_status_file
 }
 
 web_enable () {
@@ -277,6 +339,9 @@ web_set_total_speed () {
 }
 
 case $1 in
+    web_qos_status)
+        web_qos_status
+        ;;
     web_enable)
         web_enable
         ;;
@@ -297,6 +362,6 @@ case $1 in
         web_change_rule
         ;;
     *)
-        log_error "unknown command $@"
+        log_error "unknown command: $@"
         ;;
 esac
