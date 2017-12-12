@@ -10,6 +10,7 @@
 
 qos_rule_file=/tmp/qos_rule_file
 qos_rule_file_new=/tmp/qos_rule_file_new
+qos_total_speed_file=/tmp/qos_total_speed_file
 num_rule=20
 num_class=20
 percent_bandwidth=10
@@ -239,6 +240,7 @@ web_enable () {
 web_disable () {
     /etc/init.d/qos_gargoyle disable
     /etc/init.d/qos_gargoyle reload
+    /etc/init.d/network restart
 }
 
 web_change_rule () {
@@ -255,10 +257,17 @@ web_change_rule () {
     reload
 }
 
+web_get_total_speed () {
+    local upload_speed=`uci get qos_gargoyle.upload.total_bandwidth`
+    local download_speed=`uci get qos_gargoyle.download.total_bandwidth`
+
+    echo $download_speed $upload_speed > $qos_total_speed_file
+}
+
 # $1 upload speed(kbps) $2 download speed(kbps)
-web_set_default_rule () {
-    set_upload_speed $1
-    set_download_speed $2
+web_set_total_speed () {
+    set_upload_speed $2
+    set_download_speed $1
 
     reload
 }
