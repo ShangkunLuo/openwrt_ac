@@ -247,9 +247,13 @@ web_change_rule () {
     clean_rule
 
     while read -r line; do
-        ip=${a%% *}
-        speed=${a##* }
-        [ -z "$ip" ] || [ -z "$speed" ] && continue
+        ip=${line%% *}
+        speed=${line##* }
+        if [ -z "$ip" ] || [ -z "$speed" ]; then
+            log_error "invalid rule: $line"
+            uci revert qos_gargoyle
+            return
+        fi
 
         add_rule $ip $upload_speed $download_speed
     done < $qos_rule_file_new
@@ -271,3 +275,28 @@ web_set_total_speed () {
 
     reload
 }
+
+case $1 in
+    web_enable)
+        web_enable
+        ;;
+    web_disable)
+        web_disable
+        ;;
+    web_get_total_speed)
+        web_get_total_speed
+        ;;
+    web_set_total_speed)
+        shift
+        web_set_total_speed $@
+        ;;
+    web_show_rule)
+        web_show_rule
+        ;;
+    web_change_rule)
+        web_change_rule
+        ;;
+    *)
+        log_error "unknown command $@"
+        ;;
+esac
