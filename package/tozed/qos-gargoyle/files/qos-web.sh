@@ -202,14 +202,14 @@ web_show_rule () {
     rm -f $qos_rule_file
 
     for i in `seq 0 $num_rule`; do
-        local upload_ip=`uci get qos_gargoyle.@upload_rule[$i].source 2>/dev/null`
+        local upload_ip=`uci get qos_gargoyle.@upload_rule[$i].destination 2>/dev/null`
         if [ -z $upload_ip ]; then
             log_debug "web_show_rule: stop at qos_gargoyle.@upload_class[$i]"
             break
         fi
 
         local upload_class=`uci get qos_gargoyle.@upload_rule[$i].class 2>/dev/null`
-        local upload_speed=`uci get qos_gargoyle.${class}.max_bandwidth 2>/dev/null`
+        local upload_speed=`uci get qos_gargoyle.${upload_class}.max_bandwidth 2>/dev/null`
         if [ -z "$upload_speed" ]; then
             log_error "qos_gargoyle.@upload_rule[$i]: error: upload_speed is null"
             continue
@@ -222,12 +222,12 @@ web_show_rule () {
         fi
 
         local download_class=`uci get qos_gargoyle.@download_rule[$i].class 2>/dev/null`
-        local download_speed=`uci get qos_gargoyle.${class}.max_bandwidth 2>/dev/null`
+        local download_speed=`uci get qos_gargoyle.${download_class}.max_bandwidth 2>/dev/null`
         if [ -z "$download_speed" ]; then
             log_error "qos_gargoyle.@download_rule[$i]: error: download_speed is null"
             continue
         fi
-        echo $ip $upload_speed $download_speed >> $qos_rule_file
+        echo $upload_ip $download_speed $upload_speed >> $qos_rule_file
     done
 }
 
