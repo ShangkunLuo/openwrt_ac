@@ -113,26 +113,24 @@ del_class () {
 }
 
 clean_upload_class () {
-    for i in `seq 0 $num_class`; do
-        local name=`uci get qos_gargoyle.@upload_class[$i].name 2>/dev/null`
+    while true; do
+        local name=`uci get qos_gargoyle.@upload_class[0].name 2>/dev/null`
         if [ -z $name ]; then
-            log_debug "clean_upload_class: stop at qos_gargoyle.@upload_class[$i]"
             break
         fi
 
-        del_class @upload_class[$i]
+        del_class @upload_class[0]
     done
 }
 
 clean_download_class () {
-    for i in `seq 0 $num_class`; do
-        local name=`uci get qos_gargoyle.@download_class[$i].name 2>/dev/null`
+    while true; do
+        local name=`uci get qos_gargoyle.@download_class[0].name 2>/dev/null`
         if [ -z $name ]; then
-            log_debug "clean_download_class: stop at qos_gargoyle.@download_class[$i]"
             break
         fi
 
-        del_class @download_class[$i]
+        del_class @download_class[0]
     done
 }
 
@@ -196,28 +194,26 @@ del_rule () {
 }
 
 clean_upload_rule () {
-    for i in `seq 0 $num_rule`; do
-        local class=`uci get qos_gargoyle.@upload_rule[$i].class 2>/dev/null`
+    while true; do
+        local class=`uci get qos_gargoyle.@upload_rule[0].class 2>/dev/null`
         if [ -z $class ]; then
-            log_debug "clean_upload_rule: stop at qos_gargoyle.@upload_class[$i]"
             break
         fi
 
         del_class $class
-        uci delete qos_gargoyle.@upload_rule[$i]
+        uci delete qos_gargoyle.@upload_rule[0]
     done
 }
 
 clean_download_rule () {
-    for i in `seq 0 $num_rule`; do
-        local class=`uci get qos_gargoyle.@download_rule[$i].class 2>/dev/null`
+    while true; do
+        local class=`uci get qos_gargoyle.@download_rule[0].class 2>/dev/null`
         if [ -z $class ]; then
-            log_debug "clean_download_rule: stop at qos_gargoyle.@upload_class[$i]"
             break
         fi
 
         del_class $class
-        uci delete qos_gargoyle.@download_rule[$i]
+        uci delete qos_gargoyle.@download_rule[0]
     done
 }
 
@@ -256,33 +252,32 @@ set_download_speed () {
 web_show_rule () {
     rm -f $qos_rule_file
 
-    for i in `seq 0 $num_rule`; do
+    local i=0
+    while true; do
         local upload_ip=`uci get qos_gargoyle.@upload_rule[$i].destination 2>/dev/null`
         if [ -z $upload_ip ]; then
-            log_debug "web_show_rule: stop at qos_gargoyle.@upload_class[$i]"
             break
         fi
 
         local upload_class_name=$(get_upload_class_name $upload_ip)
         local upload_speed=`uci get qos_gargoyle.${upload_class_name}.max_bandwidth 2>/dev/null`
         if [ -z "$upload_speed" ]; then
-            log_error "qos_gargoyle.@upload_rule[$i]: error: upload_speed is null"
             continue
         fi
 
         local download_ip=`uci get qos_gargoyle.@download_rule[$i].source 2>/dev/null`
         if [ -z "$download_ip" ] || [ "$upload_ip" != "$download_ip" ]; then
-            log_error "qos_gargoyle.@download_rule[$i]: download_ip: $download_ip download_ip and upload_ip not match"
             continue
         fi
 
         local download_class_name=$(get_download_class_name $download_ip)
         local download_speed=`uci get qos_gargoyle.${download_class_name}.max_bandwidth 2>/dev/null`
         if [ -z "$download_speed" ]; then
-            log_error "qos_gargoyle.@download_rule[$i]: error: download_speed is null"
             continue
         fi
         echo $upload_ip $download_speed $upload_speed >> $qos_rule_file
+
+        i=$((i+1))
     done
 }
 
