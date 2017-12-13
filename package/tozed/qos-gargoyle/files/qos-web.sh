@@ -309,16 +309,20 @@ web_change_rule () {
     clean_rule
 
     while read -r line; do
-        ip=${line%% *}
-        speed=${line##* }
-        if [ -z "$ip" ] || [ -z "$speed" ]; then
+        local ip=${line%% *}
+        local two_speed=${line#* }
+        local upload_speed=${two_speed%% *}
+        upload_speed=${upload_speed// /}
+        local download_speed=${two_speed##* }
+
+        if [ -z "$ip" ] || [ -z "$upload_speed" ] || [ -z "$download_speed" ]; then
             log_error "invalid rule: $line"
             uci revert qos_gargoyle
             return
         fi
 
         add_rule $ip $upload_speed $download_speed
-    done < $qos_rule_file_new
+    done < $qos_rule_new_file
 
     reload
 }
