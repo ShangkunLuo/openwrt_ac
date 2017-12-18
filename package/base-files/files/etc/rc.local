@@ -1,3 +1,11 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
+
+# must sleep, or php7-fpm and mysql won't start...
+sleep 60
+[ ! -f /etc/rc.d/S50php7-fpm ] && /etc/init.d/php7-fpm enable
+/etc/init.d/php7-fpm start
+[ ! -f /etc/rc.d/S95mysqld ] && /etc/init.d/mysqld enable
+/etc/init.d/mysqld start
+
 exit 0
