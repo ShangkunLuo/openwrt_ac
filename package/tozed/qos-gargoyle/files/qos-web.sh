@@ -161,10 +161,17 @@ add_download_rule () {
     uci set qos_gargoyle.${download_rule_name}.class=$download_class_name
 }
 
-# $1 ip address $2 upload speed(kbps) $3 download speed(kbps)
+# $1 ip address(start) $2 ip address(end) $3 upload speed(kbps) $4 download speed(kbps)
 add_rule () {
-    add_upload_rule $1 $3
-    add_download_rule $1 $2
+    local start_postfix=$(get_postfix $1)
+    local end_postfix=$(get_postfix $2)
+
+    local rule_name=tozed_${start_postfix}_${end_postfix}
+    uci set qos_gargoyle.${rule_name}=tozed_rule
+    uci set qos_gargoyle.${rule_name}.start=$1
+    uci set qos_gargoyle.${rule_name}.end=$2
+    uci set qos_gargoyle.${rule_name}.upload=$3
+    uci set qos_gargoyle.${rule_name}.download=$4
 }
 
 # $1 ip address
@@ -304,19 +311,23 @@ web_change_rule () {
     clean_rule
 
     while read -r line; do
-        local ip=${line%% *}
-        local two_speed=${line#* }
-        local upload_speed=${two_speed%% *}
+        local ip_start=${line%% *}
+        local last_three_column=${line#* }
+        local ip_end=${last_three_column%% *}
+        ip_end=${ip_end// /}
+        local last_two_column=${last_three_column#* }
+        local upload_speed=${last_two_column%% *}
         upload_speed=${upload_speed// /}
-        local download_speed=${two_speed##* }
+        local download_speed=${last_two_column##* }
+        download_speed=${download_speed// /}
 
-        if [ -z "$ip" ] || [ -z "$upload_speed" ] || [ -z "$download_speed" ]; then
+        if [ -z "$ip_start" ] || [ -z "$ip_end" ] || [ -z "$upload_speed" ] || [ -z "$download_speed" ]; then
             log_error "invalid rule: $line"
             uci revert qos_gargoyle
             return
         fi
 
-        add_rule $ip $upload_speed $download_speed
+        add_rule $ip_start $ip_end $upload_speed $download_speed
     done < $qos_rule_new_file
 
     reload

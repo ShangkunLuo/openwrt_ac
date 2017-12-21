@@ -515,7 +515,15 @@ initialize_qos()
 			tc class add dev imq0 parent 1:1 classid 1:$next_class_index hfsc $rt_str $ll_str $ul_str
 			# Assume average download packet size is 1000 bytes.
 			tc qdisc add dev imq0 parent 1:$next_class_index handle $next_class_index:1 sfq headdrop limit $(($tbw/1000)) $sfq_depth divisor 256
-			tc filter add dev imq0 parent 1:0 prio $next_class_index protocol ip handle $next_classid fw flowid 1:$next_class_index
+
+                        local prio
+			if [ "$download_default_class" = "$dclass_name" ] ; then
+                            prio=9999
+                        else
+                            prio=$next_class_index
+			fi
+
+			tc filter add dev imq0 parent 1:0 prio $prio protocol ip handle $next_classid fw flowid 1:$next_class_index
 			tc filter add dev imq0 parent $next_class_index: handle 1 flow divisor 256 map key dst and 0xff
 			$echo_off
 

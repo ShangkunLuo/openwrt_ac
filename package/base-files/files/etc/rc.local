@@ -14,4 +14,8 @@ if [ "$result" != "ac_m" ]; then
     mysql -u root -p123456 < /etc/config/ac_m.sql
 fi
 
+/etc/init.d/qos_gargoyle restart
+
+/usr/sbin/qos-check-active-ip.sh &
+
 exit 0
