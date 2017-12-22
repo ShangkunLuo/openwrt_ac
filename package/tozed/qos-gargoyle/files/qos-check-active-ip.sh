@@ -7,7 +7,7 @@ reset_internal=120
 arp_ip_list_file=/tmp/arp_ip_list
 
 log_debug () {
-    logger -s -p DEBUG -t "QoS daemon: " $1
+    # logger -s -p DEBUG -t "QoS daemon: " $1
 }
 
 log_error () {
