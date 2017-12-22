@@ -224,9 +224,21 @@ clean_download_rule () {
     done
 }
 
+clean_tozed_rule () {
+    while true; do
+        local start=`uci get qos_gargoyle.@tozed_rule[0].start 2>/dev/null`
+        if [ -z $start ]; then
+            break
+        fi
+
+        uci delete qos_gargoyle.@tozed_rule[0]
+    done
+}
+
 clean_rule () {
     clean_upload_rule
     clean_download_rule
+    clean_tozed_rule
 }
 
 # add_default_upload_rule () {
@@ -256,7 +268,7 @@ set_download_speed () {
     uci set qos_gargoyle.dclass_default.max_bandwidth=$1
 }
 
-web_show_rule () {
+web_show_openwrt_rule () {
     rm -f $qos_rule_file
 
     local i=0
@@ -283,6 +295,36 @@ web_show_rule () {
             continue
         fi
         echo $upload_ip $download_speed $upload_speed >> $qos_rule_file
+
+        i=$((i+1))
+    done
+}
+
+web_show_tozed_rule () {
+    rm -f $qos_rule_file
+
+    local i=0
+    while true; do
+        local start_ip=`uci get qos_gargoyle.@tozed_rule[$i].start 2>/dev/null`
+        if [ -z $start_ip ]; then
+            break
+        fi
+
+        local end_ip=`uci get qos_gargoyle.@tozed_rule[$i].end 2>/dev/null`
+        if [ -z "$end_ip" ]; then
+            continue
+        fi
+
+        local upload_speed=`uci get qos_gargoyle.@tozed_rule[$i].upload 2>/dev/null`
+        if [ -z "$upload_speed" ]; then
+            continue
+        fi
+
+        local download_speed=`uci get qos_gargoyle.@tozed_rule[$i].download 2>/dev/null`
+        if [ -z "$download_speed" ]; then
+            continue
+        fi
+        echo $start_ip $end_ip $upload_speed $download_speed >> $qos_rule_file
 
         i=$((i+1))
     done
@@ -366,7 +408,7 @@ case $1 in
         web_set_total_speed $@
         ;;
     web_show_rule)
-        web_show_rule
+        web_show_tozed_rule
         ;;
     web_change_rule)
         web_change_rule

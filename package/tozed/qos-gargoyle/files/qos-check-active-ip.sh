@@ -2,11 +2,12 @@
 
 sleep_interval=15
 check_interval=60
+reset_internal=120
 
 arp_ip_list_file=/tmp/arp_ip_list
 
 log_debug () {
-    # logger -s -p DEBUG -t "QoS daemon: " $1
+    logger -s -p DEBUG -t "QoS daemon: " $1
 }
 
 log_error () {
@@ -48,6 +49,37 @@ del_rule () {
     tc class del dev br-lan parent 1:1 classid 1:${2} hfsc ls m2 100Mbit ul m2 ${4}kbit 2>/dev/null
 }
 
+reset_tc () {
+    log_debug "reset tc settings"
+
+    tc qdisc del dev br-lan root
+    tc qdisc del dev imq0 root
+
+    local download_bandwidth=`uci get qos_gargoyle.upload.total_bandwidth 2>/dev/null`
+    local default_download_class_percent=`uci get qos_gargoyle.dclass_default.percent_bandwidth 2>/dev/null`
+    let download_ls_m2_rate="10 * ${default_download_class_percent}"
+    local default_download_class_speed=`uci get qos_gargoyle.dclass_default.max_bandwidth 2>/dev/null`
+    tc qdisc add dev br-lan root handle 1:0 hfsc default 1
+    tc class add dev br-lan parent 1:0 classid 1:1 hfsc ls rate 1000Mbit ul rate ${download_bandwidth}kbit
+    tc class add dev br-lan parent 1:1 classid 1:2 hfsc ls m2 ${download_ls_m2_rate}Mbit ul m2 ${default_download_class_speed}kbit
+    tc qdisc add dev br-lan parent 1:2 handle 2:1 sfq headdrop limit 300 divisor 256
+    tc filter add dev br-lan parent 1:0 protocol ip handle 0x2 fw flowid 1:2
+    tc filter add dev br-lan parent 2: handle 1 flow divisor 256 map key nfct-src and 0xff
+    tc qdisc change dev br-lan root handle 1:0 hfsc default 2
+
+    local upload_bandwidth=`uci get qos_gargoyle.upload.total_bandwidth 2>/dev/null`
+    local default_upload_class_percent=`uci get qos_gargoyle.uclass_default.percent_bandwidth 2>/dev/null`
+    let upload_ls_m2_rate="10 * ${default_upload_class_percent}"
+    local default_upload_class_speed=`uci get qos_gargoyle.uclass_default.max_bandwidth 2>/dev/null`
+    tc qdisc add dev imq0 root handle 1:0 hfsc default 1
+    tc class add dev imq0 parent 1:0 classid 1:1 hfsc ls rate 1000Mbit ul rate ${upload_bandwidth}kbit
+    tc class add dev imq0 parent 1:1 classid 1:2 hfsc ls m2 ${upload_ls_m2_rate}Mbit ul m2 ${default_upload_class_speed}kbit
+    tc qdisc add dev imq0 parent 1:2 handle 2:1 sfq headdrop limit 75 divisor 256
+    tc filter add dev imq0 parent 1:0 prio 9999 protocol ip handle 0x200 fw flowid 1:2
+    tc filter add dev imq0 parent 2: handle 1 flow divisor 256 map key dst and 0xff
+    tc qdisc change dev imq0 root handle 1:0 hfsc default 2
+}
+
 # $1 ip address, $2 class, $3 upload speed, $4 download speed
 add_rule () {
     log_debug "add_rule: ip: $1, class: $2, upload speed: $3, download speed: $4"
@@ -70,25 +102,22 @@ while true; do
 
     log_debug "check, check..."
 
-    local result
-    let result="num % ($check_interval / $sleep_interval)"
+    let should_check="num % (check_interval / sleep_interval)"
 
     local enabled=$(is_qos_enabled)
     if [ "$enabled" == "false" ]; then
         log_debug "QoS disabled"
-        if [ $result == 0 ]; then
-            num=0
-        fi
+        num=0
         continue
     fi
 
-    if [ $result != 0 ]; then
+    if [ $should_check != 0 ]; then
         continue
     fi
 
     update_arp_ip_list $arp_ip_list_file
 
-    local i=0 qos_gargoyle_restarted=0 line
+    local i=0 tc_reseted=0 line
     while read line; do
         local ip=${line%% *}
 
@@ -105,9 +134,9 @@ while true; do
                 break
             fi
 
-            if [ "$qos_gargoyle_restarted" -eq "0" ]; then
-                /etc/init.d/qos_gargoyle restart
-                qos_gargoyle_restarted=1
+            if [ "$tc_reseted" -eq "0" ]; then
+                reset_tc
+                tc_reseted=1
             fi
 
             local download_speed=`uci get qos_gargoyle.@tozed_rule[$j].download 2>/dev/null`
@@ -119,4 +148,13 @@ while true; do
 
         i=$((i+1))
     done < $arp_ip_list_file
+
+    let should_reset="num % (reset_internal / sleep_interval)"
+    if [ $should_reset == 0 ]; then
+        num=0
+
+        if [ $tc_reseted == 0 ]; then
+            reset_tc
+        fi
+    fi
 done
