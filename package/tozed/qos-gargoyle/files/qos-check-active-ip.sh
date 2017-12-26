@@ -4,7 +4,11 @@ sleep_interval=15
 check_interval=60
 reset_internal=120
 
+class_num=100
+check_dhcp_leases_time=0
+
 arp_ip_list_file=/tmp/arp_ip_list
+dhcp_leases_file=/tmp/dhcp.leases
 
 log_debug () {
     # logger -s -p DEBUG -t "QoS daemon: " $1
@@ -34,6 +38,73 @@ update_arp_ip_list() {
 
 is_qos_enabled () {
     [ -f /etc/rc.d/S50qos_gargoyle ] && echo true || echo false
+}
+
+# $1 ip address
+is_ip_in_rule () {
+    local ip_hex=`printf '%02x' ${1//./ }`
+    local output=`tc filter show dev br-lan | grep $ip_hex -B 1 | head -n1`
+
+    echo $output
+}
+
+# $1 ip address, $2 upload speed(write back), $3 download speed(write back)
+get_rate_limit () {
+    local i=0
+    while true; do
+        local start=`uci get qos_gargoyle.@tozed_rule[$i].start 2>/dev/null`
+        if [ -z "$start" ]; then
+            break
+        fi
+
+        local end=`uci get qos_gargoyle.@tozed_rule[$i].end 2>/dev/null`
+        if [ -z "$end" ]; then
+            break
+        fi
+
+        local res=$(is_ip_in_range $start $end $1)
+        if [ "$res" != "true" ]; then
+            continue
+        fi
+
+        eval $2=`uci get qos_gargoyle.@tozed_rule[$i].upload 2>/dev/null`
+        eval $3=`uci get qos_gargoyle.@tozed_rule[$i].download 2>/dev/null`
+        i=$((i + 1))
+    done
+}
+
+# $1 ip address, $2 class(write back), $3 upload speed, $4 download speed
+check_rule () {
+    local output=$(is_ip_in_rule $1)
+    if [ -z "$output" ]; then
+        echo 1
+        return
+    fi
+
+    local class=${output##*:}
+    eval $2=$class
+
+    # check speed
+    output=`tc class show dev imq0 | grep "1\:$class"`
+    local upload_speed=${output%% }
+    local upload_speed=${upload_speed##* }
+    upload_speed=${upload_speed%Kbit}
+    if [ "$upload_speed" != "$3" ]; then
+        echo 2
+        return
+    fi
+
+    output=`tc class show dev br-lan | grep "1\:$class"`
+    local download_speed=${output%% }
+    local download_speed=${download_speed##* }
+    download_speed=${download_speed%Kbit}
+    if [ "$download_speed" != "$4" ]; then
+        echo 2
+        return
+    fi
+
+    echo 0
+    return
 }
 
 # $1 ip address, $2 class, $3 upload speed, $4 download speed
@@ -81,9 +152,7 @@ reset_tc () {
 }
 
 # $1 ip address, $2 class, $3 upload speed, $4 download speed
-add_rule () {
-    log_debug "add_rule: ip: $1, class: $2, upload speed: $3, download speed: $4"
-
+_add_rule () {
     tc class add dev imq0 parent 1:1 classid 1:${2} hfsc ls m2 100Mbit ul m2 ${3}kbit
     tc qdisc add dev imq0 parent 1:${2} handle ${2}:1 sfq headdrop limit 5 divisor 256
     tc filter add dev imq0 parent 1: protocol ip prio ${2} u32 match ip src ${1}/32 flowid 1:${2}
@@ -93,6 +162,80 @@ add_rule () {
     tc qdisc add dev br-lan parent 1:${2} handle ${2}:1 sfq headdrop limit 6 divisor 256
     tc filter add dev br-lan parent 1: protocol ip prio ${2} u32 match ip dst ${1}/32 flowid 1:${2}
     tc filter add dev br-lan parent ${2}: handle 1 flow divisor 256 map key nfct-src and 0xff
+
+    class_num=$(($2 + 1))
+
+    log_debug "_add_rule: ip: $1, class: $2, upload speed: $3, download speed: $4, class_num: $class_num"
+}
+
+# $1 ip address
+add_rule () {
+    local upload_speed=0 download_speed=0
+    get_rate_limit $1 upload_speed download_speed
+
+    if [ "$upload_speed" == "0" ] || [ "$download_speed" == "0" ]; then
+        echo 1
+        return
+    fi
+
+    _add_rule $1 $class_num $upload_speed $download_speed
+    echo 0
+}
+
+# $1 ip address
+process_ip_address () {
+    local output=$(is_ip_in_rule $1)
+    if [ -z "$output" ]; then
+        add_rule $1
+    fi
+}
+
+get_leasetime () {
+    local value=`uci get dhcp.lan.leasetime 2>/dev/null`
+    local leasetime=${value/m/}
+    if [ "$leasetime" != "$value" ]; then
+        echo $((leasetime * 60))
+        return
+    fi
+
+    leasetime=${value/h/}
+    if [ "$leasetime" != "$value" ]; then
+        echo $((leasetime * 3600))
+        return
+    fi
+
+    leasetime=${value/d/}
+    if [ "$leasetime" != "$value" ]; then
+        echo $((leasetime * 3600 * 24))
+        return
+    fi
+
+    echo 0
+    log_error "unrecognized leasetime: $value"
+}
+
+check_dhcp_lease () {
+    local leasetime=$(get_leasetime)
+    local before=$((check_dhcp_leases_time + leasetime))
+    local ip_set=`awk '$1 > '"$before"' {print $3}' $dhcp_leases_file`
+    for ip in $ip_set; do
+        process_ip_address $ip
+    done
+
+    check_dhcp_leases_time=`date +%s`
+}
+
+check_arp_table () {
+    local i=0 line
+
+    update_arp_ip_list $arp_ip_list_file
+    reset_tc
+
+    while read -r line; do
+        local ip=${line%% *}
+
+        process_ip_address $ip
+    done < $arp_ip_list_file
 }
 
 local num=0
@@ -115,46 +258,6 @@ while true; do
         continue
     fi
 
-    update_arp_ip_list $arp_ip_list_file
-
-    local i=0 tc_reseted=0 line
-    while read line; do
-        local ip=${line%% *}
-
-        local j=0
-        while true; do
-            local start=`uci get qos_gargoyle.@tozed_rule[$j].start 2>/dev/null`
-            if [ ! -n "$start" ]; then
-                break
-            fi
-
-            local end=`uci get qos_gargoyle.@tozed_rule[$j].end 2>/dev/null`
-            local in_range=$(is_ip_in_range "$start" "$end" "$ip")
-            if [ "$in_range" != "true" ]; then
-                break
-            fi
-
-            if [ "$tc_reseted" -eq "0" ]; then
-                reset_tc
-                tc_reseted=1
-            fi
-
-            local download_speed=`uci get qos_gargoyle.@tozed_rule[$j].download 2>/dev/null`
-            local upload_speed=`uci get qos_gargoyle.@tozed_rule[$j].upload 2>/dev/null`
-            class=$((100 + j*800 + i))
-            add_rule $ip $class $upload_speed $download_speed
-            j=$((j+1))
-        done
-
-        i=$((i+1))
-    done < $arp_ip_list_file
-
-    let should_reset="num % (reset_internal / sleep_interval)"
-    if [ $should_reset == 0 ]; then
-        num=0
-
-        if [ $tc_reseted == 0 ]; then
-            reset_tc
-        fi
-    fi
+    check_dhcp_lease
+    num=0
 done
