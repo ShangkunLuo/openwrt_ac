@@ -1,14 +1,18 @@
 #!/bin/sh
 
 sleep_interval=15
-check_interval=60
-reset_internal=120
+check_dhcp_interval=30
+check_arp_interval=285
+reset_tc_internal=3585
 
 class_num=100
 check_dhcp_leases_time=0
+start_time=`date +%s`
 
 arp_ip_list_file=/tmp/arp_ip_list
 dhcp_leases_file=/tmp/dhcp.leases
+qos_lock_file=/var/run/qos_updating
+qos_start_time_file=/tmp/qos_start_time
 
 log_debug () {
     # logger -s -p DEBUG -t "QoS daemon: " $1
@@ -149,6 +153,10 @@ reset_tc () {
     tc filter add dev imq0 parent 1:0 prio 9999 protocol ip handle 0x200 fw flowid 1:2
     tc filter add dev imq0 parent 2: handle 1 flow divisor 256 map key dst and 0xff
     tc qdisc change dev imq0 root handle 1:0 hfsc default 2
+
+    # reset to initial value
+    class_num=100
+    check_dhcp_leases_time=0
 }
 
 # $1 ip address, $2 class, $3 upload speed, $4 download speed
@@ -245,7 +253,9 @@ while true; do
 
     log_debug "check, check..."
 
-    let should_check="num % (check_interval / sleep_interval)"
+    if [ -f "$qos_lock_file" ]; then
+        continue
+    fi
 
     local enabled=$(is_qos_enabled)
     if [ "$enabled" == "false" ]; then
@@ -254,10 +264,21 @@ while true; do
         continue
     fi
 
-    if [ $should_check != 0 ]; then
-        continue
+    let should_check_dhcp="num % (check_dhcp_interval / sleep_interval)"
+    if [ $should_check_dhcp == 0 ]; then
+        check_dhcp_lease
     fi
 
-    check_dhcp_lease
-    num=0
+    let should_check_arp="num % (check_arp_interval / sleep_interval)"
+    local qos_start_time=`cat $qos_start_time 2>/dev/null`
+    [ -z $qos_start_time ] && qos_start_time=0
+    if [ $should_check_arp == 0 ] || [ $qos_start_time > $start_time ]; then
+        check_arp_table
+    fi
+
+    let should_reset_tc="num % (reset_tc_interval / sleep_interval)"
+    if [ $should_reset_tc == 0 ]; then
+        reset_tc
+        num=0
+    fi
 done
