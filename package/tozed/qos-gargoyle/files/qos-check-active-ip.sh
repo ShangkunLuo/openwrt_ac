@@ -37,7 +37,7 @@ is_ip_in_range () {
 update_arp_ip_list() {
     # $1 arp list file
     # get lan arps whose flag!=0x0 (flag==0x0 means invalid arp)
-    cat /proc/net/arp | grep br-* | awk '{print $1" "$3" "$4}' | grep -v 0x0 | awk '{print $1" "$3}' > $1
+    (cat /proc/net/arp | grep br-* | awk '{print $1" "$3" "$4}' | grep -v 0x0 | awk '{print $1" "$3}') > $1
 }
 
 is_qos_enabled () {
@@ -68,12 +68,13 @@ get_rate_limit () {
 
         local res=$(is_ip_in_range $start $end $1)
         if [ "$res" != "true" ]; then
+            i=$((i + 1))
             continue
         fi
 
         eval $2=`uci get qos_gargoyle.@tozed_rule[$i].upload 2>/dev/null`
         eval $3=`uci get qos_gargoyle.@tozed_rule[$i].download 2>/dev/null`
-        i=$((i + 1))
+        break
     done
 }
 
@@ -234,10 +235,9 @@ check_dhcp_lease () {
 }
 
 check_arp_table () {
-    local i=0 line
+    local line
 
     update_arp_ip_list $arp_ip_list_file
-    reset_tc
 
     while read -r line; do
         local ip=${line%% *}
@@ -264,21 +264,29 @@ while true; do
         continue
     fi
 
+    if [ $qos_start_time -gt $start_time ]; then
+        log_debug "qos_gargoyle restarted"
+        start_time=qos_start_time
+        reset_tc
+    fi
+
     let should_check_dhcp="num % (check_dhcp_interval / sleep_interval)"
     if [ $should_check_dhcp == 0 ]; then
         check_dhcp_lease
     fi
 
     let should_check_arp="num % (check_arp_interval / sleep_interval)"
-    local qos_start_time=`cat $qos_start_time 2>/dev/null`
+    local qos_start_time=`cat $qos_start_time_file 2>/dev/null`
     [ -z $qos_start_time ] && qos_start_time=0
-    if [ $should_check_arp == 0 ] || [ $qos_start_time > $start_time ]; then
+
+    if [ $should_check_arp == 0 ]; then
         check_arp_table
     fi
 
     let should_reset_tc="num % (reset_tc_interval / sleep_interval)"
     if [ $should_reset_tc == 0 ]; then
         reset_tc
+        check_arp_table
         num=0
     fi
 done
