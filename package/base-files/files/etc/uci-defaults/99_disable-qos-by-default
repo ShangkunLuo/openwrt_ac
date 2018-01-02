@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/etc/init.d/qos_gargoyle disable
+
+exit 0

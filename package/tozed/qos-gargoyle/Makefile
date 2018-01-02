@@ -55,6 +55,7 @@ define Package/qos-gargoyle/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/qosmon $(1)/usr/sbin/qosmon
 	$(INSTALL_BIN) ./files/qos-web.sh $(1)/usr/sbin/qos-web.sh
+	$(INSTALL_BIN) ./files/qos-check-active-ip.sh $(1)/usr/sbin/qos-check-active-ip.sh
 endef
 
 define Package/qos-gargoyle/prerm
