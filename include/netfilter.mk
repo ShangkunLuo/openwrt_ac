@@ -382,3 +382,8 @@ IPT_BUILTIN += $(EBTABLES_IP6-y)
 IPT_BUILTIN += $(EBTABLES_WATCHERS-y)
 
 endif # __inc_netfilter
+
+
+IPT_WEBMON-m :=
+IPT_WEBMON-$(CONFIG_IP_NF_MATCH_WEBMON) += $(P_V4)ipt_webmon
+IPT_BUILTIN += $(IPT_WEBMON-y)

@@ -562,3 +562,10 @@ $(eval $(call BuildPackage,libiptc))
 $(eval $(call BuildPackage,libip4tc))
 $(eval $(call BuildPackage,libip6tc))
 $(eval $(call BuildPackage,libxtables))
+
+
+define Package/iptables-mod-webmon
+$(call Package/iptables/Module, +kmod-ipt-webmon)
+  TITLE:=webmon
+endef
+$(eval $(call BuildPlugin,iptables-mod-webmon,$(IPT_WEBMON-m)))

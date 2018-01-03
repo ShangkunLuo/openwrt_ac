@@ -874,3 +874,14 @@ endef
 
 $(eval $(call KernelPackage,nft-nat6))
 
+
+
+define KernelPackage/ipt-webmon
+  SUBMENU:=$(NF_MENU)
+  TITLE:=webmon
+  KCONFIG:=$(KCONFIG_IPT_WEBMON)
+  FILES:=$(LINUX_DIR)/net/ipv4/netfilter/*webmon*.$(LINUX_KMOD_SUFFIX)
+  AUTOLOAD:=$(call AutoLoad,45,$(notdir $(IPT_WEBMON-m)))
+	DEPENDS:= kmod-ipt-core
+endef
+$(eval $(call KernelPackage,ipt-webmon))
