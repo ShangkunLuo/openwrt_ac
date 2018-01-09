@@ -885,3 +885,14 @@ define KernelPackage/ipt-webmon
 	DEPENDS:= kmod-ipt-core
 endef
 $(eval $(call KernelPackage,ipt-webmon))
+
+
+define KernelPackage/ipt-layer7
+  SUBMENU:=$(NF_MENU)
+  TITLE:=layer7
+  KCONFIG:=$(KCONFIG_IPT_LAYER7)
+  FILES:=$(LINUX_DIR)/net/ipv4/netfilter/*layer7*.$(LINUX_KMOD_SUFFIX)
+  AUTOLOAD:=$(call AutoLoad,45,$(notdir $(IPT_LAYER7-m)))
+	DEPENDS:= +kmod-ipt-core +kmod-ipt-conntrack
+endef
+$(eval $(call KernelPackage,ipt-layer7))

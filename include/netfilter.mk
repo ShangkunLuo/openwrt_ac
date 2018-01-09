@@ -387,3 +387,8 @@ endif # __inc_netfilter
 IPT_WEBMON-m :=
 IPT_WEBMON-$(CONFIG_IP_NF_MATCH_WEBMON) += $(P_V4)ipt_webmon
 IPT_BUILTIN += $(IPT_WEBMON-y)
+
+
+IPT_LAYER7-m :=
+IPT_LAYER7-$(CONFIG_IP_NF_MATCH_LAYER7) += $(P_V4)ipt_layer7
+IPT_BUILTIN += $(IPT_LAYER7-y)

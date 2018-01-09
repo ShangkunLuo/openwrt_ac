@@ -569,3 +569,10 @@ $(call Package/iptables/Module, +kmod-ipt-webmon)
   TITLE:=webmon
 endef
 $(eval $(call BuildPlugin,iptables-mod-webmon,$(IPT_WEBMON-m)))
+
+
+define Package/iptables-mod-layer7
+$(call Package/iptables/Module, +kmod-ipt-layer7)
+  TITLE:=layer7
+endef
+$(eval $(call BuildPlugin,iptables-mod-layer7,$(IPT_LAYER7-m)))
