@@ -576,3 +576,24 @@ $(call Package/iptables/Module, +kmod-ipt-layer7)
   TITLE:=layer7
 endef
 $(eval $(call BuildPlugin,iptables-mod-layer7,$(IPT_LAYER7-m)))
+
+
+define Package/iptables-mod-weburl
+$(call Package/iptables/Module, +kmod-ipt-weburl)
+  TITLE:=weburl
+endef
+$(eval $(call BuildPlugin,iptables-mod-weburl,$(IPT_WEBURL-m)))
+
+
+define Package/iptables-mod-timerange
+$(call Package/iptables/Module, +kmod-ipt-timerange)
+  TITLE:=timerange
+endef
+$(eval $(call BuildPlugin,iptables-mod-timerange,$(IPT_TIMERANGE-m)))
+
+
+define Package/iptables-mod-bandwidth
+$(call Package/iptables/Module, +kmod-ipt-bandwidth)
+  TITLE:=bandwidth
+endef
+$(eval $(call BuildPlugin,iptables-mod-bandwidth,$(IPT_BANDWIDTH-m)))
