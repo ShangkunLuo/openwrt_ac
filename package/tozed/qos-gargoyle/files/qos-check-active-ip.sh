@@ -3,7 +3,7 @@
 sleep_interval=15
 check_dhcp_interval=30
 check_arp_interval=285
-reset_tc_internal=3585
+reset_tc_interval=3585
 
 class_num=100
 check_dhcp_leases_time=0
@@ -16,6 +16,7 @@ qos_start_time_file=/tmp/qos_start_time
 
 log_debug () {
     # logger -s -p DEBUG -t "QoS daemon: " $1
+    return
 }
 
 log_error () {
