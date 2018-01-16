@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Copyright (C) 2006-2012 OpenWrt.org
 set -x
-[ $# == 5 -o $# == 6 ] || {
+[ $# == 5 -o $# == 6 -o $# == 7 ] || {
     echo "SYNTAX: $0 <file> <kernel size> <kernel directory> <rootfs size> <rootfs image> [<align>]"
     exit 1
 }
@@ -12,6 +12,7 @@ KERNELDIR="$3"
 ROOTFSSIZE="$4"
 ROOTFSIMAGE="$5"
 ALIGN="$6"
+MOUNTSIZE="$7"
 
 rm -f "$OUTPUT"
 
@@ -20,7 +21,7 @@ sect=63
 cyl=$(( ($KERNELSIZE + $ROOTFSSIZE) * 1024 * 1024 / ($head * $sect * 512)))
 
 # create partition table
-set `ptgen -o "$OUTPUT" -h $head -s $sect -p ${KERNELSIZE}m -p ${ROOTFSSIZE}m ${ALIGN:+-l $ALIGN} ${SIGNATURE:+-S 0x$SIGNATURE}`
+set `ptgen -o "$OUTPUT" -h $head -s $sect -p ${KERNELSIZE}m -p ${ROOTFSSIZE}m -p ${MOUNTSIZE}m ${ALIGN:+-l $ALIGN} ${SIGNATURE:+-S 0x$SIGNATURE}`
 
 KERNELOFFSET="$(($1 / 512))"
 KERNELSIZE="$2"

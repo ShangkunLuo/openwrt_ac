@@ -1,6 +1,11 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
 
+# mount 
+test -b /dev/sda3 && mount /dev/sda3 /mnt
+test -d /mnt/lost+found ||  echo "mount /dev/sda3 failed!" > /tmp/mount.log
+#mount end
+#
 # must sleep, or php7-fpm and mysql won't start...
 sleep 60
 [ ! -f /etc/rc.d/S50php7-fpm ] && /etc/init.d/php7-fpm enable

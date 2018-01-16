@@ -262,6 +262,11 @@ menu "Target Images"
 		help
 		  Select the root filesystem partition size.
 
+	config TARGET_MOUNT_PARTSIZE
+		int "Mount partition size (in MB)"
+		depends on GRUB_IMAGES
+		default 256
+
 	config TARGET_ROOTFS_PARTNAME
 		string "Root partition on target device"
 		depends on GRUB_IMAGES
