@@ -22,16 +22,16 @@ msgid "DO_pin"
 msgstr ""
 
 msgid "Enable"
-msgstr "Aktivera"
+msgstr ""
 
 msgid "MMC/SD driver configuration"
-msgstr "Konfiguration av MMC/SD-drivrutin"
+msgstr ""
 
 msgid "Mode"
-msgstr "Läge"
+msgstr ""
 
 msgid "Name"
-msgstr "Namn"
+msgstr ""
 
 msgid "Settings"
-msgstr "Inställningar"
+msgstr ""

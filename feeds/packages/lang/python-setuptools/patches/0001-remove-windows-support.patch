@@ -1,16 +1,16 @@
 diff --git a/setuptools/dist.py b/setuptools/dist.py
-index b004f92..66b9d89 100644
+index 6b9d350..1350e8a 100644
 --- a/setuptools/dist.py
 +++ b/setuptools/dist.py
-@@ -17,7 +17,6 @@ from setuptools.extern.six.moves import map
- from pkg_resources.extern import packaging
+@@ -15,7 +15,6 @@ from distutils.errors import (DistutilsOptionError, DistutilsPlatformError,
  
  from setuptools.depends import Require
+ from setuptools.compat import basestring, PY2
 -from setuptools import windows_support
- from setuptools.monkey import get_unpatched
  import pkg_resources
  
-@@ -383,7 +382,6 @@ class Distribution(_Distribution):
+ def _get_unpatched(cls):
+@@ -310,7 +309,6 @@ class Distribution(_Distribution):
          egg_cache_dir = os.path.join(os.curdir, '.eggs')
          if not os.path.exists(egg_cache_dir):
              os.mkdir(egg_cache_dir)

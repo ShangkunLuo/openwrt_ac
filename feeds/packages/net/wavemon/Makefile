@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=wavemon
-PKG_VERSION:=0.8.0
-PKG_RELEASE:=1
+PKG_VERSION:=0.7.6
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_PROTO:=git
@@ -30,7 +30,7 @@ define Package/wavemon
   SECTION:=net
   CATEGORY:=Network
   TITLE:=N-curses based wireless network devices monitor
-  DEPENDS:=+libncurses +libpthread +libnl-genl
+  DEPENDS:=+libncurses +libpthread
   SUBMENU:=wireless
   URL:=https://github.com/uoaerg/wavemon/releases
 endef
@@ -45,7 +45,7 @@ endef
 CONFIGURE_VARS += \
 	ac_cv_lib_cap_cap_get_flag=no
 
-TARGET_CFLAGS += -pthread -I$(STAGING_DIR)/usr/include/libnl3
+TARGET_CFLAGS += -pthread
 
 MAKE_FLAGS += \
 	CFLAGS="$(TARGET_CFLAGS) -L$(STAGING_DIR)/usr/lib -I$(STAGING_DIR)/usr/include"

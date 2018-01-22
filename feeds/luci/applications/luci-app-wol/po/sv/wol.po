@@ -10,42 +10,36 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Broadcast on all interfaces"
-msgstr "Sänd i alla gränssnitt"
+msgstr ""
 
 msgid "Choose the host to wake up or enter a custom MAC address to use"
 msgstr ""
-"Välj värden som ska väckas upp eller fyll i en anpassad MAC-adress att "
-"använda"
 
 msgid "Host to wake up"
-msgstr "Värd som ska väckas upp"
+msgstr ""
 
 msgid "Network interface to use"
-msgstr "Nätverksgränssnitt som ska användas"
+msgstr ""
 
 msgid ""
 "Sometimes only one of the two tools works. If one fails, try the other one"
 msgstr ""
-"Ibland så fungerar bara en av de två verktygen. Prova med den andra om den "
-"första misslyckades"
 
 msgid "Specifies the interface the WoL packet is sent on"
-msgstr "Anger gränssnittet som fjärrstartspaketet skickas med"
+msgstr ""
 
 msgid "Starting WoL utility:"
-msgstr "Startar hjälpprogrammet för fjärrstyrning av uppstart:"
+msgstr ""
 
 msgid "Wake on LAN"
-msgstr "Fjärrstyrning av uppstart"
+msgstr ""
 
 msgid ""
 "Wake on LAN is a mechanism to remotely boot computers in the local network."
 msgstr ""
-"Fjärrstyrning av uppstart är en mekanism för att starta upp datorer via "
-"fjärrstyrning i det lokala nätverket."
 
 msgid "Wake up host"
-msgstr "Väck upp värden"
+msgstr ""
 
 msgid "WoL program"
-msgstr "Program för fjärrstart"
+msgstr ""

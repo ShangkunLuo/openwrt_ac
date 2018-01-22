@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=wifidog
-PKG_VERSION:=pf-1.3.0
+PKG_VERSION:=1.3.0
 PKG_RELEASE=1
 
 
@@ -95,12 +95,6 @@ define Package/wifidog/install
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/wifidog-msg.html $(1)/etc/
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/wifidog.init $(1)/etc/init.d/wifidog
-	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_BIN) ./files/wifidog.luci.conf $(1)/etc/config/wifidog
-	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/model/cbi
-	$(INSTALL_BIN) ./files/wifidog.model.lua $(1)/usr/lib/lua/luci/model/cbi/wifidog.lua
-	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/controller
-	$(INSTALL_BIN) ./files/wifidog.controller.lua  $(1)/usr/lib/lua/luci/controller/wifidog.lua
 endef
 
 Package/wifidog-tls/install = $(Package/wifidog/install)

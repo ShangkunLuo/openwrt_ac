@@ -14,7 +14,7 @@ PKG_RELEASE:=1
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://humdi.net/vnstat
 PKG_MD5SUM:=a154b2196771e06a8accd1c24374009c
-PKG_MAINTAINER:=Jo-Philipp Wich <jo@mein.io>
+PKG_MAINTAINER:=Jo-Philipp Wich <jow@openwrt.org>
 
 PKG_INSTALL:=1
 
@@ -63,8 +63,7 @@ endef
 define Build/Compile/vnstat
 	+$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
 		$(TARGET_CONFIGURE_OPTS) \
-		CFLAGS="$(TARGET_CFLAGS)" \
-		LDFLAGS="$(TARGET_LDFLAGS)"
+		CFLAGS="$(TARGET_CFLAGS)"
 endef
 
 define Build/Compile/vnstati

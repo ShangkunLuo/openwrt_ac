@@ -9,11 +9,13 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=sslh
 PKG_VERSION:=v1.17
-PKG_RELEASE:=2
+PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://rutschle.net/tech/
-PKG_MD5SUM:=1fc3ada4bafaca5a9786cc1431f48ed4
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
+PKG_SOURCE_URL:=https://github.com/yrutschle/sslh.git
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_VERSION:=3550cbe
 PKG_LICENSE:=GPL-2.0+
 PKG_LICENSE_FILES:=COPYING
 
@@ -36,10 +38,8 @@ define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		CC="$(TARGET_CC)" \
 		CFLAGS="$(TARGET_CFLAGS)" \
-		LDFLAGS="$(TARGET_LDFLAGS)" \
 		USELIBCONFIG= \
 		USELIBWRAP= \
-		USELIBPCRE= \
 		all
 endef
 

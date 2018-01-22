@@ -1,5 +1,5 @@
 config core main
-	option lang 'zh_cn'
+	option lang auto
 	option mediaurlbase /luci-static/bootstrap
 	option resourcebase /luci-static/resources
 	
@@ -13,7 +13,6 @@ config extern flash_keep
 	option uploads	"/lib/uci/upload/"
 	
 config internal languages
-	option zh_cn '普通话 (Chinese)'
 	
 config internal sauth
 	option sessionpath "/tmp/luci-sessions"
@@ -23,5 +22,3 @@ config internal ccache
 	option enable 1
 		
 config internal themes
-	option OpenWrt '/luci-static/openwrt.org'
-

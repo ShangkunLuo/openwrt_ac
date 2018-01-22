@@ -80,14 +80,6 @@ o.optional    = true
 o.placeholder = 514
 o.datatype    = "port"
 
-o = s:taboption("logging", ListValue, "log_proto", translate("External system log server protocol"))
-o:value("udp", "UDP")
-o:value("tcp", "TCP")
-
-o = s:taboption("logging", Value, "log_file", translate("Write system log to file"))
-o.optional    = true
-o.placeholder = "/tmp/system.log"
-
 o = s:taboption("logging", ListValue, "conloglevel", translate("Log output level"))
 o:value(8, translate("Debug"))
 o:value(7, translate("Info"))
@@ -212,7 +204,7 @@ if has_ntpd then
 
 
 		o = s:option(DynamicList, "server", translate("NTP server candidates"))
-		o.datatype = "host(0)"
+		o.datatype = "host"
 		o:depends("enable", "1")
 
 		-- retain server list even if disabled

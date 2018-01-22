@@ -8,25 +8,18 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=python-pip
-PKG_VERSION:=8.1.2
+PKG_VERSION:=1.5.6
 PKG_RELEASE:=1
 
 PKG_SOURCE:=pip-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://pypi.python.org/packages/e7/a8/7556133689add8d1a54c0b14aeff0acb03c64707ce100ecd53934da1aa13/
-PKG_MD5SUM:=87083c0b9867963b29f7aba3613e8f4a
+PKG_SOURCE_URL:=https://pypi.python.org/packages/source/p/pip/
+PKG_MD5SUM:=01026f87978932060cc86c1dc527903e
 
-PKG_BUILD_DIR:=$(BUILD_DIR)/python-pip-$(PKG_VERSION)
-PKG_UNPACK=$(HOST_TAR) -C $(PKG_BUILD_DIR) --strip-components=1 -xzf $(DL_DIR)/$(PKG_SOURCE)
-HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/python-pip-$(PKG_VERSION)
-HOST_UNPACK=$(HOST_TAR) -C $(HOST_BUILD_DIR) --strip-components=1 -xzf $(DL_DIR)/$(PKG_SOURCE)
+PKG_BUILD_DIR:=$(BUILD_DIR)/pip-$(PKG_VERSION)
 PKG_USE_MIPS16:=0
 
-HOST_BUILD_DEPENDS:=python python/host python-setuptools/host
-
-include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)
-$(call include_mk, python-host.mk)
 
 define Package/python-pip
   SUBMENU:=Python
@@ -34,8 +27,7 @@ define Package/python-pip
   CATEGORY:=Languages
   TITLE:=Tool for installing Python packages.
   URL:=https://pip.pypa.io
-  DEPENDS:=+python +python-setuptools +ca-certificates
-  MAINTAINER:=Alexandru Ardelean <ardeleanalex@gmail.com>
+  DEPENDS:=+python +python-setuptools
 endef
 
 define Package/python-pip/description
@@ -44,33 +36,41 @@ endef
 
 define Build/Compile
 	$(call Build/Compile/PyMod,,\
-		install --root="$(PKG_INSTALL_DIR)" --prefix="/usr" \
-		--single-version-externally-managed \
+		install --prefix="$(PKG_INSTALL_DIR)/usr" \
 	)
 endef
 
+PYTHON_PIP_PKG_DIR:=$(PYTHON_PKG_DIR)/pip-$(PKG_VERSION)-py$(PYTHON_VERSION).egg/pip
 define PyPackage/python-pip/filespec
 +|$(PYTHON_PKG_DIR)
--|$(PYTHON_PKG_DIR)/pip/_vendor/distlib/*.exe
+-|$(PYTHON_PIP_PKG_DIR)/_vendor/distlib/*.exe
+endef
+
+# Backup these files, so that they do not clash with python-setuptools
+# If we install python-pip python-setuptools, we want these to be replaced,
+# since python-pip replaces python-setuptools (when installed)
+define Package/python-pip/preinst
+#!/bin/sh
+cd "$${IPKG_INSTROOT}$(PYTHON_PKG_DIR)"
+mv -f easy-install.pth easy-install.pth.old
+mv -f site.py site.py.old
+exit 0
+endef
+
+# And put them back on remove
+define Package/python-pip/postrm
+#!/bin/sh
+cd "$${IPKG_INSTROOT}$(PYTHON_PKG_DIR)"
+mv -f easy-install.pth.old easy-install.pth
+mv -f site.py.old site.py
+exit 0
 endef
 
 define PyPackage/python-pip/install
-	$(INSTALL_DIR) $(1)/usr/bin $(1)/etc
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin
-	$(INSTALL_CONF) ./files/pip.conf $(1)/etc/
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(CP) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin
 endef
-
-define Host/Compile
-	$(call Build/Compile/HostPyMod,,\
-		install --root="$(STAGING_DIR)/host" --prefix="" \
-		--single-version-externally-managed \
-	)
-endef
-
-define Host/Install
-endef
-
-$(eval $(call HostBuild))
 
 $(eval $(call PyPackage,python-pip))
 $(eval $(call BuildPackage,python-pip))
+

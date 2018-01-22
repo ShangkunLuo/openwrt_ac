@@ -53,9 +53,6 @@ config statistics 'collectd_conntrack'
 	option enable '0'
 
 config statistics 'collectd_cpu'
-	option enable '1'
-
-config statistics 'collectd_cpufreq'
 	option enable '0'
 
 config statistics 'collectd_df'
@@ -116,7 +113,7 @@ config statistics 'collectd_load'
 	option enable '1'
 
 config statistics 'collectd_memory'
-	option enable '1'
+	option enable '0'
 
 config statistics 'collectd_netlink'
 	option enable '0'
@@ -142,9 +139,6 @@ config statistics 'collectd_ping'
 config statistics 'collectd_processes'
 	option enable '0'
 	option Processes 'uhttpd dnsmasq dropbear'
-
-config statistics 'collectd_sensors'
-	option enable '0'
 
 config statistics 'collectd_splash_leases'
 	option enable '0'

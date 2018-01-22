@@ -42,24 +42,24 @@
 	http.prepare_content("application/xhtml+xml")
 
 	local function nodeurl(prefix, name, query)
-		local u = url(prefix, name)
+		local url = controller .. prefix .. name .. "/"
 		if query then
-			u = u .. http.build_querystring(query)
+			url = url .. http.build_querystring(query)
 		end
-		return pcdata(u)
+		return pcdata(url)
 	end
 
-	local function render_menu(prefix, node, level)
+	local function subtree(prefix, node, level)
 		if not level then
 			level = 1
 		end
 
 		local childs = disp.node_childs(node)
 		if #childs > 0 then
-			write('<div class="tabmenu%d"><ul class="tabmenu l%d">' %{
-				level, level
-			})
-
+%>
+	<div class="tabmenu<%=level%>">
+	<ul class="tabmenu l<%=level%>">
+		<%
 			local selected_node
 			local selected_name
 			local i, v
@@ -70,51 +70,22 @@
 					selected_node = nnode
 					selected_name = v
 				end
-
-				write('<li class="tabmenu-item-%s %s"><a href="%s">%s</a></li>' %{
-					v, (nnode._menu_selected or (node.leaf and v == leaf)) and 'active' or '',
-					nodeurl(prefix, v, nnode.query),
-					striptags(translate(nnode.title))
-				})
+		%>
+			<li class="tabmenu-item-<%=v%><% if nnode._menu_selected or (node.leaf and v == leaf) then %> active<% end %>">
+				<a href="<%=nodeurl(prefix, v, nnode.query)%>"><%=striptags(translate(nnode.title))%></a>
+			</li>
+		<%
 			end
-
-			write('</ul><br style="clear:both" />')
-
+		%>
+	</ul>
+	<br style="clear:both" />
+<%
 			if selected_node then
-				render_menu(prefix .. "/" .. selected_name, selected_node, level + 1)
+				subtree(prefix .. selected_name .. "/", selected_node, level + 1)
 			end
-
-			write('</div>')
-		end
-	end
-
-	local function render_changes()
-		if tree.nodes[category] and tree.nodes[category].ucidata then
-			local ucic = 0
-			for i, j in pairs(require("luci.model.uci").cursor():changes()) do
-				for k, l in pairs(j) do
-					for m, n in pairs(l) do
-						ucic = ucic + 1;
-					end
-				end
-			end
-
-			write('<div id="savemenu">')
-
-			if ucic > 0 then
-				write('<a class="warning" href="%s?redir=%s">%s: %d</a>' %{
-					url(category, 'uci/changes'),
-					http.urlencode(http.formvalue('redir') or REQUEST_URI),
-					translate('Unsaved Changes'),
-					ucic
-				})
-			else
-				write('<a href="#">%s: 0</a>' %{
-					translate('Unsaved Changes')
-				})
-			end
-
-			write('</div>')
+%>
+	</div>
+<%
 		end
 	end
 -%>
@@ -166,14 +137,31 @@
 	</ul>
 <% end %>
 
-<% render_changes() %>
+<%
+if tree.nodes[category] and tree.nodes[category].ucidata then
+	local ucic = 0
+	for i, j in pairs(require("luci.model.uci").cursor():changes()) do
+		for k, l in pairs(j) do
+			for m, n in pairs(l) do
+				ucic = ucic + 1;
+			end
+		end
+	end
+-%>
+<div id="savemenu">
+	<% if ucic > 0 then %>
+		<a class="warning" href="<%=controller%>/<%=category%>/uci/changes/?redir=<%=luci.http.urlencode(luci.http.formvalue("redir") or REQUEST_URI)%>"><%:Unsaved Changes%>: <%=ucic%></a>
+	<%- else -%>
+		<a href="#"><%:Changes%>: 0</a>
+	<% end -%>
+</div><% end %>
 
 <div class="clear"></div>
 </div>
 
 <div id="maincontainer">
 	<div id="tabmenu">
-		<% if category then render_menu(category, cattree) end %>
+		<% if category then subtree("/" .. category .. "/", cattree) end %>
 	</div>
 
 	<div id="maincontent">

@@ -10,13 +10,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Advanced Settings"
-msgstr "Avancerade inställningar"
+msgstr ""
 
 msgid "Allowed clients"
-msgstr "Tillåtna klienter"
+msgstr ""
 
 msgid "Always use system DNS resolver"
-msgstr "Använd alltid systemets DNS-resolver"
+msgstr ""
 
 msgid ""
 "Basic HTTP authentication supported. Provide username and password in "
@@ -24,13 +24,13 @@ msgid ""
 msgstr ""
 
 msgid "Configuration"
-msgstr "Konfiguration"
+msgstr ""
 
 msgid "DNS and Query Settings"
-msgstr "Inställningar för DNS och Förfrågningar"
+msgstr ""
 
 msgid "DNS server address"
-msgstr "DNS-serverns adress"
+msgstr ""
 
 msgid "Delete cache files time"
 msgstr ""
@@ -45,22 +45,22 @@ msgid "Enable if cache (proxy) is shared by multiple users."
 msgstr ""
 
 msgid "First PMM segment size (in bytes)"
-msgstr "Första PMM-segmentets storlek (i bytes)"
+msgstr ""
 
 msgid "General Settings"
-msgstr "Generella inställningar"
+msgstr ""
 
 msgid "How much RAM should Polipo use for its cache."
-msgstr "Hur mycket RAM borde Polipo använda för dess cache."
+msgstr ""
 
 msgid "In RAM cache size (in bytes)"
 msgstr ""
 
 msgid "Listen address"
-msgstr "Lyssningsadress"
+msgstr ""
 
 msgid "Listen port"
-msgstr "Lyssningsport"
+msgstr ""
 
 msgid ""
 "Location where polipo will cache files permanently. Use of external storage "
@@ -69,22 +69,22 @@ msgid ""
 msgstr ""
 
 msgid "Log file location"
-msgstr "Plats för loggfil"
+msgstr ""
 
 msgid "Log to syslog"
-msgstr "Logga till syslog"
+msgstr ""
 
 msgid "Logging and RAM"
-msgstr "Loggning och RAM"
+msgstr ""
 
 msgid "Never use system DNS resolver"
-msgstr "Använd aldrig systemets DNS-resolver"
+msgstr ""
 
 msgid "On-Disk Cache"
 msgstr ""
 
 msgid "PMM segments size (in bytes)"
-msgstr "PMM-segmentets storlek (i bytes)"
+msgstr ""
 
 msgid "Parent Proxy"
 msgstr ""
@@ -101,10 +101,10 @@ msgid "Parent proxy authentication"
 msgstr ""
 
 msgid "Polipo"
-msgstr "Polipo"
+msgstr ""
 
 msgid "Polipo Status"
-msgstr "Status för Polipo"
+msgstr ""
 
 msgid "Polipo is a small and fast caching web proxy."
 msgstr ""
@@ -120,13 +120,13 @@ msgid ""
 msgstr ""
 
 msgid "Port on which Polipo will listen"
-msgstr "Vilken port som Polipo ska lyssna på"
+msgstr ""
 
 msgid "Proxy"
-msgstr "Proxy"
+msgstr ""
 
 msgid "Query DNS by hostname"
-msgstr "Fråga efter DNS via värdnamn"
+msgstr ""
 
 msgid "Query DNS directly, fallback to system resolver"
 msgstr ""
@@ -135,7 +135,7 @@ msgid "Query DNS directly, for unknown hosts fall back to system resolver"
 msgstr ""
 
 msgid "Query DNS for IPv6"
-msgstr "Fråga efter DNS för IPv6"
+msgstr ""
 
 msgid "Query IPv4 and IPv6, prefer IPv4"
 msgstr ""
@@ -150,24 +150,20 @@ msgid ""
 "Set the DNS server address to use, if you want Polipo to use different DNS "
 "server than the host system."
 msgstr ""
-"Ange DNS-serverns adress som ska användas om du vill att Polipo ska använda "
-"en annan DNS-serverän värdsystemet."
 
 msgid "Shared cache"
-msgstr "Delad cache"
+msgstr ""
 
 msgid ""
 "Size of the first PMM segment. If not defined, it defaults to twice the PMM "
 "segment size."
 msgstr ""
-"Storleken av det första PMM-segmentet. Om det inte definieras så "
-"standardiseras det till den dubbla storleken av PMM-segmentet"
 
 msgid "Size to which cached files should be truncated"
 msgstr ""
 
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 msgid "Syslog facility"
 msgstr ""
@@ -176,22 +172,18 @@ msgid ""
 "The interface on which Polipo will listen. To listen on all interfaces use "
 "0.0.0.0 or :: (IPv6)."
 msgstr ""
-"Gränssnittet som Polipo ska lyssna i. För att lyssna på alla gränssnitt, "
-"använd 0.0.0.0 eller :: (IPv6)."
 
 msgid "Time after which cached files will be deleted"
-msgstr "Tiden efter vilket cachade filer kommer att bli raderade"
+msgstr ""
 
 msgid "Time after which cached files will be truncated"
-msgstr "Tiden efter vilket cachade filer kommer att bli trunkerade"
+msgstr ""
 
 msgid "To enable PMM, PMM segment size must be set to some positive value."
 msgstr ""
-"För att aktivera PMM så måste PMM-segmentet vara inställt till ett positivt "
-"värde."
 
 msgid "Truncate cache files size (in bytes)"
-msgstr "Storlek på cache-filer att trunkera (i bytes)"
+msgstr ""
 
 msgid "Truncate cache files time"
 msgstr ""
@@ -200,17 +192,12 @@ msgid ""
 "Use of external storage device is recommended, because the log file is "
 "written frequently and can grow considerably."
 msgstr ""
-"Användning av en extern lagringsenhet rekommenderas eftersom att loggfilen "
-"är frekvent skriven och kan växa avsevärt."
 
 msgid ""
 "When listen address is set to 0.0.0.0 or :: (IPv6), you must list clients "
 "that are allowed to connect. The format is IP address or network address "
 "(192.168.1.123, 192.168.1.0/24, 2001:660:116::/48 (IPv6))"
 msgstr ""
-"När lyssningsadress är inställd till 0.0.0.0 eller :: (IPv6) så måste du "
-"lista klienter som tillåts att ansluta. Formatet är IP-adressen eller "
-"nätverksadressen (192.168.1.123, 192.168.1.0/24, 2001:660:116::/48 (IPv6))"
 
 msgid "enable"
-msgstr "aktivera"
+msgstr ""

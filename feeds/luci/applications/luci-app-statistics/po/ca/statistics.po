@@ -30,9 +30,6 @@ msgstr "Afegeix múltiples hosts separats per espai."
 msgid "Add notification command"
 msgstr "Afegeix ordre de notificació"
 
-msgid "Aggregate number of connected users"
-msgstr ""
-
 msgid "Base Directory"
 msgstr "Directori base"
 
@@ -156,13 +153,7 @@ msgstr "Neteja la memòria cau després de"
 msgid "Forwarding between listen and server addresses"
 msgstr "Readreçant entre adreces que reben connexions i adreces de servidors"
 
-msgid "Gather compression statistics"
-msgstr ""
-
 msgid "General plugins"
-msgstr ""
-
-msgid "Generate a separate graph for each logged user"
 msgstr ""
 
 msgid "Graphs"
@@ -193,9 +184,6 @@ msgid ""
 msgstr ""
 "Ací pots definir diversos criteris pels que es seleccionaran les regles "
 "iptables monitoritzades ."
-
-msgid "Hold Ctrl to select multiple items or to deselect entries."
-msgstr ""
 
 msgid "Host"
 msgstr "Host"
@@ -265,9 +253,6 @@ msgstr ""
 msgid "Monitor all local listen ports"
 msgstr "Monitoritza tots els ports locals que reben connexions"
 
-msgid "Monitor all sensors"
-msgstr ""
-
 msgid "Monitor devices"
 msgstr "Monitoritza dispositius"
 
@@ -331,15 +316,6 @@ msgstr "Configuració del connector OLSRd"
 msgid "Only create average RRAs"
 msgstr "Crea només RRAs mitjans"
 
-msgid "OpenVPN"
-msgstr ""
-
-msgid "OpenVPN Plugin Configuration"
-msgstr ""
-
-msgid "OpenVPN status files"
-msgstr ""
-
 msgid "Options"
 msgstr "Opcions"
 
@@ -396,15 +372,6 @@ msgstr ""
 
 msgid "Seconds"
 msgstr "Segons"
-
-msgid "Sensor list"
-msgstr ""
-
-msgid "Sensors"
-msgstr ""
-
-msgid "Sensors Plugin Configuration"
-msgstr ""
 
 msgid "Server host"
 msgstr "Màquina servidor"
@@ -489,11 +456,6 @@ msgstr ""
 msgid ""
 "The OLSRd plugin reads information about meshed networks from the txtinfo "
 "plugin of OLSRd."
-msgstr ""
-
-msgid ""
-"The OpenVPN plugin gathers information about the current vpn connection "
-"status."
 msgstr ""
 
 msgid ""
@@ -635,11 +597,6 @@ msgstr ""
 "Això pot inutilitzar el dispositiu!</strong>"
 
 msgid ""
-"The sensors plugin uses the Linux Sensors framework to gather environmental "
-"statistics."
-msgstr ""
-
-msgid ""
 "The splash leases plugin uses libuci to collect statistics about splash "
 "leases."
 msgstr ""
@@ -702,9 +659,6 @@ msgid "Uptime"
 msgstr ""
 
 msgid "Uptime Plugin Configuration"
-msgstr ""
-
-msgid "Use improved naming schema"
 msgstr ""
 
 msgid "Used PID file"

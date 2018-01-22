@@ -1,5 +1,5 @@
---- a/src/main.cpp
-+++ b/src/main.cpp
+--- a/main.cpp
++++ b/main.cpp
 @@ -4,11 +4,14 @@
   * https://tsdemuxer.googlecode.com/svn/trunk/xupnpd
   */

@@ -8,12 +8,10 @@ module "luci.version"
 if pcall(dofile, "/etc/openwrt_release") and _G.DISTRIB_DESCRIPTION then
 	distname    = ""
 	distversion = _G.DISTRIB_DESCRIPTION
-        distmodel   = _G.DISTRIB_MODEL
-        distversionnumber  = _G.DISTRIB_VERSIONNUMBER
-	if distmodel then
-		--distrevision = _G.DISTRIB_REVISION
-		if not distversion:find(distmodel,1,true) then
-			distversion = distversion .. " " .. distmodel
+	if _G.DISTRIB_REVISION then
+		distrevision = _G.DISTRIB_REVISION
+		if not distversion:find(distrevision,1,true) then
+			distversion = distversion .. " " .. distrevision
 		end
 	end
 else

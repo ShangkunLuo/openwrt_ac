@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2012-2016 OpenWrt.org
+# Copyright (C) 2012-2014 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -7,15 +7,15 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=aria2
-PKG_VERSION:=1.28.0
+PKG_VERSION:=1.18.7
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_SOURCE_URL:=https://github.com/aria2/aria2/releases/download/release-$(PKG_VERSION)/
-PKG_MD5SUM:=f649ab30f3b09d0c0ebb816ce0c0205d
+PKG_SOURCE_URL:=@SF/aria2
+PKG_MD5SUM:=36e92af92b4370817c577ed802546842
 PKG_INSTALL:=1
 
-PKG_MAINTAINER:=Imre Kaloz <kaloz@openwrt.org>, Hsing-Wang Liao <kuoruan@gmail.com>
+PKG_MAINTAINER:=Imre Kaloz <kaloz@openwrt.org>
 PKG_LICENSE:=GPLv2
 PKG_LICENSE_FILES:=COPYING
 
@@ -24,10 +24,7 @@ PKG_CONFIG_DEPENDS := \
   ARIA2_OPENSSL \
   ARIA2_GNUTLS \
   ARIA2_BITTORRENT \
-  ARIA2_METALINK \
-  ARIA2_SFTP \
-  ARIA2_EXPAT \
-  ARIA2_LIBXML2
+  ARIA2_METALINK
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -40,8 +37,8 @@ define Package/aria2
   CATEGORY:=Network
   SUBMENU:=File Transfer
   TITLE:=lightweight download utility
-  URL:=https://aria2.github.io/
-  DEPENDS:=+zlib +ARIA2_SFTP:libssh2 +ARIA2_LIBXML2:libxml2 +ARIA2_EXPAT:libexpat +libstdcpp +ARIA2_OPENSSL:libopenssl +ARIA2_GNUTLS:libgnutls
+  URL:=http://aria2.sourceforge.net/
+  DEPENDS:=+zlib +ARIA2_METALINK:libxml2 +libstdcpp +ARIA2_OPENSSL:libopenssl +ARIA2_GNUTLS:libgnutls
 endef
 
 define Package/aria2/description
@@ -56,26 +53,18 @@ CONFIGURE_ARGS += \
 	$(if $(CONFIG_ARIA2_GNUTLS),--with,--without)-gnutls \
 	$(if $(CONFIG_ARIA2_BITTORRENT),--enable,--disable)-bittorrent \
 	$(if $(CONFIG_ARIA2_METALINK),--enable,--disable)-metalink \
-	$(if $(CONFIG_ARIA2_SFTP),--with,--without)-libssh2 \
-	$(if $(CONFIG_ARIA2_LIBXML2),--with,--without)-libxml2 \
-	$(if $(CONFIG_ARIA2_EXPAT),--with,--without)-libexpat \
+	$(if $(CONFIG_ARIA2_METALINK),--with,--without)-libxml2 \
 	--without-libnettle \
 	--without-libgmp \
 	--without-libgcrypt \
+	--without-libexpat \
 	--without-libcares \
-	--without-libuv \
 	--without-sqlite3 \
 	--with-libz
 
 define Package/aria2/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/aria2c $(1)/usr/bin
-
-	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/aria2.init $(1)/etc/init.d/aria2
-
-	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) ./files/aria2.conf $(1)/etc/config/aria2
 endef
 
 $(eval $(call BuildPackage,aria2))

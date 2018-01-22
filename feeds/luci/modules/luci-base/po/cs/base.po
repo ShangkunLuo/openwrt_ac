@@ -11,9 +11,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.0.6\n"
 
-msgid "%s is untagged in multiple VLANs!"
-msgstr ""
-
 msgid "(%d minute window, %d second interval)"
 msgstr "(%d minutové okno, %d sekundový interval)"
 
@@ -46,9 +43,6 @@ msgstr "Zatížení za 1 minutu:"
 
 msgid "15 Minute Load:"
 msgstr "Zatížení za 15 minut:"
-
-msgid "464XLAT (CLAT)"
-msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "Zatížení za 5 minut:"
@@ -122,19 +116,7 @@ msgstr "Nejvyšší počet souběžných dotazů"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 
-msgid "A43C + J43 + A43"
-msgstr ""
-
-msgid "A43C + J43 + A43 + V43"
-msgstr ""
-
-msgid "ADSL"
-msgstr ""
-
 msgid "AICCU (SIXXS)"
-msgstr ""
-
-msgid "ANSI T1.413"
 msgstr ""
 
 msgid "APN"
@@ -145,9 +127,6 @@ msgstr "Podpora AR"
 
 msgid "ARP retry threshold"
 msgstr "ARP limit opakování"
-
-msgid "ATM (Asynchronous Transfer Mode)"
-msgstr ""
 
 msgid "ATM Bridges"
 msgstr "ATM mosty"
@@ -169,9 +148,6 @@ msgstr ""
 
 msgid "ATM device number"
 msgstr "číslo ATM zařízení"
-
-msgid "ATU-C System Vendor ID"
-msgstr ""
 
 msgid "AYIYA"
 msgstr ""
@@ -225,9 +201,6 @@ msgstr "Přidat rozhraní..."
 msgid "Additional Hosts files"
 msgstr "Dodatečné Hosts soubory"
 
-msgid "Additional servers file"
-msgstr ""
-
 msgid "Address"
 msgstr "Adresa"
 
@@ -239,9 +212,6 @@ msgstr "Správa"
 
 msgid "Advanced Settings"
 msgstr "Pokročilé nastavení"
-
-msgid "Aggregate Transmit Power(ACTATP)"
-msgstr ""
 
 msgid "Alert"
 msgstr "Upozornění"
@@ -289,53 +259,8 @@ msgstr ""
 msgid "Always announce default router"
 msgstr ""
 
-msgid "An additional network will be created if you leave this checked."
-msgstr ""
-
-msgid "Annex"
-msgstr ""
-
-msgid "Annex A + L + M (all)"
-msgstr ""
-
-msgid "Annex A G.992.1"
-msgstr ""
-
-msgid "Annex A G.992.2"
-msgstr ""
-
-msgid "Annex A G.992.3"
-msgstr ""
-
-msgid "Annex A G.992.5"
-msgstr ""
-
-msgid "Annex B (all)"
-msgstr ""
-
-msgid "Annex B G.992.1"
-msgstr ""
-
-msgid "Annex B G.992.3"
-msgstr ""
-
-msgid "Annex B G.992.5"
-msgstr ""
-
-msgid "Annex J (all)"
-msgstr ""
-
-msgid "Annex L G.992.3 POTS 1"
-msgstr ""
-
-msgid "Annex M (all)"
-msgstr ""
-
-msgid "Annex M G.992.3"
-msgstr ""
-
-msgid "Annex M G.992.5"
-msgstr ""
+msgid "An additional network will be created if you leave this unchecked."
+msgstr "Pokud není zaškrtnuto, bude vytvořena dodatečná síť."
 
 msgid "Announce as default router even if no public prefix is available."
 msgstr ""
@@ -344,15 +269,6 @@ msgid "Announced DNS domains"
 msgstr ""
 
 msgid "Announced DNS servers"
-msgstr ""
-
-msgid "Anonymous Identity"
-msgstr ""
-
-msgid "Anonymous Mount"
-msgstr ""
-
-msgid "Anonymous Swap"
 msgstr ""
 
 msgid "Antenna 1"
@@ -390,9 +306,6 @@ msgstr "Připojení klienti"
 msgid "Atheros 802.11%s Wireless Controller"
 msgstr "Atheros 802.11%s bezdrátový ovladač"
 
-msgid "Auth Group"
-msgstr ""
-
 msgid "AuthGroup"
 msgstr ""
 
@@ -414,21 +327,6 @@ msgstr ""
 msgid "Automatic Homenet (HNCP)"
 msgstr ""
 
-msgid "Automatically check filesystem for errors before mounting"
-msgstr ""
-
-msgid "Automatically mount filesystems on hotplug"
-msgstr ""
-
-msgid "Automatically mount swap on hotplug"
-msgstr ""
-
-msgid "Automount Filesystem"
-msgstr ""
-
-msgid "Automount Swap"
-msgstr ""
-
 msgid "Available"
 msgstr "Dostupné"
 
@@ -437,15 +335,6 @@ msgstr "Dostupné balíčky"
 
 msgid "Average:"
 msgstr "Průměr:"
-
-msgid "B43 + B43C"
-msgstr ""
-
-msgid "B43 + B43C + V43"
-msgstr ""
-
-msgid "BR / DMR / AFTR"
-msgstr ""
 
 msgid "BSSID"
 msgstr "BSSID"
@@ -495,9 +384,6 @@ msgstr ""
 "souborů označených opkg, nezbyných systémových souborů a souborů "
 "vyhovujících uživatelem určeným vzorům."
 
-msgid "Bind only to specific interfaces rather than wildcard address."
-msgstr ""
-
 msgid "Bitrate"
 msgstr "Přenosová rychlost"
 
@@ -536,6 +422,9 @@ msgstr "Tlačítka"
 msgid "CA certificate; if empty it will be saved after the first connection."
 msgstr ""
 
+msgid "CPU"
+msgstr "CPU"
+
 msgid "CPU usage (%)"
 msgstr "Vytížení CPU (%)"
 
@@ -563,9 +452,6 @@ msgstr "Kanál"
 msgid "Check"
 msgstr "Kontrola"
 
-msgid "Check fileystems before mount"
-msgstr ""
-
 msgid "Checksum"
 msgstr "Kontrolní součet"
 
@@ -589,9 +475,6 @@ msgstr ""
 
 msgid "Cipher"
 msgstr "Šifra"
-
-msgid "Cisco UDP encapsulation"
-msgstr ""
 
 msgid ""
 "Click \"Generate archive\" to download a tar archive of the current "
@@ -741,32 +624,11 @@ msgstr "Přeposílání DNS"
 msgid "DNS-Label / FQDN"
 msgstr ""
 
-msgid "DNSSEC"
-msgstr ""
-
-msgid "DNSSEC check unsigned"
-msgstr ""
-
-msgid "DPD Idle Timeout"
-msgstr ""
-
 msgid "DS-Lite AFTR address"
-msgstr ""
-
-msgid "DSL"
-msgstr ""
-
-msgid "DSL Status"
-msgstr ""
-
-msgid "DSL line mode"
 msgstr ""
 
 msgid "DUID"
 msgstr "DUID"
-
-msgid "Data Rate"
-msgstr ""
 
 msgid "Debug"
 msgstr "Ladění"
@@ -800,6 +662,9 @@ msgstr ""
 msgid "Delete"
 msgstr "Odstranit"
 
+msgid "Delete this interface"
+msgstr "Odstranit toto rozhraní"
+
 msgid "Delete this network"
 msgstr "Odstranit tuto síť"
 
@@ -817,12 +682,6 @@ msgstr "Zařízení"
 
 msgid "Device Configuration"
 msgstr "Nastavení zařízení"
-
-msgid "Device is rebooting..."
-msgstr ""
-
-msgid "Device unreachable"
-msgstr ""
 
 msgid "Diagnostics"
 msgstr "Diagnostika"
@@ -845,9 +704,6 @@ msgstr ""
 
 msgid "Disable DNS setup"
 msgstr "Zakázat nastavení DNS"
-
-msgid "Disable Encryption"
-msgstr ""
 
 msgid "Disable HW-Beacon timer"
 msgstr "Zakázat HW-Beacon časovač"
@@ -944,19 +800,11 @@ msgstr ""
 "Pro klienty alokovat DHCP adresy dynamicky. Pokud je volba zakázána, budou "
 "obsloužení pouze klienti se statickými výpůjčkami."
 
-msgid "EA-bits length"
-msgstr ""
-
 msgid "EAP-Method"
 msgstr "Metoda EAP"
 
 msgid "Edit"
 msgstr "Upravit"
-
-msgid ""
-"Edit the raw configuration data above to fix any error and hit \"Save\" to "
-"reload the page."
-msgstr ""
 
 msgid "Edit this interface"
 msgstr "Upravit toto rozhraní"
@@ -984,9 +832,6 @@ msgstr "Povolit průchod jumbo rámců"
 
 msgid "Enable NTP client"
 msgstr "Povolit NTP klienta"
-
-msgid "Enable Single DES"
-msgstr ""
 
 msgid "Enable TFTP server"
 msgstr "Povolit TFTP server"
@@ -1033,17 +878,11 @@ msgstr "Odstraňování..."
 msgid "Error"
 msgstr "Chyba"
 
-msgid "Errored seconds (ES)"
-msgstr ""
-
 msgid "Ethernet Adapter"
 msgstr "Ethernetový adaptér"
 
 msgid "Ethernet Switch"
 msgstr "Ethernetový switch"
-
-msgid "Exclude interfaces"
-msgstr ""
 
 msgid "Expand hosts"
 msgstr "Rozšířit hostitele"
@@ -1066,12 +905,6 @@ msgstr "Externí protokolovací server"
 msgid "External system log server port"
 msgstr "Port externího protokolovacího serveru"
 
-msgid "External system log server protocol"
-msgstr ""
-
-msgid "Extra SSH command options"
-msgstr ""
-
 msgid "Fast Frames"
 msgstr "Rychlé rámce"
 
@@ -1093,11 +926,6 @@ msgstr "Filtrovat soukromé"
 msgid "Filter useless"
 msgstr "Filtrovat nepotřebné"
 
-msgid ""
-"Find all currently attached filesystems and swap and replace configuration "
-"with defaults based on what was detected"
-msgstr ""
-
 msgid "Find and join network"
 msgstr "Vyhledat a připojit síť"
 
@@ -1116,14 +944,14 @@ msgstr "Nastavení firewallu"
 msgid "Firewall Status"
 msgstr "Stav firewallu"
 
-msgid "Firmware File"
-msgstr ""
-
 msgid "Firmware Version"
 msgstr "Verze firmwaru"
 
 msgid "Fixed source port for outbound DNS queries"
 msgstr "Pevný zdrojový port pro odchozí DNS dotazy"
+
+msgid "Flags"
+msgstr "Příznaky"
 
 msgid "Flash Firmware"
 msgstr "Nahrát firmware"
@@ -1155,17 +983,8 @@ msgstr "Vynutit TKIP"
 msgid "Force TKIP and CCMP (AES)"
 msgstr "Vynutit TKIP a CCMP (AES)"
 
-msgid "Force use of NAT-T"
-msgstr ""
-
-msgid "Form token mismatch"
-msgstr ""
-
 msgid "Forward DHCP traffic"
 msgstr "Přeposílat DHCP provoz"
-
-msgid "Forward Error Correction Seconds (FECS)"
-msgstr ""
 
 msgid "Forward broadcast traffic"
 msgstr "Přeposílat broadcasty"
@@ -1206,9 +1025,6 @@ msgstr "Obecné nastavení"
 msgid "General options for opkg"
 msgstr ""
 
-msgid "Generate Config"
-msgstr ""
-
 msgid "Generate archive"
 msgstr "Vytvorǐt archív"
 
@@ -1218,9 +1034,6 @@ msgstr "Generic 802.11%s Wireless Controller"
 msgid "Given password confirmation did not match, password not changed!"
 msgstr "Heslo nezměněno z důvodu nesouhlasu nového hesla a ověření hesla!"
 
-msgid "Global Settings"
-msgstr ""
-
 msgid "Global network options"
 msgstr ""
 
@@ -1229,9 +1042,6 @@ msgstr "Přejít na nastavení hesla..."
 
 msgid "Go to relevant configuration page"
 msgstr "Přejít na související konfigurační stránku"
-
-msgid "Group Password"
-msgstr ""
 
 msgid "Guest"
 msgstr ""
@@ -1247,9 +1057,6 @@ msgstr "Handler"
 
 msgid "Hang Up"
 msgstr "Zavěsit"
-
-msgid "Header Error Code Errors (HEC)"
-msgstr ""
 
 msgid "Heartbeat"
 msgstr ""
@@ -1273,9 +1080,6 @@ msgstr "Hermes 802.11b bezdrátový ovladač"
 msgid "Hide <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 msgstr "Skrývat <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 
-msgid "Host"
-msgstr ""
-
 msgid "Host entries"
 msgstr "Záznamy hostitelů"
 
@@ -1296,9 +1100,6 @@ msgid "Hostnames"
 msgstr "Jména hostitelů"
 
 msgid "Hybrid"
-msgstr ""
-
-msgid "IKE DH Group"
 msgstr ""
 
 msgid "IP address"
@@ -1333,9 +1134,6 @@ msgstr "IPv4 maska sítě"
 
 msgid "IPv4 only"
 msgstr "Pouze IPv4"
-
-msgid "IPv4 prefix"
-msgstr ""
 
 msgid "IPv4 prefix length"
 msgstr "Délka IPv4 prefixu"
@@ -1403,12 +1201,6 @@ msgstr "IPv6-over-IPv4 (6to4)"
 msgid "Identity"
 msgstr "Identita"
 
-msgid "If checked, 1DES is enaled"
-msgstr ""
-
-msgid "If checked, encryption is disabled"
-msgstr ""
-
 msgid ""
 "If specified, mount the device by its UUID instead of a fixed device node"
 msgstr "Namísto pevného uzlu zařízení připojovat pomocí UUID"
@@ -1452,11 +1244,6 @@ msgstr "Obraz"
 
 msgid "In"
 msgstr "Dovnitř"
-
-msgid ""
-"In order to prevent unauthorized access to the system, your request has been "
-"blocked. Click \"Continue »\" below to return to the previous page."
-msgstr ""
 
 msgid "Inactivity timeout"
 msgstr "Časový limit nečinnosti"
@@ -1502,9 +1289,6 @@ msgstr "Rozhraní se znovu připojuje..."
 
 msgid "Interface is shutting down..."
 msgstr "Rozhraní se vypíná..."
-
-msgid "Interface name"
-msgstr ""
 
 msgid "Interface not present or not connected yet."
 msgstr "Rozhraní není přítomné nebo je dosud nepřipojeno."
@@ -1552,11 +1336,11 @@ msgstr "Vyžadován JavaScript!"
 msgid "Join Network"
 msgstr "Připojit k síti"
 
+msgid "Join Network: Settings"
+msgstr "Připojit k síti: nastavení"
+
 msgid "Join Network: Wireless Scan"
 msgstr "Připojit k síti: Vyhledání bezdrátových sítí"
-
-msgid "Joining Network: %q"
-msgstr ""
 
 msgid "Keep settings"
 msgstr "Zachovat nastavení"
@@ -1600,13 +1384,7 @@ msgstr "Jazyk"
 msgid "Language and Style"
 msgstr "Jazyk a styl"
 
-msgid "Latency"
-msgstr ""
-
 msgid "Leaf"
-msgstr ""
-
-msgid "Lease time"
 msgstr ""
 
 msgid "Lease validity time"
@@ -1633,22 +1411,13 @@ msgstr "Legenda:"
 msgid "Limit"
 msgstr "Limit"
 
-msgid "Limit DNS service to subnets interfaces on which we are serving DNS."
+msgid "Line Attenuation"
 msgstr ""
 
-msgid "Limit listening to these interfaces, and loopback."
-msgstr ""
-
-msgid "Line Attenuation (LATN)"
-msgstr ""
-
-msgid "Line Mode"
+msgid "Line Speed"
 msgstr ""
 
 msgid "Line State"
-msgstr ""
-
-msgid "Line Uptime"
 msgstr ""
 
 msgid "Link On"
@@ -1661,17 +1430,11 @@ msgstr ""
 "Seznam <abbr title=\"Domain Name System\">DNS</abbr> serverů, na které "
 "přeposílat požadavky"
 
-msgid "List of SSH key files for auth"
-msgstr ""
-
 msgid "List of domains to allow RFC1918 responses for"
 msgstr "Seznam domén, pro které povolit odpovědi podle RFC1918"
 
 msgid "List of hosts that supply bogus NX domain results"
 msgstr "Seznam hostitelů, kteří udávají falešné hodnoty NX domén"
-
-msgid "Listen Interfaces"
-msgstr ""
 
 msgid "Listen only on the given interface or, if unspecified, on all"
 msgstr ""
@@ -1689,17 +1452,11 @@ msgstr "Zátěž průměrná"
 msgid "Loading"
 msgstr "Načítání"
 
-msgid "Local IP address to assign"
-msgstr ""
-
 msgid "Local IPv4 address"
 msgstr "Místní IPv4 adresa"
 
 msgid "Local IPv6 address"
 msgstr "Místní IPv6 adresa"
-
-msgid "Local Service Only"
-msgstr ""
 
 msgid "Local Startup"
 msgstr "Místní startup"
@@ -1753,9 +1510,6 @@ msgstr "Přihlásit"
 msgid "Logout"
 msgstr "Odhlásit"
 
-msgid "Loss of Signal Seconds (LOSS)"
-msgstr ""
-
 msgid "Lowest leased address as offset from the network address."
 msgstr "Nejnižší zapůjčenou adresu použít jako offset síťové adresy."
 
@@ -1771,14 +1525,8 @@ msgstr "Filtr MAC"
 msgid "MAC-List"
 msgstr "Seznam Mac"
 
-msgid "MAP / LW4over6"
-msgstr ""
-
 msgid "MB/s"
 msgstr "MB/s"
-
-msgid "MD5"
-msgstr ""
 
 msgid "MHz"
 msgstr "MHz"
@@ -1789,12 +1537,6 @@ msgstr "MTU"
 msgid ""
 "Make sure to clone the root filesystem using something like the commands "
 "below:"
-msgstr ""
-
-msgid "Manual"
-msgstr ""
-
-msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
 msgid "Maximum Rate"
@@ -1887,17 +1629,11 @@ msgstr ""
 "Přípojný bod určuje místo v souborovém systému, na kterém bude připojeno "
 "paměťové zařízení"
 
-msgid "Mount filesystems not specifically configured"
-msgstr ""
-
 msgid "Mount options"
 msgstr "Volby připojení"
 
 msgid "Mount point"
 msgstr "Přípojný bod"
-
-msgid "Mount swap not specifically configured"
-msgstr ""
 
 msgid "Mounted file systems"
 msgstr "Připojené souborové systémy"
@@ -1917,16 +1653,7 @@ msgstr "Adresa vícesměrového vysílání"
 msgid "NAS ID"
 msgstr "NAS ID"
 
-msgid "NAT-T Mode"
-msgstr ""
-
-msgid "NAT64 Prefix"
-msgstr ""
-
 msgid "NDP-Proxy"
-msgstr ""
-
-msgid "NT Domain"
 msgstr ""
 
 msgid "NTP server candidates"
@@ -1968,9 +1695,6 @@ msgstr "Další »"
 msgid "No DHCP Server configured for this interface"
 msgstr "Pro toto rozhraní není nastaven žádný DHCP server"
 
-msgid "No NAT-T"
-msgstr ""
-
 msgid "No chains in this table"
 msgstr "Žádné řetězce v této tabulce"
 
@@ -2004,17 +1728,11 @@ msgstr "Žádná zóna nepřiřazena"
 msgid "Noise"
 msgstr "Šum"
 
-msgid "Noise Margin (SNR)"
+msgid "Noise Margin"
 msgstr ""
 
 msgid "Noise:"
 msgstr "Šum:"
-
-msgid "Non Pre-emtive CRC errors (CRC_P)"
-msgstr ""
-
-msgid "Non-wildcard"
-msgstr ""
 
 msgid "None"
 msgstr "Žádný"
@@ -2049,12 +1767,6 @@ msgstr "OK"
 msgid "OPKG-Configuration"
 msgstr "Konfigurace balíčků OPKG"
 
-msgid "Obfuscated Group Password"
-msgstr ""
-
-msgid "Obfuscated Password"
-msgstr ""
-
 msgid "Off-State Delay"
 msgstr "Vypnutí prodlevy"
 
@@ -2080,9 +1792,6 @@ msgstr "Jedno jméno nebo mac adresa, musí být zadáno!"
 
 msgid "One or more fields contain invalid values!"
 msgstr "Jedno nebo více polí obsahuje neplatné hodnoty!"
-
-msgid "One or more invalid/required values on tab"
-msgstr ""
 
 msgid "One or more required fields have no value!"
 msgstr "Jedno nebo více požadovaných polí neobsahuje hodnotu!"
@@ -2132,9 +1841,6 @@ msgstr "Přepsat MAC adresu"
 msgid "Override MTU"
 msgstr "Přepsat MTU"
 
-msgid "Override default interface name"
-msgstr ""
-
 msgid "Override the gateway in DHCP responses"
 msgstr "Přepsat bránu v DHCP odpovědích"
 
@@ -2178,20 +1884,8 @@ msgstr "PPPoATM"
 msgid "PPPoE"
 msgstr "PPPoE"
 
-msgid "PPPoSSH"
-msgstr ""
-
 msgid "PPtP"
 msgstr "PPtP"
-
-msgid "PSID offset"
-msgstr ""
-
-msgid "PSID-bits length"
-msgstr ""
-
-msgid "PTM/EFM (Packet Transfer Mode)"
-msgstr ""
 
 msgid "Package libiwinfo required!"
 msgstr "Vyžadován balíček libiwinfo!"
@@ -2217,11 +1911,11 @@ msgstr "Autentizace heslem"
 msgid "Password of Private Key"
 msgstr "Heslo privátního klíče"
 
-msgid "Password of inner Private Key"
-msgstr ""
-
 msgid "Password successfully changed!"
 msgstr "Heslo bylo úspěšně změněno!"
+
+msgid "Path"
+msgstr ""
 
 msgid "Path to CA-Certificate"
 msgstr "Cesta k certifikátu CA"
@@ -2235,23 +1929,8 @@ msgstr "Cesta k privátnímu klíči"
 msgid "Path to executable which handles the button event"
 msgstr "Cesta ke spustitelnému souboru, který obsluhuje událost tlačítka"
 
-msgid "Path to inner CA-Certificate"
-msgstr ""
-
-msgid "Path to inner Client-Certificate"
-msgstr ""
-
-msgid "Path to inner Private Key"
-msgstr ""
-
 msgid "Peak:"
 msgstr "Špička:"
-
-msgid "Peer IP address to assign"
-msgstr ""
-
-msgid "Perfect Forward Secrecy"
-msgstr ""
 
 msgid "Perform reboot"
 msgstr "Provést restart"
@@ -2274,20 +1953,23 @@ msgstr "Paketů"
 msgid "Please enter your username and password."
 msgstr "Prosím vložte vaše uživatelské jméno a heslo."
 
+msgid "Please wait: Device rebooting..."
+msgstr "Prosím počkejte: Provádím reboot..."
+
 msgid "Policy"
 msgstr "Politika"
 
 msgid "Port"
 msgstr "Port"
 
+msgid "Port %d"
+msgstr "Port %d"
+
+msgid "Port %d is untagged in multiple VLANs!"
+msgstr "Port %d je neoznačený ve více VLAN!"
+
 msgid "Port status:"
 msgstr "Stav portu:"
-
-msgid "Power Management Mode"
-msgstr ""
-
-msgid "Pre-emtive CRC errors (CRCP_P)"
-msgstr ""
 
 msgid ""
 "Presume peer to be dead after given amount of LCP echo failures, use 0 to "
@@ -2295,9 +1977,6 @@ msgid ""
 msgstr ""
 "Po takovém množství LCP echo selhání předpokládám, že peer je mrtvý. "
 "Použijte 0 pro ignorování chyb"
-
-msgid "Prevent listening on these interfaces."
-msgstr ""
 
 msgid "Prevents client-to-client communication"
 msgstr "Zabraňuje komunikaci klient-klient"
@@ -2310,9 +1989,6 @@ msgstr "Pokračovat"
 
 msgid "Processes"
 msgstr "Procesy"
-
-msgid "Profile"
-msgstr ""
 
 msgid "Prot."
 msgstr "Prot."
@@ -2343,9 +2019,6 @@ msgstr ""
 
 msgid "Quality"
 msgstr "Kvalita"
-
-msgid "RFC3947 NAT-T mode"
-msgstr ""
 
 msgid "RTS/CTS Threshold"
 msgstr "Práh RTS/CTS"
@@ -2508,11 +2181,6 @@ msgstr ""
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr "Vyžadováno u některých ISP, např. Charter s DocSIS 3"
 
-msgid ""
-"Requires upstream supports DNSSEC; verify unsigned domain responses really "
-"come from unsigned domains"
-msgstr ""
-
 msgid "Reset"
 msgstr "Reset"
 
@@ -2570,14 +2238,14 @@ msgid ""
 msgstr ""
 "Trasy určují, přes jaké rozhraní a bránu může být konkrétního hosta dosaženo."
 
+msgid "Rule #"
+msgstr "Pravidlo #"
+
 msgid "Run a filesystem check before mounting the device"
 msgstr "Spustit kontrolu souborového systému před připojením zařízení"
 
 msgid "Run filesystem check"
 msgstr "Spustit kontrolu souborového systému"
-
-msgid "SHA256"
-msgstr ""
 
 msgid ""
 "SIXXS supports TIC only, for static tunnels using IP protocol 41 (RFC4213) "
@@ -2587,20 +2255,8 @@ msgstr ""
 msgid "SIXXS-handle[/Tunnel-ID]"
 msgstr ""
 
-msgid "SNR"
-msgstr ""
-
 msgid "SSH Access"
 msgstr "Přístup přes SSH"
-
-msgid "SSH server address"
-msgstr ""
-
-msgid "SSH server port"
-msgstr ""
-
-msgid "SSH username"
-msgstr ""
 
 msgid "SSH-Keys"
 msgstr "SSH klíče"
@@ -2675,12 +2331,6 @@ msgstr "Nastavit synchronizaci času"
 msgid "Setup DHCP Server"
 msgstr "Nastavit DHCP server"
 
-msgid "Severely Errored Seconds (SES)"
-msgstr ""
-
-msgid "Short GI"
-msgstr ""
-
 msgid "Show current backup file list"
 msgstr "Ukázat aktuální seznam záložních souborů"
 
@@ -2692,9 +2342,6 @@ msgstr "Shodit tuto síť"
 
 msgid "Signal"
 msgstr "Signál"
-
-msgid "Signal Attenuation (SATN)"
-msgstr ""
 
 msgid "Signal:"
 msgstr "Signál:"
@@ -2719,9 +2366,6 @@ msgstr "Time sloty"
 
 msgid "Software"
 msgstr "Software"
-
-msgid "Software VLAN"
-msgstr ""
 
 msgid "Some fields are invalid, cannot save values!"
 msgstr "Některá pole obsahují neplatné hodnoty, nelze uložit!"
@@ -2844,13 +2488,6 @@ msgstr "Směrovač číslo %q"
 msgid "Switch %q (%s)"
 msgstr "Směrovač číslo %q (%s)"
 
-msgid ""
-"Switch %q has an unknown topology - the VLAN settings might not be accurate."
-msgstr ""
-
-msgid "Switch VLAN"
-msgstr ""
-
 msgid "Switch protocol"
 msgstr "Směrovací protokol"
 
@@ -2893,9 +2530,6 @@ msgstr ""
 msgid "Target"
 msgstr "Cíl"
 
-msgid "Target network"
-msgstr ""
-
 msgid "Terminate"
 msgstr "Ukončit"
 
@@ -2935,9 +2569,6 @@ msgid ""
 msgstr ""
 "Povolené znaky jsou: <code>A-Z</code>, <code>a-z</code>, <code>0-9</code> a "
 "<code>_</code>"
-
-msgid "The configuration file could not be loaded due to the following error:"
-msgstr ""
 
 msgid ""
 "The device file of the memory or partition (<abbr title=\"for example\">e.g."
@@ -3010,9 +2641,6 @@ msgstr ""
 msgid "The selected protocol needs a device assigned"
 msgstr "Vybraný protokol potřebuje mít přiřazeno zařízení"
 
-msgid "The submitted security token is invalid or already expired!"
-msgstr ""
-
 msgid ""
 "The system is erasing the configuration partition now and will reboot itself "
 "when finished."
@@ -3069,12 +2697,6 @@ msgstr ""
 "tak, abyste ochránili webové rozhraní a mohli povolit SSH."
 
 msgid "This IPv4 address of the relay"
-msgstr ""
-
-msgid ""
-"This file may contain lines like 'server=/domain/1.2.3.4' or "
-"'server=1.2.3.4' fordomain-specific or full upstream <abbr title=\"Domain "
-"Name System\">DNS</abbr> servers."
 msgstr ""
 
 msgid ""
@@ -3155,9 +2777,6 @@ msgstr ""
 "Zde můžete nahrát dříve vygenerovaný záložní archiv, pokud chcete obnovit "
 "konfigurační soubory."
 
-msgid "Tone"
-msgstr ""
-
 msgid "Total Available"
 msgstr "Dostupná celkem"
 
@@ -3233,9 +2852,6 @@ msgstr "UUID"
 msgid "Unable to dispatch"
 msgstr ""
 
-msgid "Unavailable Seconds (UAS)"
-msgstr ""
-
 msgid "Unknown"
 msgstr "Neznámý"
 
@@ -3244,9 +2860,6 @@ msgstr "Neznámá chyba, heslo nebylo změněno!"
 
 msgid "Unmanaged"
 msgstr "Nespravovaný"
-
-msgid "Unmount"
-msgstr ""
 
 msgid "Unsaved Changes"
 msgstr "Neuložené změny"
@@ -3321,8 +2934,7 @@ msgid ""
 "Use the <em>Add</em> Button to add a new lease entry. The <em>MAC-Address</"
 "em> indentifies the host, the <em>IPv4-Address</em> specifies to the fixed "
 "address to use and the <em>Hostname</em> is assigned as symbolic name to the "
-"requesting host. The optional <em>Lease time</em> can be used to set non-"
-"standard host-specific lease time, e.g. 12h, 3d or infinite."
+"requesting host."
 msgstr ""
 "Použitím tlačítka <em>Přidat</em> přidáte novou zápůjčku (lease). <em>MAC "
 "adresa</em> identifikuje počítač, <em>IPv4 adresa</em> určuje, jaká pevná "
@@ -3346,20 +2958,14 @@ msgstr "Uživatelské jméno"
 msgid "VC-Mux"
 msgstr "VC-Mux"
 
-msgid "VDSL"
-msgstr ""
+msgid "VLAN Interface"
+msgstr "Rozhraní VLAN"
 
 msgid "VLANs on %q"
 msgstr "VLANy na %q"
 
 msgid "VLANs on %q (%s)"
 msgstr "VLANy na %q (%s)"
-
-msgid "VPN Local address"
-msgstr ""
-
-msgid "VPN Local port"
-msgstr ""
 
 msgid "VPN Server"
 msgstr "VPN server"
@@ -3368,12 +2974,6 @@ msgid "VPN Server port"
 msgstr ""
 
 msgid "VPN Server's certificate SHA1 hash"
-msgstr ""
-
-msgid "VPNC (CISCO 3000 (and others) VPN)"
-msgstr ""
-
-msgid "Vendor"
 msgstr ""
 
 msgid "Vendor Class to send when requesting DHCP"
@@ -3426,14 +3026,11 @@ msgstr "Čekání na realizaci změn..."
 msgid "Waiting for command to complete..."
 msgstr "Čekání na dokončení příkazu..."
 
-msgid "Waiting for device..."
-msgstr ""
-
 msgid "Warning"
 msgstr "Varování"
 
-msgid "Warning: There are unsaved changes that will get lost on reboot!"
-msgstr ""
+msgid "Warning: There are unsaved changes that will be lost while rebooting!"
+msgstr "Varování: Existují neuložené změny, které budou rebootem ztraceny!"
 
 msgid "Whether to create an IPv6 default route over the tunnel"
 msgstr ""
@@ -3443,6 +3040,9 @@ msgstr ""
 
 msgid "Width"
 msgstr ""
+
+msgid "Wifi"
+msgstr "Wifi"
 
 msgid "Wireless"
 msgstr "Bezdrátová síť"
@@ -3479,9 +3079,6 @@ msgstr "Bezdrátová síť vypnuta"
 
 msgid "Write received DNS requests to syslog"
 msgstr "Zapisovat přijaté požadavky DNS do systemového logu"
-
-msgid "Write system log to file"
-msgstr ""
 
 msgid "XR Support"
 msgstr "Podpora XR"
@@ -3657,26 +3254,201 @@ msgstr "nespecifikovaný -nebo- vytvořit:"
 msgid "untagged"
 msgstr "neoznačený"
 
+msgid "xDSL"
+msgstr ""
+
+msgid "xDSL Status"
+msgstr ""
+
 msgid "yes"
 msgstr "ano"
 
 msgid "« Back"
 msgstr "« Zpět"
 
-#~ msgid "An additional network will be created if you leave this unchecked."
-#~ msgstr "Pokud není zaškrtnuto, bude vytvořena dodatečná síť."
+#~ msgid "Ignore Hosts files"
+#~ msgstr "Ignorovat soubory Hosts"
 
-#~ msgid "Join Network: Settings"
-#~ msgstr "Připojit k síti: nastavení"
+#~ msgid ""
+#~ "Always use 40MHz channels even if the secondary channel overlaps. Using "
+#~ "this option does not comply with IEEE 802.11n-2009!"
+#~ msgstr ""
+#~ "Vždy použije kanál 40 MHz , i když překrývá sekundární kanál . Tato volba "
+#~ "není v souladu s IEEE 802.11n-2009!"
 
-#~ msgid "CPU"
-#~ msgstr "CPU"
+#~ msgid "Cached"
+#~ msgstr "V cache"
 
-#~ msgid "Port %d"
-#~ msgstr "Port %d"
+#~ msgid "Configures this mount as overlay storage for block-extroot"
+#~ msgstr "Použít tento přípojný bod jako překryvné úložiště pro block-extroot"
 
-#~ msgid "Port %d is untagged in multiple VLANs!"
-#~ msgstr "Port %d je neoznačený ve více VLAN!"
+#~ msgid "Force 40MHz mode"
+#~ msgstr "Vynutit 40MHz mód"
 
-#~ msgid "VLAN Interface"
-#~ msgstr "Rozhraní VLAN"
+#~ msgid "Frequency Hopping"
+#~ msgstr "Kmitočtové skákání"
+
+#~ msgid "Locked to channel %d used by %s"
+#~ msgstr "Uzamknout kanál %d používaný %s"
+
+#~ msgid "Use as root filesystem"
+#~ msgstr "Použít jako kořenový souborový systém"
+
+#~ msgid "HE.net user ID"
+#~ msgstr "Uživatelské ID HE.net"
+
+#~ msgid "This is the 32 byte hex encoded user ID, not the login name"
+#~ msgstr ""
+#~ "Toto je 32 bajtové uživatelské ID, zapsané v hex tvaru, ne přihlašovací "
+#~ "jméno"
+
+#~ msgid "40MHz 2nd channel above"
+#~ msgstr "40MHz druhý kanál nad hlavním"
+
+#~ msgid "40MHz 2nd channel below"
+#~ msgstr "40MHz druhý kanál pod hlavním"
+
+#~ msgid "Accept router advertisements"
+#~ msgstr "Přijímat oznámení směrovačů"
+
+#~ msgid "Advertise IPv6 on network"
+#~ msgstr "Na síti oznamovat IPv6"
+
+#~ msgid "Advertised network ID"
+#~ msgstr "Oznamované ID sítě"
+
+#~ msgid "Allowed range is 1 to 65535"
+#~ msgstr "Hodnota musí ležet v intervalu 1 až 65535"
+
+#~ msgid "HT capabilities"
+#~ msgstr "Možnosti HT"
+
+#~ msgid "HT mode"
+#~ msgstr "Režim HT"
+
+#~ msgid "Router Model"
+#~ msgstr "Model routeru"
+
+#~ msgid "Router Name"
+#~ msgstr "Název routeru"
+
+#~ msgid "Send router solicitations"
+#~ msgstr "Posílat žádosti o informace o směrování"
+
+#~ msgid "Specifies the advertised preferred prefix lifetime in seconds"
+#~ msgstr ""
+#~ "Určuje dobu za kterou interface požádá o prodloužení životnosti prefixu v "
+#~ "sekundách"
+
+#~ msgid "Specifies the advertised valid prefix lifetime in seconds"
+#~ msgstr "Určuje dobu životnosti prefixu v sekundách"
+
+#~ msgid "Use preferred lifetime"
+#~ msgstr "Použít preferovanou životnost"
+
+#~ msgid "Use valid lifetime"
+#~ msgstr "Použít platnou životnost"
+
+#~ msgid "Waiting for router..."
+#~ msgstr "Čekám na router.."
+
+#~ msgid "Enable builtin NTP server"
+#~ msgstr "Povolit zabudovaný NTP server"
+
+#~ msgid "Active Leases"
+#~ msgstr "Aktivní výpůjčky"
+
+#~ msgid "Open"
+#~ msgstr "Otevřít"
+
+#~ msgid "Bit Rate"
+#~ msgstr "Přenosová rychlost"
+
+#~ msgid "Configuration / Apply"
+#~ msgstr "Nastavení / Použít"
+
+#~ msgid "Configuration / Changes"
+#~ msgstr "Nastavení / Změny"
+
+#~ msgid "Configuration / Revert"
+#~ msgstr "Nastavení / Zrušit změny"
+
+#~ msgid "MAC"
+#~ msgstr "MAC"
+
+#~ msgid "MAC Address"
+#~ msgstr "MAC adresa"
+
+#~ msgid "<abbr title=\"Encrypted\">Encr.</abbr>"
+#~ msgstr "<abbr title=\"Šifrováno\">Šifr.</abbr>"
+
+#~ msgid "<abbr title=\"Wireless Local Area Network\">WLAN</abbr>-Scan"
+#~ msgstr "<abbr title=\"Wireless Local Area Network\">WLAN</abbr>-Scanování"
+
+#~ msgid ""
+#~ "Choose the network you want to attach to this wireless interface. Select "
+#~ "<em>unspecified</em> to not attach any network or fill out the "
+#~ "<em>create</em> field to define a new network."
+#~ msgstr ""
+#~ "Síť přiřazená k tomuto bezdrátovému rozhraní. Pro nepřiřazování rozhraní "
+#~ "k žádné síti vyberte volbu \"<em>nespecifikovaná</em>\". Pro vytvoření "
+#~ "nové sítě vyplňte pole \"<em>vytvořit</em>\"."
+
+#~ msgid "Create Network"
+#~ msgstr "Vytvořit síť"
+
+#~ msgid "Networks"
+#~ msgstr "Sítě"
+
+#~ msgid "Power"
+#~ msgstr "Výkon"
+
+#~ msgid "Wifi networks in your local environment"
+#~ msgstr "Wifi sítě v místním prostředí"
+
+#~ msgid ""
+#~ "<abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>-Notation: "
+#~ "address/prefix"
+#~ msgstr ""
+#~ "<abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>-notace : "
+#~ "adresa/prefix"
+
+#~ msgid "<abbr title=\"Domain Name System\">DNS</abbr>-Server"
+#~ msgstr "<abbr title=\"Domain Name System\">DNS</abbr>-Server"
+
+#~ msgid "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Broadcast"
+#~ msgstr ""
+#~ "<abbr title=\"Internet Protokol Verze 4\">IPv4</abbr>-Všesměrové vysílání"
+
+#~ msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address"
+#~ msgstr "<abbr title=\"Internet Protokol Verze 6\">IPv6</abbr>-Adresa"
+
+#~ msgid "IPv6 Setup"
+#~ msgstr "Nastavení IPv6"
+
+#~ msgid ""
+#~ "Note: If you choose an interface here which is part of another network, "
+#~ "it will be moved into this network."
+#~ msgstr ""
+#~ "Pozn: Pokud zde zvolíte rozhraní, které již je součástí jiné sítě, bude "
+#~ "přesunuto do této sítě."
+
+#~ msgid ""
+#~ "The network ports on your router can be combined to several <abbr title="
+#~ "\"Virtual Local Area Network\">VLAN</abbr>s in which computers can "
+#~ "communicate directly with each other. <abbr title=\"Virtual Local Area "
+#~ "Network\">VLAN</abbr>s are often used to separate different network "
+#~ "segments. Often there is by default one Uplink port for a connection to "
+#~ "the next greater network like the internet and other ports for a local "
+#~ "network."
+#~ msgstr ""
+#~ "Síťové porty na vašem routeru mohou být kombinovány do několika <abbr "
+#~ "title=\"Virtual Local Area Network\">VLAN</abbr>, ve kterých mohou "
+#~ "počítače navzájem komunikovat přímo. <abbr title=\"Virtual Local Area "
+#~ "Network\">VLAN</abbr> jsou často používány za účelem oddělení různých "
+#~ "síťových segmentů. Často je zde jeden Uplink port, sloužící pro připojení "
+#~ "do větší sítě (třeba Internetu) a ostatní porty jsou využity pro místní "
+#~ "síť."
+
+#~ msgid "Enable buffering"
+#~ msgstr "Povolit bufferování"

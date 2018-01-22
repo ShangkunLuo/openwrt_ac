@@ -28,7 +28,7 @@ define Package/lua-wsapi/Default
   SECTION:=lang
   CATEGORY:=Languages
   TITLE:=Lua WSAPI
-  URL:=https://keplerproject.github.io/wsapi/
+  URL:=http://www.keplerproject.org/wsapi
   DEPENDS:= +lua
 endef
 

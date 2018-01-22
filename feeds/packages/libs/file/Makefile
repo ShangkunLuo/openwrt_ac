@@ -31,7 +31,7 @@ define Package/file/Default
 endef
 
 define Package/file
-$(call Package/file/Default)
+$(call package/file/Default)
   SECTION:=utils
   CATEGORY:=Utilities
   TITLE+= utility
@@ -39,7 +39,7 @@ $(call Package/file/Default)
 endef
 
 define Package/libmagic
-$(call Package/file/Default)
+$(call package/file/Default)
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE+= library

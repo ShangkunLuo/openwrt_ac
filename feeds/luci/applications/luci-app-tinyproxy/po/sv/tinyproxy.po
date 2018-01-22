@@ -14,99 +14,84 @@ msgid ""
 "upstream proxy, <em>Reject access</em> disables any upstream proxy for the "
 "target"
 msgstr ""
-"<em>Via proxy</em>-rutternas förfrågningar till det givna målet via den "
-"angivna uppströmsproxyn, <em>Neka åtkomst</em> inaktiverar någon "
-"uppströmsproxy för det målet"
 
 msgid ""
 "Adds an \"X-Tinyproxy\" HTTP header with the client IP address to forwarded "
 "requests"
 msgstr ""
-"Lägger till en \"X-Tinyproxy\" HTTP-header med klientens IP-adress till "
-"vidarebefordrade förfrågningar"
 
 msgid "Allowed clients"
-msgstr "Tillåtna klienter"
+msgstr ""
 
 msgid "Allowed connect ports"
-msgstr "Tillåtna portar för anslutning"
+msgstr ""
 
 msgid "Bind address"
-msgstr "Bindningsadress"
+msgstr ""
 
 msgid ""
 "By default, basic POSIX expressions are used for filtering. Enable this to "
 "activate extended regular expressions"
 msgstr ""
-"Huvudsakliga POSIX-uttryck används för filtrering. Aktivera det här för att "
-"aktivera ordinarie förlängda uttryck"
 
 msgid ""
 "By default, filter strings are treated as case-insensitive. Enable this to "
 "make the matching case-sensitive"
 msgstr ""
-"Filtrens strängar behandlas som skriftlägeskänsliga. Aktivera det här för "
-"att göra matchningen skriftlägeskänslig"
 
 msgid ""
 "By default, filtering is done based on domain names. Enable this to match "
 "against URLs instead"
 msgstr ""
-"Filtrering görs baserat på domännamn som standard. Aktivera det här för att "
-"matcha mot URL:er istället"
 
 msgid ""
 "By default, the filter rules act as blacklist. Enable this option to only "
 "allow matched URLs or domain names"
 msgstr ""
-"Filterreglerna agerar som en svartlista som standard. Aktivera det här "
-"alternativet för att endast tillåta matchade URL:er eller domännamn"
 
 msgid ""
 "Can be either an IP address or range, a domain name or \".\" for any host "
 "without domain"
 msgstr ""
-"Kan antingen vara en IP-adress eller räckvidd, ett domännamn eller \".\" för "
-"någon värd utan en domän"
 
 msgid "Configuration"
-msgstr "Konfiguration"
+msgstr ""
 
 msgid "Connection timeout"
-msgstr "Tidsgräns för anslutning"
+msgstr ""
 
 msgid "Default deny"
-msgstr "Neka som standard"
+msgstr ""
 
 msgid "Enable Tinyproxy server"
-msgstr "Aktivera Tinyproxy-server"
+msgstr ""
 
 msgid "Error page"
-msgstr "Fel-sida"
+msgstr ""
 
 msgid "Failed to retrieve statistics from url:"
-msgstr "Misslyckades med att ta emot statistik från url:"
+msgstr ""
 
 msgid "Filter by RegExp"
-msgstr "Filtrera efter RegExp"
+msgstr ""
 
 msgid "Filter by URLs"
-msgstr "Filtrera efter URL:er"
+msgstr ""
 
 msgid "Filter case-sensitive"
-msgstr "Filtrera skriftlägeskänslig"
+msgstr ""
 
 msgid "Filter file"
-msgstr "Filtrera fil"
+msgstr ""
 
 msgid "Filtering and ACLs"
-msgstr "Filtrering och ACL:er"
+msgstr ""
 
 msgid "General settings"
-msgstr "Generella inställningar"
+msgstr ""
 
 msgid "Group"
-msgstr "Grupp"
+msgstr ""
 
 msgid "HTML template file to serve for stat host requests"
 msgstr ""
@@ -127,31 +112,31 @@ msgid ""
 msgstr ""
 
 msgid "Listen address"
-msgstr "Lyssningsadress"
+msgstr ""
 
 msgid "Listen port"
-msgstr "Lyssningsport"
+msgstr ""
 
 msgid "Log file"
-msgstr "Loggfil"
+msgstr ""
 
 msgid "Log file to use for dumping messages"
-msgstr "Loggfil som ska användas för dumpningsmeddelanden"
+msgstr ""
 
 msgid "Log level"
-msgstr "Loggnivå"
+msgstr ""
 
 msgid "Logging verbosity of the Tinyproxy process"
 msgstr ""
 
 msgid "Max. clients"
-msgstr "Maximalt antalet klienter"
+msgstr ""
 
 msgid "Max. requests per server"
-msgstr "Maximalt antalet förfrågningar per server"
+msgstr ""
 
 msgid "Max. spare servers"
-msgstr "Maximalt antalet reserv-servrar"
+msgstr ""
 
 msgid "Maximum allowed number of concurrently connected clients"
 msgstr ""
@@ -165,7 +150,7 @@ msgid "Maximum number of prepared idle processes"
 msgstr ""
 
 msgid "Maximum number of seconds an inactive connection is held open"
-msgstr "Maximalt antal sekunder som en inaktiv anslutning hålls öppen"
+msgstr ""
 
 msgid "Min. spare servers"
 msgstr ""
@@ -180,19 +165,19 @@ msgid "Plaintext file with URLs or domains to filter. One entry per line"
 msgstr ""
 
 msgid "Policy"
-msgstr "Villkor"
+msgstr ""
 
 msgid "Privacy settings"
-msgstr "Integritetsinställningar"
+msgstr ""
 
 msgid "Reject access"
-msgstr "Neka åtkomst"
+msgstr ""
 
 msgid "Server Settings"
-msgstr "Server-inställningar"
+msgstr ""
 
 msgid "Server limits"
-msgstr "Gräns för server"
+msgstr ""
 
 msgid ""
 "Specifies HTTP header names which are allowed to pass-through, all others "
@@ -200,7 +185,7 @@ msgid ""
 msgstr ""
 
 msgid "Specifies the HTTP port Tinyproxy is listening on for requests"
-msgstr "Anger HTTP-porten som Tinyproxy lyssnar med efter förfrågningar"
+msgstr ""
 
 msgid "Specifies the Tinyproxy hostname to use in the Via HTTP header"
 msgstr ""
@@ -208,48 +193,44 @@ msgstr ""
 msgid ""
 "Specifies the address Tinyproxy binds to for outbound forwarded requests"
 msgstr ""
-"Anger adressen som Tinyproxy binder till för utgående vidarebefordrade "
-"förfrågningar"
 
 msgid "Specifies the addresses Tinyproxy is listening on for requests"
-msgstr "Anger adresserna som Tinyproxy lyssnar på efter förfrågningar"
+msgstr ""
 
 msgid "Specifies the group name the Tinyproxy process is running as"
-msgstr "Anger gruppnamnet som Tinyproxy-processen körs som"
+msgstr ""
 
 msgid ""
 "Specifies the upstream proxy to use for accessing the target host. Format is "
 "<code>address:port</code>"
 msgstr ""
-"Anger uppström-proxyn att använda för åtkomst till målvärden. Formatet är "
-"<code>adress:port</code>"
 
 msgid "Specifies the user name the Tinyproxy process is running as"
-msgstr "Anger användarnamnet som Tinyproxy-processen körs som"
+msgstr ""
 
 msgid "Start spare servers"
-msgstr "Starta reserv-servrar"
+msgstr ""
 
 msgid "Statistics page"
-msgstr "Sida för statistik"
+msgstr ""
 
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 msgid "Target host"
-msgstr "Målvärd"
+msgstr ""
 
 msgid "Tinyproxy"
-msgstr "Tinyproxy"
+msgstr ""
 
 msgid "Tinyproxy Status"
-msgstr "Status för Tinyproxy"
+msgstr ""
 
 msgid "Tinyproxy is a small and fast non-caching HTTP(S)-Proxy"
-msgstr "Tinyproxy är en liten och snabb icke-cachande HTTP(S)-proxy"
+msgstr ""
 
 msgid "Upstream Proxies"
-msgstr "Proxy-servrar uppströms"
+msgstr ""
 
 msgid ""
 "Upstream proxy rules define proxy servers to use when accessing certain IP "
@@ -257,19 +238,19 @@ msgid ""
 msgstr ""
 
 msgid "Use syslog"
-msgstr "Använd systemlogg"
+msgstr ""
 
 msgid "User"
-msgstr "Användare"
+msgstr ""
 
 msgid "Via hostname"
-msgstr "Via värdnamn"
+msgstr ""
 
 msgid "Via proxy"
-msgstr "Via proxy-server"
+msgstr ""
 
 msgid "Writes log messages to syslog instead of a log file"
-msgstr "Skriver loggmeddelanden till systemloggen istället för en logg-fil"
+msgstr ""
 
 msgid "X-Tinyproxy header"
-msgstr "Header för X-Tinyproxy"
+msgstr ""

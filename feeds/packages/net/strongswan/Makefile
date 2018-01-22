@@ -8,14 +8,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=strongswan
-PKG_VERSION:=5.5.1
+PKG_VERSION:=5.3.3
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://download.strongswan.org/ http://download2.strongswan.org/
-PKG_MD5SUM:=4eba9474f7dc6c8c8d7037261358e68d
+PKG_MD5SUM:=5a25f3d1c31a77ef44d14a2e7b3eaad0
 PKG_LICENSE:=GPL-2.0+
-PKG_MAINTAINER:=Stijn Tintel <stijn@linux-ipv6.be>
+PKG_MAINTAINER:=Steven Barth <cyrus@openwrt.org>
 
 PKG_MOD_AVAILABLE:= \
 	addrblock \
@@ -28,7 +28,6 @@ PKG_MOD_AVAILABLE:= \
 	ccm \
 	cmac \
 	constraints \
-	connmark \
 	coupling \
 	ctr \
 	curl \
@@ -43,11 +42,9 @@ PKG_MOD_AVAILABLE:= \
 	eap-tls \
 	farp \
 	fips-prf \
-	forecast \
 	gcm \
 	gcrypt \
 	gmp \
-	gmpdh \
 	ha \
 	hmac \
 	kernel-libipsec \
@@ -146,7 +143,6 @@ $(call Package/strongswan/Default)
 	+strongswan-mod-ccm \
 	+strongswan-mod-cmac \
 	+strongswan-mod-constraints \
-	+strongswan-mod-connmark \
 	+strongswan-mod-coupling \
 	+strongswan-mod-ctr \
 	+strongswan-mod-curl \
@@ -161,7 +157,6 @@ $(call Package/strongswan/Default)
 	+strongswan-mod-eap-tls \
 	+strongswan-mod-farp \
 	+strongswan-mod-fips-prf \
-	+strongswan-mod-forecast \
 	+strongswan-mod-gcm \
 	+strongswan-mod-gcrypt \
 	+strongswan-mod-gmp \
@@ -213,7 +208,7 @@ define Package/strongswan-full/description
 $(call Package/strongswan/description/Default)
  This meta-package contains dependencies for all of the strongswan plugins
  except kernel-libipsec,
- socket-dynamic and which are omitted in favor of the kernel-netlink and
+ socket-dynamic and which are ommitted in favor of the kernel-netlink and
  socket-default plugins.
 endef
 
@@ -225,7 +220,6 @@ $(call Package/strongswan/Default)
 	+strongswan-charon \
 	+strongswan-mod-aes \
 	+strongswan-mod-attr \
-	+strongswan-mod-connmark \
 	+strongswan-mod-constraints \
 	+strongswan-mod-des \
 	+strongswan-mod-dnskey \
@@ -259,37 +253,6 @@ define Package/strongswan-default/description
 $(call Package/strongswan/description/Default)
  This meta-package contains only dependencies to match upstream defaults.
 endef
-
-
-define Package/strongswan-isakmp
-$(call Package/strongswan/Default)
-  TITLE+= (isakmp)
-  DEPENDS:= +strongswan \
-	+strongswan-charon \
-	+strongswan-mod-aes \
-	+strongswan-mod-des \
-	+strongswan-mod-gmpdh \
-	+strongswan-mod-hmac \
-	+strongswan-mod-kernel-netlink \
-	+strongswan-mod-md5 \
-	+strongswan-mod-nonce \
-	+strongswan-mod-pubkey \
-	+strongswan-mod-random \
-	+strongswan-mod-sha1 \
-	+strongswan-mod-socket-default \
-	+strongswan-mod-stroke \
-	+strongswan-mod-uci \
-	+strongswan-mod-updown \
-	+strongswan-utils
-endef
-
-define Package/strongswan-isakmp/description
-$(call Package/strongswan/description/Default)
- This meta-package contains only dependencies to establish  ISAKMP /
- IKE PSK connections, dropping other capabilities in favor of small size 
- Can fit most routers even with 4Mb flash (after removing IPv6 support).
-endef
-
 
 define Package/strongswan-minimal
 $(call Package/strongswan/Default)
@@ -382,18 +345,15 @@ CONFIGURE_ARGS+= \
 	--with-routing-table-prio="$(call qstrip,$(CONFIG_STRONGSWAN_ROUTING_TABLE_PRIO))" \
 	$(foreach m,$(PKG_MOD_AVAILABLE), \
 	  $(if $(CONFIG_PACKAGE_strongswan-mod-$(m)),--enable-$(m),--disable-$(m)) \
-	) \
-	ac_cv_search___atomic_load=no
+	)
 
 EXTRA_LDFLAGS+= -Wl,-rpath-link,$(STAGING_DIR)/usr/lib
 
 define Package/strongswan/conffiles
-/etc/ipsec.d/
 /etc/ipsec.conf
 /etc/ipsec.secrets
 /etc/ipsec.user
 /etc/strongswan.conf
-/etc/strongswan.d/
 endef
 
 define Package/strongswan/install
@@ -401,7 +361,7 @@ define Package/strongswan/install
 	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/etc/ipsec.conf $(1)/etc/
 	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/etc/strongswan.conf $(1)/etc/
 	$(INSTALL_DIR) $(1)/usr/lib/ipsec
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/ipsec/libstrongswan.so.* $(1)/usr/lib/ipsec/
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/ipsec/{libstrongswan.so.*,libhydra.so.*} $(1)/usr/lib/ipsec/
 	$(INSTALL_CONF) ./files/ipsec.secrets $(1)/etc/
 	$(INSTALL_CONF) ./files/ipsec.user $(1)/etc/
 	$(INSTALL_DIR) $(1)/etc/init.d
@@ -413,10 +373,6 @@ define Package/strongswan-default/install
 endef
 
 define Package/strongswan-full/install
-	true
-endef
-
-define Package/strongswan-isakmp/install
 	true
 endef
 
@@ -498,7 +454,6 @@ $(eval $(call BuildPackage,strongswan))
 $(eval $(call BuildPackage,strongswan-default))
 $(eval $(call BuildPackage,strongswan-full))
 $(eval $(call BuildPackage,strongswan-minimal))
-$(eval $(call BuildPackage,strongswan-isakmp))
 $(eval $(call BuildPackage,strongswan-charon))
 $(eval $(call BuildPackage,strongswan-utils))
 $(eval $(call BuildPackage,strongswan-libtls))
@@ -511,7 +466,6 @@ $(eval $(call BuildPlugin,attr-sql,SQL based config,+strongswan-charon))
 $(eval $(call BuildPlugin,blowfish,Blowfish crypto,))
 $(eval $(call BuildPlugin,ccm,CCM AEAD wrapper crypto,))
 $(eval $(call BuildPlugin,cmac,CMAC crypto,))
-$(eval $(call BuildPlugin,connmark,netfilter connection marking,))
 $(eval $(call BuildPlugin,constraints,advanced X509 constraint checking,))
 $(eval $(call BuildPlugin,coupling,IKEv2 plugin to couple peer certificates permanently to authentication,))
 $(eval $(call BuildPlugin,ctr,Counter Mode wrapper crypto,))
@@ -527,11 +481,9 @@ $(eval $(call BuildPlugin,eap-radius,EAP RADIUS auth,))
 $(eval $(call BuildPlugin,eap-tls,EAP TLS auth,+strongswan-libtls))
 $(eval $(call BuildPlugin,farp,fake arp respsonses,))
 $(eval $(call BuildPlugin,fips-prf,FIPS PRF crypto,+strongswan-mod-sha1))
-$(eval $(call BuildPlugin,forecast,forward multi/broadcast traffic,+kmod-ipt-conntrack-extra))
 $(eval $(call BuildPlugin,gcm,GCM AEAD wrapper crypto,))
 $(eval $(call BuildPlugin,gcrypt,libgcrypt,+PACKAGE_strongswan-mod-gcrypt:libgcrypt))
 $(eval $(call BuildPlugin,gmp,libgmp,+PACKAGE_strongswan-mod-gmp:libgmp))
-$(eval $(call BuildPlugin,gmpdh,DH-Groups; no libgmp dep,))
 $(eval $(call BuildPlugin,ha,high availability cluster,))
 $(eval $(call BuildPlugin,hmac,HMAC crypto,))
 $(eval $(call BuildPlugin,kernel-libipsec,libipsec kernel interface,))
@@ -564,7 +516,7 @@ $(eval $(call BuildPlugin,socket-dynamic,dynamic socket implementation for charo
 $(eval $(call BuildPlugin,sql,SQL database interface,))
 $(eval $(call BuildPlugin,sqlite,SQLite database interface,+strongswan-mod-sql +PACKAGE_strongswan-mod-sqlite:libsqlite3))
 $(eval $(call BuildPlugin,sshkey,SSH key decoding,))
-$(eval $(call BuildPlugin,stroke,Stroke,+strongswan-charon +strongswan-utils))
+$(eval $(call BuildPlugin,stroke,Stroke,+strongswan-utils))
 $(eval $(call BuildPlugin,test-vectors,crypto test vectors,))
 $(eval $(call BuildPlugin,uci,UCI config interface,+PACKAGE_strongswan-mod-uci:libuci))
 $(eval $(call BuildPlugin,unity,Cisco Unity extension,))

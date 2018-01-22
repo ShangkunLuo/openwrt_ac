@@ -122,7 +122,7 @@ msgstr "Запускати служби UPnP та NAT-PMP"
 msgid "There are no active redirects."
 msgstr "Немає активних переспрямувань"
 
-msgid "UPnP"
+msgid "UPNP"
 msgstr "UPnP"
 
 msgid ""

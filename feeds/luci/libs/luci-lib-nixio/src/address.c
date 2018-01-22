@@ -331,9 +331,7 @@ static int nixio_getnameinfo(lua_State *L) {
 
 	nixio__addr_write(&addr, (struct sockaddr *)&saddr);
 
-	int res = getnameinfo((struct sockaddr *)&saddr,
-	 (saddr.ss_family == AF_INET)
-	  ? sizeof(struct sockaddr_in) : sizeof(struct sockaddr_in6),
+	int res = getnameinfo((struct sockaddr *)&saddr, sizeof(saddr),
 	 host, sizeof(host), NULL, 0, NI_NAMEREQD);
 
 #ifdef __linux__

@@ -13,26 +13,24 @@ msgid ""
 "ACLs specify which external ports may be redirected to which internal "
 "addresses and ports"
 msgstr ""
-"ACL:er anger vilka externa portar som ska omdirigeras till vilka interna "
-"adresser och portar"
 
 msgid "Action"
-msgstr "Handling"
+msgstr ""
 
 msgid "Active UPnP Redirects"
-msgstr "Aktivera UPnP-omdirigeringar"
+msgstr ""
 
 msgid "Advanced Settings"
-msgstr "Avancerade inställningar"
+msgstr ""
 
 msgid "Allow adding forwards only to requesting ip addresses"
 msgstr ""
 
 msgid "Announced model number"
-msgstr "Aviserat modellnummer"
+msgstr ""
 
 msgid "Announced serial number"
-msgstr "Aviserat serienummer"
+msgstr ""
 
 msgid "Clean rules interval"
 msgstr ""
@@ -41,101 +39,99 @@ msgid "Clean rules threshold"
 msgstr ""
 
 msgid "Client Address"
-msgstr "Klient-adress"
+msgstr ""
 
 msgid "Client Port"
-msgstr "Klient-port"
+msgstr ""
 
 msgid "Collecting data..."
-msgstr "Samlar in data..."
+msgstr ""
 
 msgid "Comment"
-msgstr "Kommentar"
+msgstr ""
 
 msgid "Delete Redirect"
-msgstr "Ta bort omdirigering"
+msgstr ""
 
 msgid "Device UUID"
-msgstr "Enhetens UUID"
+msgstr ""
 
 msgid "Downlink"
-msgstr "Nerlänk"
+msgstr ""
 
 msgid "Enable NAT-PMP functionality"
-msgstr "Aktivera NAT-PMP-funktionalitet"
+msgstr ""
 
 msgid "Enable UPnP functionality"
-msgstr "Aktivera UPnP-funktionalitet"
+msgstr ""
 
 msgid "Enable additional logging"
-msgstr "Aktivera ytterligare loggning"
+msgstr ""
 
 msgid "Enable secure mode"
-msgstr "Aktivera säkert läge"
+msgstr ""
 
 msgid "External Port"
-msgstr "Extern port"
+msgstr ""
 
 msgid "External ports"
-msgstr "Externa portar"
+msgstr ""
 
 msgid "General Settings"
-msgstr "Generella inställningar"
+msgstr ""
 
 msgid "Internal addresses"
-msgstr "Interna adresser"
+msgstr ""
 
 msgid "Internal ports"
-msgstr "Interna portar"
+msgstr ""
 
 msgid "MiniUPnP ACLs"
-msgstr "ACL:er för MiniUPnP"
+msgstr ""
 
 msgid "MiniUPnP settings"
-msgstr "Inställningar för MiniUPnP"
+msgstr ""
 
 msgid "Notify interval"
-msgstr "Intervall för avisering"
+msgstr ""
 
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
 msgid "Presentation URL"
-msgstr "Presentationens URL"
+msgstr ""
 
 msgid "Protocol"
-msgstr "Protokoll"
+msgstr ""
 
 msgid "Puts extra debugging information into the system log"
-msgstr "Lägger extra felsökningsinformation till system-loggen"
+msgstr ""
 
 msgid "Report system instead of daemon uptime"
-msgstr "Rapportera systemet iställer för demonens upptid"
+msgstr ""
 
 msgid "Start UPnP and NAT-PMP service"
-msgstr "Starta UPnP och NAT-PMP-tjänsten"
+msgstr ""
 
 msgid "There are no active redirects."
-msgstr "Det finns inga aktiva omdirigeringar"
+msgstr ""
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPNP"
+msgstr ""
 
 msgid ""
 "UPnP allows clients in the local network to automatically configure the "
 "router."
 msgstr ""
-"UPnP tillåter klienter i det lokala nätverket att automatiskt ställa in "
-"routern."
 
 msgid "UPnP lease file"
-msgstr "Hyr-fil för UPnP"
+msgstr ""
 
 msgid "Universal Plug & Play"
-msgstr "Universiell Plug & Play"
+msgstr ""
 
 msgid "Uplink"
-msgstr "Upplänk"
+msgstr ""
 
 msgid "Value in KByte/s, informational only"
-msgstr "Värde i KByte/s, endast informell"
+msgstr ""

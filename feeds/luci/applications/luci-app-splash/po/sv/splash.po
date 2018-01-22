@@ -10,7 +10,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Accept"
-msgstr "Acceptera"
+msgstr ""
 
 msgid ""
 "Access to the internet might be possible nevertheless, because some "
@@ -26,10 +26,10 @@ msgid ""
 msgstr ""
 
 msgid "Active Clients"
-msgstr "Aktiva klienter"
+msgstr ""
 
 msgid "Allowed hosts/subnets"
-msgstr "Tillåtna värdar/subnät"
+msgstr ""
 
 msgid ""
 "As an alternative to editing the complete splash text you can also just "
@@ -47,10 +47,10 @@ msgid ""
 msgstr ""
 
 msgid "Blacklist"
-msgstr "Svartlista"
+msgstr ""
 
 msgid "Blocked"
-msgstr "Blockerad"
+msgstr ""
 
 msgid ""
 "By accepting these rules you can use this network for %s hour(s). After this "
@@ -75,7 +75,6 @@ msgstr ""
 
 msgid "Clients download speed is limited to this value (kbyte/s)"
 msgstr ""
-"Klienternas nerladdningshastighet är begränsad till det här värdet (kbyte/s)"
 
 msgid ""
 "Clients that have accepted the splash are allowed to use the network for "
@@ -84,13 +83,12 @@ msgstr ""
 
 msgid "Clients upload speed is limited to this value (kbyte/s)"
 msgstr ""
-"Klienternas uppladdningshastighet är begränsad till det här värdet (kbyte/s)"
 
 msgid "Contact"
-msgstr "Kontakt"
+msgstr ""
 
 msgid "Decline"
-msgstr "Neka"
+msgstr ""
 
 msgid ""
 "Destination hosts and networks that are excluded from splashing, i.e. they "
@@ -99,31 +97,30 @@ msgstr ""
 
 msgid "Donate some money to help us keep this project alive."
 msgstr ""
-"Donera lite pengar för att hjälpa oss att hålla det här projektet vid liv."
 
 msgid "Download limit"
-msgstr "Begränsning av nerladdning"
+msgstr ""
 
 msgid "Edit the complete splash text"
-msgstr "Redigera den slutgiltiga splash-texten"
+msgstr ""
 
 msgid "Fair Use Policy"
 msgstr ""
 
 msgid "Firewall zone"
-msgstr "Brandväggszon"
+msgstr ""
 
 msgid "General"
-msgstr "Generell"
+msgstr ""
 
 msgid "Get in %s with the operator of this access point."
 msgstr ""
 
 msgid "Hostname"
-msgstr "Värdnamn"
+msgstr ""
 
 msgid "IP Address"
-msgstr "IP-adress"
+msgstr ""
 
 msgid ""
 "If you operate your own wifi equipment use channels different from ours."
@@ -131,26 +128,23 @@ msgstr ""
 
 msgid "If you use this network on a regular basis we ask for your support:"
 msgstr ""
-"Om du använder det här nätverket med jämna mellanrum så ber vi dig om hjälp:"
 
 msgid "Include your own text in the default splash"
-msgstr "Inkludera din egna text i standard-splash"
+msgstr ""
 
 msgid "Intercept client traffic on this Interface"
-msgstr "Fånga upp klientens trafik i det här Gränssnittet"
+msgstr ""
 
 msgid "Interfaces"
-msgstr "Gränssnitt"
+msgstr ""
 
 msgid "Interfaces that are used for Splash."
-msgstr "Gränssnitten som används för Splash."
+msgstr ""
 
 msgid ""
 "KB/s (Download/Upload). You may be able to remove this limit by actively "
 "contributing to this project."
 msgstr ""
-"KB/s (Nerladdning/Uppladdning). Du kan ha möjlighet att ta bort den här "
-"begränsningen genom att aktivt bidra till det här projektet."
 
 msgid "Legally Prohibited Activities"
 msgstr ""
@@ -159,58 +153,52 @@ msgid "Legally Prohibited content"
 msgstr ""
 
 msgid "MAC Address"
-msgstr "MAC-adress"
+msgstr ""
 
 msgid "MAC addresses in this list are blocked."
-msgstr "MAC-adresser i den här listan blir blockerade."
+msgstr ""
 
 msgid ""
 "MAC addresses of whitelisted clients. These do not need to accept the splash "
 "and are not bandwidth limited."
 msgstr ""
-"MAC-adresser till vitlistade klienter. De här behöver inte acceptera splash "
-"och har ingen bandbreddsbegränsning."
 
 msgid "Netmask"
-msgstr "Nätmask"
+msgstr ""
 
 msgid "Network"
-msgstr "Nätverk"
+msgstr ""
 
 msgid "No clients connected"
-msgstr "Inga klienter anslutna"
+msgstr ""
 
 msgid ""
 "Please note that we are not an internet service provider but an experimental "
 "community network."
 msgstr ""
-"Vänligen lägg märke till att vi är inte en internet-leverantör utan ett "
-"experimentiellt nätverk för gemenskap"
 
 msgid "Policy"
-msgstr "Villkor"
+msgstr ""
 
 msgid "Redirect target"
-msgstr "Omdirigera mål"
+msgstr ""
 
 msgid "Safety"
-msgstr "Säkerhet"
+msgstr ""
 
 msgid "Save"
-msgstr "Spara"
+msgstr ""
 
 msgid "Splash rules are integrated in this firewall zone"
-msgstr "Splash-regler är integrerade i den här brandväggszonen"
+msgstr ""
 
 msgid "Splashtext"
-msgstr "Splash-text"
+msgstr ""
 
 msgid ""
 "The network, like the Internet, is unencrypted and open. Each participant is "
 "responsible for the safety of their own connections and devices."
 msgstr ""
-"Precis som internet så är det här nätverket utan kryptering och öppet. Varje "
-"deltagare är ansvarig för säkerheten i deras egna anslutningar och enheter."
 
 msgid ""
 "The open and free wireless network of volunteers (\"Operators\") provides "
@@ -245,7 +233,7 @@ msgid ""
 msgstr ""
 
 msgid "Time remaining"
-msgstr "Återstående tid"
+msgstr ""
 
 msgid ""
 "To ask for the reason why you have been blocked or ask for access again you "
@@ -253,31 +241,28 @@ msgid ""
 msgstr ""
 
 msgid "Traffic in/out"
-msgstr "In/ut-trafik"
+msgstr ""
 
 msgid "Upload limit"
-msgstr "Gräns för uppladdningar"
+msgstr ""
 
 msgid "Usage Agreement"
-msgstr "Användningsavtal"
+msgstr ""
 
 msgid "Welcome"
-msgstr "Välkommen"
+msgstr ""
 
 msgid "Whitelist"
-msgstr "Vitlista"
+msgstr ""
 
 msgid "You are now connected to the free wireless mesh network"
-msgstr "Du är nu ansluten till det fria trådlösa mesh-nätverket"
+msgstr ""
 
 msgid ""
 "You can enter your own text that is displayed to clients here.<br />It is "
 "possible to use the following markers: ###COMMUNITY###, ###COMMUNITY_URL###, "
 "###CONTACTURL###, ###LEASETIME###, ###LIMIT### and ###ACCEPT###."
 msgstr ""
-"Du kan fylla i din egen text som visas här för klienterna.<br> />Det är "
-"möjligt att använda följande markörer: ###COMMUNITY###, ###COMMUNITY_URL###, "
-"###CONTACTURL###, ###LEASETIME###, ###LIMIT### och ###ACCEPT###."
 
 msgid ""
 "Your access to this network has been blocked, most likely because you did "
@@ -285,34 +270,34 @@ msgid ""
 msgstr ""
 
 msgid "Your bandwidth is limited to"
-msgstr "Din bandbredd är begränsas till"
+msgstr ""
 
 msgid "blacklisted"
-msgstr "svartlistad"
+msgstr ""
 
 msgid "expired"
-msgstr "slutade gälla"
+msgstr ""
 
 msgid "optional when using host addresses"
-msgstr "valfritt vid användning av värdadresser"
+msgstr ""
 
 msgid "perform any kind of illegal activities"
-msgstr "utför några slags olagliga aktiviteter"
+msgstr ""
 
 msgid "splashed"
 msgstr ""
 
 msgid "temporarily blocked"
-msgstr "tillfälligt blockerad"
+msgstr ""
 
 msgid "unknown"
-msgstr "okänd"
+msgstr ""
 
 msgid "use filesharing applications on this network"
-msgstr "använd fildelningsapplikationer i det här nätverket"
+msgstr ""
 
 msgid "waste bandwidth with unneccesary downloads or streams"
-msgstr "slösa bandbredd med onödiga nerladdningar eller strömmar"
+msgstr ""
 
 msgid "whitelisted"
-msgstr "vitlistad"
+msgstr ""

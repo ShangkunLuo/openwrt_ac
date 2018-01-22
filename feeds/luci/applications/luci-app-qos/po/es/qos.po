@@ -55,6 +55,9 @@ msgstr "QoS"
 msgid "Quality of Service"
 msgstr "Calidad de Servicio"
 
+msgid "Service"
+msgstr "Servicio"
+
 msgid "Source host"
 msgstr "Máquina origen"
 
@@ -88,9 +91,6 @@ msgstr "normal"
 
 msgid "priority"
 msgstr "prioritario"
-
-#~ msgid "Service"
-#~ msgstr "Servicio"
 
 #~ msgid "Downlink"
 #~ msgstr "Enlace de bajada"

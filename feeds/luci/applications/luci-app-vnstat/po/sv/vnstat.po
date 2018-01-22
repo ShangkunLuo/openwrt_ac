@@ -10,32 +10,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Configuration"
-msgstr "Konfiguration"
+msgstr ""
 
 msgid "Daily traffic"
-msgstr "Daglig traffik"
+msgstr ""
 
 msgid "Graphs"
-msgstr "Grafer"
+msgstr ""
 
 msgid "Hourly traffic"
-msgstr "Trafik per timma"
+msgstr ""
 
 msgid "Monitor selected interfaces"
-msgstr "Bevaka valda gränssnitt"
+msgstr ""
 
 msgid "Monthly traffic"
-msgstr "Trafik per månad"
+msgstr ""
 
 msgid ""
 "No database has been set up yet. Go to the VnStat configuration and enable "
 "monitoring for one or more interfaces."
 msgstr ""
-"Det har inte ställts in någon databas ännu. Gå till VnStat-konfigurationen "
-"och aktivera övervakning av en eller fler gränssnitt."
 
 msgid "Restart VnStat"
-msgstr "Starta om VnStat"
+msgstr ""
 
 msgid "Summary display"
 msgstr ""
@@ -44,16 +42,16 @@ msgid "Top 10 display"
 msgstr ""
 
 msgid "Update »"
-msgstr "Uppdatera »"
+msgstr ""
 
 msgid "VnStat"
-msgstr "VnStat"
+msgstr ""
 
 msgid "VnStat Graphs"
-msgstr "Grafer för VnStat"
+msgstr ""
 
 msgid "VnStat Traffic Monitor"
-msgstr "Trafik-bevakare för VnStat"
+msgstr ""
 
 msgid ""
 "VnStat is a network traffic monitor for Linux that keeps a log of network "

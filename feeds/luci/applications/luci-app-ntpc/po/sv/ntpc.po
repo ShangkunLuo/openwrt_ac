@@ -10,40 +10,40 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Clock Adjustment"
-msgstr "Justering av klocka"
+msgstr ""
 
 msgid "Count of time measurements"
 msgstr ""
 
 msgid "Current system time"
-msgstr "Nuvarande systemtid"
+msgstr ""
 
 msgid "General"
-msgstr "Generell"
+msgstr ""
 
 msgid "Hostname"
-msgstr "Värdnamn"
+msgstr ""
 
 msgid "Offset frequency"
-msgstr "Inledningsfrekvens"
+msgstr ""
 
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
 msgid "Synchronizes the system time"
-msgstr "Synkroniserar systemtiden"
+msgstr ""
 
 msgid "Time Server"
-msgstr "Tidsserver"
+msgstr ""
 
 msgid "Time Servers"
-msgstr "Tidsservrar"
+msgstr ""
 
 msgid "Time Synchronisation"
-msgstr "Synkronisering av tid"
+msgstr ""
 
 msgid "Update interval (in seconds)"
-msgstr "Intervall för uppdateringar (i sekunder)"
+msgstr ""
 
 msgid "empty = infinite"
-msgstr "tom = oändlig"
+msgstr ""

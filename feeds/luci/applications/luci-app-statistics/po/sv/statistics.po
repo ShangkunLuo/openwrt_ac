@@ -13,31 +13,28 @@ msgid "Action (target)"
 msgstr ""
 
 msgid "Add command for reading values"
-msgstr "Lägg till kommando för läsning av värden"
+msgstr ""
 
 msgid "Add matching rule"
-msgstr "Lägg till en matchande regel"
+msgstr ""
 
 msgid "Add multiple hosts separated by space."
-msgstr "Lägg till flertalet värdar separerade av mellanslag."
+msgstr ""
 
 msgid "Add notification command"
-msgstr "Lägg till aviseringskommando"
-
-msgid "Aggregate number of connected users"
 msgstr ""
 
 msgid "Base Directory"
-msgstr "Basmapp"
+msgstr ""
 
 msgid "Basic monitoring"
-msgstr "Standardövervakning"
+msgstr ""
 
 msgid "CPU Plugin Configuration"
 msgstr ""
 
 msgid "CSV Output"
-msgstr "CSV-utmatning"
+msgstr ""
 
 msgid "CSV Plugin Configuration"
 msgstr ""
@@ -49,7 +46,7 @@ msgid "Cache flush interval"
 msgstr ""
 
 msgid "Chain"
-msgstr "Kedja"
+msgstr ""
 
 msgid "CollectLinks"
 msgstr ""
@@ -61,16 +58,13 @@ msgid "CollectTopology"
 msgstr ""
 
 msgid "Collectd Settings"
-msgstr "Inställningar för Collectd"
+msgstr ""
 
 msgid ""
 "Collectd is a small daemon for collecting data from various sources through "
 "different plugins. On this page you can change general settings for the "
 "collectd daemon."
 msgstr ""
-"Collectd är en liten demon för insamling av data från olika källor via olika "
-"insticksprogam. På den här sidan så kan du ändra generella inställningar för "
-"collectd-demonen."
 
 msgid "Conntrack"
 msgstr ""
@@ -79,16 +73,16 @@ msgid "Conntrack Plugin Configuration"
 msgstr ""
 
 msgid "DF Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet DF"
+msgstr ""
 
 msgid "DNS"
-msgstr "DNS"
+msgstr ""
 
 msgid "DNS Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet DNS"
+msgstr ""
 
 msgid "Data collection interval"
-msgstr "Intervall för insamling av data"
+msgstr ""
 
 msgid "Datasets definition file"
 msgstr ""
@@ -97,73 +91,67 @@ msgid "Destination ip range"
 msgstr ""
 
 msgid "Directory for collectd plugins"
-msgstr "Mapp för collectd's insticksprogram"
+msgstr ""
 
 msgid "Directory for sub-configurations"
-msgstr "Mapp för under-konfigurationer"
+msgstr ""
 
 msgid "Disk Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet Disk"
+msgstr ""
 
 msgid "Disk Space Usage"
-msgstr "Användning av diskutrymme"
+msgstr ""
 
 msgid "Disk Usage"
-msgstr "Användning av disk"
+msgstr ""
 
 msgid "Display Host »"
-msgstr "Visa värd »"
+msgstr ""
 
 msgid "Display timespan »"
-msgstr "Visa tidsspann »"
+msgstr ""
 
 msgid "E-Mail Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet E-post"
+msgstr ""
 
 msgid "Email"
-msgstr "E-post"
+msgstr ""
 
 msgid "Enable this plugin"
-msgstr "Aktivera det här insticksprogrammet"
+msgstr ""
 
 msgid "Entropy"
-msgstr "Entropi"
+msgstr ""
 
 msgid "Entropy Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet Entropi"
+msgstr ""
 
 msgid "Exec"
-msgstr "Exec"
+msgstr ""
 
 msgid "Exec Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet Exec"
+msgstr ""
 
 msgid "Filter class monitoring"
 msgstr ""
 
 msgid "Firewall"
-msgstr "Brandvägg"
+msgstr ""
 
 msgid "Flush cache after"
 msgstr ""
 
 msgid "Forwarding between listen and server addresses"
-msgstr "Vidarebefordring mellan lyssning och server-adressen"
-
-msgid "Gather compression statistics"
 msgstr ""
 
 msgid "General plugins"
-msgstr "Generall insticksprogram"
-
-msgid "Generate a separate graph for each logged user"
-msgstr "Generera en separat graf för varje loggade användare"
+msgstr ""
 
 msgid "Graphs"
-msgstr "Grafer"
+msgstr ""
 
 msgid "Group"
-msgstr "Grupp"
+msgstr ""
 
 msgid ""
 "Here you can define external commands which will be started by collectd in "
@@ -181,57 +169,53 @@ msgid ""
 "are selected."
 msgstr ""
 
-msgid "Hold Ctrl to select multiple items or to deselect entries."
-msgstr ""
-"Håll ner Ctrl för att välja flera poster eller för att inte välja poster."
-
 msgid "Host"
-msgstr "Värd"
+msgstr ""
 
 msgid "Hostname"
-msgstr "Värdnamn"
+msgstr ""
 
 msgid "IP or hostname where to get the txtinfo output from"
 msgstr ""
 
 msgid "IRQ Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet IRQ"
+msgstr ""
 
 msgid "Ignore source addresses"
-msgstr "Ignorera källadresser"
+msgstr ""
 
 msgid "Incoming interface"
-msgstr "Inkommande gränssnitt"
+msgstr ""
 
 msgid "Interface Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammets gränssnitt"
+msgstr ""
 
 msgid "Interfaces"
-msgstr "Gränssnitt"
+msgstr ""
 
 msgid "Interrupts"
-msgstr "Avbrott"
+msgstr ""
 
 msgid "Interval for pings"
-msgstr "Intervaller för pingningar"
+msgstr ""
 
 msgid "Iptables Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet Iptabels"
+msgstr ""
 
 msgid "Leave unselected to automatically determine interfaces to monitor."
 msgstr ""
 
 msgid "Listen host"
-msgstr "Värd för lyssning"
+msgstr ""
 
 msgid "Listen port"
-msgstr "Lyssningsport"
+msgstr ""
 
 msgid "Listener interfaces"
 msgstr ""
 
 msgid "Load Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet Load"
+msgstr ""
 
 msgid ""
 "Max values for a period can be used instead of averages when not using 'only "
@@ -239,79 +223,76 @@ msgid ""
 msgstr ""
 
 msgid "Maximum allowed connections"
-msgstr "Maximalt tillåtna anslutningar"
+msgstr ""
 
 msgid "Memory"
-msgstr "Minne"
+msgstr ""
 
 msgid "Memory Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet Memory"
+msgstr ""
 
 msgid "Monitor all except specified"
-msgstr "Övervaka alla förutom specificerat"
+msgstr ""
 
 msgid "Monitor all local listen ports"
-msgstr "Övervaka alla lokala lyssningsportar"
-
-msgid "Monitor all sensors"
-msgstr "Övervaka alla sensorer"
+msgstr ""
 
 msgid "Monitor devices"
-msgstr "Övervaka enheter"
+msgstr ""
 
 msgid "Monitor disks and partitions"
-msgstr "Övervaka hårddiskar och partitioner"
+msgstr ""
 
 msgid "Monitor filesystem types"
-msgstr "Övervaka filsystemtyper"
+msgstr ""
 
 msgid "Monitor hosts"
-msgstr "Övervaka värdar"
+msgstr ""
 
 msgid "Monitor interfaces"
-msgstr "Övervaka gränssnitt"
+msgstr ""
 
 msgid "Monitor interrupts"
-msgstr "Övervaka avbrott"
+msgstr ""
 
 msgid "Monitor local ports"
-msgstr "Övervaka lokala portar"
+msgstr ""
 
 msgid "Monitor mount points"
-msgstr "Övervaka monteringspunkter"
+msgstr ""
 
 msgid "Monitor processes"
-msgstr "Övervaka processer"
+msgstr ""
 
 msgid "Monitor remote ports"
-msgstr "Övervaka fjärrportar"
+msgstr ""
 
 msgid "Name of the rule"
-msgstr "Regelns namn"
+msgstr ""
 
 msgid "Netlink"
-msgstr "Nätlänk"
+msgstr ""
 
 msgid "Netlink Plugin Configuration"
 msgstr ""
 
 msgid "Network"
-msgstr "Nätverk"
+msgstr ""
 
 msgid "Network Plugin Configuration"
 msgstr ""
 
 msgid "Network plugins"
-msgstr "Insticksprogram för nätverket"
+msgstr ""
 
 msgid "Network protocol"
-msgstr "Nätverksprotokoll"
+msgstr ""
 
 msgid "Number of threads for data collection"
-msgstr "Antalet trådar för insamling av data"
+msgstr ""
 
 msgid "OLSRd"
-msgstr "OLSRd"
+msgstr ""
 
 msgid "OLSRd Plugin Configuration"
 msgstr ""
@@ -319,35 +300,26 @@ msgstr ""
 msgid "Only create average RRAs"
 msgstr ""
 
-msgid "OpenVPN"
-msgstr "OpenVPN"
-
-msgid "OpenVPN Plugin Configuration"
+msgid "Options"
 msgstr ""
 
-msgid "OpenVPN status files"
-msgstr "Statusfiler för OpenVPN"
-
-msgid "Options"
-msgstr "Alternativ"
-
 msgid "Outgoing interface"
-msgstr "Utgående gränssnitt"
+msgstr ""
 
 msgid "Output plugins"
-msgstr "Insticksprogram för utmatning"
+msgstr ""
 
 msgid "Ping"
-msgstr "Pinga"
+msgstr ""
 
 msgid "Ping Plugin Configuration"
 msgstr ""
 
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
 msgid "Processes"
-msgstr "Processer"
+msgstr ""
 
 msgid "Processes Plugin Configuration"
 msgstr ""
@@ -356,10 +328,10 @@ msgid "Processes to monitor separated by space"
 msgstr ""
 
 msgid "Processor"
-msgstr "Processor"
+msgstr ""
 
 msgid "Qdisc monitoring"
-msgstr "Övervakning av Qdisc"
+msgstr ""
 
 msgid "RRD XFiles Factor"
 msgstr ""
@@ -371,37 +343,28 @@ msgid "RRD step interval"
 msgstr ""
 
 msgid "RRDTool"
-msgstr "RRDTool"
+msgstr ""
 
 msgid "RRDTool Plugin Configuration"
 msgstr ""
 
 msgid "Rows per RRA"
-msgstr "Rader per RRA"
-
-msgid "Script"
-msgstr "Skript"
-
-msgid "Seconds"
-msgstr "Sekunder"
-
-msgid "Sensor list"
 msgstr ""
 
-msgid "Sensors"
-msgstr "Sensorer"
+msgid "Script"
+msgstr ""
 
-msgid "Sensors Plugin Configuration"
+msgid "Seconds"
 msgstr ""
 
 msgid "Server host"
-msgstr "Värd-server"
+msgstr ""
 
 msgid "Server port"
-msgstr "Server-port"
+msgstr ""
 
 msgid "Setup"
-msgstr "Installera"
+msgstr ""
 
 msgid "Shaping class monitoring"
 msgstr ""
@@ -410,25 +373,25 @@ msgid "Show max values instead of averages"
 msgstr ""
 
 msgid "Socket file"
-msgstr "Socketfil"
+msgstr ""
 
 msgid "Socket group"
-msgstr "Socketgrupp"
+msgstr ""
 
 msgid "Socket permissions"
-msgstr "Tillstånd för socket"
+msgstr ""
 
 msgid "Source ip range"
 msgstr ""
 
 msgid "Specifies what information to collect about links."
-msgstr "Anger vilken information som ska samlas in om länkar."
+msgstr ""
 
 msgid "Specifies what information to collect about routes."
-msgstr "Anger vilken information som ska samlas in om rutter"
+msgstr ""
 
 msgid "Specifies what information to collect about the global topology."
-msgstr "Anger vilken information som ska samlas in om den globala topologin."
+msgstr ""
 
 msgid "Splash Leases"
 msgstr ""
@@ -437,37 +400,37 @@ msgid "Splash Leases Plugin Configuration"
 msgstr ""
 
 msgid "Statistics"
-msgstr "Statistik"
+msgstr ""
 
 msgid "Storage directory"
-msgstr "Lagringsmapp"
+msgstr ""
 
 msgid "Storage directory for the csv files"
-msgstr "Lagringsmapp för csv-filerna"
+msgstr ""
 
 msgid "Store data values as rates instead of absolute values"
 msgstr ""
 
 msgid "Stored timespans"
-msgstr "Lagrade tidsspann"
+msgstr ""
 
 msgid "System Load"
-msgstr "Belastning av systemet"
+msgstr ""
 
 msgid "TCP Connections"
-msgstr "TCP-anslutningar"
+msgstr ""
 
 msgid "TCPConns Plugin Configuration"
 msgstr ""
 
 msgid "TTL for network packets"
-msgstr "TTL för nätverkspaket"
+msgstr ""
 
 msgid "TTL for ping packets"
-msgstr "TTL för ping-paket"
+msgstr ""
 
 msgid "Table"
-msgstr "Tabell"
+msgstr ""
 
 msgid "The NUT plugin reads information about Uninterruptible Power Supplies."
 msgstr ""
@@ -475,11 +438,6 @@ msgstr ""
 msgid ""
 "The OLSRd plugin reads information about meshed networks from the txtinfo "
 "plugin of OLSRd."
-msgstr ""
-
-msgid ""
-"The OpenVPN plugin gathers information about the current vpn connection "
-"status."
 msgstr ""
 
 msgid ""
@@ -580,11 +538,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The sensors plugin uses the Linux Sensors framework to gather environmental "
-"statistics."
-msgstr ""
-
-msgid ""
 "The splash leases plugin uses libuci to collect statistics about splash "
 "leases."
 msgstr ""
@@ -618,43 +571,40 @@ msgid ""
 msgstr ""
 
 msgid "Try to lookup fully qualified hostname"
-msgstr "Försök att kolla upp fullständigt kvalificerade värdnamn"
+msgstr ""
 
 msgid "UPS"
-msgstr "UPS"
+msgstr ""
 
 msgid "UPS Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet UPS"
+msgstr ""
 
 msgid "UPS name in NUT ups@host format"
-msgstr "UPS-namnet i NUT ups@värd-format"
+msgstr ""
 
 msgid "UnixSock"
-msgstr "UnixSock"
+msgstr ""
 
 msgid "Unixsock Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet UnixSock"
+msgstr ""
 
 msgid "Uptime"
-msgstr "Upptid"
+msgstr ""
 
 msgid "Uptime Plugin Configuration"
-msgstr "Konfiguration av insticksprogrammet Upptid"
-
-msgid "Use improved naming schema"
 msgstr ""
 
 msgid "Used PID file"
-msgstr "Använd PID-fil"
+msgstr ""
 
 msgid "User"
-msgstr "Användare"
+msgstr ""
 
 msgid "Verbose monitoring"
-msgstr "Detaljerad övervakning"
+msgstr ""
 
 msgid "Wireless"
-msgstr "Trådlöst"
+msgstr ""
 
 msgid "Wireless iwinfo Plugin Configuration"
 msgstr ""
@@ -662,26 +612,24 @@ msgstr ""
 msgid ""
 "You can install additional collectd-mod-* plugins to enable more statistics."
 msgstr ""
-"Du kan installera ytterligare collectd-mod* insticksprogram för att aktivera "
-"mer statistik."
 
 msgid "e.g. br-ff"
-msgstr "t.ex br-ff"
+msgstr ""
 
 msgid "e.g. br-lan"
-msgstr "t.ex br-lan"
+msgstr ""
 
 msgid "e.g. reject-with tcp-reset"
-msgstr "t.ex reject-with tcp-reset"
+msgstr ""
 
 msgid "max. 16 chars"
-msgstr "maxmialt 16 tecken"
+msgstr ""
 
 msgid "reduces rrd size"
-msgstr "reducerar storlek på rrd"
+msgstr ""
 
 msgid "seconds; multiple separated by space"
-msgstr "sekunder; flertalet åtskillda med mellanrum"
+msgstr ""
 
 msgid "server interfaces"
-msgstr "gränssnitt för servern"
+msgstr ""

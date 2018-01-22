@@ -32,7 +32,7 @@ define Package/protobuf
   TITLE:=A structured data encoding library
   URL:=http://code.google.com/p/protobuf/
   DEPENDS:=+zlib +libpthread +libstdcpp
-  MAINTAINER:=Jacob Siverskog <jacob@teenageengineering.com>
+  MAINTAINER:=Obinou <obconseil@gmail.com>
 endef
 
 define Package/protobuf/description
@@ -41,7 +41,7 @@ define Package/protobuf/description
  of its internal RPC protocols and file formats.
 endef
 
-CONFIGURE_ARGS += --with-protoc=$(STAGING_DIR)/host/bin/protoc
+CONFIGURE_ARGS += --with-protoc=$(STAGING_DIR_HOST)/bin/protoc
 
 define Build/InstallDev
 	$(INSTALL_DIR) \

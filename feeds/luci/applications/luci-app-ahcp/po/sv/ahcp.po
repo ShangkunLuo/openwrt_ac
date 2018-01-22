@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 
 msgid "Active AHCP Leases"
-msgstr "Aktiva AHCP-hyror"
+msgstr ""
 
 msgid "Address"
 msgstr "Adress"
@@ -40,13 +40,13 @@ msgid "Announced NTP servers"
 msgstr "Aviserade NTP-servrar"
 
 msgid "Announced prefixes"
-msgstr "Aviserade prefix"
+msgstr ""
 
 msgid "Collecting data..."
 msgstr "Samlar in data..."
 
 msgid "Forwarder"
-msgstr "Vidarebefordrare"
+msgstr ""
 
 msgid "General Setup"
 msgstr "Allmän inställning"
@@ -61,16 +61,16 @@ msgid "IPv6 only"
 msgstr "Endast IPv6"
 
 msgid "Lease directory"
-msgstr "Hyr mappen"
+msgstr ""
 
 msgid "Lease validity time"
-msgstr "Giltighetstid för hyran"
+msgstr ""
 
 msgid "Log file"
 msgstr "Logg-fil"
 
 msgid "Multicast address"
-msgstr "Multicast-adress"
+msgstr ""
 
 msgid "Operation mode"
 msgstr "Driftsläge"
@@ -82,7 +82,7 @@ msgid "Protocol family"
 msgstr "Protokoll-familj"
 
 msgid "Served interfaces"
-msgstr "Betjänade gränssnitt"
+msgstr ""
 
 msgid "Server"
 msgstr "Server"
@@ -94,16 +94,16 @@ msgid "Specifies the announced IPv4 and IPv6 name servers"
 msgstr "Specificerar de aviserade IPv4 och IPv6 namn-servrarna"
 
 msgid "Specifies the announced IPv4 and IPv6 network prefixes in CIDR notation"
-msgstr "Specificerar de aviserade IPv4 och IPv6 nätverksprefixen i CIDR-noteringen"
+msgstr ""
 
 msgid "The AHCP Service is not running."
 msgstr "AHCP-tjänsten körs inte."
 
 msgid "The AHCP Service is running with ID %s."
-msgstr "AHCP-tjänsten körs med ID %s."
+msgstr ""
 
 msgid "There are no active leases."
-msgstr "Det finns inga aktiva hyror."
+msgstr ""
 
 msgid "Unique ID file"
 msgstr "Unik ID-fil"

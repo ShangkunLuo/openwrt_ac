@@ -102,9 +102,6 @@ CONFIGURE_ARGS += \
 	--disable-monitor \
 	--disable-relay
 
-CONFIGURE_VARS += \
-	ol_cv_lib_icu="no"
-
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		DESTDIR="$(PKG_INSTALL_DIR)" \

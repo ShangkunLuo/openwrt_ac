@@ -13,13 +13,13 @@ msgid "Active MID announcements"
 msgstr ""
 
 msgid "Active OLSR nodes"
-msgstr "Aktiva OLSR-noder"
+msgstr ""
 
 msgid "Active host net announcements"
 msgstr ""
 
 msgid "Advanced Settings"
-msgstr "Avancerade inställningar"
+msgstr ""
 
 msgid "Allow gateways with NAT"
 msgstr ""
@@ -28,53 +28,51 @@ msgid "Allow the selection of an outgoing ipv4 gateway with NAT"
 msgstr ""
 
 msgid "Announce uplink"
-msgstr "Tillkännage upplänk"
+msgstr ""
 
 msgid "Announced network"
-msgstr "Tillkännagivet nätverk"
+msgstr ""
 
 msgid "Bad (ETX > 10)"
-msgstr "Dålig (ETX > 10)"
+msgstr ""
 
 msgid "Bad (SNR < 5)"
-msgstr "Dålig (SNR < 5)"
+msgstr ""
 
 msgid "Both values must use the dotted decimal notation."
 msgstr ""
 
 msgid "Broadcast address"
-msgstr "Sändningsadress"
+msgstr ""
 
 msgid "Can only be a valid IPv4 or IPv6 address or 'default'"
-msgstr "Kan endast vara en giltig IPv4 eller IPv6-adress eller 'standard'"
+msgstr ""
 
 msgid "Can only be a valid IPv6 address or 'default'"
-msgstr "Kan endast vara en giltig IPv6-adress eller 'standard'"
+msgstr ""
 
 msgid "Configuration"
-msgstr "Konfiguration"
+msgstr ""
 
 msgid ""
 "Could not get any data. Make sure the jsoninfo plugin is installed and "
 "allows connections from localhost."
 msgstr ""
-"Kunde inte ta emot någon data. Försäkra dig om att insticksprogrammet "
-"jsoninfo är installerat och tillåter anslutningar från localhost"
 
 msgid "Display"
-msgstr "Visa"
+msgstr ""
 
 msgid "Downlink"
-msgstr "Nerlänk"
+msgstr ""
 
 msgid "Download Config"
 msgstr ""
 
 msgid "ETX"
-msgstr "ETX"
+msgstr ""
 
 msgid "Enable"
-msgstr "Aktivera"
+msgstr ""
 
 msgid ""
 "Enable SmartGateway. If it is disabled, then all other SmartGateway "
@@ -82,10 +80,10 @@ msgid ""
 msgstr ""
 
 msgid "Enable this interface."
-msgstr "Aktivera det här gränssnittet."
+msgstr ""
 
 msgid "Enabled"
-msgstr "Aktivera"
+msgstr ""
 
 msgid "Expected retransmission count"
 msgstr ""
@@ -106,25 +104,25 @@ msgid "Fisheye mechanism for TCs (checked means on). Default is \"on\""
 msgstr ""
 
 msgid "Gateway"
-msgstr "Gateway"
+msgstr ""
 
 msgid "General Settings"
-msgstr "Generella inställningar"
+msgstr ""
 
 msgid "General settings"
-msgstr "Generella inställningar"
+msgstr ""
 
 msgid "Good (2 < ETX < 4)"
-msgstr "Bra (2 < ETX < 4)"
+msgstr ""
 
 msgid "Good (30 > SNR > 20)"
-msgstr "Bra (30 > SNR > 20)"
+msgstr ""
 
 msgid "Green"
-msgstr "Grön"
+msgstr ""
 
 msgid "HNA"
-msgstr "HNA"
+msgstr ""
 
 msgid "HNA Announcements"
 msgstr ""
@@ -133,25 +131,25 @@ msgid "HNA interval"
 msgstr ""
 
 msgid "HNA validity time"
-msgstr "Giltighetstid för HNA"
+msgstr ""
 
 msgid "HNA6 Announcements"
 msgstr ""
 
 msgid "Hello"
-msgstr "Hallå"
+msgstr ""
 
 msgid "Hello interval"
-msgstr "Hallå-intervall"
+msgstr ""
 
 msgid "Hello validity time"
-msgstr "Giltighetstid för Hallå"
+msgstr ""
 
 msgid "Hide IPv4"
-msgstr "Göm IPv4"
+msgstr ""
 
 msgid "Hide IPv6"
-msgstr "Göm IPv6"
+msgstr ""
 
 msgid "Hna4"
 msgstr ""
@@ -163,7 +161,7 @@ msgid "Hops"
 msgstr ""
 
 msgid "Hostname"
-msgstr "Värdnamn"
+msgstr ""
 
 msgid ""
 "Hosts in a OLSR routed network can announce connecitivity to external "
@@ -182,7 +180,7 @@ msgid ""
 msgstr ""
 
 msgid "IP Addresses"
-msgstr "IP-adresser"
+msgstr ""
 
 msgid ""
 "IP-version to use. If 6and4 is selected then one olsrd instance is started "
@@ -190,7 +188,7 @@ msgid ""
 msgstr ""
 
 msgid "IPv4"
-msgstr "IPv4"
+msgstr ""
 
 msgid "IPv4 broadcast"
 msgstr ""
@@ -202,7 +200,7 @@ msgid ""
 msgstr ""
 
 msgid "IPv4 source"
-msgstr "IPv4-källa"
+msgstr ""
 
 msgid ""
 "IPv4 src address for outgoing OLSR packages. Default is \"0.0.0.0\", which "
@@ -210,7 +208,7 @@ msgid ""
 msgstr ""
 
 msgid "IPv6"
-msgstr "IPv6"
+msgstr ""
 
 msgid "IPv6 multicast"
 msgstr ""
@@ -225,7 +223,7 @@ msgid ""
 msgstr ""
 
 msgid "IPv6 source"
-msgstr "IPv6-källa"
+msgstr ""
 
 msgid ""
 "IPv6 src prefix. OLSRd will choose one of the interface IPs which matches "
@@ -249,7 +247,7 @@ msgid ""
 msgstr ""
 
 msgid "Interface"
-msgstr "Gränssnitt"
+msgstr ""
 
 msgid ""
 "Interface Mode is used to prevent unnecessary packet forwarding on switched "
@@ -258,13 +256,13 @@ msgid ""
 msgstr ""
 
 msgid "Interfaces"
-msgstr "Gränssnitten"
+msgstr ""
 
 msgid "Interfaces Defaults"
-msgstr "Standard-gränssnitten"
+msgstr ""
 
 msgid "Internet protocol"
-msgstr "Internet-protokoll"
+msgstr ""
 
 msgid ""
 "Interval to poll network interfaces for configuration changes (in seconds). "
@@ -280,22 +278,22 @@ msgid ""
 msgstr ""
 
 msgid "Known OLSR routes"
-msgstr "Kända OLSR-rutter"
+msgstr ""
 
 msgid "LQ"
-msgstr "LQ"
+msgstr ""
 
 msgid "LQ aging"
 msgstr ""
 
 msgid "LQ algorithm"
-msgstr "LQ-algoritm"
+msgstr ""
 
 msgid "LQ fisheye"
 msgstr ""
 
 msgid "LQ level"
-msgstr "LQ-nivå"
+msgstr ""
 
 msgid ""
 "LQMult requires two values (IP address or 'default' and multiplicator) "
@@ -303,16 +301,16 @@ msgid ""
 msgstr ""
 
 msgid "Last hop"
-msgstr "Senaste hopp"
+msgstr ""
 
 msgid "Legend"
-msgstr "Legend"
+msgstr ""
 
 msgid "Library"
-msgstr "Bibliotek"
+msgstr ""
 
 msgid "Link Quality Settings"
-msgstr "Inställningar för länkkvalité"
+msgstr ""
 
 msgid ""
 "Link quality aging factor (only for lq level 2). Tuning parameter for "
@@ -339,28 +337,28 @@ msgid "LinkQuality Multiplicator"
 msgstr ""
 
 msgid "Links per node (average)"
-msgstr "Länker per nod (vanlig)"
+msgstr ""
 
 msgid "Links total"
 msgstr ""
 
 msgid "Local interface IP"
-msgstr "IP-adress för lokalt gränssnitt"
+msgstr ""
 
 msgid "MID"
-msgstr "MID"
+msgstr ""
 
 msgid "MID interval"
-msgstr "MID-intervall"
+msgstr ""
 
 msgid "MID validity time"
 msgstr ""
 
 msgid "MTU"
-msgstr "MTU"
+msgstr ""
 
 msgid "Main IP"
-msgstr "Huvudsaklig IP-adress"
+msgstr ""
 
 msgid ""
 "Make sure that OLSRd is running, the \"jsoninfo\" plugin is loaded, "
@@ -368,10 +366,10 @@ msgid ""
 msgstr ""
 
 msgid "Metric"
-msgstr "Metrisk"
+msgstr ""
 
 msgid "Mode"
-msgstr "Läge"
+msgstr ""
 
 msgid ""
 "Multiply routes with the factor given here. Allowed values are between 0.01 "
@@ -391,34 +389,34 @@ msgid "NAT threshold"
 msgstr ""
 
 msgid "NLQ"
-msgstr "NLQ"
+msgstr ""
 
 msgid "Neighbors"
-msgstr "Grannar"
+msgstr ""
 
 msgid "Neighbour IP"
 msgstr ""
 
 msgid "Neighbours"
-msgstr "Grannar"
+msgstr ""
 
 msgid "Netmask"
-msgstr "Nätmask"
+msgstr ""
 
 msgid "Network"
-msgstr "Nätverk"
+msgstr ""
 
 msgid "Network address"
-msgstr "Nätverksadress"
+msgstr ""
 
 msgid "Nic changes poll interval"
 msgstr ""
 
 msgid "Nodes"
-msgstr "Noder"
+msgstr ""
 
 msgid "OLSR"
-msgstr "OLSR"
+msgstr ""
 
 msgid "OLSR - Display Options"
 msgstr ""
@@ -430,28 +428,28 @@ msgid "OLSR - HNA6-Announcements"
 msgstr ""
 
 msgid "OLSR - Plugins"
-msgstr "OLSR - Insticksprogram"
+msgstr ""
 
 msgid "OLSR Daemon"
-msgstr "OLSR-demon"
+msgstr ""
 
 msgid "OLSR Daemon - Interface"
-msgstr "OLSR-demon - Gränssnitt"
+msgstr ""
 
 msgid "OLSR connections"
-msgstr "OLSR-anslutningar"
+msgstr ""
 
 msgid "OLSR gateway"
 msgstr ""
 
 msgid "OLSR node"
-msgstr "OLSR-nod"
+msgstr ""
 
 msgid "Orange"
-msgstr "Orange"
+msgstr ""
 
 msgid "Overview"
-msgstr "Överblick"
+msgstr ""
 
 msgid "Overview of currently active OLSR host net announcements"
 msgstr ""
@@ -475,10 +473,10 @@ msgid "Overview of smart gateways in this network"
 msgstr ""
 
 msgid "Plugin configuration"
-msgstr "Konfiguration av insticksprogram"
+msgstr ""
 
 msgid "Plugins"
-msgstr "Insticksprogram"
+msgstr ""
 
 msgid "Polling rate for OLSR sockets in seconds. Default is 0.05."
 msgstr ""
@@ -487,13 +485,13 @@ msgid "Pollrate"
 msgstr ""
 
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
 msgid "Prefix"
-msgstr "Prefix"
+msgstr ""
 
 msgid "Red"
-msgstr "Röd"
+msgstr ""
 
 msgid "Resolve"
 msgstr ""
@@ -505,10 +503,10 @@ msgid ""
 msgstr ""
 
 msgid "Routes"
-msgstr "Rutter"
+msgstr ""
 
 msgid "Secondary OLSR interfaces"
-msgstr "Andra OLSR-gränssnitt"
+msgstr ""
 
 msgid ""
 "Sets the main IP (originator ip) of the router. This IP will NEVER change "
@@ -523,10 +521,10 @@ msgid ""
 msgstr ""
 
 msgid "Show IPv4"
-msgstr "Visa IPv4"
+msgstr ""
 
 msgid "Show IPv6"
-msgstr "Visa IPv6"
+msgstr ""
 
 msgid "Signal Noise Ratio in dB"
 msgstr ""
@@ -541,7 +539,7 @@ msgid "SmartGateway is not configured on this system."
 msgstr ""
 
 msgid "Source address"
-msgstr "Adress för källkod"
+msgstr ""
 
 msgid ""
 "Specifies the speed of the uplink in kilobits/s. First parameter is "
@@ -552,16 +550,16 @@ msgid "Speed of the uplink"
 msgstr ""
 
 msgid "State"
-msgstr "Skick"
+msgstr ""
 
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 msgid "Still usable (20 > SNR > 5)"
-msgstr "Fortfarande användbar (20 > SNR > 5)"
+msgstr ""
 
 msgid "Still usable (4 < ETX < 10)"
-msgstr "Fortfarande användbar (4 < ETX < 10)"
+msgstr ""
 
 msgid "Success rate of packages received from the neighbour"
 msgstr ""
@@ -570,16 +568,16 @@ msgid "Success rate of packages sent to the neighbour"
 msgstr ""
 
 msgid "TC"
-msgstr "TC"
+msgstr ""
 
 msgid "TC interval"
-msgstr "TC-intervall"
+msgstr ""
 
 msgid "TC validity time"
-msgstr "Giltighetstid för TC"
+msgstr ""
 
 msgid "TOS value"
-msgstr "TOS-värde"
+msgstr ""
 
 msgid ""
 "The OLSR daemon is an implementation of the Optimized Link State Routing "
@@ -613,7 +611,7 @@ msgid "Timing and Validity"
 msgstr ""
 
 msgid "Topology"
-msgstr "Topologi"
+msgstr ""
 
 msgid ""
 "Type of service value for the IP header of control traffic. Default is "
@@ -621,41 +619,39 @@ msgid ""
 msgstr ""
 
 msgid "Unable to connect to the OLSR daemon!"
-msgstr "Kunde inte ansluta till OLSR-demonen!"
+msgstr ""
 
 msgid "Uplink"
-msgstr "Upplänk"
+msgstr ""
 
 msgid "Uplink uses NAT"
-msgstr "Upplänken använder NAT"
+msgstr ""
 
 msgid "Use hysteresis"
 msgstr ""
 
 msgid "Validity Time"
-msgstr "Giltighetstid"
+msgstr ""
 
 msgid "Version"
-msgstr "Version"
+msgstr ""
 
 msgid "Very good (ETX < 2)"
-msgstr "Jättebra (ETX < 2)"
+msgstr ""
 
 msgid "Very good (SNR > 30)"
-msgstr "Jättebra (SNR > 30)"
+msgstr ""
 
 msgid "WLAN"
-msgstr "WLAN"
+msgstr ""
 
 msgid ""
 "Warning: kmod-ipip is not installed. Without kmod-ipip SmartGateway will not "
 "work, please install it."
 msgstr ""
-"Varning: kmod-ipip är inte installerat. SmartGateway kommer inte att "
-"fungerautan kmod-ipip, vänligen installera det."
 
 msgid "Weight"
-msgstr "Vikt"
+msgstr ""
 
 msgid ""
 "When multiple links exist between hosts the weight of interface is used to "
@@ -680,13 +676,13 @@ msgid ""
 msgstr ""
 
 msgid "Willingness"
-msgstr "Frivillighet"
+msgstr ""
 
 msgid "Yellow"
-msgstr "Gul"
+msgstr ""
 
 msgid "no"
-msgstr "nej"
+msgstr ""
 
 msgid "yes"
-msgstr "ja"
+msgstr ""

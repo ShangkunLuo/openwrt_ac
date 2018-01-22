@@ -11,9 +11,9 @@ PKG_NAME:=audiofile
 PKG_VERSION:=0.3.6
 PKG_RELEASE:=3
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://audiofile.68k.org/
-PKG_MD5SUM:=2731d79bec0acef3d30d2fc86b0b72fd
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
+PKG_SOURCE_URL:=@GNOME/$(PKG_NAME)/0.3
+PKG_MD5SUM:=235dde14742317328f0109e9866a8008
 PKG_MAINTAINER:=Ted Hess <thess@kitschensync.net>
 
 PKG_FIXUP:=autoreconf
@@ -25,7 +25,7 @@ define Package/libaudiofile
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE:=Audio File library
-  URL:=http://audiofile.68k.org/
+  URL:=http://www.68k.org/~michael/audiofile/
   DEPENDS:=+libflac +libstdcpp
 endef
 

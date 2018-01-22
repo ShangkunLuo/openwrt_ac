@@ -10,10 +10,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Email Addresses that Receive Voicemail"
-msgstr "E-postadresser som ska ta emot röstbrev"
+msgstr ""
 
 msgid "Enable Voicemail"
-msgstr "Aktivera röstbrevlåda"
+msgstr ""
 
 msgid "Global Voicemail Setup"
 msgstr ""
@@ -38,31 +38,31 @@ msgid "Last Sent Voicemail Log"
 msgstr ""
 
 msgid "Local Storage Directory"
-msgstr "Lokal lagringsmapp"
+msgstr ""
 
 msgid "No"
-msgstr "Nej"
+msgstr ""
 
 msgid "Outgoing mail (SMTP) Server"
-msgstr "Utgående mail (SMTP)-server"
+msgstr ""
 
 msgid "SMTP Password"
-msgstr "SMTP-lösenord"
+msgstr ""
 
 msgid "SMTP Port Number"
-msgstr "SMTP-portnummer"
+msgstr ""
 
 msgid "SMTP Server Authentication"
-msgstr "Autentisering för SMTP-server"
+msgstr ""
 
 msgid "SMTP Server Hostname or IP Address"
-msgstr "SMTP-servern värdnamn eller IP-adress"
+msgstr ""
 
 msgid "SMTP User Name"
-msgstr "Användarnamn för SMTP"
+msgstr ""
 
 msgid "Secure Connection Using TLS"
-msgstr "Säker anslutning med användning av TLS"
+msgstr ""
 
 msgid "Voicemail Setup"
 msgstr ""
@@ -74,7 +74,7 @@ msgid ""
 msgstr ""
 
 msgid "Yes"
-msgstr "Ja"
+msgstr ""
 
 msgid ""
 "You can also retain copies of voicemail messages on the device running your "

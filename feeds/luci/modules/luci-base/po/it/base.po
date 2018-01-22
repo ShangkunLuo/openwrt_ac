@@ -13,9 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.6.10\n"
 
-msgid "%s is untagged in multiple VLANs!"
-msgstr ""
-
 msgid "(%d minute window, %d second interval)"
 msgstr "(%d finestra in minuti , %d secondi intervallo)"
 
@@ -48,9 +45,6 @@ msgstr "Carico in 1 minuto:"
 
 msgid "15 Minute Load:"
 msgstr "Carico in 15 minut:"
-
-msgid "464XLAT (CLAT)"
-msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "Carico in 5 minuti:"
@@ -128,19 +122,7 @@ msgstr "<abbr title=\"maximal\">Max.</abbr> Richiesta in uso"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Accoppiata: %s / Gruppo: %s'>%s - %s</abbr>"
 
-msgid "A43C + J43 + A43"
-msgstr ""
-
-msgid "A43C + J43 + A43 + V43"
-msgstr ""
-
-msgid "ADSL"
-msgstr ""
-
 msgid "AICCU (SIXXS)"
-msgstr ""
-
-msgid "ANSI T1.413"
 msgstr ""
 
 msgid "APN"
@@ -151,9 +133,6 @@ msgstr "Supporto AR"
 
 msgid "ARP retry threshold"
 msgstr "riprova soglia ARP"
-
-msgid "ATM (Asynchronous Transfer Mode)"
-msgstr ""
 
 msgid "ATM Bridges"
 msgstr "Ponti ATM"
@@ -175,9 +154,6 @@ msgstr ""
 
 msgid "ATM device number"
 msgstr "Numero dispositivo ATM "
-
-msgid "ATU-C System Vendor ID"
-msgstr ""
 
 msgid "AYIYA"
 msgstr ""
@@ -232,9 +208,6 @@ msgstr "Aggiungi nuova interfaccia..."
 msgid "Additional Hosts files"
 msgstr "File Hosts Aggiuntivo"
 
-msgid "Additional servers file"
-msgstr ""
-
 msgid "Address"
 msgstr "Indirizzo"
 
@@ -246,9 +219,6 @@ msgstr "Amministrazione"
 
 msgid "Advanced Settings"
 msgstr "Opzioni Avanzate"
-
-msgid "Aggregate Transmit Power(ACTATP)"
-msgstr ""
 
 msgid "Alert"
 msgstr "Avviso"
@@ -299,53 +269,8 @@ msgstr ""
 msgid "Always announce default router"
 msgstr ""
 
-msgid "An additional network will be created if you leave this checked."
-msgstr ""
-
-msgid "Annex"
-msgstr ""
-
-msgid "Annex A + L + M (all)"
-msgstr ""
-
-msgid "Annex A G.992.1"
-msgstr ""
-
-msgid "Annex A G.992.2"
-msgstr ""
-
-msgid "Annex A G.992.3"
-msgstr ""
-
-msgid "Annex A G.992.5"
-msgstr ""
-
-msgid "Annex B (all)"
-msgstr ""
-
-msgid "Annex B G.992.1"
-msgstr ""
-
-msgid "Annex B G.992.3"
-msgstr ""
-
-msgid "Annex B G.992.5"
-msgstr ""
-
-msgid "Annex J (all)"
-msgstr ""
-
-msgid "Annex L G.992.3 POTS 1"
-msgstr ""
-
-msgid "Annex M (all)"
-msgstr ""
-
-msgid "Annex M G.992.3"
-msgstr ""
-
-msgid "Annex M G.992.5"
-msgstr ""
+msgid "An additional network will be created if you leave this unchecked."
+msgstr "Sarà creata una rete aggiuntiva se lasci questo senza spunta."
 
 msgid "Announce as default router even if no public prefix is available."
 msgstr ""
@@ -354,15 +279,6 @@ msgid "Announced DNS domains"
 msgstr ""
 
 msgid "Announced DNS servers"
-msgstr ""
-
-msgid "Anonymous Identity"
-msgstr ""
-
-msgid "Anonymous Mount"
-msgstr ""
-
-msgid "Anonymous Swap"
 msgstr ""
 
 msgid "Antenna 1"
@@ -400,9 +316,6 @@ msgstr "Dispositivi Wi-Fi connessi"
 msgid "Atheros 802.11%s Wireless Controller"
 msgstr "Dispositivo Wireless Atheros 802.11%s"
 
-msgid "Auth Group"
-msgstr ""
-
 msgid "AuthGroup"
 msgstr ""
 
@@ -424,21 +337,6 @@ msgstr ""
 msgid "Automatic Homenet (HNCP)"
 msgstr ""
 
-msgid "Automatically check filesystem for errors before mounting"
-msgstr ""
-
-msgid "Automatically mount filesystems on hotplug"
-msgstr ""
-
-msgid "Automatically mount swap on hotplug"
-msgstr ""
-
-msgid "Automount Filesystem"
-msgstr ""
-
-msgid "Automount Swap"
-msgstr ""
-
 msgid "Available"
 msgstr "Disponibili"
 
@@ -447,15 +345,6 @@ msgstr "Pacchetti disponibili"
 
 msgid "Average:"
 msgstr "Media:"
-
-msgid "B43 + B43C"
-msgstr ""
-
-msgid "B43 + B43C + V43"
-msgstr ""
-
-msgid "BR / DMR / AFTR"
-msgstr ""
 
 msgid "BSSID"
 msgstr "BSSID"
@@ -505,9 +394,6 @@ msgstr ""
 "composta dai file di configurazione modificati installati da opkg, file di "
 "base essenziali e i file di backup definiti dall'utente."
 
-msgid "Bind only to specific interfaces rather than wildcard address."
-msgstr ""
-
 msgid "Bitrate"
 msgstr "Bitrate"
 
@@ -546,6 +432,9 @@ msgstr "Pulsanti"
 msgid "CA certificate; if empty it will be saved after the first connection."
 msgstr ""
 
+msgid "CPU"
+msgstr "CPU"
+
 msgid "CPU usage (%)"
 msgstr "Uso CPU (%)"
 
@@ -573,9 +462,6 @@ msgstr "Canale"
 msgid "Check"
 msgstr "Verifica"
 
-msgid "Check fileystems before mount"
-msgstr ""
-
 msgid "Checksum"
 msgstr "Checksum"
 
@@ -599,9 +485,6 @@ msgstr ""
 
 msgid "Cipher"
 msgstr "Cifratura"
-
-msgid "Cisco UDP encapsulation"
-msgstr ""
 
 msgid ""
 "Click \"Generate archive\" to download a tar archive of the current "
@@ -751,32 +634,11 @@ msgstr "Inoltri DNS"
 msgid "DNS-Label / FQDN"
 msgstr ""
 
-msgid "DNSSEC"
-msgstr ""
-
-msgid "DNSSEC check unsigned"
-msgstr ""
-
-msgid "DPD Idle Timeout"
-msgstr ""
-
 msgid "DS-Lite AFTR address"
-msgstr ""
-
-msgid "DSL"
-msgstr ""
-
-msgid "DSL Status"
-msgstr ""
-
-msgid "DSL line mode"
 msgstr ""
 
 msgid "DUID"
 msgstr "DUID"
-
-msgid "Data Rate"
-msgstr ""
 
 msgid "Debug"
 msgstr "Debug"
@@ -811,6 +673,9 @@ msgstr ""
 msgid "Delete"
 msgstr "Elimina"
 
+msgid "Delete this interface"
+msgstr "Rimuovi questa interfaccia"
+
 msgid "Delete this network"
 msgstr "Rimuovi questa rete"
 
@@ -828,12 +693,6 @@ msgstr "Dispositivo"
 
 msgid "Device Configuration"
 msgstr "Configurazione del dispositivo"
-
-msgid "Device is rebooting..."
-msgstr ""
-
-msgid "Device unreachable"
-msgstr ""
 
 msgid "Diagnostics"
 msgstr "Diagnostica"
@@ -856,9 +715,6 @@ msgstr ""
 
 msgid "Disable DNS setup"
 msgstr "Disabilita il setup dei DNS"
-
-msgid "Disable Encryption"
-msgstr ""
 
 msgid "Disable HW-Beacon timer"
 msgstr "Disabilita Timer Beacon HW"
@@ -954,19 +810,11 @@ msgstr ""
 "Fornisci dinamicamente gli indirizzi DHCP ai client. Se disabilitato, solo i "
 "client con un indirizzo statico saranno serviti."
 
-msgid "EA-bits length"
-msgstr ""
-
 msgid "EAP-Method"
 msgstr "Metodo EAP"
 
 msgid "Edit"
 msgstr "Modifica"
-
-msgid ""
-"Edit the raw configuration data above to fix any error and hit \"Save\" to "
-"reload the page."
-msgstr ""
 
 msgid "Edit this interface"
 msgstr "Modifica questa interfaccia"
@@ -994,9 +842,6 @@ msgstr "Abilita Jumbo Frame passthrough"
 
 msgid "Enable NTP client"
 msgstr "Attiva il client NTP"
-
-msgid "Enable Single DES"
-msgstr ""
 
 msgid "Enable TFTP server"
 msgstr "Abilita il server TFTP"
@@ -1043,17 +888,11 @@ msgstr "Cancellazione..."
 msgid "Error"
 msgstr "Errore"
 
-msgid "Errored seconds (ES)"
-msgstr ""
-
 msgid "Ethernet Adapter"
 msgstr "Scheda di Rete"
 
 msgid "Ethernet Switch"
 msgstr "Switch di Rete"
-
-msgid "Exclude interfaces"
-msgstr ""
 
 msgid "Expand hosts"
 msgstr "Espandi gli hosts"
@@ -1076,12 +915,6 @@ msgstr "Server Log di Sistema esterno"
 msgid "External system log server port"
 msgstr "Porta Server Log di Sistema esterno"
 
-msgid "External system log server protocol"
-msgstr ""
-
-msgid "Extra SSH command options"
-msgstr ""
-
 msgid "Fast Frames"
 msgstr "Frame veloci"
 
@@ -1103,11 +936,6 @@ msgstr "Filtra privati"
 msgid "Filter useless"
 msgstr "Filtra inutili"
 
-msgid ""
-"Find all currently attached filesystems and swap and replace configuration "
-"with defaults based on what was detected"
-msgstr ""
-
 msgid "Find and join network"
 msgstr "Trova e aggiungi una rete"
 
@@ -1126,14 +954,14 @@ msgstr "Impostazioni Firewall"
 msgid "Firewall Status"
 msgstr "Stato del Firewall"
 
-msgid "Firmware File"
-msgstr ""
-
 msgid "Firmware Version"
 msgstr "Versione del Firmware"
 
 msgid "Fixed source port for outbound DNS queries"
 msgstr "Porta di origine fissa per le richieste DNS in uscita"
+
+msgid "Flags"
+msgstr "Flags"
 
 msgid "Flash Firmware"
 msgstr "Flash Firmware"
@@ -1165,17 +993,8 @@ msgstr "Forza TKIP"
 msgid "Force TKIP and CCMP (AES)"
 msgstr "Forza TKIP e CCMP (AES)"
 
-msgid "Force use of NAT-T"
-msgstr ""
-
-msgid "Form token mismatch"
-msgstr ""
-
 msgid "Forward DHCP traffic"
 msgstr "Inoltra il traffico DHCP"
-
-msgid "Forward Error Correction Seconds (FECS)"
-msgstr ""
 
 msgid "Forward broadcast traffic"
 msgstr "Inoltra il traffico broadcast"
@@ -1216,9 +1035,6 @@ msgstr "Impostazioni Generali"
 msgid "General options for opkg"
 msgstr ""
 
-msgid "Generate Config"
-msgstr ""
-
 msgid "Generate archive"
 msgstr "Genera Archivio"
 
@@ -1230,20 +1046,14 @@ msgstr ""
 "La conferma della password assegnata non ha prodotto risultati, la password "
 "non è stata cambiata!"
 
-msgid "Global Settings"
-msgstr ""
-
 msgid "Global network options"
-msgstr "Opzioni rete globale"
+msgstr ""
 
 msgid "Go to password configuration..."
 msgstr "Vai alla configurazione della password..."
 
 msgid "Go to relevant configuration page"
 msgstr "Vai alla pagina di configurazione relativa"
-
-msgid "Group Password"
-msgstr ""
 
 msgid "Guest"
 msgstr ""
@@ -1259,9 +1069,6 @@ msgstr "Gestore"
 
 msgid "Hang Up"
 msgstr "Hangup"
-
-msgid "Header Error Code Errors (HEC)"
-msgstr ""
 
 msgid "Heartbeat"
 msgstr ""
@@ -1286,9 +1093,6 @@ msgstr "Dispositivo Wireless Hermes 802.11b"
 msgid "Hide <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 msgstr "Nascondi <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 
-msgid "Host"
-msgstr ""
-
 msgid "Host entries"
 msgstr "Campi host"
 
@@ -1309,9 +1113,6 @@ msgid "Hostnames"
 msgstr "Hostname"
 
 msgid "Hybrid"
-msgstr ""
-
-msgid "IKE DH Group"
 msgstr ""
 
 msgid "IP address"
@@ -1346,9 +1147,6 @@ msgstr "Maschera rete IPv4"
 
 msgid "IPv4 only"
 msgstr "Solo IPv4"
-
-msgid "IPv4 prefix"
-msgstr ""
 
 msgid "IPv4 prefix length"
 msgstr "Lunghezza prefisso IPv4"
@@ -1416,12 +1214,6 @@ msgstr "IPv6-su-IPv4 (6to4)"
 msgid "Identity"
 msgstr "Identità PEAP"
 
-msgid "If checked, 1DES is enaled"
-msgstr ""
-
-msgid "If checked, encryption is disabled"
-msgstr ""
-
 msgid ""
 "If specified, mount the device by its UUID instead of a fixed device node"
 msgstr ""
@@ -1471,16 +1263,11 @@ msgstr "Immagine"
 msgid "In"
 msgstr "In"
 
-msgid ""
-"In order to prevent unauthorized access to the system, your request has been "
-"blocked. Click \"Continue »\" below to return to the previous page."
-msgstr ""
-
 msgid "Inactivity timeout"
 msgstr "Tempo di Inattività"
 
 msgid "Inbound:"
-msgstr "In entrata:"
+msgstr "in entrata:"
 
 msgid "Info"
 msgstr "Informazioni"
@@ -1520,9 +1307,6 @@ msgstr "L'interfaccia si sta ricollegando..."
 
 msgid "Interface is shutting down..."
 msgstr "L'intefaccia si sta spegnendo..."
-
-msgid "Interface name"
-msgstr ""
 
 msgid "Interface not present or not connected yet."
 msgstr "Interfaccia non presente o non ancora connessa."
@@ -1568,11 +1352,11 @@ msgstr "Richiesto Java Script!"
 msgid "Join Network"
 msgstr "Aggiungi Rete"
 
+msgid "Join Network: Settings"
+msgstr "Aggiunta Rete: Impostazioni"
+
 msgid "Join Network: Wireless Scan"
 msgstr "Aggiunta Rete: Rilevamento Wireless"
-
-msgid "Joining Network: %q"
-msgstr ""
 
 msgid "Keep settings"
 msgstr "Mantieni le Impostazioni"
@@ -1599,7 +1383,7 @@ msgid "L2TP Server"
 msgstr "Server L2TP"
 
 msgid "LCP echo failure threshold"
-msgstr "Fallimento soglia echo LCP"
+msgstr "fallimento soglia echo LCP"
 
 msgid "LCP echo interval"
 msgstr "Intervallo echo LCP"
@@ -1616,13 +1400,7 @@ msgstr "Lingua"
 msgid "Language and Style"
 msgstr "Lingua e Stile"
 
-msgid "Latency"
-msgstr ""
-
 msgid "Leaf"
-msgstr ""
-
-msgid "Lease time"
 msgstr ""
 
 msgid "Lease validity time"
@@ -1649,22 +1427,13 @@ msgstr "Legenda:"
 msgid "Limit"
 msgstr "Limite"
 
-msgid "Limit DNS service to subnets interfaces on which we are serving DNS."
+msgid "Line Attenuation"
 msgstr ""
 
-msgid "Limit listening to these interfaces, and loopback."
-msgstr ""
-
-msgid "Line Attenuation (LATN)"
-msgstr ""
-
-msgid "Line Mode"
+msgid "Line Speed"
 msgstr ""
 
 msgid "Line State"
-msgstr ""
-
-msgid "Line Uptime"
 msgstr ""
 
 msgid "Link On"
@@ -1677,17 +1446,11 @@ msgstr ""
 "Elenco di Server <abbr title=\"Sistema Nome Dimio\">DNS</abbr>a cui "
 "inoltrare le richieste in"
 
-msgid "List of SSH key files for auth"
-msgstr ""
-
 msgid "List of domains to allow RFC1918 responses for"
 msgstr "Elenco di domini da consentire le risposte RFC1918 per"
 
 msgid "List of hosts that supply bogus NX domain results"
 msgstr "Elenco degli host che forniscono falsi risultati di dominio NX"
-
-msgid "Listen Interfaces"
-msgstr ""
 
 msgid "Listen only on the given interface or, if unspecified, on all"
 msgstr "Ascolta solo l'interfaccia data o, se non specificato, su tutte"
@@ -1704,17 +1467,11 @@ msgstr "Carico Medio"
 msgid "Loading"
 msgstr "Caricamento"
 
-msgid "Local IP address to assign"
-msgstr ""
-
 msgid "Local IPv4 address"
 msgstr "Indirizzo IPv4 locale"
 
 msgid "Local IPv6 address"
 msgstr "Indirizzo IPv6 locale"
-
-msgid "Local Service Only"
-msgstr ""
 
 msgid "Local Startup"
 msgstr "Avvio Locale"
@@ -1766,10 +1523,7 @@ msgid "Login"
 msgstr "Login"
 
 msgid "Logout"
-msgstr "Slogga"
-
-msgid "Loss of Signal Seconds (LOSS)"
-msgstr ""
+msgstr "Logout"
 
 msgid "Lowest leased address as offset from the network address."
 msgstr ""
@@ -1786,13 +1540,7 @@ msgstr "Filtro MAC"
 msgid "MAC-List"
 msgstr "Lista MAC"
 
-msgid "MAP / LW4over6"
-msgstr ""
-
 msgid "MB/s"
-msgstr ""
-
-msgid "MD5"
 msgstr ""
 
 msgid "MHz"
@@ -1804,12 +1552,6 @@ msgstr "MTU"
 msgid ""
 "Make sure to clone the root filesystem using something like the commands "
 "below:"
-msgstr ""
-
-msgid "Manual"
-msgstr ""
-
-msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
 msgid "Maximum Rate"
@@ -1902,17 +1644,11 @@ msgstr ""
 "I punti di mount definiscono in quale punto un dispositivo di memoria verrà "
 "attaccato al tuo filesystem"
 
-msgid "Mount filesystems not specifically configured"
-msgstr ""
-
 msgid "Mount options"
 msgstr "Opzioni di mount"
 
 msgid "Mount point"
 msgstr "Punto di mount"
-
-msgid "Mount swap not specifically configured"
-msgstr ""
 
 msgid "Mounted file systems"
 msgstr "File system montati"
@@ -1932,16 +1668,7 @@ msgstr ""
 msgid "NAS ID"
 msgstr "ID della NAS"
 
-msgid "NAT-T Mode"
-msgstr ""
-
-msgid "NAT64 Prefix"
-msgstr ""
-
 msgid "NDP-Proxy"
-msgstr ""
-
-msgid "NT Domain"
 msgstr ""
 
 msgid "NTP server candidates"
@@ -1975,15 +1702,12 @@ msgid "Network boot image"
 msgstr ""
 
 msgid "Network without interfaces."
-msgstr "Rete senza interfaccia"
+msgstr ""
 
 msgid "Next »"
 msgstr "Prossimo »"
 
 msgid "No DHCP Server configured for this interface"
-msgstr ""
-
-msgid "No NAT-T"
 msgstr ""
 
 msgid "No chains in this table"
@@ -2019,16 +1743,10 @@ msgstr ""
 msgid "Noise"
 msgstr "Rumore"
 
-msgid "Noise Margin (SNR)"
+msgid "Noise Margin"
 msgstr ""
 
 msgid "Noise:"
-msgstr ""
-
-msgid "Non Pre-emtive CRC errors (CRC_P)"
-msgstr ""
-
-msgid "Non-wildcard"
 msgstr ""
 
 msgid "None"
@@ -2064,12 +1782,6 @@ msgstr "OK"
 msgid "OPKG-Configuration"
 msgstr "Configurazione di OPKG"
 
-msgid "Obfuscated Group Password"
-msgstr ""
-
-msgid "Obfuscated Password"
-msgstr ""
-
 msgid "Off-State Delay"
 msgstr ""
 
@@ -2095,9 +1807,6 @@ msgstr ""
 
 msgid "One or more fields contain invalid values!"
 msgstr "Uno o più campi contengono valori non validi!"
-
-msgid "One or more invalid/required values on tab"
-msgstr ""
 
 msgid "One or more required fields have no value!"
 msgstr "Uno o più campi obbligatori sono vuoti!"
@@ -2133,7 +1842,7 @@ msgid "Out"
 msgstr ""
 
 msgid "Outbound:"
-msgstr "In uscita:"
+msgstr ""
 
 msgid "Outdoor Channels"
 msgstr ""
@@ -2145,9 +1854,6 @@ msgid "Override MAC address"
 msgstr ""
 
 msgid "Override MTU"
-msgstr "Sovrascivi MTU"
-
-msgid "Override default interface name"
 msgstr ""
 
 msgid "Override the gateway in DHCP responses"
@@ -2191,19 +1897,7 @@ msgstr ""
 msgid "PPPoE"
 msgstr ""
 
-msgid "PPPoSSH"
-msgstr ""
-
 msgid "PPtP"
-msgstr ""
-
-msgid "PSID offset"
-msgstr ""
-
-msgid "PSID-bits length"
-msgstr ""
-
-msgid "PTM/EFM (Packet Transfer Mode)"
 msgstr ""
 
 msgid "Package libiwinfo required!"
@@ -2230,11 +1924,11 @@ msgstr "Password di authenticazione"
 msgid "Password of Private Key"
 msgstr "Password della chiave privata"
 
-msgid "Password of inner Private Key"
-msgstr ""
-
 msgid "Password successfully changed!"
 msgstr "Password cambiata con successo!"
+
+msgid "Path"
+msgstr "Percorso"
 
 msgid "Path to CA-Certificate"
 msgstr "Percorso al certificato CA"
@@ -2248,23 +1942,8 @@ msgstr "Percorso alla chiave privata"
 msgid "Path to executable which handles the button event"
 msgstr ""
 
-msgid "Path to inner CA-Certificate"
-msgstr ""
-
-msgid "Path to inner Client-Certificate"
-msgstr ""
-
-msgid "Path to inner Private Key"
-msgstr ""
-
 msgid "Peak:"
 msgstr "Picco:"
-
-msgid "Peer IP address to assign"
-msgstr ""
-
-msgid "Perfect Forward Secrecy"
-msgstr ""
 
 msgid "Perform reboot"
 msgstr "Esegui un riavvio"
@@ -2287,27 +1966,27 @@ msgstr ""
 msgid "Please enter your username and password."
 msgstr "Per favore inserisci il tuo username e la password."
 
+msgid "Please wait: Device rebooting..."
+msgstr "Per favore attendi: Riavvio del dispositivo..."
+
 msgid "Policy"
 msgstr ""
 
 msgid "Port"
 msgstr "Porta"
 
+msgid "Port %d"
+msgstr "Porta %d"
+
+msgid "Port %d is untagged in multiple VLANs!"
+msgstr ""
+
 msgid "Port status:"
-msgstr ""
-
-msgid "Power Management Mode"
-msgstr ""
-
-msgid "Pre-emtive CRC errors (CRCP_P)"
 msgstr ""
 
 msgid ""
 "Presume peer to be dead after given amount of LCP echo failures, use 0 to "
 "ignore failures"
-msgstr ""
-
-msgid "Prevent listening on these interfaces."
 msgstr ""
 
 msgid "Prevents client-to-client communication"
@@ -2321,9 +2000,6 @@ msgstr "Continuare"
 
 msgid "Processes"
 msgstr "Processi"
-
-msgid "Profile"
-msgstr ""
 
 msgid "Prot."
 msgstr "Prot."
@@ -2353,9 +2029,6 @@ msgid "Public prefix routed to this device for distribution to clients."
 msgstr ""
 
 msgid "Quality"
-msgstr ""
-
-msgid "RFC3947 NAT-T mode"
 msgstr ""
 
 msgid "RTS/CTS Threshold"
@@ -2508,11 +2181,6 @@ msgstr ""
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr ""
 
-msgid ""
-"Requires upstream supports DNSSEC; verify unsigned domain responses really "
-"come from unsigned domains"
-msgstr ""
-
 msgid "Reset"
 msgstr "Reset"
 
@@ -2571,13 +2239,13 @@ msgstr ""
 "Le route specificano attraverso quale interfaccia e gateway un certo host o "
 "rete può essere raggiunto."
 
+msgid "Rule #"
+msgstr ""
+
 msgid "Run a filesystem check before mounting the device"
 msgstr ""
 
 msgid "Run filesystem check"
-msgstr ""
-
-msgid "SHA256"
 msgstr ""
 
 msgid ""
@@ -2588,19 +2256,7 @@ msgstr ""
 msgid "SIXXS-handle[/Tunnel-ID]"
 msgstr ""
 
-msgid "SNR"
-msgstr ""
-
 msgid "SSH Access"
-msgstr ""
-
-msgid "SSH server address"
-msgstr ""
-
-msgid "SSH server port"
-msgstr ""
-
-msgid "SSH username"
 msgstr ""
 
 msgid "SSH-Keys"
@@ -2673,12 +2329,6 @@ msgstr ""
 msgid "Setup DHCP Server"
 msgstr ""
 
-msgid "Severely Errored Seconds (SES)"
-msgstr ""
-
-msgid "Short GI"
-msgstr ""
-
 msgid "Show current backup file list"
 msgstr ""
 
@@ -2690,9 +2340,6 @@ msgstr ""
 
 msgid "Signal"
 msgstr "Segnale"
-
-msgid "Signal Attenuation (SATN)"
-msgstr ""
 
 msgid "Signal:"
 msgstr ""
@@ -2717,9 +2364,6 @@ msgstr "Slot time"
 
 msgid "Software"
 msgstr "Software"
-
-msgid "Software VLAN"
-msgstr ""
 
 msgid "Some fields are invalid, cannot save values!"
 msgstr "Alcuni campi non sono validi, non è possibile salvare i valori!"
@@ -2846,13 +2490,6 @@ msgstr "Switch %q"
 msgid "Switch %q (%s)"
 msgstr "Switch %q (%s)"
 
-msgid ""
-"Switch %q has an unknown topology - the VLAN settings might not be accurate."
-msgstr ""
-
-msgid "Switch VLAN"
-msgstr ""
-
 msgid "Switch protocol"
 msgstr "Cambia protocollo"
 
@@ -2895,9 +2532,6 @@ msgstr "Tabella"
 msgid "Target"
 msgstr "Destinazione"
 
-msgid "Target network"
-msgstr ""
-
 msgid "Terminate"
 msgstr "Termina"
 
@@ -2937,9 +2571,6 @@ msgstr ""
 msgid ""
 "The allowed characters are: <code>A-Z</code>, <code>a-z</code>, <code>0-9</"
 "code> and <code>_</code>"
-msgstr ""
-
-msgid "The configuration file could not be loaded due to the following error:"
 msgstr ""
 
 msgid ""
@@ -3000,9 +2631,6 @@ msgstr ""
 msgid "The selected protocol needs a device assigned"
 msgstr ""
 
-msgid "The submitted security token is invalid or already expired!"
-msgstr ""
-
 msgid ""
 "The system is erasing the configuration partition now and will reboot itself "
 "when finished."
@@ -3055,12 +2683,6 @@ msgid ""
 msgstr ""
 
 msgid "This IPv4 address of the relay"
-msgstr ""
-
-msgid ""
-"This file may contain lines like 'server=/domain/1.2.3.4' or "
-"'server=1.2.3.4' fordomain-specific or full upstream <abbr title=\"Domain "
-"Name System\">DNS</abbr> servers."
 msgstr ""
 
 msgid ""
@@ -3135,9 +2757,6 @@ msgstr "Fuso orario"
 msgid ""
 "To restore configuration files, you can upload a previously generated backup "
 "archive here."
-msgstr ""
-
-msgid "Tone"
 msgstr ""
 
 msgid "Total Available"
@@ -3215,9 +2834,6 @@ msgstr ""
 msgid "Unable to dispatch"
 msgstr ""
 
-msgid "Unavailable Seconds (UAS)"
-msgstr ""
-
 msgid "Unknown"
 msgstr ""
 
@@ -3225,9 +2841,6 @@ msgid "Unknown Error, password not changed!"
 msgstr ""
 
 msgid "Unmanaged"
-msgstr ""
-
-msgid "Unmount"
 msgstr ""
 
 msgid "Unsaved Changes"
@@ -3304,8 +2917,7 @@ msgid ""
 "Use the <em>Add</em> Button to add a new lease entry. The <em>MAC-Address</"
 "em> indentifies the host, the <em>IPv4-Address</em> specifies to the fixed "
 "address to use and the <em>Hostname</em> is assigned as symbolic name to the "
-"requesting host. The optional <em>Lease time</em> can be used to set non-"
-"standard host-specific lease time, e.g. 12h, 3d or infinite."
+"requesting host."
 msgstr ""
 "Utilizzare il pulsante <em>Aggiungi</em> per aggiungere una nuova voce di "
 "locazione. L'<em>Indirizzo-MAC</em> identifica l'host, l'<em>Indirizzo-IPv4</"
@@ -3330,20 +2942,14 @@ msgstr "Nome Utente"
 msgid "VC-Mux"
 msgstr "VC-Mux"
 
-msgid "VDSL"
-msgstr ""
+msgid "VLAN Interface"
+msgstr "Interfaccia VLAN"
 
 msgid "VLANs on %q"
 msgstr "VLANs su %q"
 
 msgid "VLANs on %q (%s)"
 msgstr "VLANs su %q (%s)"
-
-msgid "VPN Local address"
-msgstr ""
-
-msgid "VPN Local port"
-msgstr ""
 
 msgid "VPN Server"
 msgstr "Server VPN"
@@ -3352,12 +2958,6 @@ msgid "VPN Server port"
 msgstr ""
 
 msgid "VPN Server's certificate SHA1 hash"
-msgstr ""
-
-msgid "VPNC (CISCO 3000 (and others) VPN)"
-msgstr ""
-
-msgid "Vendor"
 msgstr ""
 
 msgid "Vendor Class to send when requesting DHCP"
@@ -3410,14 +3010,12 @@ msgstr "In attesa delle modifiche da applicare ..."
 msgid "Waiting for command to complete..."
 msgstr "In attesa del comando da completare..."
 
-msgid "Waiting for device..."
-msgstr ""
-
 msgid "Warning"
 msgstr "Avviso"
 
-msgid "Warning: There are unsaved changes that will get lost on reboot!"
+msgid "Warning: There are unsaved changes that will be lost while rebooting!"
 msgstr ""
+"Attenzione: Ci sono modifiche non salvate che verranno persi riavviando!"
 
 msgid "Whether to create an IPv6 default route over the tunnel"
 msgstr ""
@@ -3427,6 +3025,9 @@ msgstr ""
 
 msgid "Width"
 msgstr ""
+
+msgid "Wifi"
+msgstr "Wifi"
 
 msgid "Wireless"
 msgstr "Wireless"
@@ -3463,9 +3064,6 @@ msgstr "Wireless spento"
 
 msgid "Write received DNS requests to syslog"
 msgstr "Scrittura delle richiesta DNS ricevute nel syslog"
-
-msgid "Write system log to file"
-msgstr ""
 
 msgid "XR Support"
 msgstr "Supporto XR"
@@ -3645,23 +3243,923 @@ msgstr "non specificato - o - creato:"
 msgid "untagged"
 msgstr "non etichettato"
 
+msgid "xDSL"
+msgstr ""
+
+msgid "xDSL Status"
+msgstr ""
+
 msgid "yes"
 msgstr "Sì"
 
 msgid "« Back"
 msgstr "« Indietro"
 
-#~ msgid "An additional network will be created if you leave this unchecked."
-#~ msgstr "Sarà creata una rete aggiuntiva se lasci questo senza spunta."
+#~ msgid "Ignore Hosts files"
+#~ msgstr "Ignora i files Hosts"
 
-#~ msgid "Join Network: Settings"
-#~ msgstr "Aggiunta Rete: Impostazioni"
+#~ msgid ""
+#~ "Always use 40MHz channels even if the secondary channel overlaps. Using "
+#~ "this option does not comply with IEEE 802.11n-2009!"
+#~ msgstr ""
+#~ "Usare sempre i canali a 40MHz anche se con le sovrapposizioni dei canali "
+#~ "secondari. Utilizzando questa opzione non è conforme con gli standard "
+#~ "IEEE 802.11n-2009!"
 
-#~ msgid "CPU"
-#~ msgstr "CPU"
+#~ msgid "Cached"
+#~ msgstr "Nella cache"
 
-#~ msgid "Port %d"
-#~ msgstr "Porta %d"
+#~ msgid "Configures this mount as overlay storage for block-extroot"
+#~ msgstr ""
+#~ "Configura questo mount come memoria di sovrapposizione per il blocco-"
+#~ "extroot"
 
-#~ msgid "VLAN Interface"
-#~ msgstr "Interfaccia VLAN"
+#~ msgid "Force 40MHz mode"
+#~ msgstr "Forza la modalità a 40MHz"
+
+#~ msgid "Frequency Hopping"
+#~ msgstr "Frequency Hopping"
+
+#~ msgid "Locked to channel %d used by %s"
+#~ msgstr "Bloccato al canale %d utilizzato da %s"
+
+#~ msgid "Use as root filesystem"
+#~ msgstr "Utilizzare come filesystem di root"
+
+#~ msgid "HE.net user ID"
+#~ msgstr "ID Utente HE.net"
+
+#~ msgid "40MHz 2nd channel above"
+#~ msgstr "secondo canale superiore a 40MHz"
+
+#~ msgid "40MHz 2nd channel below"
+#~ msgstr "secondo canale inferiore a 40MHz"
+
+#~ msgid "Accept router advertisements"
+#~ msgstr "Accetta gli annunci di router"
+
+#~ msgid "Advertise IPv6 on network"
+#~ msgstr "Annuncia IPv6 sulla rete"
+
+#~ msgid "Advertised network ID"
+#~ msgstr "ID di Rete Annunciato"
+
+#~ msgid "Allowed range is 1 to 65535"
+#~ msgstr "Intervallo permesso 1-65535"
+
+#~ msgid "HT capabilities"
+#~ msgstr "capacità HT"
+
+#~ msgid "HT mode"
+#~ msgstr "Modalità HT"
+
+#~ msgid "Router Model"
+#~ msgstr "Modello Router"
+
+#~ msgid "Router Name"
+#~ msgstr "Nome Router"
+
+#~ msgid "Specifies the advertised preferred prefix lifetime in seconds"
+#~ msgstr ""
+#~ "Specifica la durata dell'annuncio con prefisso preferito della durata in "
+#~ "secondi"
+
+#~ msgid "Specifies the advertised valid prefix lifetime in seconds"
+#~ msgstr ""
+#~ "Specifica la validità dell'annuncio con prefisso preferito della durata "
+#~ "in secondi"
+
+#~ msgid "Use preferred lifetime"
+#~ msgstr "Utilizzare durata preferita"
+
+#~ msgid "Use valid lifetime"
+#~ msgstr "Utilizzare durata valida"
+
+#~ msgid "Active Leases"
+#~ msgstr "Lease attivi"
+
+#~ msgid "Open"
+#~ msgstr "Apri"
+
+#~ msgid "KB"
+#~ msgstr "KB"
+
+#~ msgid "Bit Rate"
+#~ msgstr "Bit Rate"
+
+#~ msgid "Configuration / Apply"
+#~ msgstr "Configurazione / Applica"
+
+#~ msgid "Configuration / Changes"
+#~ msgstr "Configurazioni / cambiamenti"
+
+#~ msgid "Configuration / Revert"
+#~ msgstr "Configuration / Annullali"
+
+#~ msgid "<abbr title=\"Encrypted\">Encr.</abbr>"
+#~ msgstr "<abbr title=\"Encrypted\">Encr.</abbr>"
+
+#~ msgid "<abbr title=\"Wireless Local Area Network\">WLAN</abbr>-Scan"
+#~ msgstr "<abbr title=\"Wireless Local Area Network\">Scansione WLAN</abbr>"
+
+#~ msgid ""
+#~ "Choose the network you want to attach to this wireless interface. Select "
+#~ "<em>unspecified</em> to not attach any network or fill out the "
+#~ "<em>create</em> field to define a new network."
+#~ msgstr ""
+#~ "Scegli quale rete vuoi attaccare all'interfaccia wireless. Selezionando "
+#~ "<em>unspecified</em> per non associarne alcuna o <em>create</em> per "
+#~ "definirne una nuova ora."
+
+#~ msgid "Create Network"
+#~ msgstr "Crea rete"
+
+#~ msgid "Link"
+#~ msgstr "Collegamento"
+
+#~ msgid "Networks"
+#~ msgstr "Reti"
+
+#~ msgid "Power"
+#~ msgstr "Potenza"
+
+#~ msgid "Wifi networks in your local environment"
+#~ msgstr "Reti Wifi nell&#39;ambiente circostante"
+
+#~ msgid ""
+#~ "<abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>-Notation: "
+#~ "address/prefix"
+#~ msgstr ""
+#~ "Notazione <abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>: "
+#~ "indirizzo/prefisso"
+
+#~ msgid "<abbr title=\"Domain Name System\">DNS</abbr>-Server"
+#~ msgstr "<abbr title=\"Domain Name System\">DNS</abbr>-Server"
+
+#~ msgid "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Broadcast"
+#~ msgstr "Broadcast <abbr title=\"Internet Protocol Version 4\">IPv4</abbr>"
+
+#~ msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address"
+#~ msgstr "Indirizzo <abbr title=\"Internet Protocol Version 6\">IPv6</abbr>"
+
+#~ msgid ""
+#~ "Note: If you choose an interface here which is part of another network, "
+#~ "it will be moved into this network."
+#~ msgstr ""
+#~ "Nota: Se scegli un interfaccia qui che fa parte di un altro network, sarà "
+#~ "spostata in questo network."
+
+#~ msgid ""
+#~ "Really delete this interface? The deletion cannot be undone!\\nYou might "
+#~ "lose access to this router if you are connected via this interface."
+#~ msgstr ""
+#~ "Vuoi davvero cancellare questa interfaccia? Non potrai tornare indietro!"
+#~ "\\nPotresti perdere l'accesso a questo router se stai usando questa "
+#~ "interfaccia."
+
+#~ msgid ""
+#~ "Really delete this wireless network? The deletion cannot be undone!\\nYou "
+#~ "might lose access to this router if you are connected via this network."
+#~ msgstr ""
+#~ "Vuoi davvero cancellare questa rete wireless? Non potrai tornare indietro!"
+#~ "\\nPotresti perdere l'accesso a questo router se stai usando questa rete."
+
+#~ msgid ""
+#~ "The network ports on your router can be combined to several <abbr title="
+#~ "\"Virtual Local Area Network\">VLAN</abbr>s in which computers can "
+#~ "communicate directly with each other. <abbr title=\"Virtual Local Area "
+#~ "Network\">VLAN</abbr>s are often used to separate different network "
+#~ "segments. Often there is by default one Uplink port for a connection to "
+#~ "the next greater network like the internet and other ports for a local "
+#~ "network."
+#~ msgstr ""
+#~ "Le porte di rete del tuo router possono essere combinate in molte <abbr "
+#~ "title=\"Virtual Local Area Network\">VLAN</abbr> nelle quali i computer "
+#~ "possono comunicare direttamente fra di loro. Le <abbr title=\"Virtual "
+#~ "Local Area Network\">VLAN</abbr> sono spesso usate per separare segmenti "
+#~ "di rete differenti. Spesso c&#39;è come predefinita una porta per la "
+#~ "connessione alla prossiam rete più grande come Internet e altre porte per "
+#~ "le reti locali."
+
+#~ msgid "Custom Files"
+#~ msgstr "Files personalizzati"
+
+#~ msgid "Custom files"
+#~ msgstr "Files personalizzati"
+
+#~ msgid "Files to be kept when flashing a new firmware"
+#~ msgstr "Files da conservare quando si aggiorna un nuovo firmware"
+
+#~ msgid "General"
+#~ msgstr "Generale"
+
+#~ msgid ""
+#~ "Here you can customize the settings and the functionality of <abbr title="
+#~ "\"Lua Configuration Interface\">LuCI</abbr>."
+#~ msgstr ""
+#~ "Qui puoi personalizzare i settaggi e le funzionalità di <abbr title=\"Lua "
+#~ "Configuration Interface\">LuCI</abbr>."
+
+#~ msgid "Post-commit actions"
+#~ msgstr "Azioni post-modifica"
+
+#~ msgid ""
+#~ "These commands will be executed automatically when a given <abbr title="
+#~ "\"Unified Configuration Interface\">UCI</abbr> configuration is committed "
+#~ "allowing changes to be applied instantly."
+#~ msgstr ""
+#~ "Questi comandi verranno eseguiti automaticamente quando un comando di "
+#~ "configurazione <abbr title=\"Unified Configuration Interface\">UCI</abbr> "
+#~ "viene applicato permettendo alle modifiche di essere applicate "
+#~ "immediatamente."
+
+#~ msgid "Web <abbr title=\"User Interface\">UI</abbr>"
+#~ msgstr "<abbr title=\"User Interface\">UI</abbr> web"
+
+#~ msgid "<abbr title=\"Point-to-Point Tunneling Protocol\">PPTP</abbr>-Server"
+#~ msgstr ""
+#~ "Server <abbr title=\"Point-to-Point Tunneling Protocol\">PPTP</abbr>"
+
+#~ msgid "ARP ping retries"
+#~ msgstr "tentativi ping ARP "
+
+#~ msgid "ATM Settings"
+#~ msgstr "Impostazioni ATM"
+
+#~ msgid "Accept Router Advertisements"
+#~ msgstr "Accetta annunciamenti router"
+
+#~ msgid "Access point (APN)"
+#~ msgstr "Access point (APN)"
+
+#~ msgid "Additional pppd options"
+#~ msgstr "Opzioni pppd aggiuntive"
+
+#~ msgid "Allowed range is 1 to FFFF"
+#~ msgstr "Intervallo ammesso è tra 1 e FFFF"
+
+#~ msgid "Automatic Disconnect"
+#~ msgstr "Disconnetti automaticamente"
+
+#~ msgid "Backup Archive"
+#~ msgstr "Archivio di backup"
+
+#~ msgid ""
+#~ "Configure the local DNS server to use the name servers adverticed by the "
+#~ "PPP peer"
+#~ msgstr ""
+#~ "Configura il server DNS locale per usare i server DNS negoziati da PPP"
+
+#~ msgid "Connect script"
+#~ msgstr "Script connessione"
+
+#~ msgid "Create backup"
+#~ msgstr "Crea un backup"
+
+#~ msgid "Default"
+#~ msgstr "Default"
+
+#~ msgid "Disconnect script"
+#~ msgstr "Script disconnessione"
+
+#~ msgid "Edit package lists and installation targets"
+#~ msgstr "Modifica lista dei pacchetti e destinazione dell'installazione"
+
+#~ msgid "Enable 4K VLANs"
+#~ msgstr "Abilita 4K VLANs"
+
+#~ msgid "Enable IPv6 on PPP link"
+#~ msgstr "Attiva IPv6 sul collegamento PPP"
+
+#, fuzzy
+#~ msgid "Firmware image"
+#~ msgstr "Firmware image"
+
+#~ msgid ""
+#~ "Here you can backup and restore your router configuration and - if "
+#~ "possible - reset the router to the default settings."
+#~ msgstr ""
+#~ "Qui puoi salvare e ripristinare la configurazione del tuo router e - se "
+#~ "possibile - resettare il router con le impostazioni predefinite."
+
+#~ msgid "Installation targets"
+#~ msgstr "Destinazione installazione"
+
+#~ msgid "Keep configuration files"
+#~ msgstr "Conserva i files di configurazione"
+
+#~ msgid "Keep-Alive"
+#~ msgstr "Keep-Alive"
+
+#~ msgid "Kernel"
+#~ msgstr "Kernel"
+
+#~ msgid ""
+#~ "Let pppd replace the current default route to use the PPP interface after "
+#~ "successful connect"
+#~ msgstr ""
+#~ "Consenti a pppd di sostituire la route di default con la route corrente "
+#~ "per usare l&#39;interfaccia PPP dopo una connessione riuscita"
+
+#~ msgid "Let pppd run this script after establishing the PPP link"
+#~ msgstr ""
+#~ "Permette a pppd di avviare questo script dopo l&#39;avvenuta connessione "
+#~ "PPP"
+
+#~ msgid "Let pppd run this script before tearing down the PPP link"
+#~ msgstr ""
+#~ "Permette a pppd di avviare questo script prima della disconnessione PPP"
+
+#~ msgid ""
+#~ "Make sure that you provide the correct pin code here or you might lock "
+#~ "your sim card!"
+#~ msgstr ""
+#~ "Fai attenzione di inserire il codice PIN corretto qui o potresti bloccare "
+#~ "la tua sim card!"
+
+#~ msgid ""
+#~ "Most of them are network servers, that offer a certain service for your "
+#~ "device or network like shell access, serving webpages like <abbr title="
+#~ "\"Lua Configuration Interface\">LuCI</abbr>, doing mesh routing, sending "
+#~ "e-mails, ..."
+#~ msgstr ""
+#~ "Molti di loro sono servers, che offrono un determinato servizio al tuo "
+#~ "dispositivo o alla tua rete come accesso shell, servire pagine web come "
+#~ "<abbr title=\"Lua Configuration Interface\">LuCI</abbr>, fare mesh "
+#~ "routing, inviare e-mails, ..."
+
+#~ msgid "Number of failed connection tests to initiate automatic reconnect"
+#~ msgstr "Numero di test di connettività falliti prima di una riconnessione"
+
+#~ msgid "PIN code"
+#~ msgstr "Codice PIN"
+
+#~ msgid "PPP Settings"
+#~ msgstr "Opzioni PPP"
+
+#~ msgid "Package lists"
+#~ msgstr "Lista pacchetti"
+
+#~ msgid "Proceed reverting all settings and resetting to firmware defaults?"
+#~ msgstr ""
+#~ "Procedi annullando tutte le modifiche e resettando ai predefiniti del "
+#~ "firmware?"
+
+#~ msgid "Processor"
+#~ msgstr "Processore"
+
+#~ msgid "Radius-Port"
+#~ msgstr "Porta Radius"
+
+#~ msgid "Radius-Server"
+#~ msgstr "Server Radius"
+
+#~ msgid "Relay Settings"
+#~ msgstr "Opzioni Relay"
+
+#~ msgid "Replace default route"
+#~ msgstr "Sostituisci route di default"
+
+#~ msgid "Reset router to defaults"
+#~ msgstr "Ripristina il router come predefinito"
+
+#~ msgid ""
+#~ "Seconds to wait for the modem to become ready before attempting to connect"
+#~ msgstr ""
+#~ "Secondi da attendere prima che il modem diventi pronto prima di provare a "
+#~ "connettersi"
+
+#~ msgid "Service type"
+#~ msgstr "Tipo di servizio"
+
+#~ msgid "Services and daemons perform certain tasks on your device."
+#~ msgstr "Servizi e demoni svolgono alcune azioni sul tuo dispositivo."
+
+#~ msgid "Settings"
+#~ msgstr "Impostazioni"
+
+#~ msgid "Setup wait time"
+#~ msgstr "Tempo di attesa inizializzazione"
+
+#~ msgid ""
+#~ "Sorry. OpenWrt does not support a system upgrade on this platform.<br /> "
+#~ "You need to manually flash your device."
+#~ msgstr ""
+#~ "Sorry. OpenWrt does not support a system upgrade on this platform.<br /> "
+#~ "You need to manually flash your device."
+
+#~ msgid "Specify additional command line arguments for pppd here"
+#~ msgstr "Specifica opzioni linea di comando aggiuntive per pppd qui"
+
+#~ msgid "The device node of your modem, e.g. /dev/ttyUSB0"
+#~ msgstr "Il device node del tuo modem, e.s. /dev/ttyUSB0"
+
+#~ msgid "Time (in seconds) after which an unused connection will be closed"
+#~ msgstr ""
+#~ "Tempo (in secondi) dopo il quale una connessione inattiva verrà chiusa"
+
+#~ msgid "Update package lists"
+#~ msgstr "Aggiorna lista pacchetti"
+
+#~ msgid "Upload an OpenWrt image file to reflash the device."
+#~ msgstr "Upload an OpenWrt image file to reflash the device."
+
+#~ msgid "Upload image"
+#~ msgstr "Upload image"
+
+#~ msgid "Use peer DNS"
+#~ msgstr "Usa DNS ottenuti"
+
+#~ msgid ""
+#~ "You need to install \"comgt\" for UMTS/GPRS, \"ppp-mod-pppoe\" for PPPoE, "
+#~ "\"ppp-mod-pppoa\" for PPPoA or \"pptp\" for PPtP support"
+#~ msgstr ""
+#~ "Devi installare \"comgt\" per il supporto UMTS/GPRS, \"ppp-mod-pppoe\" "
+#~ "per PPPoE, \"ppp-mod-pppoa\" per PPPoA e \"pptp\" per PPtP"
+
+#~ msgid "back"
+#~ msgstr "indietro"
+
+#~ msgid "buffered"
+#~ msgstr "in buffer"
+
+#~ msgid "cached"
+#~ msgstr "in cache"
+
+#~ msgid "free"
+#~ msgstr "libera"
+
+#~ msgid "static"
+#~ msgstr "statico"
+
+#~ msgid ""
+#~ "<abbr title=\"Lua Configuration Interface\">LuCI</abbr> is a collection "
+#~ "of free Lua software including an <abbr title=\"Model-View-Controller"
+#~ "\">MVC</abbr>-Webframework and webinterface for embedded devices. <abbr "
+#~ "title=\"Lua Configuration Interface\">LuCI</abbr> is licensed under the "
+#~ "Apache-License."
+#~ msgstr ""
+#~ "<abbr title=\"Lua Configuration Interface\">LuCI</abbr> è una collezione "
+#~ "di software libero scritto in Lua comprendente un Webframework e "
+#~ "interfaccia web <abbr title=\"Model-View-Controller\">MVC</abbr> per "
+#~ "dispositivi integrati. <abbr title=\"Lua Configuration Interface\">LuCI</"
+#~ "abbr> è rilasciato sotto la Apache-License."
+
+#~ msgid "<abbr title=\"Secure Shell\">SSH</abbr>-Keys"
+#~ msgstr "Chiavi <abbr title=\"Secure Shell\">SSH</abbr>s"
+
+#~ msgid ""
+#~ "A lightweight HTTP/1.1 webserver written in C and Lua designed to serve "
+#~ "LuCI"
+#~ msgstr ""
+#~ "Un piccolo e leggero web-server scritto in C è disegnato per integrarsi "
+#~ "con LuCi"
+
+#~ msgid ""
+#~ "A small webserver which can be used to serve <abbr title=\"Lua "
+#~ "Configuration Interface\">LuCI</abbr>."
+#~ msgstr ""
+#~ "Un piccolo webserver che può essere usato per servire <abbr title=\"Lua "
+#~ "Configuration Interface\">LuCI</abbr>."
+
+#~ msgid "About"
+#~ msgstr "Informazioni su"
+
+#~ msgid "Active IP Connections"
+#~ msgstr "Connessioni IP attive"
+
+#~ msgid "Addresses"
+#~ msgstr "Indirizzi"
+
+#~ msgid "Admin Password"
+#~ msgstr "Password di Amministratore"
+
+#~ msgid "Alias"
+#~ msgstr "Alias"
+
+#~ msgid "Authentication Realm"
+#~ msgstr "Authentication Realm"
+
+#~ msgid "Bridge Port"
+#~ msgstr "Porta Bridge"
+
+#~ msgid ""
+#~ "Change the password of the system administrator (User <code>root</code>)"
+#~ msgstr ""
+#~ "Cambia la password dell'amministratore di sistema (Utente <code>root</"
+#~ "code>)"
+
+#~ msgid "Client + WDS"
+#~ msgstr "Client + WDS"
+
+#~ msgid "Configuration file"
+#~ msgstr "File di configurazione"
+
+#~ msgid "Connection timeout"
+#~ msgstr "Timeout Connessione"
+
+#~ msgid "Contributing Developers"
+#~ msgstr "Contributing Developers"
+
+#~ msgid "DHCP assigned"
+#~ msgstr "DHCP assegnato"
+
+#~ msgid "Document root"
+#~ msgstr "Radice dei documenti"
+
+#~ msgid "Enable Keep-Alive"
+#~ msgstr "Abilita Keep-Alive"
+
+#~ msgid "Enable device"
+#~ msgstr "Abilita dispositivo"
+
+#~ msgid ""
+#~ "Here you can paste public <abbr title=\"Secure Shell\">SSH</abbr>-Keys "
+#~ "(one per line) for <abbr title=\"Secure Shell\">SSH</abbr> public-key "
+#~ "authentication."
+#~ msgstr ""
+#~ "Qui puoi incollare le tue chiavi <abbr title=\"Secure Shell\">SSH</abbr> "
+#~ "(una per linea) per l&#39;autenticazione <abbr title=\"Secure Shell"
+#~ "\">SSH</abbr> a chiave pubblica."
+
+#~ msgid "Interface Status"
+#~ msgstr "Stato Interfaccia"
+
+#~ msgid "Lead Development"
+#~ msgstr "Lead Development"
+
+#~ msgid "No address configured on this interface."
+#~ msgstr "Nessun indirizzo è configurato su questa interfaccia."
+
+#~ msgid "Not configured"
+#~ msgstr "Non configurato"
+
+#~ msgid "Password successfully changed"
+#~ msgstr "Password cambiata con successo"
+
+#~ msgid "Plugin path"
+#~ msgstr "Percorso plugin"
+
+#~ msgid "Ports"
+#~ msgstr "Porte"
+
+#~ msgid "Project Homepage"
+#~ msgstr "Sito del progetto"
+
+#~ msgid "Thanks To"
+#~ msgstr "Ringraziamenti"
+
+#~ msgid ""
+#~ "The realm which will be displayed at the authentication prompt for "
+#~ "protected pages."
+#~ msgstr ""
+#~ "Il realm che verrà visualizzato al prompt di autenticazione per le pagine "
+#~ "protette."
+
+#~ msgid "Unknown Error"
+#~ msgstr "Errore sconosciuto"
+
+#~ msgid "defaults to <code>/etc/httpd.conf</code>"
+#~ msgstr "predefinito <code>/etc/httpd.conf</code>"
+
+#~ msgid "Enable this switch"
+#~ msgstr "Abilita questo switch"
+
+#~ msgid "OPKG error code %i"
+#~ msgstr "OPKG codice di errore %i"
+
+#~ msgid "Package lists updated"
+#~ msgstr "Lista pacchetti aggiornata"
+
+#~ msgid "Upgrade installed packages"
+#~ msgstr "Upgrade installed packages"
+
+#~ msgid ""
+#~ "Also kernel or service logfiles can be viewed here to get an overview "
+#~ "over their current state."
+#~ msgstr ""
+#~ "Inoltre i log del kernel o dei servizi sono visualizzabili qui per avere "
+#~ "un riassunto dello stato attuale."
+
+#~ msgid ""
+#~ "Here you can find information about the current system status like <abbr "
+#~ "title=\"Central Processing Unit\">CPU</abbr> clock frequency, memory "
+#~ "usage or network interface data."
+#~ msgstr ""
+#~ "Qui puoi trovare informazione sullo stato del sistema come frequenza di "
+#~ "clock della <abbr title=\"Central Processing Unit\">CPU</abbr>, uso della "
+#~ "memoria o dati della scheda di rete."
+
+#~ msgid "Search file..."
+#~ msgstr "Cerca file..."
+
+#~ msgid ""
+#~ "<abbr title=\"Lua Configuration Interface\">LuCI</abbr> is a free, "
+#~ "flexible, and user friendly graphical interface for configuring OpenWrt "
+#~ "Kamikaze."
+#~ msgstr ""
+#~ "<abbr title=\"Lua Configuration Interface\">LuCI</abbr> è un&#39;"
+#~ "interfaccia grafica gratuita, flessibile, e amichevole per configurare "
+#~ "OpenWrt Kamikaze."
+
+#~ msgid "And now have fun with your router!"
+#~ msgstr "Ed ora buon divertimento con il tuo router!"
+
+#~ msgid ""
+#~ "As we always want to improve this interface we are looking forward to "
+#~ "your feedback and suggestions."
+#~ msgstr ""
+#~ "dal momento che vogliamo migliorare quest&#39;interfaccia accettiamo "
+#~ "suggerimenti."
+
+#~ msgid "Hello!"
+#~ msgstr "Ciao!"
+
+#~ msgid ""
+#~ "Notice: In <abbr title=\"Lua Configuration Interface\">LuCI</abbr> "
+#~ "changes have to be confirmed by clicking Changes - Save &amp; Apply "
+#~ "before being applied."
+#~ msgstr ""
+#~ "Nota: Le modifiche devono essere confermate in <abbr title=\"Lua "
+#~ "Configuration Interface\">LuCI</abbr> cliccando Modifiche - Salva e "
+#~ "Applica prima di essere applicate."
+
+#~ msgid ""
+#~ "On the following pages you can adjust all important settings of your "
+#~ "router."
+#~ msgstr ""
+#~ "Nelle seguenti pagine puoi impostare tutti i settaggi più importanti del "
+#~ "tuo router"
+
+#~ msgid "The <abbr title=\"Lua Configuration Interface\">LuCI</abbr> Team"
+#~ msgstr "Il Team di <abbr title=\"Lua Configuration Interface\">LuCI</abbr>"
+
+#~ msgid ""
+#~ "This is the administration area of <abbr title=\"Lua Configuration "
+#~ "Interface\">LuCI</abbr>."
+#~ msgstr ""
+#~ "Questa è l&#39;area d&#39;amministrazione di <abbr title=\"Lua "
+#~ "Configuration Interface\">LuCI</abbr>."
+
+#~ msgid "User Interface"
+#~ msgstr "Interfaccia utente"
+
+#~ msgid "enable"
+#~ msgstr "abilita"
+
+#, fuzzy
+#~ msgid "(optional)"
+#~ msgstr " (opzionale)"
+
+#~ msgid "<abbr title=\"Domain Name System\">DNS</abbr>-Port"
+#~ msgstr "Porta <abbr title=\"Domain Name System\">DNS</abbr>"
+
+#~ msgid ""
+#~ "<abbr title=\"Domain Name System\">DNS</abbr>-Server will be queried in "
+#~ "the order of the resolvfile"
+#~ msgstr ""
+#~ "I server <abbr title=\"Domain Name System\">DNS</abbr> verranno "
+#~ "contattati nell&#39;ordine del file resolv"
+
+#~ msgid ""
+#~ "<abbr title=\"maximal\">max.</abbr> <abbr title=\"Dynamic Host "
+#~ "Configuration Protocol\">DHCP</abbr>-Leases"
+#~ msgstr ""
+#~ "Numero massimo di lease <abbr title=\"Dynamic Host Configuration Protocol"
+#~ "\">DHCP</abbr>"
+
+#~ msgid ""
+#~ "<abbr title=\"maximal\">max.</abbr> <abbr title=\"Extension Mechanisms "
+#~ "for Domain Name System\">EDNS0</abbr> packet size"
+#~ msgstr ""
+#~ "Dimensione massima pacchetto <abbr title=\"Extension Mechanisms for "
+#~ "Domain Name System\">EDNS0</abbr>"
+
+#~ msgid "AP-Isolation"
+#~ msgstr "Isolazione AP"
+
+#~ msgid "Add the Wifi network to physical network"
+#~ msgstr "Aggiungi la rete Wifi alla rete fisica"
+
+#~ msgid "Aliases"
+#~ msgstr "Alias"
+
+#~ msgid "Clamp Segment Size"
+#~ msgstr "Clamp Segment Size"
+
+#, fuzzy
+#~ msgid "Create Or Attach Network"
+#~ msgstr "Crea rete"
+
+#~ msgid "Devices"
+#~ msgstr "Dispositivi"
+
+#~ msgid "Don't forward reverse lookups for local networks"
+#~ msgstr "Non inoltrare richieste per le reti locali"
+
+#~ msgid "Enable TFTP-Server"
+#~ msgstr "Abilita server TFTP"
+
+#~ msgid "Errors"
+#~ msgstr "Errori"
+
+#~ msgid "Essentials"
+#~ msgstr "Essenziali"
+
+#~ msgid "Expand Hosts"
+#~ msgstr "Espandi host"
+
+#~ msgid "First leased address"
+#~ msgstr "Primo indirizzo offerto"
+
+#~ msgid ""
+#~ "Fixes problems with unreachable websites, submitting forms or other "
+#~ "unexpected behaviour for some ISPs."
+#~ msgstr ""
+#~ "Fixes problems with unreachable websites, submitting forms or other "
+#~ "unexpected behaviour for some ISPs."
+
+#~ msgid "Hardware Address"
+#~ msgstr "Hardware Address"
+
+#~ msgid "Here you can configure installed wifi devices."
+#~ msgstr "Qui puoi configurare i tuoi dispositivi wireless installati."
+
+#~ msgid "Independent (Ad-Hoc)"
+#~ msgstr "Independente (Ad-Hoc)"
+
+#~ msgid "Internet Connection"
+#~ msgstr "Connessione Internet"
+
+#~ msgid "Join (Client)"
+#~ msgstr "Partecipa (Client)"
+
+#~ msgid "Leases"
+#~ msgstr "Lease"
+
+#~ msgid "Local Domain"
+#~ msgstr "Dominio locale"
+
+#~ msgid "Local Network"
+#~ msgstr "Rete locale"
+
+#~ msgid "Local Server"
+#~ msgstr "Server locale"
+
+#~ msgid "Network Boot Image"
+#~ msgstr "Immagine boot da rete"
+
+#~ msgid ""
+#~ "Network Name (<abbr title=\"Extended Service Set Identifier\">ESSID</"
+#~ "abbr>)"
+#~ msgstr ""
+#~ "Nome rete (<abbr title=\"Extended Service Set Identifier\">ESSID</abbr>)"
+
+#~ msgid "Number of leased addresses"
+#~ msgstr "Numero di indirizzi offerti"
+
+#~ msgid "Perform Actions"
+#~ msgstr "Esegui azioni"
+
+#~ msgid "Prevents Client to Client communication"
+#~ msgstr "Impedisci la comunicazione fra Client"
+
+#~ msgid "Provide (Access Point)"
+#~ msgstr "Offri (Access Point)"
+
+#~ msgid "Resolvfile"
+#~ msgstr "File resolv"
+
+#~ msgid "TFTP-Server Root"
+#~ msgstr "Radice del server TFTP"
+
+#~ msgid "TX / RX"
+#~ msgstr "TX / RX"
+
+#~ msgid "The following changes have been applied"
+#~ msgstr "Le seguenti modifiche sono state applicate"
+
+#~ msgid ""
+#~ "When flashing a new firmware with <abbr title=\"Lua Configuration "
+#~ "Interface\">LuCI</abbr> these files will be added to the new firmware "
+#~ "installation."
+#~ msgstr ""
+#~ "Quando si aggiorna un firmware con <abbr title=\"Lua Configuration "
+#~ "Interface\">LuCI</abbr> questi files verranno aggiunti al nuovo firmware."
+
+#~ msgid ""
+#~ "With <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr> "
+#~ "network members can automatically receive their network settings (<abbr "
+#~ "title=\"Internet Protocol\">IP</abbr>-address, netmask, <abbr title="
+#~ "\"Domain Name System\">DNS</abbr>-server, ...)."
+#~ msgstr ""
+#~ "Con <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr> i "
+#~ "membri della rete possono ricevere automaticamente le loro impostazioni "
+#~ "di rete (indirizzi <abbr title=\"Internet Protocol\">IP</abbr>, maschere "
+#~ "di rete, server <abbr title=\"Domain Name System\">DNS</abbr>, ...)."
+
+#~ msgid ""
+#~ "You can run several wifi networks with one device. Be aware that there "
+#~ "are certain hardware and driverspecific restrictions. Normally you can "
+#~ "operate 1 Ad-Hoc or up to 3 Master-Mode and 1 Client-Mode network "
+#~ "simultaneously."
+#~ msgstr ""
+#~ "Puoi avere più reti wifi con un solo dispositivo. Sappi ceh ci sono "
+#~ "alcune restrizioni relative all&#39;hardware ed al driver.Normalmente "
+#~ "puoi avere 1 rete Ad-Hoc o fino a 3 reti Master e uan rete in modalità "
+#~ "Client contemporaneamente."
+
+#~ msgid ""
+#~ "You need to install \"ppp-mod-pppoe\" for PPPoE or \"pptp\" for PPtP "
+#~ "support"
+#~ msgstr ""
+#~ "Devi installare \"ppp-mod-pppoe\" per il supporto PPPoE e \"pptp\" per "
+#~ "PPtP"
+
+#~ msgid "additional hostfile"
+#~ msgstr "file hosts aggiuntivo"
+
+#~ msgid "adds domain names to hostentries in the resolv file"
+#~ msgstr "aggiungi nomi di dominio nel file resolv"
+
+#~ msgid "automatically reconnect"
+#~ msgstr "riconnetti automaticamente"
+
+#~ msgid "concurrent queries"
+#~ msgstr "richieste contemporanee"
+
+#~ msgid ""
+#~ "disable <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr> "
+#~ "for this interface"
+#~ msgstr ""
+#~ "disabilita <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</"
+#~ "abbr> per queste interfacce"
+
+#~ msgid "disconnect when idle for"
+#~ msgstr "disconnetti quando non usata per"
+
+#~ msgid "don't cache unknown"
+#~ msgstr "non tenere sconosciuti in cache"
+
+#~ msgid ""
+#~ "filter useless <abbr title=\"Domain Name System\">DNS</abbr>-queries of "
+#~ "Windows-systems"
+#~ msgstr ""
+#~ "Filtra richieste <abbr title=\"Domain Name System\">DNS</abbr> inutili di "
+#~ "sistemi windows"
+
+#~ msgid "installed"
+#~ msgstr "installato"
+
+#~ msgid "localises the hostname depending on its subnet"
+#~ msgstr "localizza l&#39;hostname a seconda delle sue sottoreti"
+
+#~ msgid "not installed"
+#~ msgstr "non installato"
+
+#~ msgid ""
+#~ "prevents caching of negative <abbr title=\"Domain Name System\">DNS</"
+#~ "abbr>-replies"
+#~ msgstr ""
+#~ "impedisci la cache di risposte <abbr title=\"Domain Name System\">DNS</"
+#~ "abbr> negative"
+
+#~ msgid "query port"
+#~ msgstr "porta per le richieste"
+
+#~ msgid "transmitted / received"
+#~ msgstr "transmessi / ricevuti"
+
+#, fuzzy
+#~ msgid "Join network"
+#~ msgstr "Rete"
+
+#~ msgid "all"
+#~ msgstr "tutti"
+
+#~ msgid "Code"
+#~ msgstr "Codice"
+
+#~ msgid "Distance"
+#~ msgstr "Distanza"
+
+#~ msgid "Legend"
+#~ msgstr "Legenda"
+
+#~ msgid "Library"
+#~ msgstr "Libreria"
+
+#~ msgid "see '%s' manpage"
+#~ msgstr "leggi il manuale di &#39;%s&#39;"
+
+#~ msgid "Package Manager"
+#~ msgstr "Gestore pacchetti"
+
+#~ msgid "Service"
+#~ msgstr "Servizio"
+
+#~ msgid "Statistics"
+#~ msgstr "Statistiche"
+
+#~ msgid "zone"
+#~ msgstr "Zona"

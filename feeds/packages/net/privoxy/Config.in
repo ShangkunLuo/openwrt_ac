@@ -1,6 +1,6 @@
 if PACKAGE_privoxy
 
-	comment "Shared libraries settings"
+	comment "Shared libraries settings (Size changes taken on x86 with uClib)"
 
 	config PRIVOXY_disable-pthread
 		bool "Don't use POSIX libpthread (-5489b)"

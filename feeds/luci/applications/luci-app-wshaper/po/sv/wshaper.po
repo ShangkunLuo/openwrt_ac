@@ -10,44 +10,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Downlink"
-msgstr "Nerladdningslänk"
+msgstr ""
 
 msgid "Downstream bandwidth in kbit/s"
-msgstr "Nerströms bandbredd i kbit/s"
+msgstr ""
 
 msgid "Host or Network in CIDR notation."
-msgstr "Värd eller Nätverk i CIDR-noteringen"
+msgstr ""
 
 msgid "Interface"
-msgstr "Gränssnitt"
+msgstr ""
 
 msgid "Low priority destination ports"
-msgstr "Destinations-portar med låg prioritet"
+msgstr ""
 
 msgid "Low priority hosts (Destination)"
-msgstr "Värdar med låg prioritet (Destination)"
+msgstr ""
 
 msgid "Low priority hosts (Source)"
-msgstr "Värdar med låg prioritet (Källa)"
+msgstr ""
 
 msgid "Low priority source ports"
-msgstr "Käll-portar med låg prioritet"
+msgstr ""
 
 msgid "Uplink"
-msgstr "Uppladdningslänk"
+msgstr ""
 
 msgid "Upstream bandwidth in kbit/s"
-msgstr "Bandbredd uppströms i kbit/s"
+msgstr ""
 
 msgid "Wondershaper"
-msgstr "Wondershaper"
+msgstr ""
 
 msgid "Wondershaper settings"
-msgstr "Inställningar för Wondershaper"
+msgstr ""
 
 msgid ""
 "Wondershaper shapes traffic to ensure low latencies for interactive traffic "
 "even when your internet connection is highly saturated."
 msgstr ""
-"Wondershaper formar trafiken för att säkerställa låga latenser för "
-"interaktiv trafik även när din internetanslutning är mättad som mest."

@@ -113,7 +113,7 @@ msgstr "Start UPnP og NAT-PMP tjenesten"
 msgid "There are no active redirects."
 msgstr "Det finnes ingen aktive viderekoblinger"
 
-msgid "UPnP"
+msgid "UPNP"
 msgstr ""
 
 msgid ""

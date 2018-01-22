@@ -55,6 +55,9 @@ msgstr "QoS"
 msgid "Quality of Service"
 msgstr "QOS服务"
 
+msgid "Service"
+msgstr "服务"
+
 msgid "Source host"
 msgstr "源主机"
 
@@ -86,9 +89,6 @@ msgstr "普通"
 
 msgid "priority"
 msgstr "最高"
-
-#~ msgid "Service"
-#~ msgstr "服务"
 
 #~ msgid "Downlink"
 #~ msgstr "下行"

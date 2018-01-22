@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gnutls
-PKG_VERSION:=3.5.6
+PKG_VERSION:=3.4.15
 PKG_RELEASE:=1
 PKG_USE_MIPS16:=0
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
-PKG_SOURCE_URL:=ftp://ftp.gnutls.org/gcrypt/gnutls/v3.5
-PKG_MD5SUM:=7a38b23757aae009c3eb5bb12fb0afda
+PKG_SOURCE_URL:=ftp://ftp.gnutls.org/gcrypt/gnutls/v3.4
+PKG_MD5SUM:=4ea5b239bd8bf1b734dda02997b36459
 #PKG_FIXUP:=autoreconf gettext-version
 PKG_MAINTAINER:=Nikos Mavrogiannopoulos <nmav@gnutls.org>
 PKG_LICENSE:=LGPLv2.1+
@@ -35,7 +35,6 @@ PKG_CONFIG_DEPENDS:= \
 	CONFIG_GNUTLS_PKCS11 \
 	CONFIG_GNUTLS_PSK \
 	CONFIG_GNUTLS_SRP \
-	CONFIG_GNUTLS_TPM \
 	CONFIG_LIBNETTLE_MINI \
 
 include $(INCLUDE_DIR)/package.mk
@@ -63,7 +62,6 @@ define Package/certtool
 $(call Package/gnutls/Default)
   SECTION:=utils
   CATEGORY:=Utilities
-  SUBMENU:=Encryption
   TITLE+= (certool utility)
   DEPENDS+= +libgnutls
 endef
@@ -78,7 +76,6 @@ define Package/gnutls-utils
 $(call Package/gnutls/Default)
   SECTION:=utils
   CATEGORY:=Utilities
-  SUBMENU:=Encryption
   TITLE+= (utilities)
   DEPENDS+= +libgnutls
 endef
@@ -96,7 +93,7 @@ endef
 define Package/libgnutls
 $(call Package/gnutls/Default)
   TITLE+= (library)
-  DEPENDS+= +libnettle +!LIBNETTLE_MINI:libgmp +GNUTLS_EXT_LIBTASN1:libtasn1 +GNUTLS_PKCS11:p11-kit +GNUTLS_CRYPTODEV:kmod-cryptodev
+  DEPENDS+= +libnettle +!LIBNETTLE_MINI:libgmp +GNUTLS_EXT_LIBTASN1:libtasn1 +GNUTLS_PKCS11:p11-kit
 endef
 
 define Package/libgnutls/description
@@ -104,6 +101,17 @@ $(call Package/gnutls/Default/description)
  This package contains the GnuTLS shared library, needed by other programs.
 endef
 
+
+define Package/libgnutls-openssl
+$(call Package/gnutls/Default)
+  TITLE+= (OpenSSL compat library)
+  DEPENDS+= +libgnutls
+endef
+
+define Package/libgnutls-openssl/description
+$(call Package/gnutls/Default/description)
+ This package contains the GnuTLS OpenSSL compatibility layer shared library.
+endef
 
 CONFIGURE_ARGS+= \
 	--enable-shared \
@@ -116,6 +124,7 @@ CONFIGURE_ARGS+= \
 	--enable-local-libopts \
 	--disable-doc \
 	--disable-tests \
+	--enable-openssl-compatibility \
 	--with-default-trust-store-dir=/etc/ssl/certs/ \
 	--disable-crywrap \
 	--with-librt-prefix="$(LIBRT_ROOT_DIR)/"
@@ -162,10 +171,6 @@ endif
 
 ifneq ($(CONFIG_GNUTLS_OCSP),y)
 CONFIGURE_ARGS += --disable-ocsp
-endif
-
-ifneq ($(CONFIG_GNUTLS_TPM),y)
-CONFIGURE_ARGS += --without-tpm
 endif
 
 ifeq ($(CONFIG_GNUTLS_CRYPTODEV),y)
@@ -227,11 +232,6 @@ ifeq ($(CONFIG_GNUTLS_PKCS11),y)
 		$(PKG_INSTALL_DIR)/usr/bin/p11tool \
 		$(1)/usr/bin/
 endif
-ifeq ($(CONFIG_GNUTLS_TPM),y)
-	$(CP) \
-		$(PKG_INSTALL_DIR)/usr/bin/tpmtool \
-		$(1)/usr/bin/
-endif
 endef
 
 
@@ -241,6 +241,13 @@ define Package/libgnutls/install
 endef
 
 
+define Package/libgnutls-openssl/install
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libgnutls-openssl.so.* $(1)/usr/lib/
+endef
+
+
 $(eval $(call BuildPackage,certtool))
 $(eval $(call BuildPackage,gnutls-utils))
 $(eval $(call BuildPackage,libgnutls))
+$(eval $(call BuildPackage,libgnutls-openssl))

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2006-2016 OpenWrt.org
+# Copyright (C) 2006-2015 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -14,12 +14,12 @@ PYTHON_VERSION:=$(PYTHON3_VERSION)
 PYTHON_VERSION_MICRO:=$(PYTHON3_VERSION_MICRO)
 
 PKG_NAME:=python3
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_VERSION:=$(PYTHON_VERSION).$(PYTHON_VERSION_MICRO)
 
 PKG_SOURCE:=Python-$(PKG_VERSION).tar.xz
-PKG_SOURCE_URL:=https://www.python.org/ftp/python/$(PKG_VERSION)
-PKG_MD5SUM:=8906efbacfcdc7c3c9198aeefafd159e
+PKG_SOURCE_URL:=http://www.python.org/ftp/python/$(PKG_VERSION)
+PKG_MD5SUM:=7d092d1bba6e17f0d9bd21b49e441dd5
 
 PKG_LICENSE:=PSF
 PKG_LICENSE_FILES:=LICENSE Modules/_ctypes/libffi_msvc/LICENSE Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi/LICENSE Modules/_ctypes/libffi_osx/LICENSE Tools/pybench/LICENSE
@@ -31,8 +31,7 @@ HOST_BUILD_PARALLEL:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/Python-$(PKG_VERSION)
 HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/Python-$(PKG_VERSION)
 
-PKG_BUILD_DEPENDS:=libbz2/host expat/host python3/host
-HOST_BUILD_DEPENDS:=bzip2/host expat/host libffi/host
+PKG_BUILD_DEPENDS:=python3/host
 
 include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/package.mk
@@ -42,7 +41,7 @@ define Package/python3/Default
   SECTION:=lang
   CATEGORY:=Languages
   TITLE:=Python $(PYTHON_VERSION) programming language
-  URL:=https://www.python.org/
+  URL:=http://www.python.org/
   MAINTAINER:=Alexandru Ardelean <ardeleanalex@gmail.com>
 endef
 
@@ -78,9 +77,15 @@ define Package/python3-light/description
   into separate packages.
 endef
 
+# Define newline here, since it's not defined in OpenWRT
+define newline
+
+
+endef
+
 PYTHON3_LIB_FILES_DEL:=
 PYTHON3_PACKAGES:=
-PYTHON3_SO_SUFFIX:=cpython-$(PYTHON3_VERSION_MAJOR)$(PYTHON3_VERSION_MINOR).so
+PYTHON3_SO_SUFFIX:=cpython-34.so
 define Py3BasePackage
   PYTHON3_PACKAGES+=$(1)
   PYTHON3_LIB_FILES_DEL+=$(2)
@@ -93,7 +98,7 @@ include ./files/python3-package-*.mk
 
 define Package/python3
 $(call Package/python3/Default)
-  DEPENDS:=+python3-light $(foreach package,$(filter-out python3-dev python3-lib2to3,$(PYTHON3_PACKAGES)),+$(package))
+  DEPENDS:=+python3-light $(foreach package,$(PYTHON3_PACKAGES),+$(package))
 endef
 
 define Package/python3/description
@@ -127,7 +132,7 @@ CONFIGURE_ARGS+= \
 	--with-threads \
 	--with-system-ffi="$(STAGING_DIR)/usr" \
 	--without-pymalloc \
-	--with-ensurepip=no \
+	--without-ensurepip \
 	$(ENABLE_IPV6) \
 	CONFIG_SITE="$(PKG_BUILD_DIR)/config.site" \
 	OPT="$(TARGET_CFLAGS)"
@@ -146,7 +151,7 @@ define Build/InstallDev
 		$(PKG_INSTALL_DIR)/usr/include/python$(PYTHON_VERSION) \
 		$(1)/usr/include/
 	$(CP) \
-		$(HOST_PYTHON3_LIB_DIR) \
+		$(STAGING_DIR_HOST)/lib/python$(PYTHON_VERSION) \
 		$(PKG_INSTALL_DIR)/usr/lib/libpython$(PYTHON_VERSION).so* \
 		$(1)/usr/lib/
 	$(CP) \
@@ -179,10 +184,12 @@ endef
 
 define Py3Package/python3-light/filespec
 +|/usr/lib/python$(PYTHON_VERSION)
+-|/usr/lib/python$(PYTHON_VERSION)/config-$(PYTHON_VERSION)
 -|/usr/lib/python$(PYTHON_VERSION)/distutils/cygwinccompiler.py
 -|/usr/lib/python$(PYTHON_VERSION)/distutils/command/wininst*
 -|/usr/lib/python$(PYTHON_VERSION)/ensurepip
 -|/usr/lib/python$(PYTHON_VERSION)/idlelib
+-|/usr/lib/python$(PYTHON_VERSION)/lib2to3
 -|/usr/lib/python$(PYTHON_VERSION)/tkinter
 -|/usr/lib/python$(PYTHON_VERSION)/turtledemo
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_test*.so
@@ -208,15 +215,16 @@ define Py3Package/python3/filespec
 -|$(PYTHON3_PKG_DIR)
 endef
 
+HOST_CFLAGS+= \
+	-I/usr/include/ncursesw \
+	-I/usr/include/ncurses
+
 HOST_CONFIGURE_ARGS+= \
 	--without-cxx-main \
 	--without-pymalloc \
 	--with-threads \
-	--prefix=$(HOST_PYTHON3_DIR) \
-	--exec-prefix=$(HOST_PYTHON3_DIR) \
-	--with-system-expat=$(STAGING_DIR_HOSTPKG) \
-	--with-system-ffi=$(STAGING_DIR_HOSTPKG) \
-	--with-ensurepip=no \
+	--prefix=$(STAGING_DIR_HOST) \
+	--with-ensurepip=upgrade \
 	CONFIG_SITE= \
 	CFLAGS="$(HOST_CFLAGS)"
 
@@ -226,11 +234,9 @@ define Host/Compile
 endef
 
 define Host/Install
+	$(INSTALL_DIR) $(STAGING_DIR_HOST)/bin/
 	$(MAKE) -C $(HOST_BUILD_DIR) install
-
-	$(INSTALL_DIR) $(HOST_PYTHON3_DIR)/bin/
-	$(INSTALL_BIN) $(HOST_BUILD_DIR)/Parser/pgen $(HOST_PYTHON3_DIR)/bin/pgen3
-	$(INSTALL_BIN) $(HOST_BUILD_DIR)/Programs/_freeze_importlib $(HOST_PYTHON3_DIR)/bin/_freeze_importlib
+	$(INSTALL_BIN) $(HOST_BUILD_DIR)/Parser/pgen $(STAGING_DIR_HOST)/bin/pgen3
 endef
 
 $(eval $(call HostBuild))

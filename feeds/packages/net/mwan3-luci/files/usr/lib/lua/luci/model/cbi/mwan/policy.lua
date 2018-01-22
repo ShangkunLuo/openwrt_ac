@@ -42,7 +42,7 @@ mwan_policy = m5:section(TypedSection, "policy", translate("Policies"),
 	"Policies may not share the same name as configured interfaces, members or rules"))
 	mwan_policy.addremove = true
 	mwan_policy.dynamic = false
-	mwan_policy.sectionhead = translate("Policy")
+	mwan_policy.sectionhead = "Policy"
 	mwan_policy.sortable = true
 	mwan_policy.template = "cbi/tblsection"
 	mwan_policy.extedit = ds.build_url("admin", "network", "mwan", "configuration", "policy", "%s")

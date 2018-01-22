@@ -10,59 +10,58 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Allow guests"
-msgstr "Tillåt gäster"
+msgstr ""
 
 msgid "Allow system users to reach their home directories via network shares"
-msgstr "Tillåt systemanvändare att nå deras hem-mappar via nätverksdelningar"
+msgstr ""
 
 msgid "Allowed users"
-msgstr "Tillåtna användare"
+msgstr ""
 
 msgid "Create mask"
-msgstr "Skapa mask"
+msgstr ""
 
 msgid "Description"
-msgstr "Beskrivning"
+msgstr ""
 
 msgid "Directory mask"
-msgstr "Mask för mapp"
+msgstr ""
 
 msgid "Edit Template"
-msgstr "Redigera mall"
+msgstr ""
 
 msgid "Edit the template that is used for generating the samba configuration."
 msgstr ""
-"Redigera mallen som används för att generera konfigurationen för samba."
 
 msgid "General Settings"
-msgstr "Generella inställningar"
+msgstr ""
 
 msgid "Hostname"
-msgstr "Värdnamn"
+msgstr ""
 
 msgid "Mask for new directories"
-msgstr "Mask för nya mappar"
+msgstr ""
 
 msgid "Mask for new files"
-msgstr "Mask för nya filer"
+msgstr ""
 
 msgid "Name"
-msgstr "Namn"
+msgstr ""
 
 msgid "Network Shares"
-msgstr "Nätverksdelningar"
+msgstr ""
 
 msgid "Path"
-msgstr "Genväg"
+msgstr ""
 
 msgid "Read-only"
-msgstr "Endast läsbar"
+msgstr ""
 
 msgid "Share home-directories"
-msgstr "Dela hem-mappar"
+msgstr ""
 
 msgid "Shared Directories"
-msgstr "Delade mappar"
+msgstr ""
 
 msgid ""
 "This is the content of the file '/etc/samba/smb.conf.template' from which "
@@ -72,4 +71,4 @@ msgid ""
 msgstr ""
 
 msgid "Workgroup"
-msgstr "Arbetsgrupp"
+msgstr ""

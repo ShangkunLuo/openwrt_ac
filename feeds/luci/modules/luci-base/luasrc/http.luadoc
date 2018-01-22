@@ -1,7 +1,8 @@
 ---[[
 LuCI Web Framework high-level HTTP functions.
-]]
+
 module "luci.http"
+]]
 
 ---[[
 Close the HTTP-Connection.

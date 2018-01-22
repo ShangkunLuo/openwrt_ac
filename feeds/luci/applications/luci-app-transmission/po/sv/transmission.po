@@ -10,10 +10,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Alternative download speed"
-msgstr "Alternativ nerladdningshastighet"
+msgstr ""
 
 msgid "Alternative speed enabled"
-msgstr "Alternativ hastighet aktiverat"
+msgstr ""
 
 msgid "Alternative speed time begin"
 msgstr ""
@@ -28,13 +28,13 @@ msgid "Alternative speed timing enabled"
 msgstr ""
 
 msgid "Alternative upload speed"
-msgstr "Alternativ uppladdningshastighet"
+msgstr ""
 
 msgid "Automatically start added torrents"
-msgstr "Starta tillagda torrents automatiskt"
+msgstr ""
 
 msgid "Bandwidth settings"
-msgstr "Inställningar för bandbredd"
+msgstr ""
 
 msgid "Binding address IPv4"
 msgstr ""
@@ -43,64 +43,64 @@ msgid "Binding address IPv6"
 msgstr ""
 
 msgid "Block list enabled"
-msgstr "Blockeringslista aktiverad"
+msgstr ""
 
 msgid "Blocklist URL"
-msgstr "Blockeringslistans URL"
+msgstr ""
 
 msgid "Blocklists"
-msgstr "Blockeringslistor"
+msgstr ""
 
 msgid "Cache size in MB"
-msgstr "Storlek på cache i MB"
+msgstr ""
 
 msgid "Config file directory"
-msgstr "Ställ in fil-mapp"
+msgstr ""
 
 msgid "DHT enabled"
-msgstr "DHT aktiverat"
+msgstr ""
 
 msgid "Debug"
-msgstr "Felsök"
+msgstr ""
 
 msgid "Download directory"
-msgstr "Nerladdningsmapp"
+msgstr ""
 
 msgid "Download queue enabled"
-msgstr "Nerladdnings-kö aktiverad"
+msgstr ""
 
 msgid "Download queue size"
-msgstr "Storlek på nerladdningskön"
+msgstr ""
 
 msgid "Enable watch directory"
-msgstr "Aktivera övervakningsmapp"
+msgstr ""
 
 msgid "Enabled"
-msgstr "Aktiverad"
+msgstr ""
 
 msgid "Encryption"
-msgstr "Kryptering"
+msgstr ""
 
 msgid "Error"
-msgstr "Fel"
+msgstr ""
 
 msgid "Fast"
-msgstr "Snabb"
+msgstr ""
 
 msgid "Files and Locations"
-msgstr "Filer och Platser"
+msgstr ""
 
 msgid "Forced"
-msgstr "Tvingad"
+msgstr ""
 
 msgid "Full"
-msgstr "Fullständig"
+msgstr ""
 
 msgid "Global peer limit"
 msgstr ""
 
 msgid "Global settings"
-msgstr "Globala inställningar"
+msgstr ""
 
 msgid "Idle seeding limit"
 msgstr ""
@@ -109,28 +109,28 @@ msgid "Idle seeding limit enabled"
 msgstr ""
 
 msgid "Incomplete directory"
-msgstr "Ej komplett mapp"
+msgstr ""
 
 msgid "Incomplete directory enabled"
-msgstr "Ej komplett mapp aktiverad"
+msgstr ""
 
 msgid "Info"
-msgstr "Info"
+msgstr ""
 
 msgid "LPD enabled"
-msgstr "LPD aktiverat"
+msgstr ""
 
 msgid "Lazy bitfield enabled"
-msgstr "Lazy bitfield aktiverat"
+msgstr ""
 
 msgid "Message level"
-msgstr "Meddelandenivå"
+msgstr ""
 
 msgid "Miscellaneous"
-msgstr "Diverse"
+msgstr ""
 
 msgid "None"
-msgstr "Ingen"
+msgstr ""
 
 msgid ""
 "Number/bitfield. Start with 0, then for each day you want the scheduler "
@@ -139,13 +139,13 @@ msgid ""
 msgstr ""
 
 msgid "Off"
-msgstr "Av"
+msgstr ""
 
 msgid "Open Web Interface"
-msgstr "Öppna webbgränssnittet"
+msgstr ""
 
 msgid "PEX enabled"
-msgstr "PEX aktiverat"
+msgstr ""
 
 msgid "Peer Port settings"
 msgstr ""
@@ -178,7 +178,7 @@ msgid "Port forwarding enabled"
 msgstr ""
 
 msgid "Preferred"
-msgstr "Föredraget"
+msgstr ""
 
 msgid "Prefetch enabled"
 msgstr ""
@@ -190,37 +190,37 @@ msgid "Queue stalled minutes"
 msgstr ""
 
 msgid "Queueing"
-msgstr "Köar"
+msgstr ""
 
 msgid "RPC URL"
-msgstr "URL för RPC"
+msgstr ""
 
 msgid "RPC authentication required"
-msgstr "RPC-autentisering krävs"
+msgstr ""
 
 msgid "RPC bind address"
-msgstr "Bindningsadress för RPC"
+msgstr ""
 
 msgid "RPC enabled"
-msgstr "RPC aktiverat"
+msgstr ""
 
 msgid "RPC password"
-msgstr "Lösenord för RPC"
+msgstr ""
 
 msgid "RPC port"
-msgstr "Port för RPC"
+msgstr ""
 
 msgid "RPC settings"
-msgstr "Inställningar för RPC"
+msgstr ""
 
 msgid "RPC username"
-msgstr "Användarnamn för RPC"
+msgstr ""
 
 msgid "RPC whitelist"
-msgstr "Vitlista för RPC"
+msgstr ""
 
 msgid "RPC whitelist enabled"
-msgstr "Vitlistan för RPC aktiverad"
+msgstr ""
 
 msgid "Ratio limit"
 msgstr ""
@@ -229,13 +229,13 @@ msgid "Ratio limit enabled"
 msgstr ""
 
 msgid "Rename partial files"
-msgstr "Döp om icke fullständiga filer"
+msgstr ""
 
 msgid "Run daemon as user"
-msgstr "Kör demonen som en användare"
+msgstr ""
 
 msgid "Scheduling"
-msgstr "Schemaläggning"
+msgstr ""
 
 msgid "Scrape paused torrents enabled"
 msgstr ""
@@ -265,23 +265,21 @@ msgid "Speed limit up enabled"
 msgstr ""
 
 msgid "Transmission"
-msgstr "Transmission"
+msgstr ""
 
 msgid ""
 "Transmission daemon is a simple bittorrent client, here you can configure "
 "the settings."
 msgstr ""
-"Transmission-demonen är en enkel bittorrent-klient och här kan du ställa in "
-"inställningarna."
 
 msgid "Trash original torrent files"
-msgstr "Släng de ordinarie torrent-filerna i papperskorgen"
+msgstr ""
 
 msgid "Upload slots per torrent"
 msgstr ""
 
 msgid "Watch directory"
-msgstr "Övervaka mapp"
+msgstr ""
 
 msgid "in minutes from midnight"
 msgstr ""
@@ -290,4 +288,4 @@ msgid "preallocation"
 msgstr ""
 
 msgid "uTP enabled"
-msgstr "uTP aktiverat"
+msgstr ""

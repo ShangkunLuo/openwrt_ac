@@ -12,7 +12,7 @@ LUCI_TYPE:=mod
 LUCI_BASENAME:=base
 
 LUCI_TITLE:=LuCI core libraries
-LUCI_DEPENDS:=+lua +libuci-lua +luci-lib-nixio +luci-lib-ip +rpcd +libubus-lua +luci-lib-jsonc
+LUCI_DEPENDS:=+lua +libuci-lua +luci-lib-nixio +luci-lib-ip +rpcd +libubus-lua
 
 PKG_SOURCE:=LuaSrcDiet-0.12.1.tar.bz2
 PKG_SOURCE_URL:=https://luasrcdiet.googlecode.com/files
@@ -21,10 +21,6 @@ PKG_MD5SUM:=8a0812701e29b6715e4d76f2f118264a
 HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/LuaSrcDiet-0.12.1
 
 include $(INCLUDE_DIR)/host-build.mk
-
-define Package/luci-base/conffiles
-/etc/luci-uploads
-endef
 
 include ../../luci.mk
 

@@ -8,11 +8,11 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=open-plc-utils
-PKG_VERSION:=2015-09-21
+PKG_VERSION:=2015-07-06
 PKG_RELEASE:=$(PKG_SOURCE_VERSION)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/qca/open-plc-utils.git
+PKG_SOURCE_URL:=git://github.com/qca/open-plc-utils.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_VERSION:=885a1b7e2e663b5ab8797db6d40a0318131fdf18
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
@@ -75,10 +75,6 @@ OPEN_PLC_UTILS_APPS:=efbu efeu efru efsu edru edsu nics \
 
 $(foreach a,$(OPEN_PLC_UTILS_APPS),$(eval $(call GenPlugin,$(a))))
 
-ifdef CONFIG_USE_MUSL
-  TARGET_CFLAGS += -D__UCLIBC__
-endif
-
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		EXTRA_CFLAGS="$(TARGET_CPPFLAGS) $(TARGET_CFLAGS)" \
@@ -91,7 +87,6 @@ define Build/Compile
 endef
 
 define Package/open-plc-utils/install
-	true
 endef
 
 define BuildPlugin

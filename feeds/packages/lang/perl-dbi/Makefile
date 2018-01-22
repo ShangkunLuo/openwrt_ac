@@ -21,8 +21,6 @@ PKG_MAINTAINER:=Marcel Denia <naoir@gmx.net>
 PKG_BUILD_DIR:=$(BUILD_DIR)/perl/DBI-$(PKG_VERSION)
 HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/perl/DBI-$(PKG_VERSION)
 
-HOST_BUILD_DEPENDS:=perl/host
-
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/host-build.mk
 include ../perl/perlmod.mk
@@ -33,7 +31,7 @@ define Package/perl-dbi
   CATEGORY:=Languages
   TITLE:=Database independent interface for Perl
   URL:=http://search.cpan.org/dist/DBI/
-  DEPENDS:=perl +perlbase-base +perlbase-config +perlbase-cwd +perlbase-data +perlbase-dynaloader +perlbase-errno +perlbase-essential +perlbase-fcntl +perlbase-file +perlbase-io +perlbase-ipc +perlbase-scalar +perlbase-storable +perlbase-symbol +perlbase-tie +perlbase-universal +perlbase-utf8
+  DEPENDS:=perl +perlbase-essential
 endef
 
 define Build/Configure

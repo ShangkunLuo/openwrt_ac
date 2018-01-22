@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2006-2016 OpenWrt.org
+# Copyright (C) 2006-2015 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,16 +8,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mc
-PKG_VERSION:=4.8.18
-PKG_RELEASE:=1
-PKG_MAINTAINER:=Dirk Brenken <dev@brenken.org>
+PKG_VERSION:=4.8.14
+PKG_RELEASE:=1.3
+PKG_MAINTAINER:=Dirk Brenken <dibdot@gmail.com>
 PKG_LICENSE:=GPL-3.0+
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://ftp.midnight-commander.org/
-PKG_MD5SUM:=f7636815c987c1719c4f5de2dcd156a0e7d097b1d10e4466d2bdead343d5bece
+PKG_MD5SUM:=fbdaddb9edcf8925dcf3231331a8720b
+
 PKG_BUILD_PARALLEL:=1
-PKG_FIXUP:=autoreconf gettext-version
+PKG_FIXUP:=autoreconf
 
 PKG_CONFIG_DEPENDS := \
 	CONFIG_PACKAGE_MC \
@@ -32,30 +33,29 @@ PKG_CONFIG_DEPENDS := \
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
 
-define Package/$(PKG_NAME)
-	SECTION:=utils
-	CATEGORY:=Utilities
-	DEPENDS:=+glib2 +libncurses +libmount +MC_VFS:libssh2 $(LIBRPC_DEPENDS) $(ICONV_DEPENDS)
-	TITLE:=Midnight Commander - a powerful visual file manager
-	URL:=https://www.midnight-commander.org/
-	MENU:=1
+define Package/mc
+  SECTION:=utils
+  CATEGORY:=Utilities
+  DEPENDS:=+glib2 +libncurses +libmount +MC_VFS:libssh2 $(LIBRPC_DEPENDS) $(ICONV_DEPENDS)
+  TITLE:=Midnight Commander - a powerful visual file manager
+  URL:=http://www.midnight-commander.org/
+  MENU:=1
 endef
 
-define Package/$(PKG_NAME)/config
+define Package/mc/config
 	source "$(SOURCE)/Config.in"
 endef
 
-define Package/$(PKG_NAME)/description
-GNU Midnight Commander is a visual file manager.
-It's a feature rich full-screen text mode application that allows you to copy,
-move and delete files and whole directory trees, search for files and run commands in the subshell.
-Internal viewer and editor are included as well.
-
+define Package/mc/description
+ GNU Midnight Commander is a visual file manager,
+ licensed under GNU General Public License and therefore qualifies as Free Software.
+ It's a feature rich full-screen text mode application that allows you to copy,
+ move and delete files and whole directory trees, search for files
+ and run commands in the subshell. Internal viewer and editor are included.
 endef
 
 CONFIGURE_ARGS += \
 	--disable-doxygen-doc \
-	--with-homedir=/etc/mc \
 	--with-screen=ncurses \
 	--without-gpm-mouse \
 	--without-x \
@@ -98,15 +98,10 @@ CONFIGURE_ARGS += \
 	--disable-vfs
 endif
 
-define Package/$(PKG_NAME)/install
+define Package/mc/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/mc $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/etc/mc
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/misc/mc.charsets $(1)/etc/mc
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/misc/mc.default.keymap $(1)/etc/mc
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/misc/mc.ext $(1)/etc/mc
-	$(INSTALL_DIR) $(1)/usr/share/mc/help
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/doc/hlp/mc.hlp $(1)/usr/share/mc/help
 ifeq ($(CONFIG_MC_DIFFVIEWER),y)
 	ln -sf mc $(1)/usr/bin/mcdiff
 endif
@@ -116,12 +111,12 @@ endif
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/misc/mc.menu $(1)/etc/mc
 	$(INSTALL_DIR) $(1)/etc/mc/skins
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/misc/skins/default.ini $(1)/etc/mc/skins
-	$(INSTALL_DIR) $(1)/etc/mc/mcedit/Syntax
+	$(INSTALL_DIR) $(1)/root/.mc/cedit/Syntax
 endef
 
-define Package/$(PKG_NAME)/conffiles
+define Package/mc/conffiles
 /etc/mc/mc.menu
 /etc/mc/skins/default.ini
 endef
 
-$(eval $(call BuildPackage,$(PKG_NAME)))
+$(eval $(call BuildPackage,mc))

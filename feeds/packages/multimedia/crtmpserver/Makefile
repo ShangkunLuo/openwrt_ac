@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=crtmpserver
-PKG_REV:=b6fdcdb953d1e99c48a0c37a8c80f2cad2db443b
+PKG_REV:=b6fdcdb
 PKG_VERSION:=2012-07-18+git-$(PKG_REV)
 PKG_RELEASE:=2
 PKG_BUILD_PARALLEL:=2

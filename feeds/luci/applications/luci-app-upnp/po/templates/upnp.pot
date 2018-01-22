@@ -108,7 +108,7 @@ msgstr ""
 msgid "There are no active redirects."
 msgstr ""
 
-msgid "UPnP"
+msgid "UPNP"
 msgstr ""
 
 msgid ""

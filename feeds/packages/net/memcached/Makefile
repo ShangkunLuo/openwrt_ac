@@ -9,26 +9,22 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=memcached
-PKG_VERSION:=1.4.31
+PKG_VERSION:=1.4.24
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://memcached.org/files
-PKG_MD5SUM:=c19bb0e77e720f64f33ecb43de28a1b4
-
-PKG_MAINTAINER:=Thomas Heil <heil@terminal-consulting.de>
-
-PKG_LICENSE:=BSD-3-Clause
-PKG_LICENSE_FILES:=COPYING
-
+PKG_MD5SUM:=4d6e8c90e2068580526c7579dd7f37f6
 PKG_INSTALL:=1
+PKG_MAINTAINER:=Thomas Heil <heil@terminal-consulting.de>
+PKG_LICENSE:=permissive free software license
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/memcached
   SECTION:=net
   CATEGORY:=Network
-  DEPENDS:=+libevent2 +libpthread
+  DEPENDS:=+libevent +libpthread
   TITLE:=The high-performance, distributed memory object caching system
   URL:=http://memcached.org/
 endef

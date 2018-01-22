@@ -8,15 +8,15 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=lxc
-PKG_VERSION:=1.1.5
-PKG_RELEASE:=3
+PKG_VERSION:=1.1.3
+PKG_RELEASE:=1
 
 PKG_LICENSE:=LGPL-2.1+ BSD-2-Clause GPL-2.0
 PKG_MAINTAINER:=Luka Perkov <luka@openwrt.org>
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://linuxcontainers.org/downloads/lxc/
-PKG_MD5SUM:=dd9684dde0a58ed13f4f49c855b79a1a
+PKG_MD5SUM:=197abb5a28ab0b689c737eb1951023fb
 
 PKG_BUILD_DEPENDS:=lua
 PKG_BUILD_PARALLEL:=1
@@ -27,9 +27,8 @@ PKG_FIXUP:=autoreconf
 include $(INCLUDE_DIR)/package.mk
 
 LXC_APPLETS_BIN += \
-	attach autostart cgroup clone config console create destroy device \
-	execute freeze info monitor snapshot start stop unfreeze unshare \
-	usernsexec wait
+	attach autostart cgroup clone config console create destroy execute \
+	freeze info monitor snapshot start stop unfreeze unshare usernsexec wait
 
 LXC_APPLETS_LIB += \
 	monitord user-nic
@@ -39,8 +38,7 @@ LXC_SCRIPTS += \
 
 DEPENDS_APPLETS = +libpthread +libcap +liblxc
 
-DEPENDS_create = +lxc-configs +lxc-hooks +lxc-templates +flock
-
+DEPENDS_create = +lxc-configs +lxc-hooks +lxc-templates
 DEPENDS_ls = +lxc-config
 DEPENDS_top = +lxc-lua +luafilesystem @BROKEN
 
@@ -55,23 +53,6 @@ endef
 define Package/lxc
   $(call Package/lxc/Default)
   MENU:=1
-endef
-
-define Package/lxc-auto
-  $(call Package/lxc/Default)
-  TITLE:= (initscript)
-  DEPENDS:=+lxc-start +lxc-stop
-endef
-
-define Package/lxc-auto/description
- LXC is the userspace control package for Linux Containers, a lightweight
- virtual system mechanism sometimes described as "chroot on steroids".
- This package adds and initscript for starting and stopping the containers
- on boot and shutdown.
-endef
-
-define Package/lxc-auto/conffiles
-/etc/config/lxc-auto
 endef
 
 define Package/lxc/config
@@ -112,7 +93,7 @@ define Package/liblxc
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE:=LXC userspace library
-  DEPENDS:= lxc +libcap +libpthread +LXC_SECCOMP:libseccomp
+  DEPENDS:= lxc +libcap +libpthread
 endef
 
 define Package/lxc-lua
@@ -131,14 +112,9 @@ CONFIGURE_ARGS += \
 	--disable-apparmor \
 	--disable-doc \
 	--disable-examples \
+	--disable-seccomp
 	--enable-lua=yes \
-	--with-lua-pc="$(STAGING_DIR)/usr/lib/pkgconfig/lua.pc"
-
-ifeq ($(CONFIG_LXC_SECCOMP),y)
-CONFIGURE_ARGS += --enable-seccomp
-else
-CONFIGURE_ARGS += --disable-seccomp
-endif
+	--with-lua-pc="$(STAGING_DIR)/usr/lib/pkgconfig/lua.pc" \
 
 MAKE_FLAGS += \
 	LUA_INSTALL_CMOD="/usr/lib/lua" \
@@ -167,12 +143,6 @@ define Package/lxc/install
 	true
 endef
 
-define Package/lxc-auto/install
-	$(INSTALL_DIR) $(1)/etc/config $(1)/etc/init.d
-	$(INSTALL_CONF) ./files/lxc-auto.config $(1)/etc/config/lxc-auto
-	$(INSTALL_BIN) ./files/lxc-auto.init $(1)/etc/init.d/lxc-auto
-endef
-
 define Package/lxc-common/conffiles
 /etc/lxc/default.conf
 /etc/lxc/lxc.conf
@@ -199,7 +169,7 @@ define Package/lxc-common/install
 		./files/lxc.conf \
 		$(1)/etc/lxc/lxc.conf
 
-	$(INSTALL_DIR) $(1)/srv/lxc/
+	$(INSTALL_DIR) $(1)/lxc/
 endef
 
 define Package/lxc-hooks/install
@@ -274,7 +244,6 @@ $(eval $(call BuildPackage,lxc-templates))
 $(eval $(call BuildPackage,liblxc))
 $(eval $(call BuildPackage,lxc-lua))
 $(eval $(call BuildPackage,lxc-init))
-$(eval $(call BuildPackage,lxc-auto))
 $(foreach u,$(LXC_APPLETS_BIN),$(eval $(call GenPlugin,$(u),$(DEPENDS_APPLETS),"/usr/bin")))
 $(foreach u,$(LXC_APPLETS_LIB),$(eval $(call GenPlugin,$(u),$(DEPENDS_APPLETS),"/usr/lib/lxc")))
 $(foreach u,$(LXC_SCRIPTS),$(eval $(call GenPlugin,$(u),,"/usr/bin")))

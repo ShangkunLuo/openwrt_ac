@@ -23,7 +23,6 @@ include $(INCLUDE_DIR)/package.mk
 define Package/screen
   SECTION:=utils
   CATEGORY:=Utilities
-  SUBMENU:=Terminal
   DEPENDS:=+libncurses
   TITLE:=Full-screen terminal window manager
   URL:=http://www.gnu.org/software/screen/

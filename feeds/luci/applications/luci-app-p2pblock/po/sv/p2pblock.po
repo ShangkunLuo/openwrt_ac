@@ -10,32 +10,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Block Time"
-msgstr "Tid för blockering"
+msgstr ""
 
 msgid "Enable P2P-Block"
-msgstr "Aktivera P2P-blockering"
+msgstr ""
 
 msgid "IP-P2P"
-msgstr "IP-P2P"
+msgstr ""
 
 msgid "Layer7-Protocols"
-msgstr "Layer7-protokollen"
+msgstr ""
 
 msgid "P2P-Block"
-msgstr "P2P-blockering"
+msgstr ""
 
 msgid ""
 "P2P-Block is a greylisting mechanism to block various peer-to-peer protocols "
 "for non-whitelisted clients."
 msgstr ""
-"P2P-Block är en grålistande mekanism för att blockera vissa peer-to-peer-"
-"protokoll för icke-vitlistade klienter."
 
 msgid "Portrange"
-msgstr "Porträckvidd"
+msgstr ""
 
 msgid "Whitelisted IPs"
-msgstr "Vitlistade IP-adresser"
+msgstr ""
 
 msgid "seconds"
-msgstr "sekunder"
+msgstr ""

@@ -58,6 +58,9 @@ msgstr "QoS"
 msgid "Quality of Service"
 msgstr "Якість обслуговування (QoS)"
 
+msgid "Service"
+msgstr "Сервіс"
+
 msgid "Source host"
 msgstr "Вихідний вузол"
 
@@ -92,9 +95,6 @@ msgstr "звичайний"
 
 msgid "priority"
 msgstr "пріоритетний"
-
-#~ msgid "Service"
-#~ msgstr "Сервіс"
 
 #~ msgid "Downlink"
 #~ msgstr "Низхідний канал"

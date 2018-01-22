@@ -12,9 +12,6 @@ msgstr ""
 "20)) ? 1 : 2);;\n"
 "X-Generator: Pootle 2.0.6\n"
 
-msgid "%s is untagged in multiple VLANs!"
-msgstr ""
-
 msgid "(%d minute window, %d second interval)"
 msgstr "(%d fereastra minute, %d interval secunde)"
 
@@ -47,9 +44,6 @@ msgstr "Incarcarea in ultimul minut"
 
 msgid "15 Minute Load:"
 msgstr "Incarcarea in ultimele 15 minute"
-
-msgid "464XLAT (CLAT)"
-msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "Incarcarea in ultimele 5 minute"
@@ -121,19 +115,7 @@ msgstr "<abbr title=\"maximal\">Max.</abbr> interogari simultane"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 
-msgid "A43C + J43 + A43"
-msgstr ""
-
-msgid "A43C + J43 + A43 + V43"
-msgstr ""
-
-msgid "ADSL"
-msgstr ""
-
 msgid "AICCU (SIXXS)"
-msgstr ""
-
-msgid "ANSI T1.413"
 msgstr ""
 
 msgid "APN"
@@ -144,9 +126,6 @@ msgstr "Suport AR"
 
 msgid "ARP retry threshold"
 msgstr "ARP prag reincercare"
-
-msgid "ATM (Asynchronous Transfer Mode)"
-msgstr ""
 
 msgid "ATM Bridges"
 msgstr "Punti ATM"
@@ -168,9 +147,6 @@ msgstr ""
 
 msgid "ATM device number"
 msgstr "ATM numar echipament"
-
-msgid "ATU-C System Vendor ID"
-msgstr ""
 
 msgid "AYIYA"
 msgstr ""
@@ -220,9 +196,6 @@ msgstr "Adauga interfata noua.."
 msgid "Additional Hosts files"
 msgstr "Fisiere de tip hosts aditionale"
 
-msgid "Additional servers file"
-msgstr ""
-
 msgid "Address"
 msgstr "Adresa"
 
@@ -234,9 +207,6 @@ msgstr "Administrare"
 
 msgid "Advanced Settings"
 msgstr "Setari avansate"
-
-msgid "Aggregate Transmit Power(ACTATP)"
-msgstr ""
 
 msgid "Alert"
 msgstr "Alerta"
@@ -284,53 +254,9 @@ msgstr ""
 msgid "Always announce default router"
 msgstr ""
 
-msgid "An additional network will be created if you leave this checked."
+msgid "An additional network will be created if you leave this unchecked."
 msgstr ""
-
-msgid "Annex"
-msgstr ""
-
-msgid "Annex A + L + M (all)"
-msgstr ""
-
-msgid "Annex A G.992.1"
-msgstr ""
-
-msgid "Annex A G.992.2"
-msgstr ""
-
-msgid "Annex A G.992.3"
-msgstr ""
-
-msgid "Annex A G.992.5"
-msgstr ""
-
-msgid "Annex B (all)"
-msgstr ""
-
-msgid "Annex B G.992.1"
-msgstr ""
-
-msgid "Annex B G.992.3"
-msgstr ""
-
-msgid "Annex B G.992.5"
-msgstr ""
-
-msgid "Annex J (all)"
-msgstr ""
-
-msgid "Annex L G.992.3 POTS 1"
-msgstr ""
-
-msgid "Annex M (all)"
-msgstr ""
-
-msgid "Annex M G.992.3"
-msgstr ""
-
-msgid "Annex M G.992.5"
-msgstr ""
+"Daca lasati aceasta optiune neselectata va fi creata o retea aditionala"
 
 msgid "Announce as default router even if no public prefix is available."
 msgstr ""
@@ -339,15 +265,6 @@ msgid "Announced DNS domains"
 msgstr ""
 
 msgid "Announced DNS servers"
-msgstr ""
-
-msgid "Anonymous Identity"
-msgstr ""
-
-msgid "Anonymous Mount"
-msgstr ""
-
-msgid "Anonymous Swap"
 msgstr ""
 
 msgid "Antenna 1"
@@ -385,9 +302,6 @@ msgstr "Statiile asociate"
 msgid "Atheros 802.11%s Wireless Controller"
 msgstr "Atheros 802.11%s Controler Fara Fir"
 
-msgid "Auth Group"
-msgstr ""
-
 msgid "AuthGroup"
 msgstr ""
 
@@ -409,21 +323,6 @@ msgstr ""
 msgid "Automatic Homenet (HNCP)"
 msgstr ""
 
-msgid "Automatically check filesystem for errors before mounting"
-msgstr ""
-
-msgid "Automatically mount filesystems on hotplug"
-msgstr ""
-
-msgid "Automatically mount swap on hotplug"
-msgstr ""
-
-msgid "Automount Filesystem"
-msgstr ""
-
-msgid "Automount Swap"
-msgstr ""
-
 msgid "Available"
 msgstr "Disponibil"
 
@@ -432,15 +331,6 @@ msgstr "Pachete disponibile"
 
 msgid "Average:"
 msgstr "Medie:"
-
-msgid "B43 + B43C"
-msgstr ""
-
-msgid "B43 + B43C + V43"
-msgstr ""
-
-msgid "BR / DMR / AFTR"
-msgstr ""
 
 msgid "BSSID"
 msgstr "BSSID"
@@ -487,9 +377,6 @@ msgid ""
 "defined backup patterns."
 msgstr ""
 
-msgid "Bind only to specific interfaces rather than wildcard address."
-msgstr ""
-
 msgid "Bitrate"
 msgstr "Bitrate"
 
@@ -528,6 +415,9 @@ msgstr "Butoane"
 msgid "CA certificate; if empty it will be saved after the first connection."
 msgstr ""
 
+msgid "CPU"
+msgstr "Procesor"
+
 msgid "CPU usage (%)"
 msgstr "Utilizarea procesorului (%)"
 
@@ -555,9 +445,6 @@ msgstr "Canal"
 msgid "Check"
 msgstr "Verificare"
 
-msgid "Check fileystems before mount"
-msgstr ""
-
 msgid "Checksum"
 msgstr "Suma de verificare"
 
@@ -577,9 +464,6 @@ msgid ""
 msgstr ""
 
 msgid "Cipher"
-msgstr ""
-
-msgid "Cisco UDP encapsulation"
 msgstr ""
 
 msgid ""
@@ -723,31 +607,10 @@ msgstr ""
 msgid "DNS-Label / FQDN"
 msgstr ""
 
-msgid "DNSSEC"
-msgstr ""
-
-msgid "DNSSEC check unsigned"
-msgstr ""
-
-msgid "DPD Idle Timeout"
-msgstr ""
-
 msgid "DS-Lite AFTR address"
 msgstr ""
 
-msgid "DSL"
-msgstr ""
-
-msgid "DSL Status"
-msgstr ""
-
-msgid "DSL line mode"
-msgstr ""
-
 msgid "DUID"
-msgstr ""
-
-msgid "Data Rate"
 msgstr ""
 
 msgid "Debug"
@@ -780,6 +643,9 @@ msgstr ""
 msgid "Delete"
 msgstr "Sterge"
 
+msgid "Delete this interface"
+msgstr "Sterge aceasta interfata"
+
 msgid "Delete this network"
 msgstr "Sterge aceasta retea"
 
@@ -797,12 +663,6 @@ msgstr "Dispozitiv"
 
 msgid "Device Configuration"
 msgstr "Configurarea dispozitivului"
-
-msgid "Device is rebooting..."
-msgstr ""
-
-msgid "Device unreachable"
-msgstr ""
 
 msgid "Diagnostics"
 msgstr "Diagnosticuri"
@@ -825,9 +685,6 @@ msgstr ""
 
 msgid "Disable DNS setup"
 msgstr "Dezactiveaza configuratia DNS"
-
-msgid "Disable Encryption"
-msgstr ""
 
 msgid "Disable HW-Beacon timer"
 msgstr ""
@@ -911,19 +768,11 @@ msgid ""
 "having static leases will be served."
 msgstr ""
 
-msgid "EA-bits length"
-msgstr ""
-
 msgid "EAP-Method"
 msgstr ""
 
 msgid "Edit"
 msgstr "Editeaza"
-
-msgid ""
-"Edit the raw configuration data above to fix any error and hit \"Save\" to "
-"reload the page."
-msgstr ""
 
 msgid "Edit this interface"
 msgstr "Editeaza aceasta interfata"
@@ -950,9 +799,6 @@ msgid "Enable Jumbo Frame passthrough"
 msgstr ""
 
 msgid "Enable NTP client"
-msgstr ""
-
-msgid "Enable Single DES"
 msgstr ""
 
 msgid "Enable TFTP server"
@@ -1000,17 +846,11 @@ msgstr "Stergere..."
 msgid "Error"
 msgstr "Eroare"
 
-msgid "Errored seconds (ES)"
-msgstr ""
-
 msgid "Ethernet Adapter"
 msgstr "Adaptor de retea ethernet"
 
 msgid "Ethernet Switch"
 msgstr "Switch-ul ethernet"
-
-msgid "Exclude interfaces"
-msgstr ""
 
 msgid "Expand hosts"
 msgstr ""
@@ -1030,12 +870,6 @@ msgstr "Server de log-uri extern"
 
 msgid "External system log server port"
 msgstr "Portul serverului de log-uri extern"
-
-msgid "External system log server protocol"
-msgstr ""
-
-msgid "Extra SSH command options"
-msgstr ""
 
 msgid "Fast Frames"
 msgstr ""
@@ -1058,11 +892,6 @@ msgstr "Filtreaza privatele"
 msgid "Filter useless"
 msgstr "Filtreaza nefolositele"
 
-msgid ""
-"Find all currently attached filesystems and swap and replace configuration "
-"with defaults based on what was detected"
-msgstr ""
-
 msgid "Find and join network"
 msgstr "Gaseste si alatura in retea"
 
@@ -1081,14 +910,14 @@ msgstr "Setarile firewall-ului"
 msgid "Firewall Status"
 msgstr "Status la firewall"
 
-msgid "Firmware File"
-msgstr ""
-
 msgid "Firmware Version"
 msgstr "Versiunea de firmware"
 
 msgid "Fixed source port for outbound DNS queries"
 msgstr "Portul sursa pentru intrebarile DNS catre exterior"
+
+msgid "Flags"
+msgstr ""
 
 msgid "Flash Firmware"
 msgstr "Rescrie firmware"
@@ -1121,16 +950,7 @@ msgstr "Forteaza TKIP"
 msgid "Force TKIP and CCMP (AES)"
 msgstr "Forteaza TKIP si CCMP (AES)"
 
-msgid "Force use of NAT-T"
-msgstr ""
-
-msgid "Form token mismatch"
-msgstr ""
-
 msgid "Forward DHCP traffic"
-msgstr ""
-
-msgid "Forward Error Correction Seconds (FECS)"
 msgstr ""
 
 msgid "Forward broadcast traffic"
@@ -1172,9 +992,6 @@ msgstr "Configurare generala"
 msgid "General options for opkg"
 msgstr ""
 
-msgid "Generate Config"
-msgstr ""
-
 msgid "Generate archive"
 msgstr ""
 
@@ -1184,9 +1001,6 @@ msgstr ""
 msgid "Given password confirmation did not match, password not changed!"
 msgstr "Confirmarea parolei nu se potriveste cu prima, parola neschimbata !"
 
-msgid "Global Settings"
-msgstr ""
-
 msgid "Global network options"
 msgstr ""
 
@@ -1194,9 +1008,6 @@ msgid "Go to password configuration..."
 msgstr ""
 
 msgid "Go to relevant configuration page"
-msgstr ""
-
-msgid "Group Password"
 msgstr ""
 
 msgid "Guest"
@@ -1212,9 +1023,6 @@ msgid "Handler"
 msgstr ""
 
 msgid "Hang Up"
-msgstr ""
-
-msgid "Header Error Code Errors (HEC)"
 msgstr ""
 
 msgid "Heartbeat"
@@ -1238,9 +1046,6 @@ msgstr ""
 msgid "Hide <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 msgstr "Ascunde <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 
-msgid "Host"
-msgstr ""
-
 msgid "Host entries"
 msgstr "Intrari de tip host"
 
@@ -1260,9 +1065,6 @@ msgid "Hostnames"
 msgstr "Nume de host"
 
 msgid "Hybrid"
-msgstr ""
-
-msgid "IKE DH Group"
 msgstr ""
 
 msgid "IP address"
@@ -1297,9 +1099,6 @@ msgstr ""
 
 msgid "IPv4 only"
 msgstr "Doar IPv4"
-
-msgid "IPv4 prefix"
-msgstr ""
 
 msgid "IPv4 prefix length"
 msgstr ""
@@ -1367,12 +1166,6 @@ msgstr ""
 msgid "Identity"
 msgstr "Identitate"
 
-msgid "If checked, 1DES is enaled"
-msgstr ""
-
-msgid "If checked, encryption is disabled"
-msgstr ""
-
 msgid ""
 "If specified, mount the device by its UUID instead of a fixed device node"
 msgstr ""
@@ -1409,11 +1202,6 @@ msgid "Image"
 msgstr "Imagine"
 
 msgid "In"
-msgstr ""
-
-msgid ""
-"In order to prevent unauthorized access to the system, your request has been "
-"blocked. Click \"Continue »\" below to return to the previous page."
 msgstr ""
 
 msgid "Inactivity timeout"
@@ -1461,9 +1249,6 @@ msgstr "Interfata se reconecteaza.."
 msgid "Interface is shutting down..."
 msgstr "Interfata se opreste.."
 
-msgid "Interface name"
-msgstr ""
-
 msgid "Interface not present or not connected yet."
 msgstr "Interfata nu e prezenta sau nu este conectata inca."
 
@@ -1508,10 +1293,10 @@ msgstr "Ai nevoie de Java Script !"
 msgid "Join Network"
 msgstr ""
 
-msgid "Join Network: Wireless Scan"
+msgid "Join Network: Settings"
 msgstr ""
 
-msgid "Joining Network: %q"
+msgid "Join Network: Wireless Scan"
 msgstr ""
 
 msgid "Keep settings"
@@ -1556,13 +1341,7 @@ msgstr "Limba"
 msgid "Language and Style"
 msgstr "Limba si stilul interfetei"
 
-msgid "Latency"
-msgstr ""
-
 msgid "Leaf"
-msgstr ""
-
-msgid "Lease time"
 msgstr ""
 
 msgid "Lease validity time"
@@ -1589,22 +1368,13 @@ msgstr "Legenda:"
 msgid "Limit"
 msgstr "Limita"
 
-msgid "Limit DNS service to subnets interfaces on which we are serving DNS."
+msgid "Line Attenuation"
 msgstr ""
 
-msgid "Limit listening to these interfaces, and loopback."
-msgstr ""
-
-msgid "Line Attenuation (LATN)"
-msgstr ""
-
-msgid "Line Mode"
+msgid "Line Speed"
 msgstr ""
 
 msgid "Line State"
-msgstr ""
-
-msgid "Line Uptime"
 msgstr ""
 
 msgid "Link On"
@@ -1615,16 +1385,10 @@ msgid ""
 "requests to"
 msgstr ""
 
-msgid "List of SSH key files for auth"
-msgstr ""
-
 msgid "List of domains to allow RFC1918 responses for"
 msgstr ""
 
 msgid "List of hosts that supply bogus NX domain results"
-msgstr ""
-
-msgid "Listen Interfaces"
 msgstr ""
 
 msgid "Listen only on the given interface or, if unspecified, on all"
@@ -1642,17 +1406,11 @@ msgstr "Incarcarea medie"
 msgid "Loading"
 msgstr "Incarcare"
 
-msgid "Local IP address to assign"
-msgstr ""
-
 msgid "Local IPv4 address"
 msgstr "Adresa IPv4 locala"
 
 msgid "Local IPv6 address"
 msgstr "Adresa IPv6 locala"
-
-msgid "Local Service Only"
-msgstr ""
 
 msgid "Local Startup"
 msgstr ""
@@ -1700,9 +1458,6 @@ msgstr "Autentificare"
 msgid "Logout"
 msgstr "Iesire"
 
-msgid "Loss of Signal Seconds (LOSS)"
-msgstr ""
-
 msgid "Lowest leased address as offset from the network address."
 msgstr ""
 
@@ -1718,13 +1473,7 @@ msgstr ""
 msgid "MAC-List"
 msgstr ""
 
-msgid "MAP / LW4over6"
-msgstr ""
-
 msgid "MB/s"
-msgstr ""
-
-msgid "MD5"
 msgstr ""
 
 msgid "MHz"
@@ -1736,12 +1485,6 @@ msgstr ""
 msgid ""
 "Make sure to clone the root filesystem using something like the commands "
 "below:"
-msgstr ""
-
-msgid "Manual"
-msgstr ""
-
-msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
 msgid "Maximum Rate"
@@ -1832,16 +1575,10 @@ msgid ""
 "filesystem"
 msgstr ""
 
-msgid "Mount filesystems not specifically configured"
-msgstr ""
-
 msgid "Mount options"
 msgstr ""
 
 msgid "Mount point"
-msgstr ""
-
-msgid "Mount swap not specifically configured"
 msgstr ""
 
 msgid "Mounted file systems"
@@ -1862,16 +1599,7 @@ msgstr ""
 msgid "NAS ID"
 msgstr ""
 
-msgid "NAT-T Mode"
-msgstr ""
-
-msgid "NAT64 Prefix"
-msgstr ""
-
 msgid "NDP-Proxy"
-msgstr ""
-
-msgid "NT Domain"
 msgstr ""
 
 msgid "NTP server candidates"
@@ -1913,9 +1641,6 @@ msgstr "Mai departe »"
 msgid "No DHCP Server configured for this interface"
 msgstr "Nici un server DHCP configurat pentru aceasta interfata"
 
-msgid "No NAT-T"
-msgstr ""
-
 msgid "No chains in this table"
 msgstr ""
 
@@ -1949,17 +1674,11 @@ msgstr ""
 msgid "Noise"
 msgstr "Zgomot"
 
-msgid "Noise Margin (SNR)"
+msgid "Noise Margin"
 msgstr ""
 
 msgid "Noise:"
 msgstr "Zgomot:"
-
-msgid "Non Pre-emtive CRC errors (CRC_P)"
-msgstr ""
-
-msgid "Non-wildcard"
-msgstr ""
 
 msgid "None"
 msgstr ""
@@ -1994,12 +1713,6 @@ msgstr "OK"
 msgid "OPKG-Configuration"
 msgstr "Configuratia-OPKG"
 
-msgid "Obfuscated Group Password"
-msgstr ""
-
-msgid "Obfuscated Password"
-msgstr ""
-
 msgid "Off-State Delay"
 msgstr ""
 
@@ -2020,9 +1733,6 @@ msgstr ""
 
 msgid "One or more fields contain invalid values!"
 msgstr "Unul sau mai multe campuri contin valori invalide !"
-
-msgid "One or more invalid/required values on tab"
-msgstr ""
 
 msgid "One or more required fields have no value!"
 msgstr "Unul sau mai multe campuri nu contin valori !"
@@ -2072,9 +1782,6 @@ msgstr ""
 msgid "Override MTU"
 msgstr ""
 
-msgid "Override default interface name"
-msgstr ""
-
 msgid "Override the gateway in DHCP responses"
 msgstr ""
 
@@ -2116,19 +1823,7 @@ msgstr ""
 msgid "PPPoE"
 msgstr ""
 
-msgid "PPPoSSH"
-msgstr ""
-
 msgid "PPtP"
-msgstr ""
-
-msgid "PSID offset"
-msgstr ""
-
-msgid "PSID-bits length"
-msgstr ""
-
-msgid "PTM/EFM (Packet Transfer Mode)"
 msgstr ""
 
 msgid "Package libiwinfo required!"
@@ -2155,11 +1850,11 @@ msgstr "Autentificarea cu parola"
 msgid "Password of Private Key"
 msgstr "Parola cheii private"
 
-msgid "Password of inner Private Key"
-msgstr ""
-
 msgid "Password successfully changed!"
 msgstr "Parola schimbata cu succes !"
+
+msgid "Path"
+msgstr ""
 
 msgid "Path to CA-Certificate"
 msgstr "Calea catre certificatul CA"
@@ -2173,23 +1868,8 @@ msgstr "Calea catre cheia privata"
 msgid "Path to executable which handles the button event"
 msgstr "Calea catre executabilul care se ocupa de evenimentul butonului"
 
-msgid "Path to inner CA-Certificate"
-msgstr ""
-
-msgid "Path to inner Client-Certificate"
-msgstr ""
-
-msgid "Path to inner Private Key"
-msgstr ""
-
 msgid "Peak:"
 msgstr "Maxim:"
-
-msgid "Peer IP address to assign"
-msgstr ""
-
-msgid "Perfect Forward Secrecy"
-msgstr ""
 
 msgid "Perform reboot"
 msgstr "Restarteaza"
@@ -2212,27 +1892,27 @@ msgstr "Packete."
 msgid "Please enter your username and password."
 msgstr "Introdu utilizatorul si parola."
 
+msgid "Please wait: Device rebooting..."
+msgstr "Asteapta: dispozitivul se restarteaza.."
+
 msgid "Policy"
 msgstr ""
 
 msgid "Port"
 msgstr "Port"
 
+msgid "Port %d"
+msgstr "Port %d"
+
+msgid "Port %d is untagged in multiple VLANs!"
+msgstr ""
+
 msgid "Port status:"
 msgstr "Stare port:"
-
-msgid "Power Management Mode"
-msgstr ""
-
-msgid "Pre-emtive CRC errors (CRCP_P)"
-msgstr ""
 
 msgid ""
 "Presume peer to be dead after given amount of LCP echo failures, use 0 to "
 "ignore failures"
-msgstr ""
-
-msgid "Prevent listening on these interfaces."
 msgstr ""
 
 msgid "Prevents client-to-client communication"
@@ -2246,9 +1926,6 @@ msgstr "Continua"
 
 msgid "Processes"
 msgstr "Procese"
-
-msgid "Profile"
-msgstr ""
 
 msgid "Prot."
 msgstr ""
@@ -2279,9 +1956,6 @@ msgstr ""
 
 msgid "Quality"
 msgstr "Calitate"
-
-msgid "RFC3947 NAT-T mode"
-msgstr ""
 
 msgid "RTS/CTS Threshold"
 msgstr ""
@@ -2430,11 +2104,6 @@ msgstr ""
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr ""
 
-msgid ""
-"Requires upstream supports DNSSEC; verify unsigned domain responses really "
-"come from unsigned domains"
-msgstr ""
-
 msgid "Reset"
 msgstr "Reset"
 
@@ -2491,13 +2160,13 @@ msgid ""
 "can be reached."
 msgstr ""
 
+msgid "Rule #"
+msgstr "Regula #"
+
 msgid "Run a filesystem check before mounting the device"
 msgstr ""
 
 msgid "Run filesystem check"
-msgstr ""
-
-msgid "SHA256"
 msgstr ""
 
 msgid ""
@@ -2508,20 +2177,8 @@ msgstr ""
 msgid "SIXXS-handle[/Tunnel-ID]"
 msgstr ""
 
-msgid "SNR"
-msgstr ""
-
 msgid "SSH Access"
 msgstr "Acces SSH"
-
-msgid "SSH server address"
-msgstr ""
-
-msgid "SSH server port"
-msgstr ""
-
-msgid "SSH username"
-msgstr ""
 
 msgid "SSH-Keys"
 msgstr "Cheile SSH"
@@ -2594,12 +2251,6 @@ msgstr "Configurare sincronizare timp"
 msgid "Setup DHCP Server"
 msgstr "Seteaza serverul DHCP"
 
-msgid "Severely Errored Seconds (SES)"
-msgstr ""
-
-msgid "Short GI"
-msgstr ""
-
 msgid "Show current backup file list"
 msgstr ""
 
@@ -2611,9 +2262,6 @@ msgstr "Opreste aceasta retea"
 
 msgid "Signal"
 msgstr "Semnal"
-
-msgid "Signal Attenuation (SATN)"
-msgstr ""
 
 msgid "Signal:"
 msgstr "Semnal:"
@@ -2638,9 +2286,6 @@ msgstr ""
 
 msgid "Software"
 msgstr "Software"
-
-msgid "Software VLAN"
-msgstr ""
 
 msgid "Some fields are invalid, cannot save values!"
 msgstr ""
@@ -2754,13 +2399,6 @@ msgstr ""
 msgid "Switch %q (%s)"
 msgstr ""
 
-msgid ""
-"Switch %q has an unknown topology - the VLAN settings might not be accurate."
-msgstr ""
-
-msgid "Switch VLAN"
-msgstr ""
-
 msgid "Switch protocol"
 msgstr ""
 
@@ -2803,9 +2441,6 @@ msgstr "Tabel"
 msgid "Target"
 msgstr "Tinta"
 
-msgid "Target network"
-msgstr ""
-
 msgid "Terminate"
 msgstr "Termina"
 
@@ -2834,9 +2469,6 @@ msgstr ""
 msgid ""
 "The allowed characters are: <code>A-Z</code>, <code>a-z</code>, <code>0-9</"
 "code> and <code>_</code>"
-msgstr ""
-
-msgid "The configuration file could not be loaded due to the following error:"
 msgstr ""
 
 msgid ""
@@ -2893,9 +2525,6 @@ msgstr ""
 msgid "The selected protocol needs a device assigned"
 msgstr ""
 
-msgid "The submitted security token is invalid or already expired!"
-msgstr ""
-
 msgid ""
 "The system is erasing the configuration partition now and will reboot itself "
 "when finished."
@@ -2943,12 +2572,6 @@ msgstr ""
 "pentru a proteja interfata web si porni SSH."
 
 msgid "This IPv4 address of the relay"
-msgstr ""
-
-msgid ""
-"This file may contain lines like 'server=/domain/1.2.3.4' or "
-"'server=1.2.3.4' fordomain-specific or full upstream <abbr title=\"Domain "
-"Name System\">DNS</abbr> servers."
 msgstr ""
 
 msgid ""
@@ -3017,9 +2640,6 @@ msgstr "Fusul orar"
 msgid ""
 "To restore configuration files, you can upload a previously generated backup "
 "archive here."
-msgstr ""
-
-msgid "Tone"
 msgstr ""
 
 msgid "Total Available"
@@ -3097,9 +2717,6 @@ msgstr "UUID"
 msgid "Unable to dispatch"
 msgstr ""
 
-msgid "Unavailable Seconds (UAS)"
-msgstr ""
-
 msgid "Unknown"
 msgstr "Necunoscut"
 
@@ -3108,9 +2725,6 @@ msgstr "Eroare necunoscuta, parola neschimbata !"
 
 msgid "Unmanaged"
 msgstr "Neadministrate"
-
-msgid "Unmount"
-msgstr ""
 
 msgid "Unsaved Changes"
 msgstr "Modificari nesalvate"
@@ -3182,8 +2796,7 @@ msgid ""
 "Use the <em>Add</em> Button to add a new lease entry. The <em>MAC-Address</"
 "em> indentifies the host, the <em>IPv4-Address</em> specifies to the fixed "
 "address to use and the <em>Hostname</em> is assigned as symbolic name to the "
-"requesting host. The optional <em>Lease time</em> can be used to set non-"
-"standard host-specific lease time, e.g. 12h, 3d or infinite."
+"requesting host."
 msgstr ""
 
 msgid "Used"
@@ -3204,19 +2817,13 @@ msgstr "Utilizator"
 msgid "VC-Mux"
 msgstr "VC-Mux"
 
-msgid "VDSL"
-msgstr ""
+msgid "VLAN Interface"
+msgstr "Interfata VLAN"
 
 msgid "VLANs on %q"
 msgstr "VLANuri pe %q"
 
 msgid "VLANs on %q (%s)"
-msgstr ""
-
-msgid "VPN Local address"
-msgstr ""
-
-msgid "VPN Local port"
 msgstr ""
 
 msgid "VPN Server"
@@ -3226,12 +2833,6 @@ msgid "VPN Server port"
 msgstr ""
 
 msgid "VPN Server's certificate SHA1 hash"
-msgstr ""
-
-msgid "VPNC (CISCO 3000 (and others) VPN)"
-msgstr ""
-
-msgid "Vendor"
 msgstr ""
 
 msgid "Vendor Class to send when requesting DHCP"
@@ -3284,14 +2885,11 @@ msgstr ""
 msgid "Waiting for command to complete..."
 msgstr ""
 
-msgid "Waiting for device..."
-msgstr ""
-
 msgid "Warning"
 msgstr "Avertizare"
 
-msgid "Warning: There are unsaved changes that will get lost on reboot!"
-msgstr ""
+msgid "Warning: There are unsaved changes that will be lost while rebooting!"
+msgstr "Atentie: exista modificari nesalvate care vor fi pierdute la restart !"
 
 msgid "Whether to create an IPv6 default route over the tunnel"
 msgstr ""
@@ -3301,6 +2899,9 @@ msgstr ""
 
 msgid "Width"
 msgstr ""
+
+msgid "Wifi"
+msgstr "Wifi"
 
 msgid "Wireless"
 msgstr "Wireless"
@@ -3337,9 +2938,6 @@ msgstr "Wireless-ul oprit"
 
 msgid "Write received DNS requests to syslog"
 msgstr "Scrie cererile DNS primite in syslog"
-
-msgid "Write system log to file"
-msgstr ""
 
 msgid "XR Support"
 msgstr "Suport XR"
@@ -3509,21 +3107,253 @@ msgstr ""
 msgid "untagged"
 msgstr "neetichetat"
 
+msgid "xDSL"
+msgstr ""
+
+msgid "xDSL Status"
+msgstr ""
+
 msgid "yes"
 msgstr "da"
 
 msgid "« Back"
 msgstr "« Inapoi"
 
-#~ msgid "An additional network will be created if you leave this unchecked."
+#~ msgid ""
+#~ "Always use 40MHz channels even if the secondary channel overlaps. Using "
+#~ "this option does not comply with IEEE 802.11n-2009!"
 #~ msgstr ""
-#~ "Daca lasati aceasta optiune neselectata va fi creata o retea aditionala"
+#~ "Intotdeauna foloseste canalul de 40MHz chiar daca canalul secundar da "
+#~ "rateu. Folosirea acestei optiuni nu este compatibila cu IEEE 802.11n-2009!"
 
-#~ msgid "CPU"
+#~ msgid "Cached"
+#~ msgstr "Asimilat"
+
+#~ msgid "Use as root filesystem"
+#~ msgstr "Foloseste ca sistem de fisiere primar"
+
+#~ msgid "40MHz 2nd channel above"
+#~ msgstr "40MHz 2 canale de mai jos"
+
+#~ msgid "40MHz 2nd channel below"
+#~ msgstr "40MHz 2 canale de mai sus"
+
+#~ msgid "Accept router advertisements"
+#~ msgstr "Accepta anunturile routerului"
+
+#~ msgid "Advertise IPv6 on network"
+#~ msgstr "Anunta IPv6 in retea"
+
+#~ msgid "Advertised network ID"
+#~ msgstr "ID-ul retelei anuntate"
+
+#~ msgid "Allowed range is 1 to 65535"
+#~ msgstr "Plaja permisa este de la 1 la 65535"
+
+#~ msgid "HT capabilities"
+#~ msgstr "Capabilitati HT"
+
+#~ msgid "HT mode"
+#~ msgstr "Mod HT"
+
+#~ msgid "Router Model"
+#~ msgstr "Modelul routerului"
+
+#~ msgid "Router Name"
+#~ msgstr "Numele routerului"
+
+#~ msgid "Waiting for router..."
+#~ msgstr "Asteptam dupa router.."
+
+#~ msgid "Active Leases"
+#~ msgstr "Conexiuni dhcp active"
+
+#~ msgid "Configuration / Apply"
+#~ msgstr "Configurare / Aplica"
+
+#~ msgid "Configuration / Changes"
+#~ msgstr "Configurare / Schimbari"
+
+#~ msgid "Configuration / Revert"
+#~ msgstr "Configurare / Anuleaza schimbarile"
+
+#~ msgid "Create Network"
+#~ msgstr "Creaza retea"
+
+#~ msgid "Networks"
+#~ msgstr "Retele"
+
+#~ msgid "Wifi networks in your local environment"
+#~ msgstr "Retele wireless in apropiere"
+
+#~ msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address"
+#~ msgstr "Adresa <abbr title=\"Internet Protocol Version 6\">IPv6</abbr>"
+
+#~ msgid "IP-Aliases"
+#~ msgstr "Aliasuri IP"
+
+#~ msgid "IPv6 Setup"
+#~ msgstr "Setarea IPv6"
+
+#~ msgid "Detected Files"
+#~ msgstr "Fisiere detectate"
+
+#~ msgid "Detected files"
+#~ msgstr "Fisiere detectate"
+
+#~ msgid "Files to be kept when flashing a new firmware"
+#~ msgstr "Fisiere de pastrat cand se rescrie firmware-ul"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid ""
+#~ "Here you can customize the settings and the functionality of <abbr title="
+#~ "\"Lua Configuration Interface\">LuCI</abbr>."
+#~ msgstr ""
+#~ "Aici poti configura setarile si functionalitatea interfetei web <abbr "
+#~ "title=\"Lua Configuration Interface\">LuCI</abbr>."
+
+#~ msgid "Web <abbr title=\"User Interface\">UI</abbr>"
+#~ msgstr "<abbr title=\"User Interface\">Interfata</abbr> web"
+
+#~ msgid "Additional pppd options"
+#~ msgstr "Optiuni aditionale pentru pppd"
+
+#~ msgid "Automatic Disconnect"
+#~ msgstr "Deconectare automata"
+
+#~ msgid ""
+#~ "Configure the local DNS server to use the name servers adverticed by the "
+#~ "PPP peer"
+#~ msgstr ""
+#~ "Configureaza serverul local de DNS sa foloseasca serverele de domeniu "
+#~ "anuntate la conexiunea PPP"
+
+#~ msgid "Connect script"
+#~ msgstr "Script de conectare"
+
+#~ msgid "Default"
+#~ msgstr "Implicit"
+
+#~ msgid "Disconnect script"
+#~ msgstr "Script pentru deconectare"
+
+#~ msgid "Edit package lists and installation targets"
+#~ msgstr "Editeaza lista de pachete si destinatiile de instalare"
+
+#~ msgid "Enable 4K VLANs"
+#~ msgstr "Activeaza 4 mii de VLAN-uri"
+
+#~ msgid "Enable IPv6 on PPP link"
+#~ msgstr "Activeaza IPv6 pe legatura PPP"
+
+#~ msgid "Firmware image"
+#~ msgstr "Imaginea de firmware"
+
+#~ msgid ""
+#~ "Here you can backup and restore your router configuration and - if "
+#~ "possible - reset the router to the default settings."
+#~ msgstr ""
+#~ "Aici poti face backup si restore la configuratia routerului si daca e "
+#~ "posibil chiar resetarea routerului la modul implicit."
+
+#~ msgid "Keep configuration files"
+#~ msgstr "Pastreaza fisierele de configurare"
+
+#~ msgid "Keep-Alive"
+#~ msgstr "Keep-Alive"
+
+#~ msgid "Kernel"
+#~ msgstr "Kernel"
+
+#~ msgid ""
+#~ "Let pppd replace the current default route to use the PPP interface after "
+#~ "successful connect"
+#~ msgstr ""
+#~ "PPPD va inlocui ruta default cu cea oferita de interfata PPP dupa "
+#~ "conectarea cu succes"
+
+#~ msgid "Let pppd run this script after establishing the PPP link"
+#~ msgstr "PPPD va rula acest script dupa stabilirea conexiunii PPP"
+
+#~ msgid "Let pppd run this script before tearing down the PPP link"
+#~ msgstr "PPPD va rula acest script inainte sa inchida conexiunea PPP"
+
+#~ msgid "Number of failed connection tests to initiate automatic reconnect"
+#~ msgstr "Numarul de teste de conexiune esuate pentru a reconecta"
+
+#~ msgid "Override Gateway"
+#~ msgstr "Suprascrie gateway"
+
+#~ msgid "PIN code"
+#~ msgstr "Codul PIN"
+
+#~ msgid "PPP Settings"
+#~ msgstr "Setari PPP"
+
+#~ msgid "Package lists"
+#~ msgstr "Lista de pachete"
+
+#~ msgid "Proceed reverting all settings and resetting to firmware defaults?"
+#~ msgstr "Continua anuland toate modificarile facute si resetand la default?"
+
+#~ msgid "Processor"
 #~ msgstr "Procesor"
 
-#~ msgid "Port %d"
-#~ msgstr "Port %d"
+#~ msgid "Radius-Port"
+#~ msgstr "Portul radiusului"
 
-#~ msgid "VLAN Interface"
-#~ msgstr "Interfata VLAN"
+#~ msgid "Radius-Server"
+#~ msgstr "Serverul radius"
+
+#~ msgid "Replace default route"
+#~ msgstr "Inlocuieste ruta default"
+
+#~ msgid "Reset router to defaults"
+#~ msgstr "Reseteaza routerul la default"
+
+#~ msgid ""
+#~ "Seconds to wait for the modem to become ready before attempting to connect"
+#~ msgstr ""
+#~ "Numarul de secunde de asteptat ca modemul sa devine pregatit inainte de "
+#~ "conectare"
+
+#~ msgid "Send Router Solicitiations"
+#~ msgstr "Trimite solicitari de Router"
+
+#~ msgid "Server IPv4-Address"
+#~ msgstr "Adresa IPv4 a serverului"
+
+#~ msgid "Service type"
+#~ msgstr "Tipul de serviciu"
+
+#~ msgid "Settings"
+#~ msgstr "Setari"
+
+#~ msgid "TTL"
+#~ msgstr "TTL"
+
+#~ msgid "Tunnel Settings"
+#~ msgstr "Setarile de tunel"
+
+#~ msgid "Update package lists"
+#~ msgstr "Updateaza lista de pachete"
+
+#~ msgid "Upload an OpenWrt image file to reflash the device."
+#~ msgstr "Uploadeaza o imagine OpenWRT pentru rescrierea firmware-ului."
+
+#~ msgid "Upload image"
+#~ msgstr "Uploadeaza firmware"
+
+#~ msgid "Use peer DNS"
+#~ msgstr "Foloseste DNS-urile primite pe conexiune"
+
+#~ msgid "VLAN %d"
+#~ msgstr "VLAN %d"
+
+#~ msgid "back"
+#~ msgstr "inapoi"
+
+#~ msgid "static"
+#~ msgstr "static"

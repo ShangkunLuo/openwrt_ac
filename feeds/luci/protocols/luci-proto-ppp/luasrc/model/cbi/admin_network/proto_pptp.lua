@@ -9,7 +9,7 @@ local defaultroute, metric, peerdns, dns,
 
 
 server = section:taboption("general", Value, "server", translate("VPN Server"))
-server.datatype = "host(0)"
+server.datatype = "host"
 
 
 username = section:taboption("general", Value, "username", translate("PAP/CHAP username"))

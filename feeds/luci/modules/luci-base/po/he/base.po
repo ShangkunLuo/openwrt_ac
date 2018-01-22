@@ -11,9 +11,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.6\n"
 
-msgid "%s is untagged in multiple VLANs!"
-msgstr ""
-
 msgid "(%d minute window, %d second interval)"
 msgstr ""
 
@@ -46,9 +43,6 @@ msgstr "עומס במשך דקה:"
 
 msgid "15 Minute Load:"
 msgstr "עומס במשך רבע שעה:"
-
-msgid "464XLAT (CLAT)"
-msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "עומס במשך 5 דקות:"
@@ -116,19 +110,7 @@ msgstr ""
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr ""
 
-msgid "A43C + J43 + A43"
-msgstr ""
-
-msgid "A43C + J43 + A43 + V43"
-msgstr ""
-
-msgid "ADSL"
-msgstr ""
-
 msgid "AICCU (SIXXS)"
-msgstr ""
-
-msgid "ANSI T1.413"
 msgstr ""
 
 msgid "APN"
@@ -140,9 +122,6 @@ msgstr "תמיכת AR"
 #, fuzzy
 msgid "ARP retry threshold"
 msgstr "סף נסיונות של ARP"
-
-msgid "ATM (Asynchronous Transfer Mode)"
-msgstr ""
 
 #, fuzzy
 msgid "ATM Bridges"
@@ -164,9 +143,6 @@ msgstr ""
 
 msgid "ATM device number"
 msgstr "מס' התקן של ATM"
-
-msgid "ATU-C System Vendor ID"
-msgstr ""
 
 msgid "AYIYA"
 msgstr ""
@@ -220,9 +196,6 @@ msgstr "הוסף ממשק חדש..."
 msgid "Additional Hosts files"
 msgstr "קבצי מארח נוספים"
 
-msgid "Additional servers file"
-msgstr ""
-
 msgid "Address"
 msgstr "כתובת"
 
@@ -235,9 +208,6 @@ msgstr "מנהלה"
 
 msgid "Advanced Settings"
 msgstr "הגדרות מתקדמות"
-
-msgid "Aggregate Transmit Power(ACTATP)"
-msgstr ""
 
 #, fuzzy
 msgid "Alert"
@@ -286,53 +256,9 @@ msgstr ""
 msgid "Always announce default router"
 msgstr ""
 
-msgid "An additional network will be created if you leave this checked."
-msgstr ""
-
-msgid "Annex"
-msgstr ""
-
-msgid "Annex A + L + M (all)"
-msgstr ""
-
-msgid "Annex A G.992.1"
-msgstr ""
-
-msgid "Annex A G.992.2"
-msgstr ""
-
-msgid "Annex A G.992.3"
-msgstr ""
-
-msgid "Annex A G.992.5"
-msgstr ""
-
-msgid "Annex B (all)"
-msgstr ""
-
-msgid "Annex B G.992.1"
-msgstr ""
-
-msgid "Annex B G.992.3"
-msgstr ""
-
-msgid "Annex B G.992.5"
-msgstr ""
-
-msgid "Annex J (all)"
-msgstr ""
-
-msgid "Annex L G.992.3 POTS 1"
-msgstr ""
-
-msgid "Annex M (all)"
-msgstr ""
-
-msgid "Annex M G.992.3"
-msgstr ""
-
-msgid "Annex M G.992.5"
-msgstr ""
+#, fuzzy
+msgid "An additional network will be created if you leave this unchecked."
+msgstr "רשת נוספת תווצר אם תשאיר את זה לא מסומן"
 
 msgid "Announce as default router even if no public prefix is available."
 msgstr ""
@@ -341,15 +267,6 @@ msgid "Announced DNS domains"
 msgstr ""
 
 msgid "Announced DNS servers"
-msgstr ""
-
-msgid "Anonymous Identity"
-msgstr ""
-
-msgid "Anonymous Mount"
-msgstr ""
-
-msgid "Anonymous Swap"
 msgstr ""
 
 msgid "Antenna 1"
@@ -389,9 +306,6 @@ msgstr "תחנות קשורות"
 msgid "Atheros 802.11%s Wireless Controller"
 msgstr "שלט אלחוטי Atheros 802.11%s"
 
-msgid "Auth Group"
-msgstr ""
-
 msgid "AuthGroup"
 msgstr ""
 
@@ -413,21 +327,6 @@ msgstr ""
 msgid "Automatic Homenet (HNCP)"
 msgstr ""
 
-msgid "Automatically check filesystem for errors before mounting"
-msgstr ""
-
-msgid "Automatically mount filesystems on hotplug"
-msgstr ""
-
-msgid "Automatically mount swap on hotplug"
-msgstr ""
-
-msgid "Automount Filesystem"
-msgstr ""
-
-msgid "Automount Swap"
-msgstr ""
-
 msgid "Available"
 msgstr "זמין"
 
@@ -436,15 +335,6 @@ msgstr "חבילות זמינות"
 
 msgid "Average:"
 msgstr "ממוצע:"
-
-msgid "B43 + B43C"
-msgstr ""
-
-msgid "B43 + B43C + V43"
-msgstr ""
-
-msgid "BR / DMR / AFTR"
-msgstr ""
 
 msgid "BSSID"
 msgstr "BSSID"
@@ -494,9 +384,6 @@ msgstr ""
 "המסומנים ב opkg ׁOpen PacKaGe Managementׂ, קבצי בסיס חיוניים ותבניות הגיבוי "
 "המוגדרות ע\"י המשתמש."
 
-msgid "Bind only to specific interfaces rather than wildcard address."
-msgstr ""
-
 msgid "Bitrate"
 msgstr ""
 
@@ -536,6 +423,9 @@ msgstr "כפתורים"
 msgid "CA certificate; if empty it will be saved after the first connection."
 msgstr ""
 
+msgid "CPU"
+msgstr "מעבד"
+
 msgid "CPU usage (%)"
 msgstr "שימוש מעבד (%)"
 
@@ -563,9 +453,6 @@ msgstr "ערוץ"
 msgid "Check"
 msgstr "לבדוק"
 
-msgid "Check fileystems before mount"
-msgstr ""
-
 msgid "Checksum"
 msgstr ""
 
@@ -582,9 +469,6 @@ msgid ""
 msgstr ""
 
 msgid "Cipher"
-msgstr ""
-
-msgid "Cisco UDP encapsulation"
 msgstr ""
 
 msgid ""
@@ -730,31 +614,10 @@ msgstr ""
 msgid "DNS-Label / FQDN"
 msgstr ""
 
-msgid "DNSSEC"
-msgstr ""
-
-msgid "DNSSEC check unsigned"
-msgstr ""
-
-msgid "DPD Idle Timeout"
-msgstr ""
-
 msgid "DS-Lite AFTR address"
 msgstr ""
 
-msgid "DSL"
-msgstr ""
-
-msgid "DSL Status"
-msgstr ""
-
-msgid "DSL line mode"
-msgstr ""
-
 msgid "DUID"
-msgstr ""
-
-msgid "Data Rate"
 msgstr ""
 
 msgid "Debug"
@@ -789,6 +652,9 @@ msgstr ""
 msgid "Delete"
 msgstr "למחוק"
 
+msgid "Delete this interface"
+msgstr "מחק ממשק זה"
+
 msgid "Delete this network"
 msgstr "מחק רשת זו"
 
@@ -806,12 +672,6 @@ msgstr "מכשיר"
 
 msgid "Device Configuration"
 msgstr "הגדרות מכשיר"
-
-msgid "Device is rebooting..."
-msgstr ""
-
-msgid "Device unreachable"
-msgstr ""
 
 msgid "Diagnostics"
 msgstr "אבחון"
@@ -831,9 +691,6 @@ msgid ""
 msgstr ""
 
 msgid "Disable DNS setup"
-msgstr ""
-
-msgid "Disable Encryption"
 msgstr ""
 
 msgid "Disable HW-Beacon timer"
@@ -920,19 +777,11 @@ msgid ""
 "having static leases will be served."
 msgstr ""
 
-msgid "EA-bits length"
-msgstr ""
-
 msgid "EAP-Method"
 msgstr ""
 
 msgid "Edit"
 msgstr "ערוך"
-
-msgid ""
-"Edit the raw configuration data above to fix any error and hit \"Save\" to "
-"reload the page."
-msgstr ""
 
 msgid "Edit this interface"
 msgstr "ערוך ממשק זה"
@@ -959,9 +808,6 @@ msgid "Enable Jumbo Frame passthrough"
 msgstr ""
 
 msgid "Enable NTP client"
-msgstr ""
-
-msgid "Enable Single DES"
 msgstr ""
 
 msgid "Enable TFTP server"
@@ -1009,16 +855,10 @@ msgstr "מוחק..."
 msgid "Error"
 msgstr "שגיאה"
 
-msgid "Errored seconds (ES)"
-msgstr ""
-
 msgid "Ethernet Adapter"
 msgstr ""
 
 msgid "Ethernet Switch"
-msgstr ""
-
-msgid "Exclude interfaces"
 msgstr ""
 
 msgid "Expand hosts"
@@ -1038,12 +878,6 @@ msgid "External system log server"
 msgstr ""
 
 msgid "External system log server port"
-msgstr ""
-
-msgid "External system log server protocol"
-msgstr ""
-
-msgid "Extra SSH command options"
 msgstr ""
 
 msgid "Fast Frames"
@@ -1067,11 +901,6 @@ msgstr ""
 msgid "Filter useless"
 msgstr ""
 
-msgid ""
-"Find all currently attached filesystems and swap and replace configuration "
-"with defaults based on what was detected"
-msgstr ""
-
 msgid "Find and join network"
 msgstr ""
 
@@ -1090,13 +919,13 @@ msgstr ""
 msgid "Firewall Status"
 msgstr ""
 
-msgid "Firmware File"
-msgstr ""
-
 msgid "Firmware Version"
 msgstr ""
 
 msgid "Fixed source port for outbound DNS queries"
+msgstr ""
+
+msgid "Flags"
 msgstr ""
 
 msgid "Flash Firmware"
@@ -1129,16 +958,7 @@ msgstr ""
 msgid "Force TKIP and CCMP (AES)"
 msgstr ""
 
-msgid "Force use of NAT-T"
-msgstr ""
-
-msgid "Form token mismatch"
-msgstr ""
-
 msgid "Forward DHCP traffic"
-msgstr ""
-
-msgid "Forward Error Correction Seconds (FECS)"
 msgstr ""
 
 msgid "Forward broadcast traffic"
@@ -1180,9 +1000,6 @@ msgstr ""
 msgid "General options for opkg"
 msgstr ""
 
-msgid "Generate Config"
-msgstr ""
-
 msgid "Generate archive"
 msgstr ""
 
@@ -1192,9 +1009,6 @@ msgstr ""
 msgid "Given password confirmation did not match, password not changed!"
 msgstr ""
 
-msgid "Global Settings"
-msgstr ""
-
 msgid "Global network options"
 msgstr ""
 
@@ -1202,9 +1016,6 @@ msgid "Go to password configuration..."
 msgstr ""
 
 msgid "Go to relevant configuration page"
-msgstr ""
-
-msgid "Group Password"
 msgstr ""
 
 msgid "Guest"
@@ -1220,9 +1031,6 @@ msgid "Handler"
 msgstr ""
 
 msgid "Hang Up"
-msgstr ""
-
-msgid "Header Error Code Errors (HEC)"
 msgstr ""
 
 msgid "Heartbeat"
@@ -1244,9 +1052,6 @@ msgstr ""
 msgid "Hide <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 msgstr ""
 
-msgid "Host"
-msgstr ""
-
 msgid "Host entries"
 msgstr ""
 
@@ -1266,9 +1071,6 @@ msgid "Hostnames"
 msgstr ""
 
 msgid "Hybrid"
-msgstr ""
-
-msgid "IKE DH Group"
 msgstr ""
 
 msgid "IP address"
@@ -1302,9 +1104,6 @@ msgid "IPv4 netmask"
 msgstr ""
 
 msgid "IPv4 only"
-msgstr ""
-
-msgid "IPv4 prefix"
 msgstr ""
 
 msgid "IPv4 prefix length"
@@ -1373,12 +1172,6 @@ msgstr ""
 msgid "Identity"
 msgstr ""
 
-msgid "If checked, 1DES is enaled"
-msgstr ""
-
-msgid "If checked, encryption is disabled"
-msgstr ""
-
 msgid ""
 "If specified, mount the device by its UUID instead of a fixed device node"
 msgstr ""
@@ -1415,11 +1208,6 @@ msgid "Image"
 msgstr ""
 
 msgid "In"
-msgstr ""
-
-msgid ""
-"In order to prevent unauthorized access to the system, your request has been "
-"blocked. Click \"Continue »\" below to return to the previous page."
 msgstr ""
 
 msgid "Inactivity timeout"
@@ -1467,9 +1255,6 @@ msgstr ""
 msgid "Interface is shutting down..."
 msgstr ""
 
-msgid "Interface name"
-msgstr ""
-
 msgid "Interface not present or not connected yet."
 msgstr ""
 
@@ -1511,10 +1296,10 @@ msgstr ""
 msgid "Join Network"
 msgstr ""
 
-msgid "Join Network: Wireless Scan"
+msgid "Join Network: Settings"
 msgstr ""
 
-msgid "Joining Network: %q"
+msgid "Join Network: Wireless Scan"
 msgstr ""
 
 msgid "Keep settings"
@@ -1559,13 +1344,7 @@ msgstr ""
 msgid "Language and Style"
 msgstr ""
 
-msgid "Latency"
-msgstr ""
-
 msgid "Leaf"
-msgstr ""
-
-msgid "Lease time"
 msgstr ""
 
 msgid "Lease validity time"
@@ -1592,22 +1371,13 @@ msgstr ""
 msgid "Limit"
 msgstr ""
 
-msgid "Limit DNS service to subnets interfaces on which we are serving DNS."
+msgid "Line Attenuation"
 msgstr ""
 
-msgid "Limit listening to these interfaces, and loopback."
-msgstr ""
-
-msgid "Line Attenuation (LATN)"
-msgstr ""
-
-msgid "Line Mode"
+msgid "Line Speed"
 msgstr ""
 
 msgid "Line State"
-msgstr ""
-
-msgid "Line Uptime"
 msgstr ""
 
 msgid "Link On"
@@ -1618,16 +1388,10 @@ msgid ""
 "requests to"
 msgstr ""
 
-msgid "List of SSH key files for auth"
-msgstr ""
-
 msgid "List of domains to allow RFC1918 responses for"
 msgstr ""
 
 msgid "List of hosts that supply bogus NX domain results"
-msgstr ""
-
-msgid "Listen Interfaces"
 msgstr ""
 
 msgid "Listen only on the given interface or, if unspecified, on all"
@@ -1645,17 +1409,11 @@ msgstr "עומס ממוצע"
 msgid "Loading"
 msgstr "טוען"
 
-msgid "Local IP address to assign"
-msgstr ""
-
 msgid "Local IPv4 address"
 msgstr "כתובת IPv4 מקומית"
 
 msgid "Local IPv6 address"
 msgstr "כתובת IPv6 מקומית"
-
-msgid "Local Service Only"
-msgstr ""
 
 msgid "Local Startup"
 msgstr ""
@@ -1703,9 +1461,6 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-msgid "Loss of Signal Seconds (LOSS)"
-msgstr ""
-
 msgid "Lowest leased address as offset from the network address."
 msgstr ""
 
@@ -1721,13 +1476,7 @@ msgstr ""
 msgid "MAC-List"
 msgstr ""
 
-msgid "MAP / LW4over6"
-msgstr ""
-
 msgid "MB/s"
-msgstr ""
-
-msgid "MD5"
 msgstr ""
 
 msgid "MHz"
@@ -1739,12 +1488,6 @@ msgstr ""
 msgid ""
 "Make sure to clone the root filesystem using something like the commands "
 "below:"
-msgstr ""
-
-msgid "Manual"
-msgstr ""
-
-msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
 msgid "Maximum Rate"
@@ -1835,16 +1578,10 @@ msgid ""
 "filesystem"
 msgstr ""
 
-msgid "Mount filesystems not specifically configured"
-msgstr ""
-
 msgid "Mount options"
 msgstr ""
 
 msgid "Mount point"
-msgstr ""
-
-msgid "Mount swap not specifically configured"
 msgstr ""
 
 msgid "Mounted file systems"
@@ -1865,16 +1602,7 @@ msgstr ""
 msgid "NAS ID"
 msgstr ""
 
-msgid "NAT-T Mode"
-msgstr ""
-
-msgid "NAT64 Prefix"
-msgstr ""
-
 msgid "NDP-Proxy"
-msgstr ""
-
-msgid "NT Domain"
 msgstr ""
 
 msgid "NTP server candidates"
@@ -1916,9 +1644,6 @@ msgstr ""
 msgid "No DHCP Server configured for this interface"
 msgstr ""
 
-msgid "No NAT-T"
-msgstr ""
-
 msgid "No chains in this table"
 msgstr ""
 
@@ -1952,16 +1677,10 @@ msgstr ""
 msgid "Noise"
 msgstr ""
 
-msgid "Noise Margin (SNR)"
+msgid "Noise Margin"
 msgstr ""
 
 msgid "Noise:"
-msgstr ""
-
-msgid "Non Pre-emtive CRC errors (CRC_P)"
-msgstr ""
-
-msgid "Non-wildcard"
 msgstr ""
 
 msgid "None"
@@ -1997,12 +1716,6 @@ msgstr ""
 msgid "OPKG-Configuration"
 msgstr ""
 
-msgid "Obfuscated Group Password"
-msgstr ""
-
-msgid "Obfuscated Password"
-msgstr ""
-
 msgid "Off-State Delay"
 msgstr ""
 
@@ -2023,9 +1736,6 @@ msgstr ""
 
 msgid "One or more fields contain invalid values!"
 msgstr "ישנם שדות המכילים ערכים בלתי חוקיים!"
-
-msgid "One or more invalid/required values on tab"
-msgstr ""
 
 msgid "One or more required fields have no value!"
 msgstr ""
@@ -2075,9 +1785,6 @@ msgstr ""
 msgid "Override MTU"
 msgstr ""
 
-msgid "Override default interface name"
-msgstr ""
-
 msgid "Override the gateway in DHCP responses"
 msgstr ""
 
@@ -2119,19 +1826,7 @@ msgstr ""
 msgid "PPPoE"
 msgstr ""
 
-msgid "PPPoSSH"
-msgstr ""
-
 msgid "PPtP"
-msgstr ""
-
-msgid "PSID offset"
-msgstr ""
-
-msgid "PSID-bits length"
-msgstr ""
-
-msgid "PTM/EFM (Packet Transfer Mode)"
 msgstr ""
 
 msgid "Package libiwinfo required!"
@@ -2158,10 +1853,10 @@ msgstr ""
 msgid "Password of Private Key"
 msgstr ""
 
-msgid "Password of inner Private Key"
+msgid "Password successfully changed!"
 msgstr ""
 
-msgid "Password successfully changed!"
+msgid "Path"
 msgstr ""
 
 msgid "Path to CA-Certificate"
@@ -2176,22 +1871,7 @@ msgstr "נתיב למפתח הפרטי"
 msgid "Path to executable which handles the button event"
 msgstr ""
 
-msgid "Path to inner CA-Certificate"
-msgstr ""
-
-msgid "Path to inner Client-Certificate"
-msgstr ""
-
-msgid "Path to inner Private Key"
-msgstr ""
-
 msgid "Peak:"
-msgstr ""
-
-msgid "Peer IP address to assign"
-msgstr ""
-
-msgid "Perfect Forward Secrecy"
 msgstr ""
 
 msgid "Perform reboot"
@@ -2215,27 +1895,27 @@ msgstr ""
 msgid "Please enter your username and password."
 msgstr "אנא הזן את שם המשתמש והסיסמה שלך:"
 
+msgid "Please wait: Device rebooting..."
+msgstr "אנא המתן: המכשיר מאותחל מחדש..."
+
 msgid "Policy"
 msgstr ""
 
 msgid "Port"
 msgstr ""
 
+msgid "Port %d"
+msgstr ""
+
+msgid "Port %d is untagged in multiple VLANs!"
+msgstr ""
+
 msgid "Port status:"
-msgstr ""
-
-msgid "Power Management Mode"
-msgstr ""
-
-msgid "Pre-emtive CRC errors (CRCP_P)"
 msgstr ""
 
 msgid ""
 "Presume peer to be dead after given amount of LCP echo failures, use 0 to "
 "ignore failures"
-msgstr ""
-
-msgid "Prevent listening on these interfaces."
 msgstr ""
 
 msgid "Prevents client-to-client communication"
@@ -2248,9 +1928,6 @@ msgid "Proceed"
 msgstr ""
 
 msgid "Processes"
-msgstr ""
-
-msgid "Profile"
 msgstr ""
 
 msgid "Prot."
@@ -2281,9 +1958,6 @@ msgid "Public prefix routed to this device for distribution to clients."
 msgstr ""
 
 msgid "Quality"
-msgstr ""
-
-msgid "RFC3947 NAT-T mode"
 msgstr ""
 
 msgid "RTS/CTS Threshold"
@@ -2434,11 +2108,6 @@ msgstr ""
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr ""
 
-msgid ""
-"Requires upstream supports DNSSEC; verify unsigned domain responses really "
-"come from unsigned domains"
-msgstr ""
-
 msgid "Reset"
 msgstr ""
 
@@ -2495,14 +2164,14 @@ msgid ""
 "can be reached."
 msgstr ""
 
+msgid "Rule #"
+msgstr ""
+
 msgid "Run a filesystem check before mounting the device"
 msgstr ""
 
 msgid "Run filesystem check"
 msgstr "הרץ בדיקת מערכת קבצים"
-
-msgid "SHA256"
-msgstr ""
 
 msgid ""
 "SIXXS supports TIC only, for static tunnels using IP protocol 41 (RFC4213) "
@@ -2512,19 +2181,7 @@ msgstr ""
 msgid "SIXXS-handle[/Tunnel-ID]"
 msgstr ""
 
-msgid "SNR"
-msgstr ""
-
 msgid "SSH Access"
-msgstr ""
-
-msgid "SSH server address"
-msgstr ""
-
-msgid "SSH server port"
-msgstr ""
-
-msgid "SSH username"
 msgstr ""
 
 msgid "SSH-Keys"
@@ -2598,12 +2255,6 @@ msgstr "סנכרון זמן"
 msgid "Setup DHCP Server"
 msgstr ""
 
-msgid "Severely Errored Seconds (SES)"
-msgstr ""
-
-msgid "Short GI"
-msgstr ""
-
 msgid "Show current backup file list"
 msgstr ""
 
@@ -2614,9 +2265,6 @@ msgid "Shutdown this network"
 msgstr ""
 
 msgid "Signal"
-msgstr ""
-
-msgid "Signal Attenuation (SATN)"
 msgstr ""
 
 msgid "Signal:"
@@ -2642,9 +2290,6 @@ msgstr ""
 
 msgid "Software"
 msgstr "תוכנה"
-
-msgid "Software VLAN"
-msgstr ""
 
 msgid "Some fields are invalid, cannot save values!"
 msgstr "חלק מהשדות אינם תקינים, אין אפשרות לשמור את הערכים!"
@@ -2764,13 +2409,6 @@ msgstr ""
 msgid "Switch %q (%s)"
 msgstr ""
 
-msgid ""
-"Switch %q has an unknown topology - the VLAN settings might not be accurate."
-msgstr ""
-
-msgid "Switch VLAN"
-msgstr ""
-
 msgid "Switch protocol"
 msgstr ""
 
@@ -2813,9 +2451,6 @@ msgstr "טבלה"
 msgid "Target"
 msgstr "יעד"
 
-msgid "Target network"
-msgstr ""
-
 msgid "Terminate"
 msgstr ""
 
@@ -2844,9 +2479,6 @@ msgstr ""
 msgid ""
 "The allowed characters are: <code>A-Z</code>, <code>a-z</code>, <code>0-9</"
 "code> and <code>_</code>"
-msgstr ""
-
-msgid "The configuration file could not be loaded due to the following error:"
 msgstr ""
 
 msgid ""
@@ -2904,9 +2536,6 @@ msgstr ""
 msgid "The selected protocol needs a device assigned"
 msgstr ""
 
-msgid "The submitted security token is invalid or already expired!"
-msgstr ""
-
 msgid ""
 "The system is erasing the configuration partition now and will reboot itself "
 "when finished."
@@ -2952,12 +2581,6 @@ msgid ""
 msgstr ""
 
 msgid "This IPv4 address of the relay"
-msgstr ""
-
-msgid ""
-"This file may contain lines like 'server=/domain/1.2.3.4' or "
-"'server=1.2.3.4' fordomain-specific or full upstream <abbr title=\"Domain "
-"Name System\">DNS</abbr> servers."
 msgstr ""
 
 msgid ""
@@ -3028,9 +2651,6 @@ msgid ""
 "archive here."
 msgstr ""
 "על מנת לשחזר את קבצי ההגדרות, באפשרותך להעלות ארכיון גיבוי שנוצר לפני כן."
-
-msgid "Tone"
-msgstr ""
 
 msgid "Total Available"
 msgstr "סה\"כ פנוי"
@@ -3107,9 +2727,6 @@ msgstr ""
 msgid "Unable to dispatch"
 msgstr ""
 
-msgid "Unavailable Seconds (UAS)"
-msgstr ""
-
 msgid "Unknown"
 msgstr ""
 
@@ -3117,9 +2734,6 @@ msgid "Unknown Error, password not changed!"
 msgstr ""
 
 msgid "Unmanaged"
-msgstr ""
-
-msgid "Unmount"
 msgstr ""
 
 msgid "Unsaved Changes"
@@ -3192,8 +2806,7 @@ msgid ""
 "Use the <em>Add</em> Button to add a new lease entry. The <em>MAC-Address</"
 "em> indentifies the host, the <em>IPv4-Address</em> specifies to the fixed "
 "address to use and the <em>Hostname</em> is assigned as symbolic name to the "
-"requesting host. The optional <em>Lease time</em> can be used to set non-"
-"standard host-specific lease time, e.g. 12h, 3d or infinite."
+"requesting host."
 msgstr ""
 
 msgid "Used"
@@ -3214,19 +2827,13 @@ msgstr "שם משתמש"
 msgid "VC-Mux"
 msgstr ""
 
-msgid "VDSL"
+msgid "VLAN Interface"
 msgstr ""
 
 msgid "VLANs on %q"
 msgstr ""
 
 msgid "VLANs on %q (%s)"
-msgstr ""
-
-msgid "VPN Local address"
-msgstr ""
-
-msgid "VPN Local port"
 msgstr ""
 
 msgid "VPN Server"
@@ -3236,12 +2843,6 @@ msgid "VPN Server port"
 msgstr ""
 
 msgid "VPN Server's certificate SHA1 hash"
-msgstr ""
-
-msgid "VPNC (CISCO 3000 (and others) VPN)"
-msgstr ""
-
-msgid "Vendor"
 msgstr ""
 
 msgid "Vendor Class to send when requesting DHCP"
@@ -3292,14 +2893,11 @@ msgstr ""
 msgid "Waiting for command to complete..."
 msgstr ""
 
-msgid "Waiting for device..."
-msgstr ""
-
 msgid "Warning"
 msgstr "אזהרה"
 
-msgid "Warning: There are unsaved changes that will get lost on reboot!"
-msgstr ""
+msgid "Warning: There are unsaved changes that will be lost while rebooting!"
+msgstr "אזהרה: ישנם שינויים שלא נשמרו ויאבדו בעת הפעלה מחדש!"
 
 msgid "Whether to create an IPv6 default route over the tunnel"
 msgstr ""
@@ -3309,6 +2907,9 @@ msgstr ""
 
 msgid "Width"
 msgstr ""
+
+msgid "Wifi"
+msgstr "Wifi"
 
 msgid "Wireless"
 msgstr ""
@@ -3344,9 +2945,6 @@ msgid "Wireless shut down"
 msgstr ""
 
 msgid "Write received DNS requests to syslog"
-msgstr ""
-
-msgid "Write system log to file"
 msgstr ""
 
 msgid "XR Support"
@@ -3517,15 +3115,46 @@ msgstr "לא מוגדר -או- יצר"
 msgid "untagged"
 msgstr "לא מתויג"
 
+msgid "xDSL"
+msgstr ""
+
+msgid "xDSL Status"
+msgstr ""
+
 msgid "yes"
 msgstr "כן"
 
 msgid "« Back"
 msgstr "<< אחורה"
 
-#, fuzzy
-#~ msgid "An additional network will be created if you leave this unchecked."
-#~ msgstr "רשת נוספת תווצר אם תשאיר את זה לא מסומן"
+#~ msgid "Cached"
+#~ msgstr "שמור במטמון"
 
-#~ msgid "CPU"
-#~ msgstr "מעבד"
+#~ msgid "40MHz 2nd channel above"
+#~ msgstr "40Mhz, הערוץ הנוסף מעל"
+
+#~ msgid "40MHz 2nd channel below"
+#~ msgstr "40Mhz, הערוץ הנוסף מתחת"
+
+#~ msgid "Accept router advertisements"
+#~ msgstr "אפשר פרסומות נתב"
+
+#~ msgid "Advertise IPv6 on network"
+#~ msgstr "פרסם IPv6 ברשת"
+
+# זהות?
+#, fuzzy
+#~ msgid "Advertised network ID"
+#~ msgstr "פרסם פרטי זהות של הרשת"
+
+#~ msgid "Allowed range is 1 to 65535"
+#~ msgstr "הטווח המורשה הוא 1 עד 65535"
+
+#~ msgid "Freifunk"
+#~ msgstr "אריג"
+
+#~ msgid "Wifi networks in your local environment"
+#~ msgstr "רשתות Wifi בסביבתך"
+
+#~ msgid "static"
+#~ msgstr "סטטי"

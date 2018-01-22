@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=madplay
 PKG_VERSION:=0.15.2b
-PKG_RELEASE:=6
+PKG_RELEASE:=4
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/mad \
@@ -22,21 +22,18 @@ PKG_MAINTAINER:=Simon Peter <probono@puredarwin.org>
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_FIXUP:=autoreconf
+PKG_INSTALL:=1
 
 include $(INCLUDE_DIR)/package.mk
-include $(INCLUDE_DIR)/nls.mk
 
 define Package/madplay/default
   SECTION:=sound
   CATEGORY:=Sound
-  DEPENDS:=+libid3tag +libmad $(INTL_DEPENDS) $(2)
+  DEPENDS:=+libid3tag +libmad $(2)
   TITLE:=MPEG audio player in fixed point - $(1)
   VARIANT:=$(1)
   URL:=http://sourceforge.net/projects/mad
 endef
-
-Package/madplay-alsa=$(call Package/madplay/default,alsa,+alsa-lib)
-Package/madplay=$(call Package/madplay/default,oss)
 
 define Package/madplay/description
 	MAD is an MPEG audio decoder. It currently only supports the MPEG 1
@@ -44,6 +41,9 @@ define Package/madplay/description
 	and Layer III, the latter often colloquially known as MP3.). There is also
 	full support for ID3 tags.
 endef
+
+Package/madplay-alsa=$(call Package/madplay/default,alsa,+alsa-lib)
+Package/madplay=$(call Package/madplay/default,oss)
 
 define Build/Configure
 	$(call Build/Configure/Default, \
@@ -73,12 +73,12 @@ endif
 
 define Package/madplay/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/madplay $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/madplay $(1)/usr/bin/
 endef
 
 define Package/madplay-alsa/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/madplay $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/madplay $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,madplay-alsa))

@@ -551,7 +551,7 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "Executable to run as a CGI type program (like haserl) for URLs with "
-#~ "extension .chi"
+#~ "extention .chi"
 #~ msgstr "Thống nhất cấu hình phương pháp cài đặt"
 
 #, fuzzy

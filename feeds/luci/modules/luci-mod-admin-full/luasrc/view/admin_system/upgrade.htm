@@ -6,7 +6,7 @@
 
 <%+header%>
 
-<h2 name="content"><%:Flash Firmware%> - <%:Verify%></h2>
+<h2><a id="content" name="content"><%:Flash Firmware%> - <%:Verify%></a></h2>
 <p>
 	<%_ The flash image was uploaded.
 		Below is the checksum and file size listed,
@@ -24,9 +24,7 @@
 
 <fieldset class="cbi-section">
 	<ul>
-		<li><%:Checksum%><br />
-		<%:MD5%>: <code><%=checksum%></code><br />
-		<%:SHA256%>: <code><%=sha256ch%></code></li>
+		<li><%:Checksum%>: <code><%=checksum%></code></li>
 		<li><%:Size%>: <%
 			local w = require "luci.tools.webadmin"
 			write(w.byte_format(size))
@@ -47,11 +45,12 @@
 </fieldset>
 
 <div class="cbi-page-actions right">
-	<form class="inline" action="<%=REQUEST_URI%>" method="post">
-		<input type="hidden" name="token" value="<%=token%>" />
+	<form style="display:inline" action="<%=REQUEST_URI%>" method="post">
+		<input class="cbi-button cbi-button-reset" type="submit" value="<%:Cancel%>" />
+	</form>
+	<form style="display:inline" action="<%=REQUEST_URI%>" method="post">
 		<input type="hidden" name="step" value="2" />
 		<input type="hidden" name="keep" value="<%=keep and "1" or ""%>" />
-		<input class="cbi-button cbi-button-reset" name="cancel" type="submit" value="<%:Cancel%>" />
 		<input class="cbi-button cbi-button-apply" type="submit" value="<%:Proceed%>" />
 	</form>
 </div>

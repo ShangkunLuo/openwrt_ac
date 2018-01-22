@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 - 2016 OpenWrt.org
+# Copyright (C) 2015 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -29,7 +29,7 @@ define Package/perl-uri
   CATEGORY:=Languages
   TITLE:=Manipulates and accesses URI strings
   URL:=http://search.cpan.org/dist/URI/
-  DEPENDS:=perl +perlbase-essential +perlbase-integer +perlbase-mime +perlbase-scalar +perlbase-utf8
+  DEPENDS:=perl
 endef
 
 define Build/Configure

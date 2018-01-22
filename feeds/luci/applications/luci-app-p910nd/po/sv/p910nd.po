@@ -13,32 +13,30 @@ msgid "Bidirectional mode"
 msgstr ""
 
 msgid "Device"
-msgstr "Enhet"
+msgstr ""
 
 msgid ""
 "First you have to install the packages to get support for USB (kmod-usb-"
 "printer) or parallel port (kmod-lp)."
 msgstr ""
-"Först behöver du installera paketen för att få stöd för USB (kmod-usb-"
-"printer) eller paralell port (kmod-lp)."
 
 msgid "Interface"
-msgstr "Gränssnitt"
+msgstr ""
 
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
 msgid "Settings"
-msgstr "Inställningar"
+msgstr ""
 
 msgid "Specifies the interface to listen on."
-msgstr "Anger gränssnittet att lyssna på"
+msgstr ""
 
 msgid "TCP listener port."
-msgstr "Port för TCP-lyssnare."
+msgstr ""
 
 msgid "enable"
-msgstr "aktivera"
+msgstr ""
 
 msgid "p910nd - Printer server"
-msgstr "p910nd- Skrivar-server"
+msgstr ""

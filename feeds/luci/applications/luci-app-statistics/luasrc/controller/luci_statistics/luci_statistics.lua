@@ -25,7 +25,6 @@ function index()
 
 		conntrack	= _("Conntrack"),
 		cpu			= _("Processor"),
-		cpufreq		= _("CPU Frequency"),
 		csv			= _("CSV Output"),
 		df			= _("Disk Space Usage"),
 		disk		= _("Disk Usage"),
@@ -43,11 +42,9 @@ function index()
 		network		= _("Network"),
 		nut			= _("UPS"),
 		olsrd		= _("OLSRd"),
-		openvpn		= _("OpenVPN"),
 		ping		= _("Ping"),
 		processes	= _("Processes"),
 		rrdtool		= _("RRDTool"),
-		sensors     = _("Sensors"),
 		splash_leases = _("Splash Leases"),
 		tcpconns	= _("TCP Connections"),
 		unixsock	= _("UnixSock"),
@@ -57,8 +54,8 @@ function index()
 	-- our collectd menu
 	local collectd_menu = {
 		output  = { "csv", "network", "rrdtool", "unixsock" },
-		general = { "cpu", "cpufreq", "df", "disk", "email", "entropy", "exec", "irq", "load", "memory", "nut", "processes", "sensors", "uptime" },
-		network = { "conntrack", "dns", "interface", "iptables", "netlink", "olsrd", "openvpn", "ping", "splash_leases", "tcpconns", "iwinfo" }
+		general = { "cpu", "df", "disk", "email", "entropy", "exec", "irq", "load", "memory", "nut", "processes", "uptime" },
+		network = { "conntrack", "dns", "interface", "iptables", "netlink", "olsrd", "ping", "splash_leases", "tcpconns", "iwinfo" }
 	}
 
 	-- create toplevel menu nodes

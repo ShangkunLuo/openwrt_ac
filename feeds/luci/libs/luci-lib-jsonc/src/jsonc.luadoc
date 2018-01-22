@@ -121,22 +121,10 @@ parser:set({ "some", "data" })`
 ]]
 
 ---[[
-Generate an ltn12-compatible sink.
-
-@class function
-@sort 4
-@name parser.sink
-@return Returns a function that can be used as an ltn12 sink.
-@usage `parser = luci.jsonc.new()
-ltn12.pump.all(ltn12.source.file(io.input()), parser:sink())
-print(parser:get())`
-]]
-
----[[
 Serialize current parser state as JSON.
 
 @class function
-@sort 5
+@sort 4
 @name parser.stringify
 @param pretty A boolean value indicating whether the resulting JSON should be pretty printed.
 @return Returns the serialized JSON data of this parser instance.

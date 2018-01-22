@@ -54,6 +54,9 @@ msgstr ""
 msgid "Quality of Service"
 msgstr ""
 
+msgid "Service"
+msgstr ""
+
 msgid "Source host"
 msgstr ""
 

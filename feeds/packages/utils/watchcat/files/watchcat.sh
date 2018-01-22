@@ -7,9 +7,6 @@
 
 mode="$1"
 
-# Fix potential typo in mode (backward compatibility).
-[ "$mode" = "allways" ] && mode="always"
-
 shutdown_now() {
 	local forcedelay="$1"
 
@@ -22,7 +19,7 @@ shutdown_now() {
 	}
 }
 
-watchcat_always() {
+watchcat_allways() {
 	local period="$1"; local forcedelay="$2"
 
 	sleep "$period" && shutdown_now "$forcedelay"
@@ -69,9 +66,9 @@ watchcat_ping() {
 	done
 }
 
-	if [ "$mode" = "always" ]
+	if [ "$mode" = "allways" ]
 	then
-		watchcat_always "$2" "$3"
+		watchcat_allways "$2" "$3"
 	else
 		watchcat_ping "$2" "$3" "$4" "$5"
 	fi

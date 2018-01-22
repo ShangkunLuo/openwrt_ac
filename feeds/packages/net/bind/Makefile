@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2006-2012 OpenWrt.org
-#               2014-2016 Noah Meyerhans <frodo@morgul.net>
+#               2014 Noah Meyerhans <frodo@morgul.net>
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -9,28 +9,23 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=bind
-PKG_VERSION:=9.10.4-P4
+PKG_VERSION:=9.9.8-P3
 PKG_RELEASE:=1
 USERID:=bind=57:bind=57
 
-PKG_MAINTAINER:=Noah Meyerhans <frodo@morgul.net>
+PKG_MAINTAINER := Noah Meyerhans <frodo@morgul.net>
 PKG_LICENSE := BSD-3-Clause
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:= \
 	ftp://ftp.isc.org/isc/bind9/$(PKG_VERSION) \
 	http://www.mirrorservice.org/sites/ftp.isc.org/isc/bind9/$(PKG_VERSION)
-PKG_MD5SUM:=e110904a1d54f83f01d4be8bcd842927
+PKG_MD5SUM:=30b9bf88a78eee783d3fef5257445788
 
 PKG_FIXUP:=autoreconf
 PKG_REMOVE_FILES:=aclocal.m4 libtool.m4
 
 PKG_INSTALL:=1
-PKG_USE_MIPS16:=0
-
-PKG_CONFIG_DEPENDS := \
-	CONFIG_OPENSSL_WITH_EC \
-	CONFIG_BIND_ENABLE_FILTER_AAAA
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -54,10 +49,6 @@ endef
 define Package/bind-server
   $(call Package/bind/Default)
   TITLE+= DNS server
-endef
-
-define Package/bind-server/config
-	source "$(SOURCE)/Config.in"
 endef
 
 define Package/bind-client
@@ -109,13 +100,8 @@ CONFIGURE_ARGS += \
 	--enable-epoll=yes \
 	--with-gost=no \
 	--with-gssapi=no \
-	--with-ecdsa=$(if $(CONFIG_OPENSSL_WITH_EC),yes,no) \
+	--with-ecdsa=no \
 	--with-readline=no
-
-ifdef CONFIG_BIND_ENABLE_FILTER_AAAA
-	CONFIGURE_ARGS += \
-		--enable-filter-aaaa
-endif
 
 CONFIGURE_VARS += \
 	BUILD_CC="$(TARGET_CC)" \

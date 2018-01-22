@@ -13,19 +13,19 @@ msgid "6to4 interface"
 msgstr ""
 
 msgid "Address"
-msgstr "Adress"
+msgstr ""
 
 msgid "Addresses"
-msgstr "Adresser"
+msgstr ""
 
 msgid "Advanced"
-msgstr "Avancerat"
+msgstr ""
 
 msgid "Advertise Home Agent flag"
 msgstr ""
 
 msgid "Advertise router address"
-msgstr "Annonsera router-adress"
+msgstr ""
 
 msgid "Advertised Domain Suffixes"
 msgstr ""
@@ -92,25 +92,25 @@ msgid ""
 msgstr ""
 
 msgid "Advertising"
-msgstr "Annonsering"
+msgstr ""
 
 msgid "Autonomous"
 msgstr ""
 
 msgid "Clients"
-msgstr "Klienter"
+msgstr ""
 
 msgid "Configuration flag"
-msgstr "Konfigurationsflagga"
+msgstr ""
 
 msgid "Current hop limit"
 msgstr ""
 
 msgid "DNSSL"
-msgstr "DNSSL"
+msgstr ""
 
 msgid "DNSSL Configuration"
-msgstr "Konfiguration av DNSSL"
+msgstr ""
 
 msgid "Default lifetime"
 msgstr ""
@@ -119,13 +119,13 @@ msgid "Default preference"
 msgstr ""
 
 msgid "Enable"
-msgstr "Aktivera"
+msgstr ""
 
 msgid "Enable advertisements"
-msgstr "Aktivera annonser"
+msgstr ""
 
 msgid "Enables router advertisements and solicitations"
-msgstr "Aktivera router-annonser och hemställande"
+msgstr ""
 
 msgid ""
 "Enables the additional stateful administered autoconfiguration protocol "
@@ -138,7 +138,7 @@ msgid ""
 msgstr ""
 
 msgid "General"
-msgstr "Generella"
+msgstr ""
 
 msgid "Home Agent information"
 msgstr ""
@@ -178,40 +178,40 @@ msgid ""
 msgstr ""
 
 msgid "Interface"
-msgstr "Gränssnitt"
+msgstr ""
 
 msgid "Interface Configuration"
-msgstr "Konfiguration av gränssnitt"
+msgstr ""
 
 msgid "Interface required"
-msgstr "Gränssnitt krävs"
+msgstr ""
 
 msgid "Interfaces"
-msgstr "Gränsnitt"
+msgstr ""
 
 msgid "Lifetime"
-msgstr "Livstid"
+msgstr ""
 
 msgid "Link MTU"
-msgstr "Länka MTU"
+msgstr ""
 
 msgid "Managed flag"
-msgstr "Hanterad flagga"
+msgstr ""
 
 msgid "Max. interval"
-msgstr "Maximalt intervall"
+msgstr ""
 
 msgid "Maximum advertisement interval"
-msgstr "Maximalt intervall för annonsering"
+msgstr ""
 
 msgid "Minimum advertisement delay"
-msgstr "Minsta fördröjning av annonsering"
+msgstr ""
 
 msgid "Minimum advertisement interval"
-msgstr "Minsta intervall för annonsering"
+msgstr ""
 
 msgid "Mobile IPv6"
-msgstr "Mobilt IPv6"
+msgstr ""
 
 msgid "Mobile IPv6 interval option"
 msgstr ""
@@ -235,37 +235,37 @@ msgid "Preferred lifetime"
 msgstr ""
 
 msgid "Prefix"
-msgstr "Prefix"
+msgstr ""
 
 msgid "Prefix Configuration"
-msgstr "Konfiguration av prefix"
+msgstr ""
 
 msgid "Prefixes"
-msgstr "Prefix"
+msgstr ""
 
 msgid "RDNSS"
-msgstr "RDNSS"
+msgstr ""
 
 msgid "RDNSS Configuration"
-msgstr "Konfiguration av RDNSS"
+msgstr ""
 
 msgid "Radvd"
-msgstr "Radvd"
+msgstr ""
 
 msgid "Radvd - DNSSL"
-msgstr "Radvd - DNSSL"
+msgstr ""
 
 msgid "Radvd - Interface %q"
-msgstr "Radvd - Gränssnitt %q"
+msgstr ""
 
 msgid "Radvd - Prefix"
-msgstr "Radvd - Prefix"
+msgstr ""
 
 msgid "Radvd - RDNSS"
-msgstr "Radvd - RDNSS"
+msgstr ""
 
 msgid "Radvd - Route"
-msgstr "Radvd - Route"
+msgstr ""
 
 msgid ""
 "Radvd is a router advertisement daemon for IPv6. It listens to router "
@@ -278,17 +278,15 @@ msgstr ""
 msgid ""
 "Restrict communication to specified clients, leave empty to use multicast"
 msgstr ""
-"Begränsa kommunikation till specificerade klienter, lämna tom för att "
-"använda multicast"
 
 msgid "Retransmit timer"
 msgstr ""
 
 msgid "Route Configuration"
-msgstr "Konfiguration för rutt"
+msgstr ""
 
 msgid "Routes"
-msgstr "Rutter"
+msgstr ""
 
 msgid "Source link-layer address"
 msgstr ""
@@ -319,7 +317,7 @@ msgid "Specifies the preference associated with the default router"
 msgstr ""
 
 msgid "Suffix"
-msgstr "Tillägg"
+msgstr ""
 
 msgid ""
 "The maximum time allowed between sending unsolicited multicast router "
@@ -343,28 +341,28 @@ msgid "Timing"
 msgstr ""
 
 msgid "Unicast only"
-msgstr "Endast Unicast"
+msgstr ""
 
 msgid "Valid lifetime"
-msgstr "Giltig livstid"
+msgstr ""
 
 msgid "Validity time"
-msgstr "Tid för giltighet"
+msgstr ""
 
 msgid "default"
-msgstr "standard"
+msgstr ""
 
 msgid "high"
-msgstr "hög"
+msgstr ""
 
 msgid "low"
-msgstr "låg"
+msgstr ""
 
 msgid "medium"
-msgstr "mellan"
+msgstr ""
 
 msgid "no"
-msgstr "nej"
+msgstr ""
 
 msgid "yes"
-msgstr "ja"
+msgstr ""

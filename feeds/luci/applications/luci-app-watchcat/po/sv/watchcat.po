@@ -10,10 +10,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Forced reboot delay"
-msgstr "Fördröjning av påtvingad omstart"
+msgstr ""
 
 msgid "Host address to ping"
-msgstr "Värdadress att pinga"
+msgstr ""
 
 msgid ""
 "How often to check internet connection. Default unit is seconds, you can you "
@@ -31,16 +31,16 @@ msgid "Operating mode"
 msgstr ""
 
 msgid "Period"
-msgstr "Period"
+msgstr ""
 
 msgid "Ping host"
-msgstr "Pinga värd"
+msgstr ""
 
 msgid "Ping period"
 msgstr ""
 
 msgid "Watchcat"
-msgstr "Watchcat"
+msgstr ""
 
 msgid ""
 "Watchcat allows configuring a periodic reboot when the Internet connection "

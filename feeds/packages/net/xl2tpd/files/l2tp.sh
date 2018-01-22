@@ -14,27 +14,25 @@ proto_l2tp_init_config() {
 	proto_config_add_string "keepalive"
 	proto_config_add_string "pppd_options"
 	proto_config_add_boolean "ipv6"
-	proto_config_add_int "demand"
 	proto_config_add_int "mtu"
 	proto_config_add_int "checkup_interval"
 	proto_config_add_string "server"
 	available=1
 	no_device=1
 	no_proto_task=1
-	teardown_on_l3_link_down=1
 }
 
 proto_l2tp_setup() {
 	local interface="$1"
 	local optfile="/tmp/l2tp/options.${interface}"
-	local ip serv_addr server host
 
-	json_get_var server server
-	host="${server%:*}"
-	for ip in $(resolveip -t 5 "$host"); do
-		( proto_add_host_dependency "$interface" "$ip" )
-		serv_addr=1
-	done
+	local ip serv_addr server
+	json_get_var server server && {
+		for ip in $(resolveip -t 5 "$server"); do
+			( proto_add_host_dependency "$interface" "$ip" )
+			serv_addr=1
+		done
+	}
 	[ -n "$serv_addr" ] || {
 		echo "Could not resolve server address" >&2
 		sleep 5

@@ -1,7 +1,9 @@
+diff --git a/configure b/configure
+index 6936a47..9a85269 100755
 --- a/configure
 +++ b/configure
-@@ -5981,9 +5981,6 @@ fi
- 
+@@ -6980,9 +6980,6 @@ else
+ fi
  
  
 -# Add additional cflags since some distros bury panel.h

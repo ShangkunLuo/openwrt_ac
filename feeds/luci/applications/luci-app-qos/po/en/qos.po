@@ -53,6 +53,9 @@ msgstr ""
 msgid "Quality of Service"
 msgstr "Quality of Service"
 
+msgid "Service"
+msgstr "Service"
+
 msgid "Source host"
 msgstr "Source host"
 
@@ -86,6 +89,3 @@ msgstr "normal"
 
 msgid "priority"
 msgstr "priority"
-
-#~ msgid "Service"
-#~ msgstr "Service"

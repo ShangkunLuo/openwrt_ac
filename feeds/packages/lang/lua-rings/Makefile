@@ -30,7 +30,7 @@ define Package/lua-rings
   SECTION:=lang
   CATEGORY:=Languages
   TITLE:=Lua-Rings
-  URL:=http://keplerproject.github.io/rings/
+  URL:=http://www.inf.puc-rio.br/~roberto/lua-rings/
   DEPENDS:=+lua
 endef
 

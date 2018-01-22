@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015-2016 OpenWrt.org
+# Copyright (C) 2015 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mmc-utils
-PKG_VERSION=2016-09-11-$(PKG_SOURCE_VERSION)
-PKG_RELEASE:=2
+PKG_VERSION=2015-03-25-$(PKG_SOURCE_VERSION)
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://git.kernel.org/pub/scm/linux/kernel/git/cjb/mmc-utils.git
-PKG_SOURCE_VERSION:=2cb6695e8dec00d887bdd5309d1b57d836fcd214
+PKG_SOURCE_VERSION:=50b68547ad895803128519af71c31b9f14bfc791
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_SOURCE_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_SOURCE_VERSION).tar.gz
 
@@ -44,7 +44,7 @@ endef
 
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
-	        $(TARGET_CONFIGURE_OPTS) CFLAGS="$(TARGET_CFLAGS) -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2" \
+	        $(TARGET_CONFIGURE_OPTS) CFLAGS="$(TARGET_CFLAGS)" \
 	        mmc
 endef
 

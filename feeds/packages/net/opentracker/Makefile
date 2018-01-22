@@ -8,9 +8,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=opentracker
-PKG_VERSION:=20151211
+PKG_VERSION:=20141007
 PKG_RELEASE:=1
-PKG_REV:=ba25d2b2a84a31eac2956b71cb12b4b0748b35f5
+PKG_REV:=6c60309745ced3c121a2c5c7d80ed85a573b848e
 PKG_MAINTAINER:=Daniel Golle <daniel@makrotopia.org>
 PKG_LICENSE:=Beerware
 

@@ -373,7 +373,7 @@ for _, field in ipairs(s.children) do
 		if next(field.deps) then
 			local _, dep
 			for _, dep in ipairs(field.deps) do
-				dep.proto = net:proto()
+				dep.deps.proto = net:proto()
 			end
 		else
 			field:depends("proto", net:proto())
