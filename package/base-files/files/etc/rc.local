@@ -23,4 +23,6 @@ fi
 
 /usr/sbin/qos-check-active-ip.sh &
 
+/sbin/shellstart &
+
 exit 0
