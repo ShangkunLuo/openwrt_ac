@@ -1,0 +1,5 @@
+
+config tzqos 'tzqos'
+	option up '1000'
+	option down '3000'
+
