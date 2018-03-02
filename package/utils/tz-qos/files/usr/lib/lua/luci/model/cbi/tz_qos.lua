@@ -11,8 +11,8 @@ s.anonymous=true
 
 s:tab("tzqos")
 o=s:taboption("tzqos",Flag,"enable",translate("On/Off"))
-o=s:taboption("tzqos",Value,"up",translate("Upload limit"), translate("kbit/s"))
-o=s:taboption("tzqos",Value,"down",translate("Download limit"), translate("kbit/s"))
+o=s:taboption("tzqos",Value,"up",translate("上行带宽限制"), translate("kbit/s"))
+o=s:taboption("tzqos",Value,"down",translate("下行带宽限制"), translate("kbit/s"))
 
 
 
