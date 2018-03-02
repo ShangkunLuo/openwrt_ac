@@ -43,7 +43,9 @@ BEGIN {
 		ARGV[3]=ARGV[2]
 	}
 
-	network=and(ipaddr,netmask)
+#	network=and(ipaddr,netmask)
+	network=ipaddr
+
 	broadcast=or(network,compl32(netmask))
 
 	start=or(network,and(ip2int(ARGV[3]),compl32(netmask)))
